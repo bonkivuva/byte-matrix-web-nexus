@@ -1,3 +1,4 @@
+
 import {
   ArrowRight,
   CheckCircle,
@@ -10,6 +11,8 @@ import {
   Lightbulb,
   Moon,
   Sun,
+  Menu,
+  X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -18,6 +21,7 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -29,6 +33,10 @@ const About = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -49,6 +57,8 @@ const About = () => {
                 }}
               />
             </div>
+            
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8 absolute right-6">
               <Link
                 to="/services"
@@ -73,7 +83,49 @@ const About = () => {
                 {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
               </Button>
             </nav>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden absolute right-6">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleMenu}
+                className="p-2"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </Button>
+            </div>
           </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+              <div className="flex flex-col space-y-4">
+                <Link
+                  to="/services"
+                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Services
+                </Link>
+                <Link
+                  to="/contact"
+                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={toggleDarkMode}
+                  className="w-fit p-3"
+                >
+                  {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
@@ -96,8 +148,8 @@ const About = () => {
             </div>
             
             <div className="mb-12 animate-slide-up">
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6 text-gradient-primary text-shadow-lg tracking-tight">
-                Byte Matrix Technologies
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 text-gradient-primary text-shadow-lg tracking-tight leading-tight">
+                BYTE MATRIX TECHNOLOGIES
               </h1>
               <p className="text-2xl lg:text-3xl font-light text-gradient-secondary mb-6 tracking-wide">
                 "Connecting Your Digital Matrix"
@@ -292,8 +344,8 @@ const About = () => {
               Transform Your Technology Into Strategic Advantage
             </h3>
             <p className="text-xl text-blue-100 leading-relaxed max-w-4xl mx-auto mb-8 font-extralight">
-              Let us be your trusted partner in achieving digital excellence. Discover how Byte Matrix
-              Technologies can revolutionize your technology infrastructure and drive your success forward.
+              Let us be your trusted partner in achieving digital excellence. Discover how BYTE MATRIX
+              TECHNOLOGIES can revolutionize your technology infrastructure and drive your success forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
@@ -319,6 +371,15 @@ const About = () => {
         </div>
       </div>
 
+      {/* Scroll to Top Button */}
+      <Button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
+        size="sm"
+      >
+        <ArrowRight className="h-5 w-5 transform -rotate-90" />
+      </Button>
+
       {/* Footer */}
       <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-gray-400 py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
@@ -342,7 +403,7 @@ const About = () => {
               <p className="text-gradient-secondary font-medium text-lg italic">"Connecting Your Digital Matrix"</p>
             </div>
             <div className="text-center md:text-right">
-              <p className="text-base font-medium text-gray-300">© 2024 Byte Matrix Technologies. All rights reserved.</p>
+              <p className="text-base font-medium text-gray-300">© 2024 BYTE MATRIX TECHNOLOGIES. All rights reserved.</p>
               <p className="text-sm mt-2 text-gray-500 font-light">Expert IT Solutions for Modern Businesses</p>
             </div>
           </div>
