@@ -240,8 +240,8 @@ const About = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl blur-2xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=450&fit=crop&crop=center"
-                alt="Professional IT technician configuring network equipment"
+                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=500&h=450&fit=crop&crop=center"
+                alt="IT professional working on computer systems and network infrastructure"
                 className="relative w-full h-[450px] object-cover rounded-2xl shadow-2xl"
                 loading="lazy"
               />

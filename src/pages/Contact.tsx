@@ -160,7 +160,7 @@ const Contact = () => {
                   description: "Get instant support and quick responses",
                   contact: "+254 724 367 794",
                   href: "tel:+254724367794",
-                  image: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=400&h=300&fit=crop&crop=center",
+                  image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop&crop=center",
                 },
                 {
                   icon: Mail,
@@ -168,7 +168,7 @@ const Contact = () => {
                   description: "Send us your detailed requirements",
                   contact: "bytematrixtechnologies@gmail.com",
                   href: "mailto:bytematrixtechnologies@gmail.com",
-                  image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop&crop=center",
+                  image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=400&h=300&fit=crop&crop=center",
                 },
               ].map((contact, index) => (
                 <Card
@@ -202,8 +202,8 @@ const Contact = () => {
 
             <div className="text-center mb-16">
               <img
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=400&fit=crop&crop=center"
-                alt="Professional business meeting"
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=400&fit=crop&crop=center"
+                alt="Professional business meeting with technology consultation"
                 className="w-full max-w-4xl mx-auto h-64 object-cover rounded-2xl shadow-2xl"
               />
             </div>

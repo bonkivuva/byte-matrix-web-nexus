@@ -165,7 +165,7 @@ const Services = () => {
                 icon: Server,
                 title: "IT Services",
                 description: "Professional IT infrastructure and support services",
-                image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=250&fit=crop&crop=center",
                 features: [
                   "Network Setup & Configuration",
                   "System Administration",
@@ -178,7 +178,7 @@ const Services = () => {
                 icon: HardDrive,
                 title: "Hardware Solutions",
                 description: "Enterprise-grade hardware for optimal performance",
-                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=250&fit=crop&crop=center",
                 features: [
                   "Enterprise Servers",
                   "Networking Equipment",
@@ -191,7 +191,7 @@ const Services = () => {
                 icon: Computer,
                 title: "Desktop Computers",
                 description: "High-performance desktop systems for every need",
-                image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=400&h=250&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&h=250&fit=crop&crop=center",
                 features: [
                   "Business Desktops",
                   "Gaming PCs",
@@ -204,7 +204,7 @@ const Services = () => {
                 icon: Computer,
                 title: "Laptops",
                 description: "Premium portable computing solutions",
-                image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=250&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=250&fit=crop&crop=center",
                 features: [
                   "Business Laptops",
                   "Student & Budget Options",
@@ -217,7 +217,7 @@ const Services = () => {
                 icon: Printer,
                 title: "Printers",
                 description: "Professional printing solutions for any environment",
-                image: "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=250&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=250&fit=crop&crop=center",
                 features: [
                   "Laser Printers",
                   "Inkjet Printers",
@@ -230,7 +230,7 @@ const Services = () => {
                 icon: Shield,
                 title: "Tech Support",
                 description: "Comprehensive technical support and maintenance",
-                image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=250&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop&crop=center",
                 features: [
                   "24/7 Remote Support",
                   "On-site Repair",
@@ -322,8 +322,8 @@ const Services = () => {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl blur-2xl"></div>
                     <img
-                      src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&h=400&fit=crop&crop=center"
-                      alt="Professional customer support specialist providing 24/7 technical assistance"
+                      src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=400&fit=crop&crop=center"
+                      alt="Customer support representative wearing headset providing technical assistance"
                       className="relative w-full h-[400px] object-cover rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105"
                       loading="lazy"
                     />
