@@ -1,4 +1,3 @@
-
 import {
   Mail,
   Phone,
@@ -27,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 font-light transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-gray-900 font-light transition-colors duration-300 relative">
       {/* Header */}
       <header className="border-b border-gray-100/50 dark:border-gray-800/50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-6 py-4">
@@ -36,39 +35,42 @@ const Contact = () => {
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-16 w-auto drop-shadow-lg transition-transform hover:scale-105"
+                className="h-20 w-auto drop-shadow-lg transition-transform hover:scale-105"
                 loading="eager"
+                style={{
+                  filter: "contrast(1.2) saturate(1.3) brightness(1.1) drop-shadow(0 8px 32px rgba(59, 130, 246, 0.25))",
+                }}
               />
             </Link>
             <nav className="hidden md:flex items-center space-x-8">
               <Link
-                to="/services"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-light relative group"
-              >
-                Services
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-              <Link
-                to="/about"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-light relative group"
+                to="/"
+                className="text-gray-700 dark:text-gray-300 hover:text-gradient-primary transition-all duration-300 font-medium text-lg relative group"
               >
                 About
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link
+                to="/services"
+                className="text-gray-700 dark:text-gray-300 hover:text-gradient-primary transition-all duration-300 font-medium text-lg relative group"
+              >
+                Services
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link
                 to="/contact"
-                className="text-blue-600 dark:text-blue-400 font-medium relative"
+                className="text-gradient-primary font-semibold text-lg relative"
               >
                 Contact
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400"></span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"></span>
               </Link>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={toggleDarkMode}
-                className="ml-4 p-2"
+                className="ml-4 p-3"
               >
-                {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
               </Button>
             </nav>
           </div>
@@ -76,7 +78,7 @@ const Contact = () => {
       </header>
 
       {/* Contact Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.3) 1px, transparent 0)',
@@ -85,16 +87,16 @@ const Contact = () => {
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 bg-blue-600 rounded-full text-white font-light mb-6">
-                <Mail className="w-4 h-4 mr-2" />
+            <div className="text-center mb-16 animate-fade-in">
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold mb-8 text-lg shadow-xl">
+                <Mail className="w-5 h-5 mr-3" />
                 Get In Touch
               </div>
-              <h1 className="text-4xl lg:text-5xl font-extralight mb-6 tracking-tight">Ready to Get Started?</h1>
-              <p className="text-xl text-gray-300 font-extralight max-w-3xl mx-auto">
+              <h1 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-shadow-lg">Ready to Get Started?</h1>
+              <p className="text-xl lg:text-2xl text-gray-300 font-medium max-w-3xl mx-auto text-shadow-sm">
                 Connect with our experts today. We're here to transform your technology experience.
               </p>
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto mt-8 rounded-full"></div>
+              <div className="w-32 h-1.5 bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 mx-auto mt-8 rounded-full shadow-lg"></div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-16">

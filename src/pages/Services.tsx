@@ -1,16 +1,19 @@
-
 import {
   ArrowRight,
   CheckCircle,
   Computer,
   HardDrive,
+  Mail,
   Phone,
   Printer,
   Server,
   Shield,
+  Zap,
   Star,
-  Headphones,
+  Users,
   Award,
+  Lightbulb,
+  Headphones,
   Moon,
   Sun,
 } from "lucide-react";
@@ -36,7 +39,7 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 font-light transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-gray-900 font-light transition-colors duration-300 relative">
       {/* Header */}
       <header className="border-b border-gray-100/50 dark:border-gray-800/50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-6 py-4">
@@ -45,39 +48,42 @@ const Services = () => {
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-16 w-auto drop-shadow-lg transition-transform hover:scale-105"
+                className="h-20 w-auto drop-shadow-lg transition-transform hover:scale-105"
                 loading="eager"
+                style={{
+                  filter: "contrast(1.2) saturate(1.3) brightness(1.1) drop-shadow(0 8px 32px rgba(59, 130, 246, 0.25))",
+                }}
               />
             </Link>
             <nav className="hidden md:flex items-center space-x-8">
               <Link
-                to="/services"
-                className="text-blue-600 dark:text-blue-400 font-medium relative"
-              >
-                Services
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400"></span>
-              </Link>
-              <Link
-                to="/about"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-light relative group"
+                to="/"
+                className="text-gray-700 dark:text-gray-300 hover:text-gradient-primary transition-all duration-300 font-medium text-lg relative group"
               >
                 About
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link
+                to="/services"
+                className="text-gradient-primary font-semibold text-lg relative"
+              >
+                Services
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"></span>
               </Link>
               <Link
                 to="/contact"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-light relative group"
+                className="text-gray-700 dark:text-gray-300 hover:text-gradient-primary transition-all duration-300 font-medium text-lg relative group"
               >
                 Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={toggleDarkMode}
-                className="ml-4 p-2"
+                className="ml-4 p-3"
               >
-                {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
               </Button>
             </nav>
           </div>
@@ -85,20 +91,20 @@ const Services = () => {
       </header>
 
       {/* Services Section */}
-      <section className="py-24 bg-white dark:bg-gray-900 relative">
+      <section className="py-24 bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-indigo-50/40 dark:from-gray-900/90 dark:via-blue-900/20 dark:to-purple-900/10 relative">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-50 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-400 font-light mb-6">
-              <Star className="w-4 h-4 mr-2" />
+          <div className="text-center mb-20 animate-fade-in">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold mb-8 text-lg shadow-xl">
+              <Star className="w-5 h-5 mr-3" />
               Our Services
             </div>
-            <h1 className="text-4xl lg:text-5xl font-extralight text-gray-900 dark:text-white mb-6 tracking-tight">
+            <h1 className="text-5xl lg:text-6xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg">
               Complete Technology Solutions
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-extralight">
+            <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto font-medium text-shadow-sm">
               From infrastructure to devices, we deliver comprehensive tech solutions tailored to your needs
             </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-8 rounded-full"></div>
+            <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto mt-8 rounded-full shadow-lg"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
