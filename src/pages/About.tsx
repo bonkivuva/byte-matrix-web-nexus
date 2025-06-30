@@ -1,4 +1,3 @@
-
 import {
   ArrowRight,
   CheckCircle,
@@ -13,6 +12,7 @@ import {
   Sun,
   Menu,
   X,
+  Phone,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -41,7 +41,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 font-light transition-colors duration-300 relative">
-      {/* Header */}
+      {/* Background Logo */}
       <header className="border-b border-gray-100/50 dark:border-gray-800/50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
@@ -130,89 +130,81 @@ const About = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-indigo-50/40 dark:from-gray-900/90 dark:via-blue-900/20 dark:to-purple-900/10"></div>
-        
+      <section className="py-24 bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-indigo-50/40 dark:from-gray-900/90 dark:via-blue-900/20 dark:to-purple-900/10 relative">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-6xl mx-auto text-center animate-fade-in">
-            <div className="mb-12 animate-float">
-              <img
-                src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
-                alt="Byte Matrix Technologies"
-                className="h-48 lg:h-64 w-auto mx-auto mb-8 drop-shadow-2xl transition-transform hover:scale-110"
-                style={{
-                  filter: "contrast(1.3) saturate(1.4) brightness(1.15) drop-shadow(0 20px 60px rgba(59, 130, 246, 0.3))",
-                }}
-                loading="eager"
-              />
-            </div>
-            
-            <div className="mb-12 animate-slide-up">
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 text-gradient-primary text-shadow-lg tracking-tight leading-tight">
-                BYTE MATRIX TECHNOLOGIES
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1 animate-fade-in">
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold mb-8 text-lg shadow-xl">
+                <Star className="w-5 h-5 mr-3" />
+                About Us
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg leading-tight">
+                Your Technology Partner
               </h1>
-              <p className="text-2xl lg:text-3xl font-light text-gradient-secondary mb-6 tracking-wide">
-                "Connecting Your Digital Matrix"
+              <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 leading-loose mb-10 font-medium text-shadow-sm">
+                At Byte Matrix Technologies, we specialize in delivering comprehensive IT solutions
+                that empower businesses to thrive in the digital age.
               </p>
-              <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto rounded-full shadow-lg"></div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 font-light"
+                  asChild
+                >
+                  <Link to="/services">
+                    <ArrowRight className="mr-2 h-5 w-5" />
+                    Explore Services
+                  </Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-8 py-4 text-lg transition-all duration-300 font-light"
+                  asChild
+                >
+                  <Link to="/contact">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Get in Touch
+                  </Link>
+                </Button>
+              </div>
             </div>
-
-            <div className="max-w-5xl mx-auto mb-16 animate-scale-in">
-              <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8 font-medium text-shadow-sm">
-                We deliver <span className="font-bold text-gradient-primary">unparalleled IT services</span> and
-                <span className="font-bold text-gradient-primary"> cutting-edge hardware solutions</span> that empower
-                businesses and individuals to thrive in today's fast-paced digital landscape.
-              </p>
-              <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-light">
-                Our mission is to provide the{" "}
-                <span className="font-semibold text-gray-900 dark:text-white">tools, technologies, and support</span> you need to
-                transform challenges into competitive advantages.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-12 py-6 text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 font-semibold rounded-2xl"
-                asChild
-              >
-                <Link to="/services">
-                  <ArrowRight className="mr-3 h-6 w-6" />
-                  Explore Our Services
-                </Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-12 py-6 text-xl bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border-3 border-blue-600/30 text-blue-600 dark:text-blue-400 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white hover:border-transparent transition-all duration-300 transform hover:-translate-y-2 font-semibold rounded-2xl"
-                asChild
-              >
-                <Link to="/contact">Get In Touch</Link>
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="grid md:grid-cols-4 gap-8 mb-20">
-              {[
-                { number: "500+", label: "Satisfied Clients", icon: Users, color: "from-blue-500 to-cyan-500" },
-                { number: "10+", label: "Industries Served", icon: Award, color: "from-purple-500 to-pink-500" },
-                { number: "99.9%", label: "Uptime Guarantee", icon: Shield, color: "from-green-500 to-emerald-500" },
-                { number: "24/7", label: "Support Available", icon: Zap, color: "from-orange-500 to-red-500" },
-              ].map((stat, index) => (
-                <div key={index} className="text-center group animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 transition-all duration-500 shadow-xl`}>
-                    <stat.icon className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="text-5xl font-bold text-gradient-primary mb-3 text-shadow-md">{stat.number}</div>
-                  <div className="text-gray-600 dark:text-gray-400 font-medium text-lg">{stat.label}</div>
-                </div>
-              ))}
+            <div className="order-1 lg:order-2 animate-scale-in">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl blur-2xl animate-pulse-slow"></div>
+                <img
+                  src="/lovable-uploads/b23292c5-517f-450d-a2ea-e81562ad4b3b.png"
+                  alt="Modern startup office with diverse team collaborating on technology projects"
+                  className="relative w-full h-[500px] object-cover rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Value Proposition */}
+      {/* Key Stats */}
+      <div className="mb-20">
+        <div className="grid md:grid-cols-4 gap-8 mb-20">
+          {[
+            { number: "500+", label: "Satisfied Clients", icon: Users, color: "from-blue-500 to-cyan-500" },
+            { number: "10+", label: "Industries Served", icon: Award, color: "from-purple-500 to-pink-500" },
+            { number: "99.9%", label: "Uptime Guarantee", icon: Shield, color: "from-green-500 to-emerald-500" },
+            { number: "24/7", label: "Support Available", icon: Zap, color: "from-orange-500 to-red-500" },
+          ].map((stat, index) => (
+            <div key={index} className="text-center group animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 transition-all duration-500 shadow-xl`}>
+                <stat.icon className="h-10 w-10 text-white" />
+              </div>
+              <div className="text-5xl font-bold text-gradient-primary mb-3 text-shadow-md">{stat.number}</div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium text-lg">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Our Story */}
       <div className="mb-20">
         <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-xl border border-blue-100/50 dark:border-blue-800/50">
           <div className="text-center mb-8">
@@ -361,7 +353,7 @@ const About = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white/30 text-white hover:bg-white hover:text-blue-600 hover:border-white px-10 py-4 text-lg bg-transparent transition-all duration-300 transform hover:-translate-y-1 font-light"
+                className="border-2 border-white/30 text-white hover:bg-white hover:text-blue-600 hover:border-transparent px-10 py-4 text-lg bg-transparent transition-all duration-300 transform hover:-translate-y-1 font-light"
                 asChild
               >
                 <Link to="/services">Explore Our Solutions</Link>
