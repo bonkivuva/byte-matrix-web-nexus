@@ -48,6 +48,15 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 font-light transition-colors duration-300 relative">
+      {/* Background Logo */}
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.03] dark:opacity-[0.05]">
+        <img
+          src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
+          alt="Background Logo"
+          className="w-[70vw] h-auto max-w-4xl object-contain transform rotate-0"
+        />
+      </div>
+
       {/* Header */}
       <header className="border-b border-gray-100/50 dark:border-gray-800/50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-6 py-4">
@@ -55,7 +64,7 @@ const Services = () => {
             <Link to="/" className="flex items-center space-x-3">
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
-                alt="Byte Matrix Technologies"
+                alt="BYTE MATRIX TECHNOLOGIES"
                 className="h-20 w-auto drop-shadow-lg transition-transform hover:scale-105"
                 loading="eager"
                 style={{
@@ -144,13 +153,13 @@ const Services = () => {
 
       {/* Services Section */}
       <section className="py-24 bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-indigo-50/40 dark:from-gray-900/90 dark:via-blue-900/20 dark:to-purple-900/10 relative">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold mb-8 text-lg shadow-xl">
               <Star className="w-5 h-5 mr-3" />
               Our Services
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg leading-tight">
               Complete Technology Solutions
             </h1>
             <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto font-medium text-shadow-sm">
@@ -165,7 +174,7 @@ const Services = () => {
                 icon: Server,
                 title: "IT Services",
                 description: "Professional IT infrastructure and support services",
-                image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=250&fit=crop&crop=center",
+                image: "/lovable-uploads/8a8cda77-4bf8-4392-97fc-d1cb7057e068.png",
                 features: [
                   "Network Setup & Configuration",
                   "System Administration",
@@ -178,7 +187,7 @@ const Services = () => {
                 icon: HardDrive,
                 title: "Hardware Solutions",
                 description: "Enterprise-grade hardware for optimal performance",
-                image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=250&fit=crop&crop=center",
+                image: "/lovable-uploads/fab2577d-98ee-4879-ac95-c1a0ade0afa7.png",
                 features: [
                   "Enterprise Servers",
                   "Networking Equipment",
@@ -191,7 +200,7 @@ const Services = () => {
                 icon: Computer,
                 title: "Desktop Computers",
                 description: "High-performance desktop systems for every need",
-                image: "https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&h=250&fit=crop&crop=center",
+                image: "/lovable-uploads/f858d253-338e-48f5-bfea-74af9143bbcd.png",
                 features: [
                   "Business Desktops",
                   "Gaming PCs",
@@ -204,7 +213,7 @@ const Services = () => {
                 icon: Computer,
                 title: "Laptops",
                 description: "Premium portable computing solutions",
-                image: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=250&fit=crop&crop=center",
+                image: "/lovable-uploads/f1e6cb6e-37c8-4aac-addb-2b38d4f23412.png",
                 features: [
                   "Business Laptops",
                   "Student & Budget Options",
@@ -217,7 +226,7 @@ const Services = () => {
                 icon: Printer,
                 title: "Printers",
                 description: "Professional printing solutions for any environment",
-                image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=250&fit=crop&crop=center",
+                image: "/lovable-uploads/a80fa3b7-bf9b-4d7c-8af1-a74162bae6a6.png",
                 features: [
                   "Laser Printers",
                   "Inkjet Printers",
@@ -230,7 +239,7 @@ const Services = () => {
                 icon: Shield,
                 title: "Tech Support",
                 description: "Comprehensive technical support and maintenance",
-                image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop&crop=center",
+                image: "/lovable-uploads/d29f94dc-9102-4701-adec-42bc48de5bfb.png",
                 features: [
                   "24/7 Remote Support",
                   "On-site Repair",
@@ -322,8 +331,8 @@ const Services = () => {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl blur-2xl"></div>
                     <img
-                      src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=400&fit=crop&crop=center"
-                      alt="Customer support representative wearing headset providing technical assistance"
+                      src="/lovable-uploads/5c26510c-54ca-4c96-82dc-18848ca363cf.png"
+                      alt="Professional team providing technical support and consultation"
                       className="relative w-full h-[400px] object-cover rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105"
                       loading="lazy"
                     />
