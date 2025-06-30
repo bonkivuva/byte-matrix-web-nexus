@@ -331,8 +331,8 @@ const Services = () => {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl blur-2xl"></div>
                     <img
-                      src="/lovable-uploads/32aed714-c356-4ff9-9e3d-017e2f1071af.png"
-                      alt="Professional team providing technical support and consultation"
+                      src="/lovable-uploads/bb69a6e7-18eb-48d3-bd42-b46cd197bcf3.png"
+                      alt="Professional customer support specialist providing technical assistance"
                       className="relative w-full h-[400px] object-cover rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105"
                       loading="lazy"
                     />
