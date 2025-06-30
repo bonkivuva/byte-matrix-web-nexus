@@ -159,7 +159,7 @@ const Services = () => {
               <Star className="w-5 h-5 mr-3" />
               Our Services
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg leading-tight">
               Complete Technology Solutions
             </h1>
             <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto font-medium text-shadow-sm">
@@ -331,7 +331,7 @@ const Services = () => {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl blur-2xl"></div>
                     <img
-                      src="/lovable-uploads/5c26510c-54ca-4c96-82dc-18848ca363cf.png"
+                      src="/lovable-uploads/32aed714-c356-4ff9-9e3d-017e2f1071af.png"
                       alt="Professional team providing technical support and consultation"
                       className="relative w-full h-[400px] object-cover rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105"
                       loading="lazy"
