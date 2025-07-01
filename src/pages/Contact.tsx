@@ -202,8 +202,8 @@ const Contact = () => {
 
             <div className="text-center mb-16">
               <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=400&fit=crop&crop=center"
-                alt="Professional business meeting with technology consultation"
+                src="/lovable-uploads/395d4682-f18c-4266-89f9-1a5f965c03f3.png"
+                alt="Professional technology operations center with multiple monitoring stations"
                 className="w-full max-w-4xl mx-auto h-64 object-cover rounded-2xl shadow-2xl"
               />
             </div>

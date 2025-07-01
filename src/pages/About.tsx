@@ -1,4 +1,3 @@
-
 import {
   ArrowRight,
   CheckCircle,
@@ -41,12 +40,12 @@ const About = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50/30 to-purple-50/20 dark:from-gray-900 dark:via-blue-900/10 dark:to-purple-900/5 font-light transition-colors duration-300 relative">
+    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50/30 to-purple-50/20 dark:from-gray-900 dark:via-blue-900/20 dark:to-purple-900/15 font-light transition-colors duration-300 relative">
       {/* Background Logo */}
-      <header className="border-b border-gray-100/50 dark:border-gray-800/50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl sticky top-0 z-50 shadow-lg">
+      <header className="border-b border-gray-100/50 dark:border-gray-800/50 bg-white/90 dark:bg-gray-900/95 backdrop-blur-xl sticky top-0 z-50 shadow-lg">
+        {/* Centered Company Logo */}
         <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
-            {/* Centered Company Logo */}
             <div className="flex-1 flex justify-center">
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
@@ -131,8 +130,8 @@ const About = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-indigo-50/40 dark:from-gray-900/90 dark:via-blue-900/20 dark:to-purple-900/10 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-indigo-600/5 dark:from-blue-600/10 dark:via-purple-600/10 dark:to-indigo-600/10"></div>
+      <section className="py-24 bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-indigo-50/40 dark:from-gray-900/95 dark:via-blue-900/30 dark:to-purple-900/20 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-indigo-600/5 dark:from-blue-600/15 dark:via-purple-600/15 dark:to-indigo-600/15"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 animate-fade-in">
@@ -143,7 +142,7 @@ const About = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg leading-tight">
                 Your Technology Partner
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 leading-loose mb-10 font-medium text-shadow-sm">
+              <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-200 leading-loose mb-10 font-medium text-shadow-sm">
                 At Byte Matrix Technologies, we specialize in delivering comprehensive IT solutions
                 that empower businesses to thrive in the digital age.
               </p>
@@ -187,7 +186,7 @@ const About = () => {
       </section>
 
       {/* Key Stats */}
-      <div className="mb-20 bg-gradient-to-br from-white/80 via-blue-50/40 to-purple-50/30 dark:from-gray-900/80 dark:via-blue-900/20 dark:to-purple-900/10 py-16">
+      <div className="mb-20 bg-gradient-to-br from-white/80 via-blue-50/40 to-purple-50/30 dark:from-gray-900/90 dark:via-blue-900/25 dark:to-purple-900/20 py-16">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-20">
             {[
@@ -211,19 +210,19 @@ const About = () => {
       {/* Our Story */}
       <div className="mb-20">
         <div className="container mx-auto px-6">
-          <div className="bg-gradient-to-br from-white/90 via-blue-50/50 to-purple-50/30 dark:from-gray-800/90 dark:via-blue-900/30 dark:to-purple-900/20 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-xl border border-blue-100/50 dark:border-blue-800/50">
+          <div className="bg-gradient-to-br from-white/90 via-blue-50/50 to-purple-50/30 dark:from-gray-800/95 dark:via-blue-900/40 dark:to-purple-900/30 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-xl border border-blue-100/50 dark:border-blue-800/50">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full text-blue-600 dark:text-blue-400 font-light mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/50 dark:to-purple-900/50 rounded-full text-blue-600 dark:text-blue-300 font-light mb-6">
                 <Lightbulb className="w-4 h-4 mr-2" />
                 Complete Solutions Portfolio
               </div>
-              <h3 className="text-2xl lg:text-3xl font-extralight text-gray-900 dark:text-white mb-6">Tailored for Every Need</h3>
+              <h3 className="text-2xl lg:text-3xl font-extralight text-gray-900 dark:text-gray-100 mb-6">Tailored for Every Need</h3>
             </div>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-4xl mx-auto font-extralight">
-              Whether you need <span className="font-light text-blue-600 dark:text-blue-400">dependable tech support</span> for
+            <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed text-center max-w-4xl mx-auto font-extralight">
+              Whether you need <span className="font-light text-blue-600 dark:text-blue-300">dependable tech support</span> for
               seamless operations,
-              <span className="font-light text-blue-600 dark:text-blue-400"> high-performance computing equipment</span> for demanding
-              workloads, or <span className="font-light text-blue-600 dark:text-blue-400">efficient printing solutions</span> for
+              <span className="font-light text-blue-600 dark:text-blue-300"> high-performance computing equipment</span> for demanding
+              workloads, or <span className="font-light text-blue-600 dark:text-blue-300">efficient printing solutions</span> for
               streamlined document management, we provide innovative answers to your most pressing technology
               challenges.
             </p>
@@ -232,7 +231,7 @@ const About = () => {
       </div>
 
       {/* Professional Expertise */}
-      <div className="mb-20 bg-gradient-to-br from-blue-50/40 via-purple-50/30 to-indigo-50/20 dark:from-blue-900/10 dark:via-purple-900/5 dark:to-indigo-900/5 py-16">
+      <div className="mb-20 bg-gradient-to-br from-blue-50/40 via-purple-50/30 to-indigo-50/20 dark:from-blue-900/20 dark:via-purple-900/15 dark:to-indigo-900/10 py-16">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
@@ -247,14 +246,14 @@ const About = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full text-blue-600 dark:text-blue-400 font-light mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/50 dark:to-purple-900/50 rounded-full text-blue-600 dark:text-blue-300 font-light mb-6">
                 <Award className="w-4 h-4 mr-2" />
                 Professional Excellence
               </div>
-              <h3 className="text-3xl lg:text-4xl font-extralight text-gray-900 dark:text-white mb-6 tracking-tight">
+              <h3 className="text-3xl lg:text-4xl font-extralight text-gray-900 dark:text-gray-100 mb-6 tracking-tight">
                 From Startups to Enterprises
               </h3>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8 font-extralight">
+              <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed mb-8 font-extralight">
                 From small startups establishing their technological foundation to large enterprises seeking
                 scalable solutions, we assist at every stage of your digital journey. Our certified technicians
                 ensure solutions are implemented correctly and maintained professionally.
@@ -269,7 +268,7 @@ const About = () => {
                     <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0">
                       <CheckCircle className="h-4 w-4 text-white" />
                     </div>
-                    <span className="text-gray-700 dark:text-gray-300 font-light">{item}</span>
+                    <span className="text-gray-700 dark:text-gray-200 font-light">{item}</span>
                   </div>
                 ))}
               </div>
@@ -282,11 +281,11 @@ const About = () => {
       <div className="mb-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/30 dark:to-purple-900/30 rounded-full text-indigo-600 dark:text-indigo-400 font-light mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/50 dark:to-purple-900/50 rounded-full text-indigo-600 dark:text-indigo-300 font-light mb-6">
               <Star className="w-4 h-4 mr-2" />
               What Sets Us Apart
             </div>
-            <h3 className="text-3xl lg:text-4xl font-extralight text-gray-900 dark:text-white mb-6 tracking-tight">
+            <h3 className="text-3xl lg:text-4xl font-extralight text-gray-900 dark:text-gray-100 mb-6 tracking-tight">
               Our Competitive Edge
             </h3>
           </div>
@@ -319,12 +318,12 @@ const About = () => {
               },
             ].map((item, index) => (
               <div key={index} className="group">
-                <div className="bg-gradient-to-br from-white/90 via-blue-50/50 to-purple-50/30 dark:from-gray-800/90 dark:via-blue-900/30 dark:to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100/50 dark:border-gray-700/50 hover:-translate-y-1">
+                <div className="bg-gradient-to-br from-white/90 via-blue-50/50 to-purple-50/30 dark:from-gray-800/95 dark:via-blue-900/40 dark:to-purple-900/30 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100/50 dark:border-gray-700/50 hover:-translate-y-1">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <item.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h4 className="text-xl font-light text-gray-900 dark:text-white mb-4">{item.title}</h4>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-extralight">{item.description}</p>
+                  <h4 className="text-xl font-light text-gray-900 dark:text-gray-100 mb-4">{item.title}</h4>
+                  <p className="text-gray-600 dark:text-gray-200 leading-relaxed font-extralight">{item.description}</p>
                 </div>
               </div>
             ))}
