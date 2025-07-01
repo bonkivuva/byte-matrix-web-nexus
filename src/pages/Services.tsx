@@ -159,8 +159,8 @@ const Services = () => {
               <Star className="w-5 h-5 mr-3" />
               Our Services
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg leading-tight">
-              Complete Technology Solutions
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg leading-tight uppercase">
+              COMPLETE TECHNOLOGY SOLUTIONS
             </h1>
             <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto font-medium text-shadow-sm">
               From infrastructure to devices, we deliver comprehensive tech solutions tailored to your needs
@@ -251,7 +251,7 @@ const Services = () => {
             ].map((service, index) => (
               <Card
                 key={index}
-                className="group border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm overflow-hidden"
+                className="group border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 via-blue-50/0 to-blue-50/50 dark:from-blue-900/0 dark:via-blue-900/0 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10">
@@ -286,7 +286,7 @@ const Services = () => {
 
           {/* Customer Support Excellence */}
           <div className="mb-20">
-            <div className="bg-gradient-to-br from-blue-50 via-indigo-50/50 to-purple-50/30 dark:from-blue-900/20 dark:via-indigo-900/10 dark:to-purple-900/10 rounded-3xl p-8 lg:p-16 shadow-2xl border border-blue-100/50 dark:border-blue-800/50 overflow-hidden">
+            <div className="bg-gradient-to-br from-blue-50 via-indigo-50/50 to-purple-50/30 dark:from-blue-900/20 dark:via-indigo-900/15 dark:to-purple-900/15 rounded-3xl p-8 lg:p-16 shadow-2xl border border-blue-100/50 dark:border-blue-800/50 overflow-hidden">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
                   <div className="inline-flex items-center px-4 py-2 bg-blue-600 rounded-full text-white font-light mb-6">
