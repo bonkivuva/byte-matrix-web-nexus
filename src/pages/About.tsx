@@ -1,27 +1,21 @@
 
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  CheckCircle,
+  Server,
+  Shield,
+  Clock,
   Users,
   Award,
-  Shield,
   Zap,
-  Star,
-  Lightbulb,
-  Target,
-  TrendingUp,
-  Heart,
-  Sparkles,
   Moon,
   Sun,
   Menu,
   X,
 } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -44,50 +38,38 @@ const About = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 font-light transition-colors duration-300 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 dark:from-gray-900 dark:via-gray-800/30 dark:to-gray-900/20 transition-all duration-500">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-400/5 rounded-full blur-3xl animate-float"></div>
       </div>
 
       {/* Header */}
-      <header className="border-b border-gray-100/50 dark:border-gray-800/50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+      <header className="relative z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 sticky top-0 shadow-lg">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-3 group">
+            <div className="flex items-center space-x-3">
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-20 w-auto drop-shadow-lg transition-transform hover:scale-105 group-hover:drop-shadow-2xl"
-                loading="eager"
-                style={{
-                  filter: "contrast(1.2) saturate(1.3) brightness(1.1) drop-shadow(0 8px 32px rgba(59, 130, 246, 0.25))",
-                }}
+                className="h-16 w-auto drop-shadow-lg transition-transform hover:scale-105 duration-300"
               />
-            </Link>
+            </div>
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <Link
-                to="/"
-                className="text-gradient-primary font-semibold text-lg relative group"
-              >
-                About
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 animate-gradient"></span>
-                <Sparkles className="inline-block w-4 h-4 ml-1 text-blue-500 animate-pulse" />
-              </Link>
-              <Link
                 to="/services"
-                className="text-gray-700 dark:text-gray-300 hover:text-gradient-primary transition-all duration-300 font-medium text-lg relative group"
+                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium relative group"
               >
                 Services
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link
                 to="/contact"
-                className="text-gray-700 dark:text-gray-300 hover:text-gradient-primary transition-all duration-300 font-medium text-lg relative group"
+                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium relative group"
               >
                 Contact
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
@@ -96,39 +78,37 @@ const About = () => {
                 variant="ghost"
                 size="sm"
                 onClick={toggleDarkMode}
-                className="ml-4 p-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300"
+                className="ml-4 p-2 hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors"
               >
-                {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500 animate-pulse" /> : <Moon className="h-6 w-6 text-blue-600 animate-pulse" />}
+                {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
             </nav>
 
             {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleMenu}
-                className="p-2"
-              >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </Button>
-            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleMenu}
+              className="md:hidden p-2"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
           </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700 pt-4 animate-fade-in">
-              <div className="flex flex-col space-y-4">
+            <div className="md:hidden mt-4 pb-4 border-t border-gray-200/50 dark:border-gray-700/50 animate-fade-in">
+              <nav className="flex flex-col space-y-4 pt-4">
                 <Link
                   to="/services"
-                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
+                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Services
                 </Link>
                 <Link
                   to="/contact"
-                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
+                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
@@ -137,243 +117,72 @@ const About = () => {
                   variant="ghost"
                   size="sm"
                   onClick={toggleDarkMode}
-                  className="w-fit p-3"
+                  className="self-start p-2"
                 >
-                  {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
+                  {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
                 </Button>
-              </div>
+              </nav>
             </div>
           )}
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-indigo-50/40 dark:from-gray-900/90 dark:via-blue-900/20 dark:to-purple-900/10 relative overflow-hidden">
+      {/* Hero Section with Company Logo */}
+      <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-bold mb-8 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 animate-pulse-slow">
-              <Sparkles className="w-6 h-6 mr-3 animate-spin" />
-              Welcome to Innovation
-              <Sparkles className="w-6 h-6 ml-3 animate-spin" />
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg leading-tight animate-scale-in">
-              BYTE MATRIX TECHNOLOGIES
-            </h1>
-            <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 tracking-wider animate-slide-up" style={{animationDelay: '0.3s'}}>
-              <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
-                YOUR TECHNOLOGY PARTNER
-              </span>
-            </div>
-            <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto font-medium text-shadow-sm mb-12 animate-fade-in" style={{animationDelay: '0.6s'}}>
-              Empowering businesses with cutting-edge technology solutions, premium hardware, and exceptional support services that drive growth and innovation.
-            </p>
-            <div className="w-32 h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto mt-8 rounded-full shadow-lg animate-pulse"></div>
-            
-            {/* Floating Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12 animate-slide-up" style={{animationDelay: '0.9s'}}>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-12 py-6 text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 font-semibold group"
-                asChild
-              >
-                <Link to="/services">
-                  <Zap className="mr-3 h-6 w-6 group-hover:animate-pulse" />
-                  Explore Services
-                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-3 border-purple-500/50 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:border-purple-600 px-12 py-6 text-xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm transition-all duration-300 transform hover:-translate-y-2 font-semibold group"
-                asChild
-              >
-                <Link to="/contact">
-                  <Heart className="mr-3 h-6 w-6 group-hover:animate-pulse text-red-500" />
-                  Get Started
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm relative">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {[
-              { icon: Users, number: "500+", label: "Happy Clients", color: "text-blue-600" },
-              { icon: Award, number: "99%", label: "Success Rate", color: "text-green-600" },
-              { icon: Shield, number: "24/7", label: "Support", color: "text-purple-600" },
-              { icon: TrendingUp, number: "5+", label: "Years Experience", color: "text-orange-600" },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="text-center group hover:scale-110 transition-all duration-300 animate-fade-in"
-                style={{animationDelay: `${index * 0.1}s`}}
-              >
-                <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center group-hover:shadow-xl transition-all duration-300 ${stat.color.includes('blue') ? 'group-hover:from-blue-100 group-hover:to-blue-50' : stat.color.includes('green') ? 'group-hover:from-green-100 group-hover:to-green-50' : stat.color.includes('purple') ? 'group-hover:from-purple-100 group-hover:to-purple-50' : 'group-hover:from-orange-100 group-hover:to-orange-50'}`}>
-                  <stat.icon className={`h-10 w-10 ${stat.color} dark:${stat.color.replace('600', '400')} group-hover:animate-pulse`} />
-                </div>
-                <div className={`text-3xl font-bold ${stat.color} dark:${stat.color.replace('600', '400')} mb-2 group-hover:animate-pulse`}>
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 dark:text-gray-400 font-medium">
-                  {stat.label}
-                </div>
+          <div className="max-w-6xl mx-auto text-center">
+            {/* Large Company Logo with Amazing Animations */}
+            <div className="mb-16 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse-slow"></div>
+              <div className="relative">
+                <img
+                  src="/lovable-uploads/34f37754-9171-4da7-aa9a-8e558bdfb980.png"
+                  alt="Byte Matrix Technologies"
+                  className="w-80 h-80 lg:w-96 lg:h-96 mx-auto object-contain animate-fade-in"
+                  style={{
+                    filter: "drop-shadow(0 25px 50px rgba(59, 130, 246, 0.3))",
+                    animation: "fadeIn 1.2s ease-out, float 4s ease-in-out infinite 1.5s"
+                  }}
+                />
+                {/* Floating particles around logo */}
+                <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-ping" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-indigo-400 rounded-full opacity-60 animate-ping" style={{ animationDelay: '1.5s' }}></div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* About Content */}
-      <section className="py-24 bg-gradient-to-br from-gray-50/80 via-blue-50/40 to-purple-50/20 dark:from-gray-900/90 dark:via-blue-900/20 dark:to-purple-900/10 relative">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-20 animate-fade-in">
-              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold mb-8 text-lg shadow-xl">
-                <Target className="w-5 h-5 mr-3 animate-pulse" />
-                About Us
+            {/* Main Content */}
+            <div className="space-y-8 animate-slide-up">
+              <div>
+                <h1 className="text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-6 animate-gradient leading-tight">
+                  YOUR TECHNOLOGY PARTNER
+                </h1>
+                <div className="w-32 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto rounded-full animate-scale-in"></div>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg leading-tight">
-                TRANSFORMING BUSINESSES WITH TECHNOLOGY
-              </h2>
-              <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto font-medium text-shadow-sm">
-                We are your trusted partner in digital transformation, delivering innovative solutions that drive success.
+              
+              <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                "Connecting Your Digital Matrix" - We specialize in comprehensive IT infrastructure management, 
+                enterprise-grade hardware deployment, and strategic technology consulting.
               </p>
-              <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto mt-8 rounded-full shadow-lg animate-pulse"></div>
-            </div>
 
-            <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-              <div className="animate-slide-up">
-                <div className="relative group">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
-                  <img
-                    src="/lovable-uploads/32aed714-c356-4ff9-9e3d-017e2f1071af.png"
-                    alt="Modern technology workspace showcasing our expertise"
-                    className="relative w-full h-[400px] object-cover rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
-                    <Sparkles className="w-6 h-6 text-blue-600 animate-spin" />
-                  </div>
-                </div>
-              </div>
-              
-              <div className="space-y-8 animate-fade-in" style={{animationDelay: '0.3s'}}>
-                <div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-                    <Lightbulb className="w-8 h-8 text-yellow-500 mr-3 animate-pulse" />
-                    Our Mission
-                  </h3>
-                  <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-light">
-                    To empower businesses with cutting-edge technology solutions that enhance productivity, 
-                    streamline operations, and drive sustainable growth in an ever-evolving digital landscape.
-                  </p>
-                </div>
-                
-                <div className="grid sm:grid-cols-2 gap-6">
-                  {[
-                    { icon: CheckCircle, text: "Premium Quality Hardware", color: "text-green-600" },
-                    { icon: Shield, text: "24/7 Technical Support", color: "text-blue-600" },
-                    { icon: Zap, text: "Lightning Fast Solutions", color: "text-yellow-600" },
-                    { icon: Heart, text: "Customer-Centric Approach", color: "text-red-600" },
-                  ].map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-3 group hover:scale-105 transition-all duration-300">
-                      <div className={`w-12 h-12 ${feature.color.includes('green') ? 'bg-green-100 dark:bg-green-900/30' : feature.color.includes('blue') ? 'bg-blue-100 dark:bg-blue-900/30' : feature.color.includes('yellow') ? 'bg-yellow-100 dark:bg-yellow-900/30' : 'bg-red-100 dark:bg-red-900/30'} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:shadow-lg transition-all duration-300`}>
-                        <feature.icon className={`h-6 w-6 ${feature.color} dark:${feature.color.replace('600', '400')} group-hover:animate-pulse`} />
-                      </div>
-                      <span className="text-gray-700 dark:text-gray-300 font-medium group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
-                        {feature.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Why Choose Us */}
-            <div className="mb-20">
-              <div className="text-center mb-16 animate-fade-in">
-                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-8">
-                  ✨ Why Choose Byte Matrix Technologies?
-                </h3>
-                <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-light">
-                  Experience the difference with our premium technology solutions and exceptional service.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                {[
-                  {
-                    icon: Award,
-                    title: "Industry Excellence",
-                    description: "Recognized for delivering outstanding technology solutions with proven results",
-                    gradient: "from-blue-500 to-cyan-500"
-                  },
-                  {
-                    icon: Users,
-                    title: "Expert Team",
-                    description: "Skilled professionals dedicated to your success with years of experience",
-                    gradient: "from-purple-500 to-pink-500"
-                  },
-                  {
-                    icon: Zap,
-                    title: "Rapid Innovation",
-                    description: "Stay ahead with the latest technology trends and cutting-edge solutions",
-                    gradient: "from-orange-500 to-red-500"
-                  },
-                ].map((item, index) => (
-                  <Card
-                    key={index}
-                    className="group border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm overflow-hidden animate-scale-in"
-                    style={{animationDelay: `${index * 0.2}s`}}
-                  >
-                    <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-                    <CardHeader className="text-center pb-4 relative z-10">
-                      <div className={`w-20 h-20 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
-                        <item.icon className="h-10 w-10 text-white group-hover:animate-pulse" />
-                      </div>
-                      <CardTitle className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-gradient-primary transition-all duration-300">
-                        {item.title}
-                      </CardTitle>
-                      <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed font-light group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">
-                        {item.description}
-                      </CardDescription>
-                    </CardHeader>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Call to Action */}
-            <div className="text-center animate-fade-in">
-              <div className="bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-indigo-600/10 dark:from-blue-900/20 dark:via-purple-900/20 dark:to-indigo-900/20 rounded-3xl p-12 backdrop-blur-sm border border-blue-200/50 dark:border-blue-800/50 hover:border-blue-300/50 dark:hover:border-blue-700/50 transition-all duration-300">
-                <div className="flex justify-center mb-8">
-                  <div className="flex -space-x-4">
-                    <Star className="w-12 h-12 text-yellow-500 animate-pulse" />
-                    <Star className="w-12 h-12 text-yellow-500 animate-pulse" style={{animationDelay: '0.2s'}} />
-                    <Star className="w-12 h-12 text-yellow-500 animate-pulse" style={{animationDelay: '0.4s'}} />
-                  </div>
-                </div>
-                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Ready to Transform Your Business?
-                </h3>
-                <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto font-light">
-                  Join hundreds of satisfied clients who have revolutionized their operations with our technology solutions.
-                </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 font-semibold group"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105"
                   asChild
                 >
-                  <Link to="/contact">
-                    <Sparkles className="mr-3 h-6 w-6 group-hover:animate-spin" />
-                    Start Your Journey
-                    <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                  <Link to="/services">
+                    Explore Services
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-10 py-4 text-lg glass-card hover:bg-blue-50 dark:hover:bg-gray-800 border-2 border-blue-200 dark:border-blue-700 text-blue-600 dark:text-blue-400 transition-all duration-500 transform hover:-translate-y-2"
+                  asChild
+                >
+                  <Link to="/contact">Get In Touch</Link>
                 </Button>
               </div>
             </div>
@@ -381,14 +190,141 @@ const About = () => {
         </div>
       </section>
 
-      {/* Scroll to Top Button */}
-      <Button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 z-50 group hover:scale-110"
-        size="sm"
-      >
-        <ArrowRight className="h-6 w-6 transform -rotate-90 group-hover:animate-pulse" />
-      </Button>
+      {/* Features Section */}
+      <section className="py-20 relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-6">
+              Why Choose <span className="text-gradient-primary font-semibold">Byte Matrix?</span>
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Experience the difference with our cutting-edge solutions and dedicated expertise
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Server,
+                title: "Enterprise Solutions",
+                description: "Scalable infrastructure designed for growth and reliability",
+                gradient: "from-blue-500 to-cyan-500"
+              },
+              {
+                icon: Shield,
+                title: "Advanced Security",
+                description: "Military-grade protection for your digital assets",
+                gradient: "from-purple-500 to-pink-500"
+              },
+              {
+                icon: Clock,
+                title: "24/7 Support",
+                description: "Round-the-clock monitoring and instant response",
+                gradient: "from-green-500 to-emerald-500"
+              },
+              {
+                icon: Users,
+                title: "Expert Team",
+                description: "Certified professionals with decades of experience",
+                gradient: "from-orange-500 to-red-500"
+              },
+              {
+                icon: Award,
+                title: "Industry Leading",
+                description: "Award-winning solutions trusted by Fortune 500 companies",
+                gradient: "from-indigo-500 to-purple-500"
+              },
+              {
+                icon: Zap,
+                title: "Lightning Fast",
+                description: "Optimized performance that exceeds expectations",
+                gradient: "from-yellow-500 to-orange-500"
+              }
+            ].map((feature, index) => (
+              <Card 
+                key={index} 
+                className="glass-card hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 animate-fade-in group"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-8 text-center">
+                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${feature.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-indigo-600/10"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <h2 className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-8">
+              Ready to Transform Your <span className="text-gradient-primary font-semibold">Digital Future?</span>
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who trust Byte Matrix Technologies for their critical IT infrastructure
+            </p>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-12 py-4 text-lg shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 animate-pulse-slow"
+              asChild
+            >
+              <Link to="/contact">
+                Start Your Journey Today
+                <ArrowRight className="ml-2 h-6 w-6" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-950 text-gray-400 py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-gray-950"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
+            <div className="flex flex-col items-center md:items-start space-y-4 mb-8 md:mb-0">
+              <img
+                src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
+                alt="Byte Matrix Technologies"
+                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+              />
+              <p className="text-blue-400 font-light italic">"Connecting Your Digital Matrix"</p>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-sm font-light">© 2024 Byte Matrix Technologies. All rights reserved.</p>
+              <p className="text-sm mt-2 text-gray-500">Expert IT Solutions for Modern Businesses</p>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center">
+            <div className="flex justify-center space-x-8">
+              {[
+                { name: "Services", path: "/services" },
+                { name: "Contact", path: "/contact" },
+              ].map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className="text-gray-400 hover:text-blue-400 transition-all duration-300 relative group"
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
