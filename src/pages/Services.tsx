@@ -19,6 +19,7 @@ import {
   Sun,
   Menu,
   X,
+  Sparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -47,28 +48,35 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 font-light transition-colors duration-300 relative">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 font-roboto transition-all duration-700 relative">
+      {/* Enhanced Background Elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-gradient-to-r from-indigo-400/15 to-blue-400/15 rounded-full blur-2xl animate-float"></div>
+      </div>
+
       {/* Background Logo */}
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.03] dark:opacity-[0.05]">
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.02] dark:opacity-[0.03]">
         <img
           src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
           alt="Background Logo"
-          className="w-[70vw] h-auto max-w-4xl object-contain transform rotate-0"
+          className="w-[80vw] h-auto max-w-6xl object-contain transform"
         />
       </div>
 
-      {/* Header */}
-      <header className="border-b border-gray-100/50 dark:border-gray-800/50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+      {/* Enhanced Header */}
+      <header className="border-b border-gray-100/30 dark:border-gray-800/30 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl sticky top-0 z-50 shadow-xl">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center space-x-3 group">
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="BYTE MATRIX TECHNOLOGIES"
-                className="h-20 w-auto drop-shadow-lg transition-transform hover:scale-105"
+                className="h-20 w-auto drop-shadow-2xl transition-all duration-500 group-hover:scale-110"
                 loading="eager"
                 style={{
-                  filter: "contrast(1.2) saturate(1.3) brightness(1.1) drop-shadow(0 8px 32px rgba(59, 130, 246, 0.25))",
+                  filter: "contrast(1.3) saturate(1.4) brightness(1.1) drop-shadow(0 12px 24px rgba(59, 130, 246, 0.3))",
                 }}
               />
             </Link>
@@ -77,30 +85,30 @@ const Services = () => {
             <nav className="hidden md:flex items-center space-x-8">
               <Link
                 to="/"
-                className="text-gray-700 dark:text-gray-300 hover:text-gradient-primary transition-all duration-300 font-medium text-lg relative group"
+                className="text-gray-700 dark:text-gray-300 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all duration-500 font-medium text-lg relative group"
               >
                 About
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
               </Link>
               <Link
                 to="/services"
                 className="text-gradient-primary font-semibold text-lg relative"
               >
                 Services
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"></span>
+                <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></span>
               </Link>
               <Link
                 to="/contact"
-                className="text-gray-700 dark:text-gray-300 hover:text-gradient-primary transition-all duration-300 font-medium text-lg relative group"
+                className="text-gray-700 dark:text-gray-300 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all duration-500 font-medium text-lg relative group"
               >
                 Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
               </Link>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={toggleDarkMode}
-                className="ml-4 p-3"
+                className="ml-4 p-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-800 dark:hover:to-gray-700 transition-all duration-300 rounded-full"
               >
                 {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
               </Button>
@@ -112,7 +120,7 @@ const Services = () => {
                 variant="ghost"
                 size="sm"
                 onClick={toggleMenu}
-                className="p-2"
+                className="p-2 rounded-full"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
@@ -121,8 +129,8 @@ const Services = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700 pt-4">
-              <div className="flex flex-col space-y-4">
+            <div className="md:hidden mt-6 pb-6 border-t border-gray-200 dark:border-gray-700 pt-6 animate-fade-in">
+              <div className="flex flex-col space-y-6">
                 <Link
                   to="/"
                   className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
@@ -141,7 +149,7 @@ const Services = () => {
                   variant="ghost"
                   size="sm"
                   onClick={toggleDarkMode}
-                  className="w-fit p-3"
+                  className="w-fit p-3 rounded-full"
                 >
                   {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
                 </Button>
@@ -151,29 +159,29 @@ const Services = () => {
         </div>
       </header>
 
-      {/* Services Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-indigo-50/40 dark:from-gray-900/90 dark:via-blue-900/20 dark:to-purple-900/10 relative">
+      {/* Enhanced Services Section */}
+      <section className="py-28 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-indigo-50/20 dark:from-gray-900/95 dark:via-blue-900/10 dark:to-purple-900/5 relative">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-20 animate-fade-in">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold mb-8 text-lg shadow-xl">
-              <Star className="w-5 h-5 mr-3" />
+          <div className="text-center mb-24 animate-fade-in">
+            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg shadow-lg">
+              <Sparkles className="w-5 h-5 mr-3" />
               Our Services
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-primary mb-8 tracking-tight text-shadow-lg leading-tight uppercase">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient-primary mb-10 tracking-tight text-shadow-lg leading-tight uppercase">
               COMPLETE TECHNOLOGY SOLUTIONS
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto font-medium text-shadow-sm">
-              From infrastructure to devices, we deliver comprehensive tech solutions tailored to your needs
+            <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto font-light text-shadow-sm leading-relaxed">
+              From infrastructure to devices, we deliver comprehensive tech solutions tailored to your unique business needs
             </p>
-            <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto mt-8 rounded-full shadow-lg"></div>
+            <div className="w-40 h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto mt-10 rounded-full shadow-lg"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24">
             {[
               {
                 icon: Server,
                 title: "IT Services",
-                description: "Professional IT infrastructure and support services",
+                description: "Professional IT infrastructure and support services with cutting-edge solutions",
                 image: "/lovable-uploads/8a8cda77-4bf8-4392-97fc-d1cb7057e068.png",
                 features: [
                   "Network Setup & Configuration",
@@ -182,11 +190,12 @@ const Services = () => {
                   "Cloud Services Integration",
                   "Cybersecurity Implementation",
                 ],
+                gradient: "from-blue-500 to-cyan-500"
               },
               {
                 icon: HardDrive,
                 title: "Hardware Solutions",
-                description: "Enterprise-grade hardware for optimal performance",
+                description: "Enterprise-grade hardware for optimal performance and reliability",
                 image: "/lovable-uploads/fab2577d-98ee-4879-ac95-c1a0ade0afa7.png",
                 features: [
                   "Enterprise Servers",
@@ -195,11 +204,12 @@ const Services = () => {
                   "Custom PC Builds",
                   "Hardware Installation",
                 ],
+                gradient: "from-purple-500 to-pink-500"
               },
               {
                 icon: Computer,
                 title: "Desktop Computers",
-                description: "High-performance desktop systems for every need",
+                description: "High-performance desktop systems for every professional need",
                 image: "/lovable-uploads/f858d253-338e-48f5-bfea-74af9143bbcd.png",
                 features: [
                   "Business Desktops",
@@ -208,11 +218,12 @@ const Services = () => {
                   "CAD Workstations",
                   "Mini PCs & Thin Clients",
                 ],
+                gradient: "from-green-500 to-emerald-500"
               },
               {
                 icon: Computer,
                 title: "Laptops",
-                description: "Premium portable computing solutions",
+                description: "Premium portable computing solutions for modern professionals",
                 image: "/lovable-uploads/f1e6cb6e-37c8-4aac-addb-2b38d4f23412.png",
                 features: [
                   "Business Laptops",
@@ -221,11 +232,12 @@ const Services = () => {
                   "Ultrabooks & 2-in-1s",
                   "MacBooks & Surface Devices",
                 ],
+                gradient: "from-orange-500 to-red-500"
               },
               {
                 icon: Printer,
                 title: "Printers",
-                description: "Professional printing solutions for any environment",
+                description: "Professional printing solutions for any business environment",
                 image: "/lovable-uploads/a80fa3b7-bf9b-4d7c-8af1-a74162bae6a6.png",
                 features: [
                   "Laser Printers",
@@ -234,11 +246,12 @@ const Services = () => {
                   "Large Format Plotters",
                   "3D Printers",
                 ],
+                gradient: "from-indigo-500 to-purple-500"
               },
               {
                 icon: Shield,
                 title: "Tech Support",
-                description: "Comprehensive technical support and maintenance",
+                description: "Comprehensive technical support and maintenance services",
                 image: "/lovable-uploads/d29f94dc-9102-4701-adec-42bc48de5bfb.png",
                 features: [
                   "24/7 Remote Support",
@@ -247,34 +260,39 @@ const Services = () => {
                   "Virus Removal",
                   "Training & Support",
                 ],
+                gradient: "from-yellow-500 to-orange-500"
               },
             ].map((service, index) => (
               <Card
                 key={index}
-                className="group border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm overflow-hidden"
+                className="group border-0 shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 hover:scale-105 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl overflow-hidden animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 via-blue-50/0 to-blue-50/50 dark:from-blue-900/0 dark:via-blue-900/0 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`}></div>
                 <div className="relative z-10">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-52 object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
                   <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900 dark:to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-500 transform group-hover:scale-110">
-                      <service.icon className="h-8 w-8 text-blue-600 dark:text-blue-400 group-hover:text-white transition-colors duration-500" />
+                    <div className={`w-18 h-18 bg-gradient-to-br ${service.gradient} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 transition-all duration-500 shadow-xl`}>
+                      <service.icon className="h-10 w-10 text-white" />
                     </div>
-                    <CardTitle className="text-xl font-light text-gray-900 dark:text-white mb-2">{service.title}</CardTitle>
-                    <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed font-extralight">
+                    <CardTitle className="text-2xl font-light text-gray-900 dark:text-white mb-3">{service.title}</CardTitle>
+                    <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed font-light text-lg">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       {service.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center space-x-3">
-                          <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full flex-shrink-0"></div>
-                          <span className="text-gray-700 dark:text-gray-300 text-sm font-light">{feature}</span>
+                        <div key={idx} className="flex items-center space-x-4">
+                          <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex-shrink-0"></div>
+                          <span className="text-gray-700 dark:text-gray-300 font-light">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -284,56 +302,56 @@ const Services = () => {
             ))}
           </div>
 
-          {/* Customer Support Excellence */}
-          <div className="mb-20">
-            <div className="bg-gradient-to-br from-blue-50 via-indigo-50/50 to-purple-50/30 dark:from-blue-900/20 dark:via-indigo-900/15 dark:to-purple-900/15 rounded-3xl p-8 lg:p-16 shadow-2xl border border-blue-100/50 dark:border-blue-800/50 overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Enhanced Customer Support Section */}
+          <div className="mb-24">
+            <div className="bg-gradient-to-br from-blue-50/80 via-indigo-50/60 to-purple-50/40 dark:from-blue-900/30 dark:via-indigo-900/20 dark:to-purple-900/20 rounded-3xl p-10 lg:p-20 shadow-2xl border border-blue-100/50 dark:border-blue-800/50 overflow-hidden backdrop-blur-sm">
+              <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div className="order-2 lg:order-1">
-                  <div className="inline-flex items-center px-4 py-2 bg-blue-600 rounded-full text-white font-light mb-6">
-                    <Headphones className="w-4 h-4 mr-2" />
+                  <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg">
+                    <Headphones className="w-5 h-5 mr-3" />
                     Customer Support Excellence
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-extralight text-gray-900 dark:text-white mb-6 tracking-tight">
+                  <h3 className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-8 tracking-tight">
                     24/7 Professional Support
                   </h3>
-                  <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8 font-extralight">
+                  <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-10 font-light">
                     Our dedicated support specialists are available around the clock to assist you with any technical
                     challenges. From troubleshooting to guidance, we provide personalized support that keeps your
-                    business running smoothly.
+                    business running smoothly and efficiently.
                   </p>
-                  <div className="grid sm:grid-cols-2 gap-4 mb-10">
+                  <div className="grid sm:grid-cols-2 gap-6 mb-12">
                     {[
                       "24/7 Live Support",
                       "Expert Technical Guidance",
                       "Remote Troubleshooting",
                       "Priority Response Times",
                     ].map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                          <CheckCircle className="h-4 w-4 text-white" />
+                      <div key={idx} className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                          <CheckCircle className="h-5 w-5 text-white" />
                         </div>
-                        <span className="text-gray-700 dark:text-gray-300 font-light">{feature}</span>
+                        <span className="text-gray-700 dark:text-gray-300 font-light text-lg">{feature}</span>
                       </div>
                     ))}
                   </div>
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 font-light"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-6 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 font-light text-lg rounded-2xl"
                     asChild
                   >
                     <Link to="/contact">
-                      <Phone className="mr-2 h-5 w-5" />
+                      <Phone className="mr-3 h-6 w-6" />
                       Get Support Now
                     </Link>
                   </Button>
                 </div>
                 <div className="order-1 lg:order-2">
                   <div className="relative">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl blur-2xl"></div>
+                    <div className="absolute -inset-6 bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-3xl blur-3xl"></div>
                     <img
                       src="/lovable-uploads/bb69a6e7-18eb-48d3-bd42-b46cd197bcf3.png"
                       alt="Professional customer support specialist providing technical assistance"
-                      className="relative w-full h-[400px] object-cover rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105"
+                      className="relative w-full h-[450px] object-cover rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105"
                       loading="lazy"
                     />
                   </div>
@@ -345,11 +363,11 @@ const Services = () => {
           <div className="text-center">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 font-light"
+              className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-16 py-8 text-2xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-3 hover:scale-110 font-light rounded-2xl"
               asChild
             >
               <Link to="/contact">
-                <ArrowRight className="mr-2 h-5 w-5" />
+                <ArrowRight className="mr-4 h-8 w-8" />
                 Get Started Today
               </Link>
             </Button>
@@ -360,10 +378,10 @@ const Services = () => {
       {/* Scroll to Top Button */}
       <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
+        className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-110 z-50"
         size="sm"
       >
-        <ArrowRight className="h-5 w-5 transform -rotate-90" />
+        <ArrowRight className="h-6 w-6 transform -rotate-90" />
       </Button>
     </div>
   );
