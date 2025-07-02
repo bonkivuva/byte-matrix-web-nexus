@@ -94,9 +94,12 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-roboto;
     position: relative;
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.02) 0%, rgba(147, 51, 234, 0.02) 50%, rgba(99, 102, 241, 0.02) 100%);
+    font-family: 'Roboto', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .dark body {
@@ -125,16 +128,16 @@ All colors MUST be HSL.
   }
 }
 
-/* Enhanced typography */
+/* Enhanced typography with Roboto */
 @layer utilities {
   .text-gradient-primary {
-    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent font-roboto;
     background-size: 200% 200%;
     animation: gradient-shift 6s ease-in-out infinite;
   }
   
   .text-gradient-secondary {
-    @apply bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent font-roboto;
     background-size: 200% 200%;
     animation: gradient-shift 8s ease-in-out infinite reverse;
   }
