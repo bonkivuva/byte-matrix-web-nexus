@@ -25,6 +25,7 @@
     <meta name="twitter:title" content="Byte Matrix Technologies - Professional IT Solutions" />
     <meta name="twitter:description" content="Professional IT services, enterprise hardware solutions, and 24/7 technical support." />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:site" content="@ByteMatrixTech" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -39,34 +40,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="#2563eb" />
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href,
+        send_page_view: true
+      });
+
+      // Enhanced ecommerce and event tracking
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        custom_map: {
+          'custom_parameter_1': 'lead_source',
+          'custom_parameter_2': 'service_interest'
+        }
+      });
+    </script>
+
+    <!-- Microsoft Clarity (Alternative Analytics) -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
+    </script>
+    
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "name": "Byte Matrix Technologies",
-      "description": "Professional IT services and hardware solutions",
+      "description": "Professional IT services and hardware solutions for businesses",
       "url": "https://bytematrixtech.com",
       "logo": "https://bytematrixtech.com/logo.png",
+      "image": "https://lovable.dev/opengraph-image-p98pqg.png",
+      "telephone": "+254724367794",
+      "email": "bytematrixtechnologies@gmail.com",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-800-BYTETECH",
-        "contactType": "Customer Service"
+        "telephone": "+254724367794",
+        "contactType": "Customer Service",
+        "availableLanguage": "English",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday", 
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
       },
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "US"
+        "addressCountry": "KE"
       },
+      "serviceType": [
+        "IT Consulting",
+        "Hardware Solutions", 
+        "Technical Support",
+        "Cloud Services",
+        "Cybersecurity"
+      ],
+      "areaServed": "Global",
+      "priceRange": "$$",
       "sameAs": [
-        "https://linkedin.com/company/byte-matrix-technologies",
-        "https://twitter.com/bytematrix_tech"
+        "https://x.com/ByteMatrixTech",
+        "https://www.facebook.com/share/1BSjKFRCUd/",
+        "https://www.instagram.com/byte_matrix_technologies"
       ]
     }
     </script>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/main.tsx" as="script">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Cookie Consent (GDPR Compliance) -->
+    <script>
+      // Simple cookie consent implementation
+      if (!localStorage.getItem('cookieConsent')) {
+        const banner = document.createElement('div');
+        banner.innerHTML = `
+          <div style="position: fixed; bottom: 0; left: 0; right: 0; background: #1e3a8a; color: white; padding: 16px; z-index: 9999; text-align: center;">
+            <p style="margin: 0 0 8px 0;">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <button onclick="acceptCookies()" style="background: white; color: #1e3a8a; border: none; padding: 8px 16px; border-radius: 4px; margin-right: 8px; cursor: pointer;">Accept</button>
+            <button onclick="declineCookies()" style="background: transparent; color: white; border: 1px solid white; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Decline</button>
+          </div>
+        `;
+        document.body.appendChild(banner);
+      }
+
+      window.acceptCookies = function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        document.querySelector('[style*="position: fixed"]').remove();
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      };
+
+      window.declineCookies = function() {
+        localStorage.setItem('cookieConsent', 'declined');
+        document.querySelector('[style*="position: fixed"]').remove();
+      };
+    </script>
   </body>
 </html>

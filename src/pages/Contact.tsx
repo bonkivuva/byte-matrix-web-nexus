@@ -21,6 +21,8 @@ import { useState, useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import SEOHead from "@/components/SEOHead";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 const Contact = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -44,6 +46,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 font-roboto transition-all duration-700 relative overflow-hidden">
+      <SEOHead 
+        title="Contact Byte Matrix Technologies - Get Your Free IT Consultation"
+        description="Contact our IT experts for professional technology solutions. Get free consultation, 24/7 support, and transform your business with our comprehensive IT services."
+        keywords="contact IT services, free IT consultation, technology support, professional IT help, enterprise solutions contact"
+      />
+
       {/* Premium animated background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-[1000px] h-[1000px] bg-gradient-to-br from-blue-400/6 to-cyan-400/6 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -174,6 +182,11 @@ const Contact = () => {
                 Connect with our innovation experts today. We're here to elevate your technology experience to extraordinary heights and create solutions that exceed your wildest expectations.
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto mt-8 rounded-full shadow-lg"></div>
+            </div>
+
+            {/* Lead Capture Form */}
+            <div className="mb-20 animate-slide-up">
+              <LeadCaptureForm />
             </div>
 
             {/* Enhanced Working Hours Card */}
