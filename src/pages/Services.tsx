@@ -1,390 +1,298 @@
-import {
-  ArrowRight,
-  CheckCircle,
-  Computer,
-  HardDrive,
-  Mail,
-  Phone,
-  Printer,
-  Server,
-  Shield,
-  Zap,
-  Star,
-  Users,
-  Award,
-  Lightbulb,
-  Headphones,
-  Moon,
-  Sun,
-  Menu,
-  X,
-  Sparkles,
-  Play,
-  Target,
-  Rocket,
-} from "lucide-react";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 
+import { ArrowRight, CheckCircle, Computer, HardDrive, Mail, Phone, Printer, Server, Shield, Zap, Star, Users, Award, Lightbulb, Headphones, Sparkles, Play, Target, Rocket, TrendingUp, Clock, Award as AwardIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import ProfessionalHeader from "@/components/ProfessionalHeader";
 
 const Services = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
+  const services = [
+    {
+      icon: Server,
+      title: "IT Infrastructure & Support",
+      description: "Increase productivity by 40% with our comprehensive IT infrastructure management and 24/7 support services",
+      image: "/lovable-uploads/8a8cda77-4bf8-4392-97fc-d1cb7057e068.png",
+      benefits: [
+        "99.9% uptime guarantee",
+        "24/7 monitoring & support",
+        "Scalable cloud solutions",
+        "Advanced cybersecurity",
+        "Cost reduction up to 30%"
+      ],
+      gradient: "from-blue-600 to-blue-700"
+    },
+    {
+      icon: HardDrive,
+      title: "Enterprise Hardware Solutions",
+      description: "Boost performance by 50% with our enterprise-grade hardware solutions tailored for your business needs",
+      image: "/lovable-uploads/fab2577d-98ee-4879-ac95-c1a0ade0afa7.png",
+      benefits: [
+        "Latest enterprise technology",
+        "Custom configurations",
+        "Extended warranty coverage",
+        "Professional installation",
+        "Performance optimization"
+      ],
+      gradient: "from-indigo-600 to-purple-600"
+    },
+    {
+      icon: Computer,
+      title: "Business Desktop Solutions",
+      description: "Enhance workflow efficiency by 35% with high-performance desktop systems designed for professional environments",
+      image: "/lovable-uploads/f858d253-338e-48f5-bfea-74af9143bbcd.png",
+      benefits: [
+        "Business-grade reliability",
+        "Custom specifications",
+        "Multi-monitor support",
+        "Energy-efficient designs",
+        "3-year warranty included"
+      ],
+      gradient: "from-green-600 to-emerald-600"
+    },
+    {
+      icon: Computer,
+      title: "Professional Laptops",
+      description: "Increase mobility and productivity by 45% with our premium laptop solutions for modern professionals",
+      image: "/lovable-uploads/f1e6cb6e-37c8-4aac-addb-2b38d4f23412.png",
+      benefits: [
+        "Ultra-portable designs",
+        "All-day battery life",
+        "Enterprise security features",
+        "SSD storage standard",
+        "Business support included"
+      ],
+      gradient: "from-orange-600 to-red-600"
+    },
+    {
+      icon: Printer,
+      title: "Printing & Document Solutions",
+      description: "Reduce printing costs by 25% while improving document workflow with our comprehensive printing solutions",
+      image: "/lovable-uploads/a80fa3b7-bf9b-4d7c-8af1-a74162bae6a6.png",
+      benefits: [
+        "Cost-effective printing",
+        "Document management",
+        "Wireless connectivity",
+        "Eco-friendly options",
+        "Maintenance included"
+      ],
+      gradient: "from-purple-600 to-pink-600"
+    },
+    {
+      icon: Shield,
+      title: "Technical Support & Maintenance",
+      description: "Minimize downtime by 80% with our proactive technical support and comprehensive maintenance services",
+      image: "/lovable-uploads/d29f94dc-9102-4701-adec-42bc48de5bfb.png",
+      benefits: [
+        "Proactive monitoring",
+        "Remote troubleshooting",
+        "On-site repairs available",
+        "Preventive maintenance",
+        "Expert consultation"
+      ],
+      gradient: "from-yellow-600 to-orange-600"
     }
-  }, [isDarkMode]);
+  ];
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const stats = [
+    { icon: Users, value: "500+", label: "Happy Clients", description: "Businesses trust our solutions" },
+    { icon: Clock, value: "99.9%", label: "Uptime Guarantee", description: "Reliable service delivery" },
+    { icon: TrendingUp, value: "40%", label: "Productivity Boost", description: "Average client improvement" },
+    { icon: AwardIcon, value: "24/7", label: "Support Available", description: "Round-the-clock assistance" }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 font-roboto transition-all duration-700 relative overflow-hidden">
-      {/* Advanced Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-[900px] h-[900px] bg-gradient-to-br from-blue-400/8 to-cyan-400/8 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute -bottom-40 -left-40 w-[900px] h-[900px] bg-gradient-to-tr from-purple-400/8 to-pink-400/8 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-gradient-to-r from-indigo-400/6 to-blue-400/6 rounded-full blur-2xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-emerald-400/6 to-teal-400/6 rounded-full blur-2xl animate-float" style={{ animationDelay: '3s' }}></div>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-50 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900">
+      <ProfessionalHeader currentPage="services" />
 
-      {/* Premium Header - without logo */}
-      <header className="border-b border-gray-100/20 dark:border-gray-800/20 bg-white/85 dark:bg-gray-900/85 backdrop-blur-2xl sticky top-0 z-50 shadow-2xl">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-4 group">
-              <h1 className="text-2xl font-bold text-gradient-primary">Byte Matrix Technologies</h1>
-            </Link>
+      {/* Hero Section */}
+      <section className="section-spacing bg-gradient-to-br from-blue-50/50 via-white to-neutral-50 dark:from-neutral-900 dark:via-blue-900/5 dark:to-neutral-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-neutral-100 dark:bg-grid-neutral-800 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.05))]"></div>
+        
+        <div className="container-professional relative">
+          <div className="text-center max-w-4xl mx-auto animate-fade-up">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium mb-6">
+              <Rocket className="w-4 h-4 mr-2" />
+              Professional IT Solutions
+            </div>
             
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link
-                to="/"
-                className="text-gray-700 dark:text-gray-300 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all duration-500 font-medium text-lg relative group"
-              >
-                About
-                <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
-              </Link>
-              <Link
-                to="/services"
-                className="text-gradient-primary font-semibold text-lg relative"
-              >
-                Services
-                <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg"></span>
-              </Link>
-              <Link
-                to="/portfolio"
-                className="text-gray-700 dark:text-gray-300 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all duration-500 font-medium text-lg relative group"
-              >
-                Portfolio
-                <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
-              </Link>
-              <Link
-                to="/contact"
-                className="text-gray-700 dark:text-gray-300 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all duration-500 font-medium text-lg relative group"
-              >
-                Contact
-                <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
-              </Link>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleDarkMode}
-                className="ml-4 p-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-800 dark:hover:to-gray-700 transition-all duration-300 rounded-full"
-              >
-                {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
-              </Button>
-            </nav>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleMenu}
-                className="p-2 rounded-full"
-              >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </Button>
-            </div>
-          </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden mt-6 pb-6 border-t border-gray-200 dark:border-gray-700 pt-6 animate-fade-in">
-              <div className="flex flex-col space-y-6">
-                <Link
-                  to="/"
-                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  About
-                </Link>
-                <Link
-                  to="/portfolio"
-                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Portfolio
-                </Link>
-                <Link
-                  to="/contact"
-                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact
-                </Link>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={toggleDarkMode}
-                  className="w-fit p-3 rounded-full"
-                >
-                  {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
-                </Button>
-              </div>
-            </div>
-          )}
-        </div>
-      </header>
-
-      {/* Hero Services Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-indigo-50/10 dark:from-gray-900/95 dark:via-blue-900/5 dark:to-purple-900/5 relative">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-20 animate-fade-in">
-            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg shadow-lg">
-              <Rocket className="w-6 h-6 mr-3 animate-pulse" />
-              Our Premium Services
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gradient-primary mb-8 tracking-tight leading-tight">
-              COMPLETE TECHNOLOGY SOLUTIONS
+            <h1 className="text-gradient-brand mb-6">
+              Complete Technology Solutions That Drive Results
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-5xl mx-auto font-light leading-relaxed">
-              From infrastructure to devices, we deliver comprehensive tech solutions tailored to your unique business needs with unmatched expertise and innovation
+            
+            <p className="text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed mb-8 max-w-3xl mx-auto">
+              Transform your business with our comprehensive IT services. From infrastructure to support, 
+              we deliver solutions that increase productivity, reduce costs, and ensure reliable performance.
             </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto mt-8 rounded-full shadow-lg"></div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Button asChild className="btn-professional text-lg px-8 py-4">
+                <Link to="/contact">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Get Free Consultation
+                </Link>
+              </Button>
+              <Button variant="outline" asChild className="btn-professional-outline text-lg px-8 py-4">
+                <Link to="/portfolio">
+                  <Play className="mr-2 h-5 w-5" />
+                  View Our Work
+                </Link>
+              </Button>
+            </div>
+            
+            {/* Stats Grid */}
+            <div className="grid-professional-4 mt-16">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center animate-scale-in-center" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-xl mb-3">
+                    <stat.icon className="w-6 h-6" />
+                  </div>
+                  <div className="text-3xl font-bold text-gradient-brand mb-1">{stat.value}</div>
+                  <div className="font-semibold text-neutral-900 dark:text-white mb-1">{stat.label}</div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-400">{stat.description}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="section-spacing">
+        <div className="container-professional">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="text-gradient-brand mb-4">Our Professional Services</h2>
+            <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+              Comprehensive technology solutions designed to enhance your business performance and efficiency
+            </p>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {[
-              {
-                icon: Server,
-                title: "IT Services",
-                description: "Professional IT infrastructure and support services with cutting-edge solutions",
-                image: "/lovable-uploads/8a8cda77-4bf8-4392-97fc-d1cb7057e068.png",
-                features: [
-                  "Network Setup & Configuration",
-                  "System Administration",
-                  "Data Backup & Recovery",
-                  "Cloud Services Integration",
-                  "Cybersecurity Implementation",
-                ],
-                gradient: "from-blue-500 to-cyan-500",
-                delay: "0s"
-              },
-              {
-                icon: HardDrive,
-                title: "Hardware Solutions",
-                description: "Enterprise-grade hardware for optimal performance and reliability",
-                image: "/lovable-uploads/fab2577d-98ee-4879-ac95-c1a0ade0afa7.png",
-                features: [
-                  "Enterprise Servers",
-                  "Networking Equipment",
-                  "Storage Solutions",
-                  "Custom PC Builds",
-                  "Hardware Installation",
-                ],
-                gradient: "from-purple-500 to-pink-500",
-                delay: "0.1s"
-              },
-              {
-                icon: Computer,
-                title: "Desktop Computers",
-                description: "High-performance desktop systems for every professional need",
-                image: "/lovable-uploads/f858d253-338e-48f5-bfea-74af9143bbcd.png",
-                features: [
-                  "Business Desktops",
-                  "Gaming PCs",
-                  "All-in-One Systems",
-                  "CAD Workstations",
-                  "Mini PCs & Thin Clients",
-                ],
-                gradient: "from-green-500 to-emerald-500",
-                delay: "0.2s"
-              },
-              {
-                icon: Computer,
-                title: "Laptops",
-                description: "Premium portable computing solutions for modern professionals",
-                image: "/lovable-uploads/f1e6cb6e-37c8-4aac-addb-2b38d4f23412.png",
-                features: [
-                  "Business Laptops",
-                  "Student & Budget Options",
-                  "Gaming Laptops",
-                  "Ultrabooks & 2-in-1s",
-                  "MacBooks & Surface Devices",
-                ],
-                gradient: "from-orange-500 to-red-500",
-                delay: "0.3s"
-              },
-              {
-                icon: Printer,
-                title: "Printers",
-                description: "Professional printing solutions for any business environment",
-                image: "/lovable-uploads/a80fa3b7-bf9b-4d7c-8af1-a74162bae6a6.png",
-                features: [
-                  "Laser Printers",
-                  "Inkjet Printers",
-                  "Multifunction Devices",
-                  "Large Format Plotters",
-                  "3D Printers",
-                ],
-                gradient: "from-indigo-500 to-purple-500",
-                delay: "0.4s"
-              },
-              {
-                icon: Shield,
-                title: "Tech Support",
-                description: "Comprehensive technical support and maintenance services",
-                image: "/lovable-uploads/d29f94dc-9102-4701-adec-42bc48de5bfb.png",
-                features: [
-                  "24/7 Remote Support",
-                  "On-site Repair",
-                  "Software Installation",
-                  "Virus Removal",
-                  "Training & Support",
-                ],
-                gradient: "from-yellow-500 to-orange-500",
-                delay: "0.5s"
-              },
-            ].map((service, index) => (
+          <div className="grid-professional-3">
+            {services.map((service, index) => (
               <Card
                 key={index}
-                className="group border-0 shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-6 hover:scale-105 bg-white/85 dark:bg-gray-800/85 backdrop-blur-xl overflow-hidden animate-fade-in relative"
-                style={{ animationDelay: service.delay }}
+                className="card-professional group overflow-hidden animate-fade-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`}></div>
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div className="relative z-10">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent group-hover:from-black/50 transition-all duration-700"></div>
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                      <Play className="h-8 w-8 text-white" />
-                    </div>
+                <div className="relative overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  <div className={`absolute top-4 right-4 w-12 h-12 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center opacity-90`}>
+                    <service.icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardHeader className="text-center pb-4">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 transition-all duration-500 shadow-xl group-hover:shadow-2xl`}>
-                      <service.icon className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">{service.title}</CardTitle>
-                    <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="space-y-3">
-                      {service.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center space-x-3 group-hover:translate-x-2 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
-                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
-                          <span className="text-gray-700 dark:text-gray-300 font-light text-sm">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
                 </div>
-              </Card>
-            ))}
-          </div>
 
-          {/* Premium Customer Support Section */}
-          <div className="mb-20">
-            <div className="bg-gradient-to-br from-blue-50/60 via-indigo-50/40 to-purple-50/30 dark:from-blue-900/20 dark:via-indigo-900/15 dark:to-purple-900/15 rounded-3xl p-12 lg:p-16 shadow-2xl border border-blue-100/30 dark:border-blue-800/30 overflow-hidden backdrop-blur-sm relative">
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 opacity-50"></div>
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="order-2 lg:order-1">
-                  <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-6 text-lg">
-                    <Target className="w-5 h-5 mr-3 animate-pulse" />
-                    Customer Support Excellence
-                  </div>
-                  <h3 className="text-3xl lg:text-4xl font-light text-gray-900 dark:text-white mb-6 tracking-tight">
-                    24/7 Professional Support
-                  </h3>
-                  <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8 font-light">
-                    Our dedicated support specialists are available around the clock to assist you with any technical
-                    challenges. From troubleshooting to guidance, we provide personalized support that keeps your
-                    business running smoothly and efficiently with guaranteed response times.
-                  </p>
-                  <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                    {[
-                      "24/7 Live Support",
-                      "Expert Technical Guidance",
-                      "Remote Troubleshooting",
-                      "Priority Response Times",
-                    ].map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-3 animate-fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>
-                        <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                          <CheckCircle className="h-4 w-4 text-white" />
-                        </div>
-                        <span className="text-gray-700 dark:text-gray-300 font-light">{feature}</span>
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-neutral-900 dark:text-white group-hover:text-blue-600 transition-colors duration-300">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent>
+                  <div className="space-y-3">
+                    {service.benefits.map((benefit, idx) => (
+                      <div key={idx} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0"></div>
+                        <span className="text-sm text-neutral-700 dark:text-neutral-300">{benefit}</span>
                       </div>
                     ))}
                   </div>
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-6 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 font-light text-lg rounded-2xl group"
-                    asChild
-                  >
-                    <Link to="/contact">
-                      <Headphones className="mr-3 h-6 w-6 group-hover:animate-pulse" />
-                      Get Support Now
-                    </Link>
-                  </Button>
-                </div>
-                <div className="order-1 lg:order-2">
-                  <div className="relative">
-                    <div className="absolute -inset-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-3xl animate-pulse-slow"></div>
-                    <img
-                      src="/lovable-uploads/bb69a6e7-18eb-48d3-bd42-b46cd197bcf3.png"
-                      alt="Professional customer support specialist providing technical assistance"
-                      className="relative w-full h-[400px] object-cover rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
-                  </div>
-                </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Support Excellence Section */}
+      <section className="section-spacing bg-gradient-to-br from-blue-50 via-neutral-50 to-white dark:from-blue-900/10 dark:via-neutral-800 dark:to-neutral-900">
+        <div className="container-professional">
+          <div className="grid-professional-2 items-center">
+            <div className="animate-slide-in-left">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium mb-6">
+                <Target className="w-4 h-4 mr-2" />
+                Excellence in Support
               </div>
+              
+              <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900 dark:text-white mb-6">
+                24/7 Professional Support That Never Sleeps
+              </h3>
+              
+              <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-8">
+                Our dedicated team of certified professionals provides round-the-clock support to ensure 
+                your business operations run smoothly. Experience faster resolution times and proactive 
+                monitoring that prevents issues before they impact your productivity.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                {[
+                  "< 15 min response time",
+                  "Certified technicians",
+                  "Proactive monitoring",
+                  "Remote diagnostics"
+                ].map((feature, idx) => (
+                  <div key={idx} className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="font-medium text-neutral-700 dark:text-neutral-300">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <Button asChild className="btn-professional">
+                <Link to="/contact">
+                  <Headphones className="mr-2 h-5 w-5" />
+                  Contact Support Team
+                </Link>
+              </Button>
+            </div>
+
+            <div className="relative animate-scale-in-center">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl blur-2xl"></div>
+              <img
+                src="/lovable-uploads/bb69a6e7-18eb-48d3-bd42-b46cd197bcf3.png"
+                alt="Professional support team providing technical assistance"
+                className="relative w-full h-[400px] object-cover rounded-xl shadow-professional-lg"
+                loading="lazy"
+              />
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Call to Action */}
-          <div className="text-center">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-16 py-8 text-2xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 font-light rounded-2xl group"
-              asChild
-            >
-              <Link to="/contact">
-                <Rocket className="mr-4 h-8 w-8 group-hover:animate-pulse" />
-                Get Started Today
-              </Link>
-            </Button>
+      {/* Call to Action */}
+      <section className="section-spacing border-t border-neutral-200 dark:border-neutral-800">
+        <div className="container-professional">
+          <div className="text-center animate-fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-lg text-neutral-600 dark:text-neutral-300 mb-8 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who have already boosted their productivity and reduced costs with our solutions.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild className="btn-professional text-lg px-8 py-4">
+                <Link to="/contact">
+                  <Rocket className="mr-2 h-6 w-6" />
+                  Start Your Project Today
+                </Link>
+              </Button>
+              <Button variant="outline" asChild className="btn-professional-outline text-lg px-8 py-4">
+                <Link to="/portfolio">
+                  <Star className="mr-2 h-6 w-6" />
+                  View Success Stories
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -392,10 +300,10 @@ const Services = () => {
       {/* Floating Action Button */}
       <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-125 z-50 animate-pulse-slow"
+        className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-professional-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
         size="sm"
       >
-        <ArrowRight className="h-6 w-6 transform -rotate-90" />
+        <ArrowRight className="h-5 w-5 transform -rotate-90" />
       </Button>
     </div>
   );
