@@ -222,7 +222,6 @@ const Contact = () => {
                   contact: "+254 724 367 794",
                   href: "tel:+254724367794",
                   gradient: "from-green-500 via-emerald-500 to-teal-600",
-                  image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=350&fit=crop&crop=center",
                   delay: "0s"
                 },
                 {
@@ -232,7 +231,6 @@ const Contact = () => {
                   contact: "bytematrixtechnologies@gmail.com",
                   href: "mailto:bytematrixtechnologies@gmail.com",
                   gradient: "from-blue-500 via-indigo-500 to-purple-600",
-                  image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=500&h=350&fit=crop&crop=center",
                   delay: "0.2s"
                 },
               ].map((contact, index) => (
@@ -244,15 +242,16 @@ const Contact = () => {
                   <div className={`absolute inset-0 bg-gradient-to-br ${contact.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`}></div>
                   <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   <CardContent className="p-0 relative z-10">
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={contact.image}
-                        alt={contact.title}
-                        className="w-full h-52 object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/60 transition-all duration-700"></div>
+                    <div className={`relative h-52 bg-gradient-to-br ${contact.gradient} flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-700`}>
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+                      <div className="relative z-10 text-center">
+                        <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
+                          <contact.icon className="h-12 w-12 text-white" />
+                        </div>
+                        <div className="text-white/90 font-medium text-lg">{contact.title}</div>
+                      </div>
                       <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                        <Zap className="h-8 w-8 text-white animate-pulse" />
+                        <Sparkles className="h-8 w-8 text-white animate-pulse" />
                       </div>
                     </div>
                     <div className="p-8 text-center">

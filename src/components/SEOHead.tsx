@@ -145,7 +145,7 @@ const SEOHead = ({
     } else {
       structuredDataScript = document.createElement('script');
       structuredDataScript.id = 'structured-data';
-      structuredDataScript.type = 'application/ld+json';
+      structuredDataScript.setAttribute('type', 'application/ld+json');
       structuredDataScript.textContent = JSON.stringify(structuredData);
       document.head.appendChild(structuredDataScript);
     }
