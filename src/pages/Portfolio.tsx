@@ -1,0 +1,396 @@
+
+import {
+  ArrowRight,
+  Moon,
+  Sun,
+  Menu,
+  X,
+  Sparkles,
+  Star,
+  Zap,
+  CheckCircle,
+  Users,
+  Award,
+  Target,
+  Rocket,
+  Building,
+  Shield,
+  Server,
+  Computer,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+const Portfolio = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 font-roboto transition-all duration-700 relative overflow-hidden">
+      {/* Premium animated background */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-[1000px] h-[1000px] bg-gradient-to-br from-blue-400/6 to-cyan-400/6 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute -bottom-40 -left-40 w-[1000px] h-[1000px] bg-gradient-to-tr from-purple-400/6 to-pink-400/6 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-gradient-to-r from-indigo-400/4 to-blue-400/4 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-gradient-to-l from-emerald-400/4 to-teal-400/4 rounded-full blur-2xl animate-float" style={{ animationDelay: '3s' }}></div>
+      </div>
+
+      {/* Premium Header */}
+      <header className="border-b border-gray-100/20 dark:border-gray-800/20 bg-white/85 dark:bg-gray-900/85 backdrop-blur-2xl sticky top-0 z-50 shadow-2xl">
+        <div className="container mx-auto px-6 py-6">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="flex items-center space-x-4 group">
+              <h1 className="text-2xl font-bold text-gradient-primary">Byte Matrix Technologies</h1>
+            </Link>
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link
+                to="/"
+                className="text-gray-700 dark:text-gray-300 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all duration-500 font-medium text-lg relative group"
+              >
+                About
+                <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
+              </Link>
+              <Link
+                to="/services"
+                className="text-gray-700 dark:text-gray-300 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all duration-500 font-medium text-lg relative group"
+              >
+                Services
+                <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
+              </Link>
+              <Link
+                to="/portfolio"
+                className="text-gradient-primary font-semibold text-lg relative"
+              >
+                Portfolio
+                <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg"></span>
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-700 dark:text-gray-300 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all duration-500 font-medium text-lg relative group"
+              >
+                Contact
+                <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
+              </Link>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleDarkMode}
+                className="ml-4 p-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-800 dark:hover:to-gray-700 transition-all duration-300 rounded-full"
+              >
+                {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
+              </Button>
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleMenu}
+                className="p-2 rounded-full"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </Button>
+            </div>
+          </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-6 pb-6 border-t border-gray-200 dark:border-gray-700 pt-6 animate-fade-in">
+              <div className="flex flex-col space-y-6">
+                <Link
+                  to="/"
+                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <Link
+                  to="/services"
+                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Services
+                </Link>
+                <Link
+                  to="/contact"
+                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={toggleDarkMode}
+                  className="w-fit p-3 rounded-full"
+                >
+                  {isDarkMode ? <Sun className="h-6 w-6 text-yellow-500" /> : <Moon className="h-6 w-6 text-blue-600" />}
+                </Button>
+              </div>
+            </div>
+          )}
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="py-24 relative z-10">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20 animate-fade-in">
+            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg shadow-lg">
+              <Star className="w-6 h-6 mr-3 animate-pulse text-yellow-500" />
+              Our Success Stories
+            </div>
+            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 tracking-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent">
+              TRANSFORMING BUSINESSES
+            </h1>
+            <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-5xl mx-auto leading-relaxed">
+              Discover how we've helped organizations across Kenya achieve digital excellence through innovative technology solutions and strategic partnerships
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto mt-8 rounded-full shadow-lg"></div>
+          </div>
+
+          {/* Success Metrics */}
+          <div className="grid md:grid-cols-4 gap-8 mb-20">
+            {[
+              { number: "500+", label: "Happy Clients", icon: Users, gradient: "from-blue-500 to-cyan-500" },
+              { number: "1000+", label: "Projects Completed", icon: CheckCircle, gradient: "from-green-500 to-emerald-500" },
+              { number: "5+", label: "Years Experience", icon: Award, gradient: "from-purple-500 to-pink-500" },
+              { number: "24/7", label: "Support Available", icon: Shield, gradient: "from-orange-500 to-red-500" },
+            ].map((metric, index) => (
+              <Card
+                key={index}
+                className="glass-card hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 animate-fade-in group border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl text-center"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-8">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${metric.gradient} rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 transition-all duration-500 shadow-xl`}>
+                    <metric.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                    {metric.number}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 font-light">{metric.label}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Featured Projects */}
+          <div className="mb-20">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm border border-purple-200/30 dark:border-purple-700/30 rounded-full text-purple-700 dark:text-purple-300 font-semibold mb-8 text-lg shadow-lg">
+                <Target className="w-6 h-6 mr-3 animate-pulse" />
+                Featured Projects
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                Solutions That <span className="text-gradient-primary">Make a Difference</span>
+              </h2>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12">
+              {[
+                {
+                  title: "Enterprise Network Infrastructure",
+                  description: "Complete network overhaul for a 200+ employee organization, including server installation, security implementation, and cloud migration",
+                  image: "/lovable-uploads/8a8cda77-4bf8-4392-97fc-d1cb7057e068.png",
+                  technologies: ["Cisco Networking", "Windows Server", "Cloud Migration", "Cybersecurity"],
+                  results: ["99.9% Uptime", "50% Faster Operations", "Zero Security Incidents"],
+                  gradient: "from-blue-500 to-cyan-500",
+                  icon: Server
+                },
+                {
+                  title: "Educational Technology Suite",
+                  description: "Comprehensive IT solutions for educational institutions including computer labs, interactive displays, and learning management systems",
+                  image: "/lovable-uploads/f858d253-338e-48f5-bfea-74af9143bbcd.png",
+                  technologies: ["Computer Labs", "Interactive Displays", "Network Setup", "Educational Software"],
+                  results: ["300+ Students Served", "Enhanced Learning", "Teacher Satisfaction"],
+                  gradient: "from-green-500 to-emerald-500",
+                  icon: Computer
+                },
+              ].map((project, index) => (
+                <Card
+                  key={index}
+                  className="group border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-6 hover:scale-105 bg-white/85 dark:bg-gray-800/85 backdrop-blur-xl overflow-hidden animate-fade-in relative"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`}></div>
+                  <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className="relative z-10">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/60 transition-all duration-700"></div>
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        <Zap className="h-8 w-8 text-white animate-pulse" />
+                      </div>
+                    </div>
+                    <CardHeader className="pb-4">
+                      <div className="flex items-center mb-4">
+                        <div className={`w-12 h-12 bg-gradient-to-br ${project.gradient} rounded-2xl flex items-center justify-center mr-4 group-hover:scale-125 transition-all duration-500 shadow-xl`}>
+                          <project.icon className="h-6 w-6 text-white" />
+                        </div>
+                        <CardTitle className="text-2xl font-semibold text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                          {project.title}
+                        </CardTitle>
+                      </div>
+                      <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed font-light text-lg">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Technologies Used:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech, idx) => (
+                            <span
+                              key={idx}
+                              className="px-3 py-1 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 text-blue-700 dark:text-blue-300 text-sm rounded-full border border-blue-200/30 dark:border-blue-700/30"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Results:</h4>
+                        <div className="space-y-2">
+                          {project.results.map((result, idx) => (
+                            <div key={idx} className="flex items-center space-x-3">
+                              <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <CheckCircle className="h-3 w-3 text-white" />
+                              </div>
+                              <span className="text-gray-700 dark:text-gray-300 font-light">{result}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Client Testimonials */}
+          <div className="mb-20">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600/10 to-emerald-600/10 backdrop-blur-sm border border-green-200/30 dark:border-green-700/30 rounded-full text-green-700 dark:text-green-300 font-semibold mb-8 text-lg shadow-lg">
+                <Building className="w-6 h-6 mr-3 animate-pulse" />
+                Client Success Stories
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                What Our <span className="text-gradient-primary">Clients Say</span>
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  quote: "Byte Matrix Technologies transformed our IT infrastructure completely. Their expertise and professionalism exceeded our expectations.",
+                  author: "Sarah Kiprotich",
+                  position: "IT Manager",
+                  company: "Nairobi Tech Solutions",
+                  rating: 5
+                },
+                {
+                  quote: "Outstanding service delivery! They completed our network setup ahead of schedule and within budget. Highly recommended!",
+                  author: "Michael Ochieng",
+                  position: "Operations Director", 
+                  company: "East Africa Logistics",
+                  rating: 5
+                },
+                {
+                  quote: "Professional, reliable, and innovative. Their 24/7 support has been crucial for our business operations.",
+                  author: "Grace Wanjiku",
+                  position: "CEO",
+                  company: "Kenyan Innovations Ltd",
+                  rating: 5
+                }
+              ].map((testimonial, index) => (
+                <Card
+                  key={index}
+                  className="glass-card hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 animate-fade-in group border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardContent className="p-8">
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 text-yellow-500 fill-current" />
+                      ))}
+                    </div>
+                    <blockquote className="text-gray-700 dark:text-gray-300 mb-6 italic font-light leading-relaxed">
+                      "{testimonial.quote}"
+                    </blockquote>
+                    <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+                      <div className="font-semibold text-gray-900 dark:text-white">{testimonial.author}</div>
+                      <div className="text-blue-600 dark:text-blue-400 font-medium">{testimonial.position}</div>
+                      <div className="text-gray-500 dark:text-gray-400 text-sm">{testimonial.company}</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center">
+            <div className="bg-gradient-to-br from-blue-50/60 via-indigo-50/40 to-purple-50/30 dark:from-blue-900/20 dark:via-indigo-900/15 dark:to-purple-900/15 rounded-3xl p-12 lg:p-16 shadow-2xl border border-blue-100/30 dark:border-blue-800/30 backdrop-blur-sm">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                Ready to Start Your <span className="text-gradient-primary">Success Story?</span>
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto font-light leading-relaxed">
+                Join our growing list of satisfied clients and experience the Byte Matrix Technologies difference. Let's build something amazing together.
+              </p>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-16 py-8 text-2xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 font-medium rounded-2xl group"
+                asChild
+              >
+                <Link to="/contact">
+                  <Rocket className="mr-4 h-8 w-8 group-hover:animate-pulse" />
+                  Start Your Project
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Floating Action Button */}
+      <Button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white p-5 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-125 z-50 animate-pulse-slow"
+        size="sm"
+      >
+        <ArrowRight className="h-6 w-6 transform -rotate-90" />
+      </Button>
+    </div>
+  );
+};
+
+export default Portfolio;

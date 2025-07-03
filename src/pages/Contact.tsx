@@ -58,23 +58,12 @@ const Contact = () => {
         <div className="absolute bottom-20 right-20 w-3 h-3 bg-pink-400 rounded-full animate-ping opacity-25" style={{ animationDelay: '3s' }}></div>
       </div>
 
-      {/* Premium Header */}
+      {/* Premium Header - without logo */}
       <header className="border-b border-gray-100/20 dark:border-gray-800/20 bg-white/85 dark:bg-gray-900/85 backdrop-blur-2xl sticky top-0 z-50 shadow-2xl">
         <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-4 group">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <img
-                  src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
-                  alt="Byte Matrix Technologies"
-                  className="relative h-18 w-auto drop-shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-3xl"
-                  loading="eager"
-                  style={{
-                    filter: "contrast(1.4) saturate(1.5) brightness(1.1)",
-                  }}
-                />
-              </div>
+              <h1 className="text-2xl font-bold text-gradient-primary">Byte Matrix Technologies</h1>
             </Link>
             
             {/* Desktop Navigation */}
@@ -91,6 +80,13 @@ const Contact = () => {
                 className="text-gray-700 dark:text-gray-300 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all duration-500 font-medium text-lg relative group"
               >
                 Services
+                <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
+              </Link>
+              <Link
+                to="/portfolio"
+                className="text-gray-700 dark:text-gray-300 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:bg-clip-text transition-all duration-500 font-medium text-lg relative group"
+              >
+                Portfolio
                 <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
               </Link>
               <Link
@@ -140,6 +136,13 @@ const Contact = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Services
+                </Link>
+                <Link
+                  to="/portfolio"
+                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium text-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Portfolio
                 </Link>
                 <Button
                   variant="ghost"
