@@ -171,8 +171,8 @@ const Career = () => {
           
           <div className="mt-12 animate-scale-in-center">
             <img 
-              src="/lovable-uploads/babb4625-0209-4f12-95b2-209a31633356.png" 
-              alt="Team collaboration at BYTE MATRIX TECHNOLOGIES"
+              src="/lovable-uploads/6118b34b-4d85-4de5-b29f-798c1f7e9cec.png" 
+              alt="Professional success at BYTE MATRIX TECHNOLOGIES"
               className="w-full max-w-4xl mx-auto rounded-2xl shadow-professional-lg"
             />
           </div>
@@ -319,114 +319,46 @@ const Career = () => {
         </div>
       </section>
 
-      {/* Employee Testimonials */}
-      <section className="section-spacing bg-neutral-50 dark:bg-neutral-900/50">
-        <div className="container-professional">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gradient-professional mb-6">
-              What Our Team Says
-            </h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-300">
-              Hear from our talented team members about their experience working with us
-            </p>
-          </div>
-
-          <div className="grid-professional-3">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="card-professional">
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover"
-                    />
-                    <div>
-                      <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-                      <CardDescription>{testimonial.role}</CardDescription>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-neutral-600 dark:text-neutral-300 italic">
-                    "{testimonial.quote}"
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact & FAQ */}
+      {/* Contact Information */}
       <section className="section-spacing">
         <div className="container-professional">
-          <div className="grid-professional-2 gap-16">
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold text-gradient-professional mb-8">
-                Have Questions?
-              </h2>
-              <p className="text-lg text-neutral-600 dark:text-neutral-300 mb-8">
-                Our HR team is here to help you with any questions about career opportunities at BYTE MATRIX TECHNOLOGIES.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-neutral-800 dark:text-white">Email Us</h3>
-                    <p className="text-neutral-600 dark:text-neutral-300">careers@bytematrixtech.com</p>
-                  </div>
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gradient-professional mb-8">
+              Have Questions?
+            </h2>
+            <p className="text-lg text-neutral-600 dark:text-neutral-300 mb-8">
+              Our HR team is here to help you with any questions about career opportunities at BYTE MATRIX TECHNOLOGIES.
+            </p>
+            
+            <div className="space-y-6">
+              <div className="flex items-center gap-4 justify-center">
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-neutral-800 dark:text-white">Call Us</h3>
-                    <p className="text-neutral-600 dark:text-neutral-300">+254 724 367 794</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
-                    <MessageSquare className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-neutral-800 dark:text-white">WhatsApp</h3>
-                    <p className="text-neutral-600 dark:text-neutral-300">+254 724 367 794</p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold text-neutral-800 dark:text-white">Email Us</h3>
+                  <p className="text-neutral-600 dark:text-neutral-300">careers@bytematrixtech.com</p>
                 </div>
               </div>
-            </div>
-
-            {/* FAQ */}
-            <div>
-              <h2 className="text-3xl font-bold text-gradient-professional mb-8">
-                Frequently Asked Questions
-              </h2>
               
-              <div className="space-y-6">
-                {faqs.map((faq, index) => (
-                  <div key={index}>
-                    <h3 className="font-semibold text-neutral-800 dark:text-white mb-2">
-                      {faq.question}
-                    </h3>
-                    <p className="text-neutral-600 dark:text-neutral-300">
-                      {faq.answer}
-                    </p>
-                    {index < faqs.length - 1 && <Separator className="mt-6" />}
-                  </div>
-                ))}
+              <div className="flex items-center gap-4 justify-center">
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-neutral-800 dark:text-white">Call Us</h3>
+                  <p className="text-neutral-600 dark:text-neutral-300">+254 724 367 794</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 justify-center">
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
+                  <MessageSquare className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-neutral-800 dark:text-white">WhatsApp</h3>
+                  <p className="text-neutral-600 dark:text-neutral-300">+254 724 367 794</p>
+                </div>
               </div>
             </div>
           </div>
