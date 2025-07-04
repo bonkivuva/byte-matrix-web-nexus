@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import ProfessionalHeader from "@/components/ProfessionalHeader";
 import SEOHead from "@/components/SEOHead";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
@@ -106,13 +107,17 @@ const Services = () => {
               that drive growth, enhance security, and optimize your technology investments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-brand hover:opacity-90 transition-opacity">
-                <Phone className="w-5 h-5 mr-2" />
-                Get Free Consultation
+              <Button size="lg" className="bg-gradient-brand hover:opacity-90 transition-opacity" asChild>
+                <Link to="/contact">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Get Free Consultation
+                </Link>
               </Button>
-              <Button variant="outline" size="lg">
-                View Our Portfolio
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/portfolio">
+                  View Our Portfolio
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
               </Button>
             </div>
           </div>
