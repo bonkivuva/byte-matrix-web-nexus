@@ -190,7 +190,7 @@ const About = () => {
             <div className="space-y-12 animate-slide-up">
               <div>
                 <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-8 animate-gradient leading-tight tracking-tight">
-                  YOUR TECHNOLOGY PARTNER
+                  Connecting Your Digital Matrix
                 </h1>
                 <div className="w-32 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto rounded-full animate-scale-in shadow-lg mb-6"></div>
               </div>

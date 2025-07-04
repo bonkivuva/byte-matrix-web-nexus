@@ -335,13 +335,13 @@ const Contact = () => {
             <div className="text-center mb-16 animate-fade-in">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-6xl mx-auto">
                 <img
-                  src="/lovable-uploads/395d4682-f18c-4266-89f9-1a5f965c03f3.png"
-                  alt="Professional technology operations center with multiple monitoring stations"
+                  src="/lovable-uploads/babb4625-0209-4f12-95b2-209a31633356.png"
+                  alt="Collaborative team meeting with technology professionals working together"
                   className="w-full h-64 lg:h-80 object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-lg font-medium">Your Technology Operations Center</p>
+                  <p className="text-lg font-medium">Our Collaborative Approach</p>
                 </div>
               </div>
             </div>
