@@ -220,65 +220,29 @@ const Career = () => {
         </div>
       </section>
 
-      {/* Current Job Openings */}
+      {/* No Current Openings */}
       <section className="section-spacing bg-neutral-50 dark:bg-neutral-900/50">
         <div className="container-professional">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gradient-professional mb-6">
-              Current Job Openings
+              Thank You for Your Interest
             </h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-300">
-              Discover exciting opportunities to grow your career with us
-            </p>
           </div>
 
-          <div className="grid gap-8">
-            {jobOpenings.map((job) => (
-              <Card key={job.id} className="card-professional">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
-                        <job.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
-                        <div className="flex flex-wrap gap-2">
-                          <Badge variant="secondary">{job.department}</Badge>
-                          <Badge variant="outline" className="flex items-center gap-1">
-                            <MapPin className="w-3 h-3" />
-                            {job.location}
-                          </Badge>
-                          <Badge variant="outline">{job.type}</Badge>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-neutral-600 dark:text-neutral-300 mb-6">
-                    {job.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-3 text-neutral-800 dark:text-white">Requirements:</h4>
-                    <ul className="space-y-2">
-                      {job.requirements.map((req, index) => (
-                        <li key={index} className="flex items-start gap-2 text-neutral-600 dark:text-neutral-300">
-                          <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                          <span>{req}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <Button className="w-full sm:w-auto bg-gradient-brand hover:opacity-90">
-                    Apply Now
-                    <ArrowRight className="w-4 h-4 ml-2" />
+          <div className="max-w-4xl mx-auto">
+            <Card className="card-professional text-center">
+              <CardContent className="p-12">
+                <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                  Thank you for your interest in joining the BYTE MATRIX TECHNOLOGIES team! While we currently do not have any open positions, we are always on the lookout for talented individuals who share our passion for innovation and excellence. Please feel free to submit your resume or portfolio, and we will keep it on file for future opportunities.
+                </p>
+                <div className="mt-8">
+                  <Button size="lg" className="bg-gradient-brand hover:opacity-90 transition-opacity">
+                    <Mail className="w-5 h-5 mr-2" />
+                    Submit Your Resume
                   </Button>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
