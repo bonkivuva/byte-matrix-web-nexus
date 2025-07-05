@@ -27,7 +27,6 @@ const Services = () => {
       title: "IT Consulting & Strategy",
       description: "Strategic technology planning and digital transformation consulting to optimize your business operations",
       benefits: ["Technology Roadmap", "Cost Optimization", "Digital Strategy", "Risk Assessment"],
-      pricing: "Starting at $150/hour",
       gradient: "from-blue-500 to-indigo-600"
     },
     {
@@ -35,7 +34,6 @@ const Services = () => {
       title: "Hardware Procurement & Setup",
       description: "End-to-end hardware solutions from sourcing to installation and configuration",
       benefits: ["Best Price Guarantee", "Quality Assurance", "Professional Setup", "Warranty Support"],
-      pricing: "Custom Pricing",
       gradient: "from-purple-500 to-pink-600"
     },
     {
@@ -43,7 +41,6 @@ const Services = () => {
       title: "Cybersecurity Solutions",
       description: "Comprehensive security services to protect your business from cyber threats",
       benefits: ["24/7 Monitoring", "Threat Detection", "Data Protection", "Compliance Support"],
-      pricing: "Starting at $200/month",
       gradient: "from-red-500 to-orange-600"
     },
     {
@@ -51,7 +48,6 @@ const Services = () => {
       title: "Cloud Solutions",
       description: "Cloud migration, management, and optimization services for scalable business growth",
       benefits: ["Cloud Migration", "Cost Optimization", "Scalability", "24/7 Support"],
-      pricing: "Starting at $100/month",
       gradient: "from-green-500 to-teal-600"
     },
     {
@@ -59,7 +55,6 @@ const Services = () => {
       title: "Technical Support",
       description: "Round-the-clock technical support to keep your business running smoothly",
       benefits: ["24/7 Availability", "Remote Support", "On-site Service", "Priority Response"],
-      pricing: "Starting at $80/month",
       gradient: "from-yellow-500 to-orange-600"
     },
     {
@@ -67,7 +62,6 @@ const Services = () => {
       title: "System Integration",
       description: "Seamless integration of your business systems for improved efficiency and productivity",
       benefits: ["Process Automation", "Data Synchronization", "Workflow Optimization", "Training Included"],
-      pricing: "Custom Pricing",
       gradient: "from-indigo-500 to-purple-600"
     }
   ];
@@ -178,10 +172,7 @@ const Services = () => {
                     ))}
                   </div>
                   
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-semibold text-gray-900 dark:text-white">
-                      {service.pricing}
-                    </span>
+                  <div className="flex justify-end">
                     <Button variant="outline" size="sm" className="group-hover:bg-gradient-brand group-hover:text-white group-hover:border-transparent transition-all duration-300">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
