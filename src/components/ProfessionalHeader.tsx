@@ -49,12 +49,12 @@ const ProfessionalHeader = ({ currentPage }: ProfessionalHeaderProps) => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-neutral-200/20 dark:border-neutral-800/20 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-xl shadow-professional">
+    <header className="sticky top-0 z-50 w-full border-b border-blue-200/30 dark:border-blue-800/30 bg-gradient-to-r from-blue-600/95 via-blue-700/95 to-blue-800/95 backdrop-blur-xl shadow-professional">
       <div className="container-professional">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="text-2xl font-bold text-gradient-brand hover:scale-105 transition-transform duration-300">
+            <div className="text-2xl font-bold text-white hover:scale-105 transition-transform duration-300">
               Byte Matrix Technologies
             </div>
           </Link>
@@ -67,13 +67,13 @@ const ProfessionalHeader = ({ currentPage }: ProfessionalHeaderProps) => {
                 to={link.path}
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 ${
                   isActive(link.path) || currentPage === link.name
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-neutral-600 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400"
+                    ? "text-white dark:text-white font-semibold"
+                    : "text-white/80 dark:text-white/80 hover:text-white dark:hover:text-white"
                 }`}
               >
                 {link.label}
                 {(isActive(link.path) || currentPage === link.name) && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full" />
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white rounded-full" />
                 )}
               </Link>
             ))}
@@ -87,7 +87,7 @@ const ProfessionalHeader = ({ currentPage }: ProfessionalHeaderProps) => {
               {isDarkMode ? (
                 <Sun className="h-4 w-4 text-yellow-500" />
               ) : (
-                <Moon className="h-4 w-4 text-neutral-600" />
+                <Moon className="h-4 w-4 text-white/80" />
               )}
             </Button>
           </nav>
@@ -103,7 +103,7 @@ const ProfessionalHeader = ({ currentPage }: ProfessionalHeaderProps) => {
               {isDarkMode ? (
                 <Sun className="h-4 w-4 text-yellow-500" />
               ) : (
-                <Moon className="h-4 w-4 text-neutral-600" />
+                <Moon className="h-4 w-4 text-white/80" />
               )}
             </Button>
             <Button
@@ -113,9 +113,9 @@ const ProfessionalHeader = ({ currentPage }: ProfessionalHeaderProps) => {
               className="h-9 w-9 rounded-full"
             >
               {isMenuOpen ? (
-                <X className="h-5 w-5" />
+                <X className="h-5 w-5 text-white/80" />
               ) : (
-                <Menu className="h-5 w-5" />
+                <Menu className="h-5 w-5 text-white/80" />
               )}
             </Button>
           </div>
@@ -123,7 +123,7 @@ const ProfessionalHeader = ({ currentPage }: ProfessionalHeaderProps) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-neutral-200 dark:border-neutral-800 py-4 animate-fade-up">
+          <div className="md:hidden border-t border-white/20 dark:border-white/20 py-4 animate-fade-up">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
@@ -131,8 +131,8 @@ const ProfessionalHeader = ({ currentPage }: ProfessionalHeaderProps) => {
                   to={link.path}
                   className={`px-4 py-2 text-sm font-medium transition-colors duration-300 ${
                     isActive(link.path) || currentPage === link.name
-                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 rounded-lg"
-                      : "text-neutral-600 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      ? "text-white dark:text-white bg-white/20 dark:bg-white/20 rounded-lg font-semibold"
+                      : "text-white/80 dark:text-white/80 hover:text-white dark:hover:text-white"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
