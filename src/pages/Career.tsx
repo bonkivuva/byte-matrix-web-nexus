@@ -2,6 +2,7 @@ import ProfessionalHeader from "@/components/ProfessionalHeader";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import { 
   Users, 
   ArrowRight,
@@ -34,9 +35,11 @@ const Career = () => {
                 <Users className="w-5 h-5 mr-2" />
                 View Open Positions
               </Button>
-              <Button variant="outline" size="lg">
-                Learn More About Us
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/">
+                  Learn More About Us
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
               </Button>
             </div>
           </div>
