@@ -45,7 +45,7 @@ const ProfessionalHeader = ({ currentPage }: ProfessionalHeaderProps) => {
     { path: "/services", label: "Services", name: "services" },
     { path: "/portfolio", label: "Portfolio", name: "portfolio" },
     { path: "/contact", label: "Contact", name: "contact" },
-    { path: "/career", label: "Careers", name: "careers" },
+    { path: "/careers", label: "Careers", name: "careers" },
   ];
 
   return (

@@ -60,6 +60,20 @@ const Index = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link
+                to="/portfolio"
+                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-light relative group"
+              >
+                Portfolio
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link
+                to="/careers"
+                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-light relative group"
+              >
+                Careers
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link
                 to="/contact"
                 className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-light relative group"
               >
@@ -104,7 +118,7 @@ const Index = () => {
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-64 w-auto mx-auto mb-8 drop-shadow-2xl transition-transform hover:scale-105"
+                className="h-64 w-auto mx-auto mb-8 drop-shadow-2xl animate-pulse"
                 style={{
                   imageRendering: "crisp-edges",
                   filter: "contrast(1.15) saturate(1.2) brightness(1.1) drop-shadow(0 20px 40px rgba(59, 130, 246, 0.15))",
@@ -114,7 +128,7 @@ const Index = () => {
               />
             </div>
             <div className="mb-8">
-              <p className="text-xl lg:text-2xl font-light text-blue-600 dark:text-blue-400 mb-4 tracking-wide">
+              <p className="text-base lg:text-lg font-light text-blue-600 dark:text-blue-400 mb-4 tracking-wide">
                 "Connecting Your Digital Matrix"
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 mx-auto rounded-full"></div>
@@ -239,6 +253,8 @@ const Index = () => {
               {[
                 { name: "Services", path: "/services" },
                 { name: "About", path: "/about" },
+                { name: "Portfolio", path: "/portfolio" },
+                { name: "Careers", path: "/careers" },
                 { name: "Contact", path: "/contact" },
               ].map((item, index) => (
                 <Link

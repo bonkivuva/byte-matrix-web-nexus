@@ -1,7 +1,7 @@
 
 import {
   ArrowRight,
-  Sparkles,
+  
   Star,
   Zap,
   CheckCircle,

@@ -8,7 +8,7 @@ import {
   Users,
   Award,
   Zap,
-  Sparkles,
+  
   Star,
   ChevronDown,
 } from "lucide-react";
@@ -66,7 +66,7 @@ const About = () => {
                 <div className="absolute top-1/3 right-1/4 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-70 animate-ping" style={{ animationDelay: '1s' }}></div>
                 <div className="absolute bottom-1/3 left-1/3 w-5 h-5 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-full opacity-70 animate-ping" style={{ animationDelay: '1.5s' }}></div>
                 <div className="absolute top-2/3 right-1/3 w-3 h-3 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full opacity-70 animate-ping" style={{ animationDelay: '2s' }}></div>
-                <Sparkles className="absolute top-1/6 right-1/6 w-10 h-10 text-yellow-400 opacity-70 animate-pulse" style={{ animationDelay: '2.5s' }} />
+                <Star className="absolute top-1/6 right-1/6 w-10 h-10 text-blue-400 opacity-70 animate-pulse" style={{ animationDelay: '2.5s' }} />
                 <Star className="absolute bottom-1/6 left-1/6 w-8 h-8 text-blue-400 opacity-70 animate-pulse" style={{ animationDelay: '3s' }} />
               </div>
             </div>
@@ -119,7 +119,7 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg shadow-lg">
-              <Sparkles className="w-5 h-5 mr-3 animate-pulse" />
+              <Star className="w-5 h-5 mr-3 animate-pulse" />
               Why Choose Us
             </div>
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 dark:text-white mb-8 tracking-tight">

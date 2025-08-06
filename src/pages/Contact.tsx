@@ -4,7 +4,7 @@ import {
   Phone,
   ArrowRight,
   Clock,
-  Sparkles,
+  
   Star,
   MapPin,
   Send,
@@ -131,7 +131,7 @@ const Contact = () => {
                         <div className="text-white/90 font-medium text-lg">{contact.title}</div>
                       </div>
                       <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                        <Sparkles className="h-8 w-8 text-white animate-pulse" />
+                        <Star className="h-8 w-8 text-white animate-pulse" />
                       </div>
                     </div>
                     <div className="p-8 text-center">
