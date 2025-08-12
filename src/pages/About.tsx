@@ -27,18 +27,9 @@ const About = () => {
       />
       
       <ProfessionalHeader currentPage="about" />
-      {/* Advanced Animated Background */}
+      {/* Clean professional background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-gradient-to-br from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute -bottom-40 -left-40 w-[800px] h-[800px] bg-gradient-to-tr from-purple-400/10 to-pink-400/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-gradient-to-r from-indigo-400/8 to-blue-400/8 rounded-full blur-2xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-gradient-to-l from-emerald-400/8 to-teal-400/8 rounded-full blur-2xl animate-float" style={{ animationDelay: '3s' }}></div>
-        
-        {/* Floating particles */}
-        <div className="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full animate-ping opacity-60"></div>
-        <div className="absolute top-40 right-32 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-50" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-32 left-40 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping opacity-40" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 right-20 w-2 h-2 bg-pink-400 rounded-full animate-ping opacity-30" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-slate-100/20 dark:from-blue-950/20 dark:to-slate-900/20"></div>
       </div>
 
 
@@ -46,28 +37,38 @@ const About = () => {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
-            {/* Company Logo Showcase */}
+            {/* Futuristic Logo Showcase */}
             <div className="mb-16 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
-              <div className="absolute inset-8 bg-gradient-to-r from-cyan-500/15 via-blue-500/15 to-purple-500/15 rounded-full blur-2xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-              <div className="relative group">
-                <img
-                  src="/lovable-uploads/34f37754-9171-4da7-aa9a-8e558bdfb980.png"
-                  alt="Byte Matrix Technologies"
-                  className="w-80 h-80 lg:w-[32rem] lg:h-[32rem] mx-auto object-contain animate-fade-in transition-all duration-700 group-hover:scale-105"
-                  style={{
-                    filter: "drop-shadow(0 25px 50px rgba(59, 130, 246, 0.4)) contrast(1.3) saturate(1.4)",
-                    animation: "fadeIn 1.5s ease-out, float 8s ease-in-out infinite 2s"
-                  }}
-                />
+              <div className="relative group perspective-1000">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-cyan-500/5 to-purple-600/5 rounded-full blur-2xl group-hover:from-blue-600/10 group-hover:via-cyan-500/10 group-hover:to-purple-600/10 transition-all duration-1000"></div>
                 
-                {/* Enhanced floating elements without play button */}
-                <div className="absolute top-1/4 left-1/4 w-6 h-6 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-70 animate-ping" style={{ animationDelay: '0.5s' }}></div>
-                <div className="absolute top-1/3 right-1/4 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-70 animate-ping" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute bottom-1/3 left-1/3 w-5 h-5 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-full opacity-70 animate-ping" style={{ animationDelay: '1.5s' }}></div>
-                <div className="absolute top-2/3 right-1/3 w-3 h-3 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full opacity-70 animate-ping" style={{ animationDelay: '2s' }}></div>
-                <Star className="absolute top-1/6 right-1/6 w-10 h-10 text-blue-400 opacity-70 animate-pulse" style={{ animationDelay: '2.5s' }} />
-                <Star className="absolute bottom-1/6 left-1/6 w-8 h-8 text-blue-400 opacity-70 animate-pulse" style={{ animationDelay: '3s' }} />
+                {/* Logo with futuristic transformation */}
+                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/10 to-blue-50/20 dark:from-gray-800/20 dark:to-blue-900/20 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-2000 ease-out"></div>
+                  <img
+                    src="/lovable-uploads/34f37754-9171-4da7-aa9a-8e558bdfb980.png"
+                    alt="Byte Matrix Technologies"
+                    className="w-80 h-80 lg:w-[32rem] lg:h-[32rem] mx-auto object-contain p-8 transform transition-all duration-1000 group-hover:scale-105 group-hover:rotate-1"
+                    style={{
+                      filter: "drop-shadow(0 20px 40px rgba(59, 130, 246, 0.2))",
+                    }}
+                  />
+                  
+                  {/* Futuristic grid overlay */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-1000" 
+                       style={{
+                         backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+                                          linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)`,
+                         backgroundSize: '20px 20px'
+                       }}>
+                  </div>
+                  
+                  {/* Corner accents */}
+                  <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-300"></div>
+                  <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-500"></div>
+                  <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-700"></div>
+                  <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-900"></div>
+                </div>
               </div>
             </div>
 
@@ -119,7 +120,7 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg shadow-lg">
-              <Star className="w-5 h-5 mr-3 animate-pulse" />
+              <Star className="w-5 h-5 mr-3 text-blue-600" />
               Why Choose Us
             </div>
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 dark:text-white mb-8 tracking-tight">
@@ -212,7 +213,7 @@ const About = () => {
             </p>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-16 py-8 text-2xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 animate-pulse-slow rounded-2xl font-medium group"
+              className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-16 py-8 text-2xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 rounded-2xl font-medium group"
               asChild
             >
               <Link to="/contact">
