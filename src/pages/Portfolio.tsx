@@ -31,12 +31,9 @@ const Portfolio = () => {
       />
       
       <ProfessionalHeader currentPage="portfolio" />
-      {/* Premium animated background */}
+      {/* Subtle professional background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-[1000px] h-[1000px] bg-gradient-to-br from-blue-400/6 to-cyan-400/6 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute -bottom-40 -left-40 w-[1000px] h-[1000px] bg-gradient-to-tr from-purple-400/6 to-pink-400/6 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-gradient-to-r from-indigo-400/4 to-blue-400/4 rounded-full blur-2xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-gradient-to-l from-emerald-400/4 to-teal-400/4 rounded-full blur-2xl animate-float" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-slate-100/30 dark:from-blue-950/30 dark:to-slate-900/30"></div>
       </div>
 
 
@@ -45,7 +42,7 @@ const Portfolio = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg shadow-lg">
-              <Star className="w-6 h-6 mr-3 animate-pulse text-yellow-500" />
+              <Star className="w-6 h-6 mr-3 text-blue-600" />
               Our Success Stories
             </div>
             <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 tracking-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent">
@@ -87,7 +84,7 @@ const Portfolio = () => {
           <div className="mb-20">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm border border-purple-200/30 dark:border-purple-700/30 rounded-full text-purple-700 dark:text-purple-300 font-semibold mb-8 text-lg shadow-lg">
-                <Target className="w-6 h-6 mr-3 animate-pulse" />
+                <Target className="w-6 h-6 mr-3 text-purple-600" />
                 Featured Projects
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -131,8 +128,8 @@ const Portfolio = () => {
                         className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/60 transition-all duration-700"></div>
-                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                        <Zap className="h-8 w-8 text-white animate-pulse" />
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <Zap className="h-8 w-8 text-white" />
                       </div>
                     </div>
                     <CardHeader className="pb-4">
@@ -186,7 +183,7 @@ const Portfolio = () => {
           <div className="mb-20">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600/10 to-emerald-600/10 backdrop-blur-sm border border-green-200/30 dark:border-green-700/30 rounded-full text-green-700 dark:text-green-300 font-semibold mb-8 text-lg shadow-lg">
-                <Building className="w-6 h-6 mr-3 animate-pulse" />
+                <Building className="w-6 h-6 mr-3 text-green-600" />
                 Client Success Stories
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -258,7 +255,7 @@ const Portfolio = () => {
                 asChild
               >
                 <Link to="/contact">
-                  <Rocket className="mr-4 h-8 w-8 group-hover:animate-pulse" />
+                  <Rocket className="mr-4 h-8 w-8" />
                   Start Your Project
                 </Link>
               </Button>
@@ -270,10 +267,10 @@ const Portfolio = () => {
       {/* Floating Action Button */}
       <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white p-5 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-125 z-50 animate-pulse-slow"
+        className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
         size="sm"
       >
-        <ArrowRight className="h-6 w-6 transform -rotate-90" />
+        <ArrowRight className="h-5 w-5 transform -rotate-90" />
       </Button>
     </div>
   );

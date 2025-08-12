@@ -118,10 +118,9 @@ const Index = () => {
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-64 w-auto mx-auto mb-8 drop-shadow-2xl animate-pulse"
+                className="h-64 w-auto mx-auto mb-8 drop-shadow-lg"
                 style={{
                   imageRendering: "crisp-edges",
-                  filter: "contrast(1.15) saturate(1.2) brightness(1.1) drop-shadow(0 20px 40px rgba(59, 130, 246, 0.15))",
                 }}
                 loading="eager"
                 fetchPriority="high"
