@@ -37,37 +37,22 @@ const About = () => {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
-            {/* Futuristic Logo Showcase */}
+            {/* Clean Logo Showcase */}
             <div className="mb-16 relative">
-              <div className="relative group perspective-1000">
+              <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-cyan-500/5 to-purple-600/5 rounded-full blur-2xl group-hover:from-blue-600/10 group-hover:via-cyan-500/10 group-hover:to-purple-600/10 transition-all duration-1000"></div>
                 
-                {/* Logo with futuristic transformation */}
-                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/10 to-blue-50/20 dark:from-gray-800/20 dark:to-blue-900/20 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 shadow-2xl">
+                {/* Large clean logo */}
+                <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-2000 ease-out"></div>
                   <img
                     src="/lovable-uploads/34f37754-9171-4da7-aa9a-8e558bdfb980.png"
                     alt="Byte Matrix Technologies"
-                    className="w-80 h-80 lg:w-[32rem] lg:h-[32rem] mx-auto object-contain p-8 transform transition-all duration-1000 group-hover:scale-105 group-hover:rotate-1"
+                    className="w-96 h-96 lg:w-[40rem] lg:h-[40rem] mx-auto object-contain transform transition-all duration-1000 group-hover:scale-105"
                     style={{
                       filter: "drop-shadow(0 20px 40px rgba(59, 130, 246, 0.2))",
                     }}
                   />
-                  
-                  {/* Futuristic grid overlay */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-1000" 
-                       style={{
-                         backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
-                                          linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)`,
-                         backgroundSize: '20px 20px'
-                       }}>
-                  </div>
-                  
-                  {/* Corner accents */}
-                  <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-300"></div>
-                  <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-500"></div>
-                  <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-700"></div>
-                  <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-900"></div>
                 </div>
               </div>
             </div>
