@@ -59,7 +59,7 @@ const Contact = () => {
                 Ready to Transform?
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-5xl mx-auto leading-relaxed">
-                Connect with our innovation experts today. We're here to elevate your technology experience to extraordinary heights and create solutions that exceed your wildest expectations.
+                Connect with Kenya's leading tech innovators. Based in Nairobi, we empower African businesses with world-class technology solutions that drive success across the continent.
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto mt-8 rounded-full shadow-lg"></div>
             </div>
@@ -78,11 +78,12 @@ const Contact = () => {
                     <Clock className="h-10 w-10 text-white" />
                   </div>
                   <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">Business Hours</h3>
-                  <div className="space-y-4 text-gray-600 dark:text-gray-300">
-                    <p className="font-medium text-lg">Monday - Saturday</p>
-                    <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 mb-4">
-                      <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">9:00 AM - 6:00 PM</p>
-                    </div>
+                    <div className="space-y-4 text-gray-600 dark:text-gray-300">
+                      <p className="font-medium text-lg">Monday - Saturday (EAT)</p>
+                      <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 mb-4">
+                        <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">9:00 AM - 6:00 PM</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">East Africa Time (UTC+3)</p>
+                      </div>
                     <div className="bg-gradient-to-r from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 rounded-xl p-4">
                       <p className="font-medium text-red-600 dark:text-red-400">Closed on Sundays</p>
                       <p className="font-medium text-red-600 dark:text-red-400">& Public Holidays</p>
@@ -97,8 +98,8 @@ const Contact = () => {
               {[
                 {
                   icon: Phone,
-                  title: "Call or WhatsApp",
-                  description: "Get instant support and quick responses from our expert team available to help you succeed",
+                  title: "Call or WhatsApp (Kenya)",
+                  description: "Connect with our Nairobi-based tech experts for instant support and innovative solutions tailored for African businesses",
                   contact: "+254 724 367 794",
                   href: "tel:+254724367794",
                   gradient: "from-green-500 via-emerald-500 to-teal-600",
@@ -106,8 +107,8 @@ const Contact = () => {
                 },
                 {
                   icon: Mail,
-                  title: "Email Us",
-                  description: "Send us your detailed requirements and get comprehensive solutions tailored to your needs",
+                  title: "Email Us (Kenya Office)",
+                  description: "Reach our Kenyan headquarters for comprehensive IT solutions designed to empower East African enterprises",
                   contact: "bytematrixtechnologies@gmail.com",
                   href: "mailto:bytematrixtechnologies@gmail.com",
                   gradient: "from-blue-500 via-indigo-500 to-purple-600",
@@ -163,7 +164,7 @@ const Contact = () => {
                   🚀 Innovation in Motion!
                 </h2>
                 <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-5xl mx-auto mb-8 leading-relaxed">
-                  Follow our journey on social media to witness cutting-edge tech solutions, client success stories, and revolutionary products transforming businesses daily!
+                  Follow Kenya's premier tech company on social media! See how we're revolutionizing East African businesses with cutting-edge solutions and transforming the digital landscape across Africa.
                 </p>
               </div>
               
@@ -206,9 +207,9 @@ const Contact = () => {
                 </a>
               </div>
               
-              <p className="text-lg text-blue-600 dark:text-blue-400 font-medium animate-pulse-slow">
-                💡 Witness real solutions, real results, real innovation!
-              </p>
+                <p className="text-lg text-blue-600 dark:text-blue-400 font-medium animate-pulse-slow">
+                  🇰🇪 Proudly Kenyan | Globally Competitive | Locally Trusted
+                </p>
             </div>
 
             {/* Hero Image */}
