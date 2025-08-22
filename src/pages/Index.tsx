@@ -27,7 +27,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 font-light transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-gray-900 font-poppins font-light transition-colors duration-300">
       {/* Header */}
       <header className="border-b border-gray-100/50 dark:border-gray-800/50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-6 py-4">
@@ -127,12 +127,12 @@ const Index = () => {
               />
             </div>
             <div className="mb-8">
-              <p className="text-base lg:text-lg font-light text-blue-600 dark:text-blue-400 mb-4 tracking-wide">
+              <p className="text-sm lg:text-base font-montserrat font-medium text-blue-600 dark:text-blue-400 mb-4 tracking-wide">
                 "Connecting Your Digital Matrix"
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 mx-auto rounded-full"></div>
             </div>
-            <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-source font-light">
               We specialize in comprehensive IT infrastructure management, enterprise-grade hardware deployment, and
               strategic technology consulting. From network architecture and cybersecurity implementation to custom
               computing solutions and 24/7 technical support, we transform complex technology challenges into
@@ -141,7 +141,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 font-light"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 text-base font-montserrat font-medium shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                 asChild
               >
                 <Link to="/services">
@@ -152,7 +152,7 @@ const Index = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-10 py-4 text-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-blue-600/20 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300 transform hover:-translate-y-1 font-light"
+                className="px-8 py-3 text-base font-montserrat font-medium bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-blue-600/20 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300 transform hover:-translate-y-1"
                 asChild
               >
                 <Link to="/about">Learn More</Link>
@@ -170,10 +170,10 @@ const Index = () => {
               <Star className="w-4 h-4 mr-2" />
               Our Expertise
             </div>
-            <h2 className="text-4xl lg:text-5xl font-extralight text-gray-900 dark:text-white mb-6 tracking-tight">
+            <h2 className="text-3xl lg:text-4xl font-playfair font-semibold text-gray-900 dark:text-white mb-6 tracking-tight">
               Complete Technology Solutions
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-extralight">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-source font-light">
               From infrastructure to devices, we deliver comprehensive tech solutions tailored to your needs
             </p>
           </div>
@@ -181,8 +181,8 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center p-8 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl">
               <Server className="h-16 w-16 text-blue-600 dark:text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-light text-gray-900 dark:text-white mb-2">IT Services</h3>
-              <p className="text-gray-600 dark:text-gray-300 font-extralight">Professional infrastructure and support</p>
+              <h3 className="text-lg font-montserrat font-medium text-gray-900 dark:text-white mb-2">IT Services</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300 font-source font-light">Professional infrastructure and support</p>
             </div>
             <div className="text-center p-8 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-2xl">
               <img
@@ -190,8 +190,8 @@ const Index = () => {
                 alt="Technology Hardware"
                 className="h-16 w-16 mx-auto mb-4 rounded-lg object-cover"
               />
-              <h3 className="text-xl font-light text-gray-900 dark:text-white mb-2">Hardware Solutions</h3>
-              <p className="text-gray-600 dark:text-gray-300 font-extralight">Enterprise-grade equipment</p>
+              <h3 className="text-lg font-montserrat font-medium text-gray-900 dark:text-white mb-2">Hardware Solutions</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300 font-source font-light">Enterprise-grade equipment</p>
             </div>
             <div className="text-center p-8 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl">
               <img
@@ -199,15 +199,15 @@ const Index = () => {
                 alt="24/7 Support"
                 className="h-16 w-16 mx-auto mb-4 rounded-lg object-cover"
               />
-              <h3 className="text-xl font-light text-gray-900 dark:text-white mb-2">24/7 Support</h3>
-              <p className="text-gray-600 dark:text-gray-300 font-extralight">Round-the-clock assistance</p>
+              <h3 className="text-lg font-montserrat font-medium text-gray-900 dark:text-white mb-2">24/7 Support</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300 font-source font-light">Round-the-clock assistance</p>
             </div>
           </div>
 
           <div className="text-center">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 font-light"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 text-base font-montserrat font-medium shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
               asChild
             >
               <Link to="/services">

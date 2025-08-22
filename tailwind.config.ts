@@ -20,8 +20,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Roboto', 'system-ui', 'sans-serif'],
-				'roboto': ['Roboto', 'sans-serif'],
+				'sans': ['Poppins', 'system-ui', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
+				'source': ['Source Sans Pro', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

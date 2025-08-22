@@ -19,7 +19,7 @@ import SEOHead from "@/components/SEOHead";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-all duration-700 font-roboto overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-all duration-700 font-poppins overflow-hidden">
       <SEOHead 
         title="About Byte Matrix Technologies - IT Solutions & Digital Transformation"
         description="Learn about Byte Matrix Technologies, Kenya's leading IT solutions provider. We specialize in digital transformation, enterprise solutions, and technology consulting."
@@ -60,13 +60,13 @@ const About = () => {
             {/* Main Content */}
             <div className="space-y-12 animate-slide-up">
               <div>
-                <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-8 animate-gradient leading-tight tracking-tight">
+                <h1 className="text-3xl lg:text-5xl xl:text-6xl font-playfair font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-8 animate-gradient leading-tight tracking-tight">
                   Connecting Your Digital Matrix
                 </h1>
                 <div className="w-32 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto rounded-full animate-scale-in shadow-lg mb-6"></div>
               </div>
               
-              <p className="text-xl lg:text-2xl xl:text-3xl text-gray-600 dark:text-gray-300 max-w-6xl mx-auto leading-relaxed font-light animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-6xl mx-auto leading-relaxed font-source font-light animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 font-medium">"Connecting Your Digital Matrix"</span> 
                 <br className="lg:hidden" />
                 We specialize in comprehensive IT infrastructure management, enterprise-grade hardware deployment, and strategic technology consulting that transforms businesses.
@@ -75,7 +75,7 @@ const About = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-12 py-6 text-xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-3 hover:scale-110 rounded-2xl font-medium group"
+                  className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-8 py-4 text-base font-montserrat font-medium shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-3 hover:scale-105 rounded-xl"
                   asChild
                 >
                   <Link to="/services">
@@ -86,7 +86,7 @@ const About = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="px-12 py-6 text-xl glass-card hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-800 dark:hover:to-gray-700 border-2 border-blue-200 dark:border-blue-700 text-blue-600 dark:text-blue-400 transition-all duration-700 transform hover:-translate-y-3 rounded-2xl font-medium shadow-lg hover:shadow-xl group"
+                  className="px-8 py-4 text-base font-montserrat font-medium glass-card hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-800 dark:hover:to-gray-700 border-2 border-blue-200 dark:border-blue-700 text-blue-600 dark:text-blue-400 transition-all duration-700 transform hover:-translate-y-3 rounded-xl shadow-lg hover:shadow-xl"
                   asChild
                 >
                   <Link to="/contact">
@@ -108,10 +108,10 @@ const About = () => {
               <Star className="w-5 h-5 mr-3 text-blue-600" />
               Why Choose Us
             </div>
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 dark:text-white mb-8 tracking-tight">
-              Why Choose <span className="text-gradient-primary font-semibold">Byte Matrix?</span>
+            <h2 className="text-2xl lg:text-3xl font-playfair font-semibold text-gray-900 dark:text-white mb-8 tracking-tight">
+              Why Choose <span className="text-gradient-primary font-bold">Byte Matrix?</span>
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-light">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-source font-light">
               Experience the difference with our cutting-edge solutions and dedicated expertise
             </p>
           </div>
@@ -172,10 +172,10 @@ const About = () => {
                   <div className={`inline-flex p-4 rounded-3xl bg-gradient-to-r ${feature.gradient} mb-6 group-hover:scale-125 transition-all duration-500 shadow-xl group-hover:shadow-2xl`}>
                     <feature.icon className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                  <h3 className="text-lg font-montserrat font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-source font-light">
                     {feature.description}
                   </p>
                 </CardContent>
@@ -190,15 +190,15 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-indigo-600/10 backdrop-blur-sm"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 dark:text-white mb-8 tracking-tight">
-              Ready to Transform Your <span className="text-gradient-primary font-semibold">Digital Future?</span>
+            <h2 className="text-2xl lg:text-4xl font-playfair font-semibold text-gray-900 dark:text-white mb-8 tracking-tight">
+              Ready to Transform Your <span className="text-gradient-primary font-bold">Digital Future?</span>
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-4xl mx-auto font-source font-light leading-relaxed">
               Join hundreds of satisfied clients who trust Byte Matrix Technologies for their critical IT infrastructure and digital transformation journey
             </p>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-16 py-8 text-2xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 rounded-2xl font-medium group"
+              className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-8 py-4 text-lg font-montserrat font-medium shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 rounded-xl"
               asChild
             >
               <Link to="/contact">
