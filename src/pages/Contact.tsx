@@ -55,7 +55,7 @@ const Contact = () => {
                 <Zap className="w-6 h-6 mr-3 text-blue-600" />
                 Professional Technology Solutions
               </div>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 tracking-tight bg-gradient-to-r from-gray-900 via-slate-800 to-blue-800 dark:from-white dark:via-slate-200 dark:to-blue-200 bg-clip-text text-transparent font-playfair">
+              <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold mb-8 tracking-tight bg-gradient-to-r from-gray-900 via-slate-800 to-blue-800 dark:from-white dark:via-slate-200 dark:to-blue-200 bg-clip-text text-transparent font-playfair">
                 Enterprise Technology Excellence
               </h1>
               <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-source-sans">
@@ -77,7 +77,7 @@ const Contact = () => {
                   <div className="w-20 h-20 bg-gradient-to-br from-green-500 via-emerald-500 to-teal-600 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl animate-pulse-slow">
                     <Clock className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">Business Hours</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-6">Business Hours</h3>
                     <div className="space-y-4 text-gray-600 dark:text-gray-300">
                       <p className="font-medium text-lg">Monday - Saturday (EAT)</p>
                       <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 mb-4">
@@ -139,7 +139,7 @@ const Contact = () => {
                       <div className={`w-18 h-18 bg-gradient-to-br ${contact.gradient} rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-125 group-hover:shadow-3xl transition-all duration-500`}>
                         <contact.icon className="h-9 w-9 text-white" />
                       </div>
-                      <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">{contact.title}</h3>
+                      <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">{contact.title}</h3>
                       <p className="text-gray-600 dark:text-gray-300 mb-6 font-light leading-relaxed">{contact.description}</p>
                       <a
                         href={contact.href}
@@ -160,7 +160,7 @@ const Contact = () => {
                   <Target className="w-6 h-6 mr-3 text-indigo-600" />
                   Connect With Us
                 </div>
-                <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-indigo-800 dark:from-white dark:via-slate-200 dark:to-indigo-200 bg-clip-text text-transparent font-playfair">
+                <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-indigo-800 dark:from-white dark:via-slate-200 dark:to-indigo-200 bg-clip-text text-transparent font-playfair">
                   Professional Networks
                 </h2>
                 <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 font-light max-w-4xl mx-auto mb-8 leading-relaxed font-source-sans">
@@ -231,22 +231,22 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-8 justify-center animate-scale-in">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-16 py-8 text-2xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 font-medium rounded-2xl group"
+                className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-8 py-4 text-lg shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 font-medium rounded-2xl group"
                 asChild
               >
                 <a href="tel:+254724367794">
-                  <Phone className="mr-4 h-8 w-8 group-hover:animate-pulse" />
+                  <Phone className="mr-3 h-6 w-6 group-hover:animate-pulse" />
                   Call Now
                 </a>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-blue-300/50 text-blue-600 dark:text-blue-400 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white hover:border-transparent px-16 py-8 text-2xl bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 font-medium rounded-2xl shadow-xl hover:shadow-2xl group"
+                className="border-2 border-blue-300/50 text-blue-600 dark:text-blue-400 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white hover:border-transparent px-8 py-4 text-lg bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 font-medium rounded-2xl shadow-xl hover:shadow-2xl group"
                 asChild
               >
                 <a href="mailto:bytematrixtechnologies@gmail.com">
-                  <Send className="mr-4 h-8 w-8 group-hover:animate-pulse" />
+                  <Send className="mr-3 h-6 w-6 group-hover:animate-pulse" />
                   Send Email
                 </a>
               </Button>
