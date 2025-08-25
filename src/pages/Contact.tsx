@@ -51,15 +51,15 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20 animate-fade-in">
-              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600/10 to-red-600/10 backdrop-blur-sm border border-green-200/30 dark:border-green-700/30 rounded-full text-green-700 dark:text-green-300 font-semibold mb-8 text-lg shadow-lg">
-                <Heart className="w-6 h-6 mr-3 animate-pulse text-red-500" />
-                🇰🇪 Your Local Tech Partner in Kenya
+              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-slate-600/10 to-blue-600/10 backdrop-blur-sm border border-slate-200/30 dark:border-slate-700/30 rounded-full text-slate-700 dark:text-slate-300 font-medium mb-8 text-lg shadow-lg font-montserrat">
+                <Zap className="w-6 h-6 mr-3 text-blue-600" />
+                Professional Technology Solutions
               </div>
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 tracking-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent">
-                Ready to Transform?
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 tracking-tight bg-gradient-to-r from-gray-900 via-slate-800 to-blue-800 dark:from-white dark:via-slate-200 dark:to-blue-200 bg-clip-text text-transparent font-playfair">
+                Enterprise Technology Excellence
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-5xl mx-auto leading-relaxed">
-                Connect with Kenya's leading tech innovators. Based in Nairobi, we empower African businesses with world-class technology solutions that drive success across the continent.
+              <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-source-sans">
+                Partner with Kenya's premier technology consultancy. We deliver enterprise-grade solutions that drive digital transformation and business growth across East Africa and beyond.
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto mt-8 rounded-full shadow-lg"></div>
             </div>
@@ -98,8 +98,8 @@ const Contact = () => {
               {[
                 {
                   icon: Phone,
-                  title: "Call or WhatsApp (Kenya)",
-                  description: "Connect with our Nairobi-based tech experts for instant support and innovative solutions tailored for African businesses",
+                  title: "Professional Phone Support",
+                  description: "Direct access to our senior technology consultants for immediate assistance and strategic IT guidance",
                   contact: "+254 724 367 794",
                   href: "tel:+254724367794",
                   gradient: "from-green-500 via-emerald-500 to-teal-600",
@@ -107,8 +107,8 @@ const Contact = () => {
                 },
                 {
                   icon: Mail,
-                  title: "Email Us (Kenya Office)",
-                  description: "Reach our Kenyan headquarters for comprehensive IT solutions designed to empower East African enterprises",
+                  title: "Professional Email Support",
+                  description: "Connect with our technology consultants for detailed project discussions and comprehensive solution proposals",
                   contact: "bytematrixtechnologies@gmail.com",
                   href: "mailto:bytematrixtechnologies@gmail.com",
                   gradient: "from-blue-500 via-indigo-500 to-purple-600",
@@ -156,15 +156,15 @@ const Contact = () => {
             {/* Premium Social Media Section */}
             <div className="text-center mb-16 animate-fade-in">
               <div className="mb-10">
-                <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm border border-purple-200/30 dark:border-purple-700/30 rounded-full text-purple-700 dark:text-purple-300 font-semibold mb-8 text-lg shadow-lg">
-                  <Target className="w-6 h-6 mr-3 animate-pulse" />
-                  Follow Our Innovation Journey
+                <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-slate-600/10 to-indigo-600/10 backdrop-blur-sm border border-slate-200/30 dark:border-slate-700/30 rounded-full text-slate-700 dark:text-slate-300 font-medium mb-8 text-lg shadow-lg font-montserrat">
+                  <Target className="w-6 h-6 mr-3 text-indigo-600" />
+                  Connect With Us
                 </div>
-                <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-purple-800 to-pink-800 dark:from-white dark:via-purple-200 dark:to-pink-200 bg-clip-text text-transparent">
-                  🚀 Innovation in Motion!
+                <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-indigo-800 dark:from-white dark:via-slate-200 dark:to-indigo-200 bg-clip-text text-transparent font-playfair">
+                  Professional Networks
                 </h2>
-                <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-5xl mx-auto mb-8 leading-relaxed">
-                  Follow Kenya's premier tech company on social media! See how we're revolutionizing East African businesses with cutting-edge solutions and transforming the digital landscape across Africa.
+                <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 font-light max-w-4xl mx-auto mb-8 leading-relaxed font-source-sans">
+                  Stay connected with our latest technology insights, industry updates, and innovative solutions through our professional social channels.
                 </p>
               </div>
               
@@ -207,8 +207,8 @@ const Contact = () => {
                 </a>
               </div>
               
-                <p className="text-lg text-blue-600 dark:text-blue-400 font-medium animate-pulse-slow">
-                  🇰🇪 Proudly Kenyan | Globally Competitive | Locally Trusted
+                <p className="text-base text-slate-600 dark:text-slate-400 font-medium font-montserrat">
+                  Excellence | Innovation | Trust
                 </p>
             </div>
 
