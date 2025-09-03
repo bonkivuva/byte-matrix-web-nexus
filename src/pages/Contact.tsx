@@ -100,7 +100,7 @@ const Contact = () => {
                   icon: Phone,
                   title: "Professional Phone Support",
                   description: "Direct access to our senior technology consultants for immediate assistance and strategic IT guidance",
-                  contact: "+254 724 367 794",
+                  contact: "+254 724367794",
                   href: "tel:+254724367794",
                   gradient: "from-green-500 via-emerald-500 to-teal-600",
                   delay: "0s"
@@ -109,8 +109,8 @@ const Contact = () => {
                   icon: Mail,
                   title: "Professional Email Support",
                   description: "Connect with our technology consultants for detailed project discussions and comprehensive solution proposals",
-                  contact: "bytematrixtechnologies@gmail.com",
-                  href: "mailto:bytematrixtechnologies@gmail.com",
+                  contact: "support@bytematrixtechnologies.co.ke",
+                  href: "mailto:support@bytematrixtechnologies.co.ke",
                   gradient: "from-blue-500 via-indigo-500 to-purple-600",
                   delay: "0.2s"
                 },
@@ -245,7 +245,7 @@ const Contact = () => {
                 className="border-2 border-blue-300/50 text-blue-600 dark:text-blue-400 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white hover:border-transparent px-8 py-4 text-lg bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 font-medium rounded-2xl shadow-xl hover:shadow-2xl group"
                 asChild
               >
-                <a href="mailto:bytematrixtechnologies@gmail.com">
+                <a href="mailto:support@bytematrixtechnologies.co.ke">
                   <Send className="mr-3 h-6 w-6 group-hover:animate-pulse" />
                   Send Email
                 </a>

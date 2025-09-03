@@ -177,7 +177,7 @@ const LeadCaptureForm = ({
                       Phone Number *
                     </FormLabel>
                     <FormControl>
-                      <Input placeholder="+1 (555) 123-4567" {...field} />
+                      <Input placeholder="+254 724 367 794" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
