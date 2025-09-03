@@ -170,7 +170,7 @@ const Index = () => {
               <Star className="w-4 h-4 mr-2" />
               Our Expertise
             </div>
-            <h2 className="text-3xl lg:text-4xl font-playfair font-semibold text-gray-900 dark:text-white mb-6 tracking-tight">
+            <h2 className="text-2xl lg:text-3xl font-playfair font-semibold text-gray-900 dark:text-white mb-6 tracking-tight">
               Complete Technology Solutions
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-source font-light">

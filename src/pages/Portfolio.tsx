@@ -45,7 +45,7 @@ const Portfolio = () => {
               <Star className="w-6 h-6 mr-3 text-blue-600" />
               Our Success Stories
             </div>
-            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 tracking-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 tracking-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent">
               TRANSFORMING BUSINESSES
             </h1>
             <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-5xl mx-auto leading-relaxed">
@@ -87,7 +87,7 @@ const Portfolio = () => {
                 <Target className="w-6 h-6 mr-3 text-purple-600" />
                 Featured Projects
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 Solutions That <span className="text-gradient-primary">Make a Difference</span>
               </h2>
             </div>
@@ -137,7 +137,7 @@ const Portfolio = () => {
                         <div className={`w-12 h-12 bg-gradient-to-br ${project.gradient} rounded-2xl flex items-center justify-center mr-4 group-hover:scale-125 transition-all duration-500 shadow-xl`}>
                           <project.icon className="h-6 w-6 text-white" />
                         </div>
-                        <CardTitle className="text-2xl font-semibold text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                        <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
                           {project.title}
                         </CardTitle>
                       </div>
@@ -186,7 +186,7 @@ const Portfolio = () => {
                 <Building className="w-6 h-6 mr-3 text-green-600" />
                 Client Success Stories
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 What Our <span className="text-gradient-primary">Clients Say</span>
               </h2>
             </div>
@@ -243,7 +243,7 @@ const Portfolio = () => {
           {/* Call to Action */}
           <div className="text-center">
             <div className="bg-gradient-to-br from-blue-50/60 via-indigo-50/40 to-purple-50/30 dark:from-blue-900/20 dark:via-indigo-900/15 dark:to-purple-900/15 rounded-3xl p-12 lg:p-16 shadow-2xl border border-blue-100/30 dark:border-blue-800/30 backdrop-blur-sm">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 Ready to Start Your <span className="text-gradient-primary">Success Story?</span>
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto font-light leading-relaxed">

@@ -60,7 +60,7 @@ const About = () => {
             {/* Main Content */}
             <div className="space-y-12 animate-slide-up">
               <div>
-                <h1 className="text-3xl lg:text-5xl xl:text-6xl font-playfair font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-8 animate-gradient leading-tight tracking-tight">
+                <h1 className="text-2xl lg:text-3xl xl:text-4xl font-playfair font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-8 animate-gradient leading-tight tracking-tight">
                   Connecting Your Digital Matrix
                 </h1>
                 <div className="w-32 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto rounded-full animate-scale-in shadow-lg mb-6"></div>
@@ -108,7 +108,7 @@ const About = () => {
               <Star className="w-5 h-5 mr-3 text-blue-600" />
               Why Choose Us
             </div>
-            <h2 className="text-2xl lg:text-3xl font-playfair font-semibold text-gray-900 dark:text-white mb-8 tracking-tight">
+            <h2 className="text-xl lg:text-2xl font-playfair font-semibold text-gray-900 dark:text-white mb-8 tracking-tight">
               Why Choose <span className="text-gradient-primary font-bold">Byte Matrix?</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-source font-light">
@@ -190,7 +190,7 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-indigo-600/10 backdrop-blur-sm"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <h2 className="text-2xl lg:text-4xl font-playfair font-semibold text-gray-900 dark:text-white mb-8 tracking-tight">
+            <h2 className="text-xl lg:text-2xl font-playfair font-semibold text-gray-900 dark:text-white mb-8 tracking-tight">
               Ready to Transform Your <span className="text-gradient-primary font-bold">Digital Future?</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-4xl mx-auto font-source font-light leading-relaxed">

@@ -197,7 +197,7 @@ const Services = () => {
               <Zap className="w-4 h-4 mr-2" />
               Professional IT Solutions
             </div>
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Transform Your Business with
               <span className="text-gradient-brand block">Expert IT Services</span>
             </h1>
@@ -244,7 +244,7 @@ const Services = () => {
       <section className="py-20">
         <div className="container-professional">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Our Professional Services
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -260,7 +260,7 @@ const Services = () => {
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                     {service.title}
                   </h3>
                   
@@ -299,7 +299,7 @@ const Services = () => {
       <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-neutral-800 dark:to-neutral-900">
         <div className="container-professional">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -317,7 +317,7 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-brand">
         <div className="container-professional text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             Need Immediate IT Support?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
