@@ -107,7 +107,7 @@ const Contact = () => {
                 },
                 {
                   icon: Mail,
-                  title: "Professional Email Support",
+                  title: "support@bytematrixtechnologies.co.ke",
                   description: "Connect with our technology consultants for detailed project discussions and comprehensive solution proposals",
                   contact: "support@bytematrixtechnologies.co.ke",
                   href: "mailto:support@bytematrixtechnologies.co.ke",
