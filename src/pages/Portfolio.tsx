@@ -179,61 +179,76 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* Client Testimonials */}
+          {/* Value Proposition Section */}
           <div className="mb-20">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600/10 to-emerald-600/10 backdrop-blur-sm border border-green-200/30 dark:border-green-700/30 rounded-full text-green-700 dark:text-green-300 font-semibold mb-8 text-lg shadow-lg">
-                <Building className="w-6 h-6 mr-3 text-green-600" />
-                Client Success Stories
+                <Award className="w-6 h-6 mr-3 text-green-600" />
+                Why Choose Byte Matrix
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                What Our <span className="text-gradient-primary">Clients Say</span>
+                Your Success Is <span className="text-gradient-primary">Our Priority</span>
               </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-light">
+                We understand that technology is the backbone of modern business. That's why we deliver solutions that not only work but drive measurable results.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  quote: "Byte Matrix Technologies transformed our IT infrastructure completely. Their expertise and professionalism exceeded our expectations.",
-                  author: "Sarah Kiprotich",
-                  position: "IT Manager",
-                  company: "Nairobi Tech Solutions",
-                  rating: 5
+                  icon: Target,
+                  title: "Results-Driven Solutions",
+                  description: "Every project is designed with clear objectives and measurable outcomes. We don't just implement technology - we deliver business transformation.",
+                  gradient: "from-blue-500 to-cyan-500"
                 },
                 {
-                  quote: "Outstanding service delivery! They completed our network setup ahead of schedule and within budget. Highly recommended!",
-                  author: "Michael Ochieng",
-                  position: "Operations Director", 
-                  company: "East Africa Logistics",
-                  rating: 5
+                  icon: Shield,
+                  title: "Enterprise-Grade Security", 
+                  description: "Your business data is invaluable. Our security implementations follow international standards to protect what matters most to your organization.",
+                  gradient: "from-red-500 to-pink-500"
                 },
                 {
-                  quote: "Professional, reliable, and innovative. Their 24/7 support has been crucial for our business operations.",
-                  author: "Grace Wanjiku",
-                  position: "CEO",
-                  company: "Kenyan Innovations Ltd",
-                  rating: 5
+                  icon: Rocket,
+                  title: "Future-Ready Infrastructure",
+                  description: "We build scalable solutions that grow with your business. Our forward-thinking approach ensures your technology investment pays dividends for years.",
+                  gradient: "from-purple-500 to-indigo-500"
+                },
+                {
+                  icon: Users,
+                  title: "Dedicated Support Team",
+                  description: "Our certified professionals are available 24/7 to ensure your operations never skip a beat. When technology challenges arise, we're here.",
+                  gradient: "from-green-500 to-emerald-500"
+                },
+                {
+                  icon: CheckCircle,
+                  title: "Proven Track Record",
+                  description: "With hundreds of successful implementations across Kenya, we bring experience and expertise that translates to reliable, efficient solutions.",
+                  gradient: "from-orange-500 to-yellow-500"
+                },
+                {
+                  icon: Zap,
+                  title: "Rapid Deployment",
+                  description: "Time is money in business. Our streamlined processes and pre-configured solutions mean faster implementation and quicker returns on investment.",
+                  gradient: "from-indigo-500 to-purple-500"
                 }
-              ].map((testimonial, index) => (
+              ].map((benefit, index) => (
                 <Card
                   key={index}
                   className="glass-card hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 animate-fade-in group border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <CardContent className="p-8">
-                    <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-500 fill-current" />
-                      ))}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`}></div>
+                  <CardContent className="p-8 relative z-10">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${benefit.gradient} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 transition-all duration-500 shadow-xl`}>
+                      <benefit.icon className="h-8 w-8 text-white" />
                     </div>
-                    <blockquote className="text-gray-700 dark:text-gray-300 mb-6 italic font-light leading-relaxed">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
-                      <div className="font-semibold text-gray-900 dark:text-white">{testimonial.author}</div>
-                      <div className="text-blue-600 dark:text-blue-400 font-medium">{testimonial.position}</div>
-                      <div className="text-gray-500 dark:text-gray-400 text-sm">{testimonial.company}</div>
-                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+                      {benefit.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
