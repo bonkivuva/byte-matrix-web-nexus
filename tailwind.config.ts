@@ -25,6 +25,7 @@ export default {
 				'montserrat': ['Montserrat', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
 				'source': ['Source Sans Pro', 'sans-serif'],
+				'cyber': ['JetBrains Mono', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -69,6 +70,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				cyber: {
+					blue: 'hsl(var(--cyber-blue))',
+					purple: 'hsl(var(--cyber-purple))',
+					pink: 'hsl(var(--cyber-pink))',
+					green: 'hsl(var(--cyber-green))',
+					yellow: 'hsl(var(--cyber-yellow))',
+				},
+				neural: {
+					50: 'hsl(var(--neural-50))',
+					100: 'hsl(var(--neural-100))',
+					200: 'hsl(var(--neural-200))',
+					300: 'hsl(var(--neural-300))',
+					400: 'hsl(var(--neural-400))',
+					500: 'hsl(var(--neural-500))',
+					600: 'hsl(var(--neural-600))',
+					700: 'hsl(var(--neural-700))',
+					800: 'hsl(var(--neural-800))',
+					900: 'hsl(var(--neural-900))',
 				}
 			},
 			borderRadius: {
@@ -92,11 +112,48 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'cyber-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(var(--cyber-blue) / 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px hsl(var(--cyber-purple) / 0.6)'
+					}
+				},
+				'matrix-rain': {
+					'0%': {
+						transform: 'translateY(-100%)',
+						opacity: '0'
+					},
+					'10%': {
+						opacity: '1'
+					},
+					'90%': {
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateY(100vh)',
+						opacity: '0'
+					}
+				},
+				'neural-pulse': {
+					'0%, 100%': {
+						opacity: '0.4',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '1',
+						transform: 'scale(1.05)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'cyber-glow': 'cyber-glow 2s ease-in-out infinite',
+				'matrix-rain': 'matrix-rain 3s linear infinite',
+				'neural-pulse': 'neural-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
 			}
 		}
 	},

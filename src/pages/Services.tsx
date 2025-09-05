@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import ProfessionalHeader from "@/components/ProfessionalHeader";
+import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { Button } from "@/components/ui/button";
@@ -179,43 +179,52 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-blue-50/30 dark:from-neutral-900 dark:to-neutral-800">
+    <div className="min-h-screen bg-background font-poppins transition-all duration-300">
       <SEOHead 
-        title="Professional IT Services - Byte Matrix Technologies"
-        description="Comprehensive IT services including consulting, hardware procurement, cybersecurity, cloud solutions, and 24/7 technical support for businesses of all sizes."
-        keywords="IT services, technology consulting, hardware procurement, cybersecurity, cloud solutions, technical support, system integration"
+        title="Next-Gen IT Services - Byte Matrix Technologies"
+        description="Comprehensive IT services including quantum-secure consulting, neural hardware procurement, AI-powered cybersecurity, cloud solutions, and 24/7 intelligent technical support."
+        keywords="IT services, technology consulting, hardware procurement, cybersecurity, cloud solutions, technical support, system integration, AI, quantum security"
       />
       
-      <ProfessionalHeader currentPage="services" />
+      <FuturisticHeader currentPage="services" />
       
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-indigo-600/5"></div>
-        <div className="container-professional relative">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium mb-6">
-              <Zap className="w-4 h-4 mr-2" />
-              Professional IT Solutions
+      <section className="section-spacing relative overflow-hidden">
+        {/* Futuristic background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyber-blue/10 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-purple/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        <div className="container-professional relative z-10">
+          <div className="text-center max-w-5xl mx-auto">
+            <div className="inline-flex items-center px-6 py-3 glass-cyber rounded-full mb-8 border border-cyber-blue/20">
+              <Zap className="w-5 h-5 mr-3 text-cyber-yellow animate-glow" />
+              <span className="text-lg font-medium text-gradient-neon">Next-Gen IT Solutions</span>
             </div>
-            <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Transform Your Business with
-              <span className="text-gradient-brand block">Expert IT Services</span>
+            
+            <h1 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
+              <span className="text-foreground">Transform Your Business with</span>
+              <br />
+              <span className="text-gradient-cyber">Expert Technology Matrix</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              From strategic consulting to hands-on technical support, we provide comprehensive IT solutions 
-              that drive growth, enhance security, and optimize your technology investments.
+            
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed font-light max-w-4xl mx-auto">
+              From quantum-secure consulting to neural-powered automation, we provide comprehensive IT solutions 
+              that drive exponential growth, enhance security, and optimize your technology investments for the digital frontier.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-brand hover:opacity-90 transition-opacity" asChild>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button size="lg" className="btn-cyber text-lg px-10 py-4" asChild>
                 <Link to="/contact">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-6 h-6 mr-3" />
                   Get Free Consultation
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="outline" size="lg" className="btn-cyber-outline text-lg px-10 py-4" asChild>
                 <Link to="/portfolio">
                   View Our Portfolio
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-6 h-6 ml-3" />
                 </Link>
               </Button>
             </div>
@@ -224,16 +233,16 @@ const Services = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white/50 dark:bg-neutral-800/50 backdrop-blur-sm">
+      <section className="py-16 glass-cyber backdrop-blur-sm">
         <div className="container-professional">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-brand rounded-xl mb-4">
-                  <stat.icon className="w-6 h-6 text-white" />
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-cyber rounded-2xl mb-6 shadow-cyber group-hover:scale-110 transition-all duration-300">
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{stat.number}</div>
-                <div className="text-gray-600 dark:text-gray-300 font-medium">{stat.label}</div>
+                <div className="text-4xl font-bold text-foreground mb-3 group-hover:text-cyber-blue transition-colors duration-300">{stat.number}</div>
+                <div className="text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -241,38 +250,41 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="section-spacing">
         <div className="container-professional">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Our Professional Services
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+              Our <span className="text-gradient-cyber">Neural Services</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed to meet the unique needs of your business
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
+              Advanced IT solutions engineered for the digital frontier, powered by AI and secured with quantum technology
             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm hover:-translate-y-2">
+              <Card key={index} className="card-cyber group hover-lift-cyber">
                 <CardContent className="p-8">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-8 h-8 text-white" />
+                  <div className="relative mb-6">
+                    <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${service.gradient} rounded-2xl mb-4 group-hover:scale-110 transition-all duration-300 shadow-cyber`}>
+                      <service.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <div className="absolute inset-0 bg-cyber-blue/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  <h3 className="text-xl font-bold text-foreground mb-4">
                     {service.title}
                   </h3>
                   
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-muted-foreground mb-6 leading-relaxed font-light">
                     {service.description}
                   </p>
                   
                   <div className="space-y-3 mb-6">
                     {service.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-center text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700 dark:text-gray-300">{benefit}</span>
+                        <CheckCircle2 className="w-4 h-4 text-cyber-green mr-3 flex-shrink-0" />
+                        <span className="text-muted-foreground">{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -281,7 +293,7 @@ const Services = () => {
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="group-hover:bg-gradient-brand group-hover:text-white group-hover:border-transparent transition-all duration-300"
+                      className="btn-cyber-outline group-hover:btn-cyber transition-all duration-300"
                       onClick={() => setSelectedService(index)}
                     >
                       Learn More
@@ -296,39 +308,53 @@ const Services = () => {
       </section>
 
       {/* Lead Capture Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-neutral-800 dark:to-neutral-900">
-        <div className="container-professional">
+      <section className="section-spacing glass-cyber relative">
+        {/* Futuristic background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-cyber-purple/10 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-10 left-10 w-80 h-80 bg-cyber-pink/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        <div className="container-professional relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Ready to Get Started?
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+              Ready to <span className="text-gradient-cyber">Join the Matrix?</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Let's discuss how our IT services can transform your business operations and drive growth
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
+              Let's discuss how our next-gen IT services can quantum-leap your business operations and drive exponential growth
             </p>
           </div>
           
           <LeadCaptureForm 
-            title="Get Your Custom IT Solution"
-            subtitle="Tell us about your business needs and we'll create a tailored IT strategy for your success."
+            title="Get Your Custom Neural IT Solution"
+            subtitle="Tell us about your business needs and we'll architect a tailored technology matrix for your digital transformation."
           />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-brand">
-        <div className="container-professional text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Need Immediate IT Support?
+      <section className="py-16 bg-gradient-cyber relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-32 h-32 bg-cyber-yellow/20 rounded-full blur-2xl animate-pulse-slow"></div>
+          <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-cyber-pink/20 rounded-full blur-2xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        <div className="container-professional text-center relative z-10">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Need <span className="text-cyber-yellow">Immediate</span> IT Support?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our expert technicians are available 24/7 to resolve your IT issues and keep your business running smoothly.
+          <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto font-light">
+            Our neural-enhanced technicians are available 24/7 to resolve your IT issues with quantum speed 
+            and keep your business matrix running smoothly.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Phone className="w-5 h-5 mr-2" />
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button size="lg" variant="secondary" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white hover:text-primary text-lg px-8 py-4">
+              <Phone className="w-6 h-6 mr-3" />
               Call: +254 724367794
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8 py-4">
+              <Zap className="w-6 h-6 mr-3" />
               Email Support
             </Button>
           </div>
