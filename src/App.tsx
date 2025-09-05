@@ -19,7 +19,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/byte-matrix-technologies">
+      <BrowserRouter basename={import.meta.env.MODE === 'production' ? '/byte-matrix-technologies' : ''}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
