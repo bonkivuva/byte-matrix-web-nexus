@@ -70,9 +70,9 @@ const Index = () => {
             {/* Main headline */}
             <div className="mb-8 animate-fade-up" style={{ animationDelay: '0.4s' }}>
               <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
-                <span className="text-foreground">Transform Your Business with</span>
+                <span className="text-foreground">Enterprise IT Excellence</span>
                 <br />
-                <span className="text-gradient-cyber">Next-Gen IT Solutions</span>
+                <span className="text-gradient-cyber">Delivered with Precision</span>
               </h1>
             </div>
 
