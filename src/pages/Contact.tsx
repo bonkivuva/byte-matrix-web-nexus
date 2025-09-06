@@ -18,18 +18,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEOHead from "@/components/SEOHead";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import ProfessionalHeader from "@/components/ProfessionalHeader";
+import FuturisticHeader from "@/components/FuturisticHeader";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 font-roboto transition-all duration-700 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-quantum font-cyber text-foreground relative overflow-hidden">
       <SEOHead 
         title="Contact Byte Matrix Technologies - Get Your Free IT Consultation"
         description="Contact our IT experts for professional technology solutions. Get free consultation, 24/7 support, and transform your business with our comprehensive IT services."
         keywords="contact IT services, free IT consultation, technology support, professional IT help, enterprise solutions contact"
       />
       
-      <ProfessionalHeader currentPage="contact" />
+      <FuturisticHeader currentPage="contact" />
 
       {/* Premium animated background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">

@@ -14,19 +14,19 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import ProfessionalHeader from "@/components/ProfessionalHeader";
+import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-all duration-700 font-poppins overflow-hidden">
+    <div className="min-h-screen bg-gradient-quantum font-cyber text-foreground overflow-hidden">
       <SEOHead 
         title="About Byte Matrix Technologies - IT Solutions & Digital Transformation"
         description="Learn about Byte Matrix Technologies, Kenya's leading IT solutions provider. We specialize in digital transformation, enterprise solutions, and technology consulting."
         keywords="about byte matrix technologies, IT company Kenya, digital transformation, enterprise solutions, technology consulting"
       />
       
-      <ProfessionalHeader currentPage="about" />
+      <FuturisticHeader currentPage="about" />
       {/* Clean professional background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-slate-100/20 dark:from-blue-950/20 dark:to-slate-900/20"></div>

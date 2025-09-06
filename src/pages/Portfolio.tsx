@@ -18,19 +18,19 @@ import { Link } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import ProfessionalHeader from "@/components/ProfessionalHeader";
+import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 font-roboto transition-all duration-700 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-quantum font-cyber text-foreground relative overflow-hidden">
       <SEOHead 
         title="Portfolio - Our Success Stories | Byte Matrix Technologies"
         description="Explore our portfolio of successful IT projects and client transformations. See how we've helped businesses achieve digital excellence and growth."
         keywords="IT portfolio, client success stories, technology projects, digital transformation examples, enterprise solutions"
       />
       
-      <ProfessionalHeader currentPage="portfolio" />
+      <FuturisticHeader currentPage="portfolio" />
       {/* Subtle professional background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-slate-100/30 dark:from-blue-950/30 dark:to-slate-900/30"></div>

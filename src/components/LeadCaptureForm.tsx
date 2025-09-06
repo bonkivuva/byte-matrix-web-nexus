@@ -94,17 +94,17 @@ const LeadCaptureForm = ({
 
   if (isSubmitted) {
     return (
-      <Card className={`w-full max-w-2xl mx-auto bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border-green-200/50 dark:border-green-700/50 ${className}`}>
+      <Card className={`w-full max-w-2xl mx-auto glass-cyber border border-cyber-green/20 shadow-cyber-lg ${className}`}>
         <CardContent className="p-8 text-center">
-          <CheckCircle2 className="w-16 h-16 text-green-600 mx-auto mb-4" />
-          <h3 className="text-2xl font-semibold text-green-800 dark:text-green-300 mb-2">
-            Thank You!
+          <CheckCircle2 className="w-16 h-16 text-cyber-green mx-auto mb-4 animate-pulse-slow" />
+          <h3 className="text-2xl font-semibold text-gradient-cyber mb-2">
+            Connection Established!
           </h3>
-          <p className="text-green-700 dark:text-green-400 mb-4">
-            Your consultation request has been submitted successfully.
+          <p className="text-foreground mb-4">
+            Your neural link request has been processed successfully.
           </p>
-          <p className="text-sm text-green-600 dark:text-green-500">
-            Our team will contact you within 24 hours to discuss your IT needs.
+          <p className="text-sm text-muted-foreground">
+            Our digital matrix team will interface with you within 24 hours.
           </p>
           <Button 
             onClick={() => setIsSubmitted(false)}
@@ -119,12 +119,12 @@ const LeadCaptureForm = ({
   }
 
   return (
-    <Card className={`w-full max-w-2xl mx-auto bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border-0 shadow-xl ${className}`}>
+    <Card className={`w-full max-w-2xl mx-auto glass-cyber shadow-cyber-lg hover:shadow-cyber hover-lift-cyber border border-cyber-blue/20 ${className}`}>
       <CardHeader className="text-center pb-6">
-        <CardTitle className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+        <CardTitle className="text-2xl lg:text-3xl font-bold text-gradient-cyber mb-2">
           {title}
         </CardTitle>
-        <p className="text-gray-600 dark:text-gray-300">
+        <p className="text-muted-foreground">
           {subtitle}
         </p>
       </CardHeader>
@@ -253,7 +253,7 @@ const LeadCaptureForm = ({
               type="submit"
               size="lg"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white py-3 text-lg font-medium"
+              className="w-full btn-cyber py-3 text-lg font-medium hover-lift-cyber"
             >
               {isSubmitting ? (
                 <>
