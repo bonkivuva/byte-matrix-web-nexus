@@ -479,11 +479,6 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* Fix for missing gradient classes in pages */
-.bg-gradient-quantum {
-  @apply bg-gradient-quantum;
-}
-
 /* Missing utility classes for compatibility */
 .text-gradient-primary {
   background: linear-gradient(135deg, 
