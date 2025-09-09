@@ -50,7 +50,6 @@ const Index = () => {
                     filter: "drop-shadow(0 0 30px hsl(var(--cyber-blue) / 0.3))",
                   }}
                   loading="eager"
-                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-cyber opacity-20 blur-3xl animate-glow"></div>
               </div>
