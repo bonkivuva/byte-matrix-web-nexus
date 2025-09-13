@@ -50,8 +50,8 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
   };
 
   const navLinks = [
-    { path: '/services', label: 'Services', name: 'services' },
     { path: '/about', label: 'About', name: 'about' },
+    { path: '/services', label: 'Services', name: 'services' },
     { path: '/portfolio', label: 'Portfolio', name: 'portfolio' },
     { path: '/careers', label: 'Careers', name: 'careers' },
     { path: '/contact', label: 'Contact', name: 'contact' },
