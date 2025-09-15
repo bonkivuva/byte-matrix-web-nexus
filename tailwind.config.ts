@@ -72,11 +72,16 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				cyber: {
-					blue: 'hsl(var(--cyber-blue))',
-					purple: 'hsl(var(--cyber-purple))',
-					pink: 'hsl(var(--cyber-pink))',
-					green: 'hsl(var(--cyber-green))',
-					yellow: 'hsl(var(--cyber-yellow))',
+					blue: 'hsl(var(--brand-blue))',
+					gray: 'hsl(var(--brand-gray))',
+				},
+				brand: {
+					blue: 'hsl(var(--brand-blue))',
+					'blue-light': 'hsl(var(--brand-blue-light))',
+					'blue-dark': 'hsl(var(--brand-blue-dark))',
+					gray: 'hsl(var(--brand-gray))',
+					'gray-light': 'hsl(var(--brand-gray-light))',
+					accent: 'hsl(var(--brand-accent))',
 				},
 				neural: {
 					50: 'hsl(var(--neural-50))',
@@ -113,12 +118,12 @@ export default {
 						height: '0'
 					}
 				},
-				'cyber-glow': {
+				'brand-glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(var(--cyber-blue) / 0.3)'
+						boxShadow: '0 0 20px hsl(var(--brand-blue) / 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px hsl(var(--cyber-purple) / 0.6)'
+						boxShadow: '0 0 40px hsl(var(--brand-blue-light) / 0.6)'
 					}
 				},
 				'matrix-rain': {
@@ -151,7 +156,7 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'cyber-glow': 'cyber-glow 2s ease-in-out infinite',
+				'brand-glow': 'brand-glow 2s ease-in-out infinite',
 				'matrix-rain': 'matrix-rain 3s linear infinite',
 				'neural-pulse': 'neural-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
 			}

@@ -6,91 +6,90 @@
 /* Futuristic design system with professional aesthetics */
 @layer base {
   :root {
-    --background: 220 27% 98%;
-    --foreground: 220 20% 14%;
-    --card: 220 27% 99%;
-    --card-foreground: 220 20% 14%;
-    --popover: 220 27% 99%;
-    --popover-foreground: 220 20% 14%;
-    --primary: 220 100% 55%;
-    --primary-foreground: 220 27% 98%;
-    --secondary: 220 20% 96%;
-    --secondary-foreground: 220 20% 14%;
-    --muted: 220 20% 95%;
-    --muted-foreground: 220 15% 46%;
-    --accent: 220 90% 65%;
-    --accent-foreground: 220 27% 98%;
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 8% 95%;
+    --secondary-foreground: 210 11% 15%;
+    --muted: 210 8% 95%;
+    --muted-foreground: 210 6% 46%;
+    --accent: 210 100% 60%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 220 27% 98%;
-    --border: 220 20% 90%;
-    --input: 220 20% 90%;
-    --ring: 220 100% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 8% 90%;
+    --input: 210 8% 90%;
+    --ring: 210 100% 50%;
     --radius: 0.75rem;
-    --sidebar-background: 220 27% 98%;
-    --sidebar-foreground: 220 20% 14%;
-    --sidebar-primary: 220 100% 55%;
-    --sidebar-primary-foreground: 220 27% 98%;
-    --sidebar-accent: 220 20% 96%;
-    --sidebar-accent-foreground: 220 20% 14%;
-    --sidebar-border: 220 20% 90%;
-    --sidebar-ring: 220 100% 55%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 11% 15%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 8% 95%;
+    --sidebar-accent-foreground: 210 11% 15%;
+    --sidebar-border: 210 8% 90%;
+    --sidebar-ring: 210 100% 50%;
     
-    /* Futuristic color palette */
-    --cyber-blue: 195 100% 65%;
-    --cyber-purple: 270 100% 70%;
-    --cyber-pink: 330 100% 70%;
-    --cyber-green: 150 100% 60%;
-    --cyber-yellow: 50 100% 65%;
-    --neon-glow: 195 100% 75%;
+    /* Brand colors matching Byte Matrix logo */
+    --brand-blue: 210 100% 50%;
+    --brand-blue-light: 210 100% 60%;
+    --brand-blue-dark: 210 100% 40%;
+    --brand-gray: 210 11% 15%;
+    --brand-gray-light: 210 8% 85%;
+    --brand-accent: 210 100% 55%;
     
-    /* Brand colors with futuristic appeal */
-    --brand-primary: 220 100% 55%;
-    --brand-secondary: 270 85% 65%;
-    --brand-accent: 195 100% 65%;
-    --brand-gradient-start: 220 100% 55%;
-    --brand-gradient-mid: 270 85% 65%;
-    --brand-gradient-end: 195 100% 65%;
+    /* Professional color palette */
+    --brand-primary: 210 100% 50%;
+    --brand-secondary: 210 8% 85%;
+    --brand-gradient-start: 210 100% 50%;
+    --brand-gradient-mid: 210 100% 60%;
+    --brand-gradient-end: 210 100% 70%;
     
-    /* Neural network inspired neutrals */
-    --neural-50: 220 40% 98%;
-    --neural-100: 220 35% 96%;
-    --neural-200: 220 30% 92%;
-    --neural-300: 220 25% 85%;
-    --neural-400: 220 20% 70%;
-    --neural-500: 220 15% 55%;
-    --neural-600: 220 20% 40%;
-    --neural-700: 220 25% 25%;
-    --neural-800: 220 30% 15%;
-    --neural-900: 220 35% 8%;
+    /* Professional neutrals matching logo */
+    --neural-50: 210 20% 98%;
+    --neural-100: 210 15% 96%;
+    --neural-200: 210 12% 92%;
+    --neural-300: 210 10% 85%;
+    --neural-400: 210 8% 70%;
+    --neural-500: 210 6% 55%;
+    --neural-600: 210 8% 40%;
+    --neural-700: 210 10% 25%;
+    --neural-800: 210 12% 15%;
+    --neural-900: 210 15% 8%;
   }
 
   .dark {
-    --background: 220 35% 8%;
-    --foreground: 220 40% 98%;
-    --card: 220 30% 12%;
-    --card-foreground: 220 40% 98%;
-    --popover: 220 30% 12%;
-    --popover-foreground: 220 40% 98%;
-    --primary: 220 100% 65%;
-    --primary-foreground: 220 35% 8%;
-    --secondary: 220 25% 18%;
-    --secondary-foreground: 220 40% 98%;
-    --muted: 220 25% 18%;
-    --muted-foreground: 220 20% 70%;
-    --accent: 270 85% 65%;
-    --accent-foreground: 220 35% 8%;
+    --background: 210 15% 8%;
+    --foreground: 210 20% 98%;
+    --card: 210 12% 12%;
+    --card-foreground: 210 20% 98%;
+    --popover: 210 12% 12%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 100% 60%;
+    --primary-foreground: 210 15% 8%;
+    --secondary: 210 10% 18%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 210 10% 18%;
+    --muted-foreground: 210 8% 70%;
+    --accent: 210 100% 65%;
+    --accent-foreground: 210 15% 8%;
     --destructive: 0 62% 50%;
-    --destructive-foreground: 220 40% 98%;
-    --border: 220 25% 18%;
-    --input: 220 25% 18%;
-    --ring: 220 100% 65%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 210 10% 18%;
+    --input: 210 10% 18%;
+    --ring: 210 100% 60%;
     
-    /* Dark mode futuristic adjustments */
-    --cyber-blue: 195 100% 75%;
-    --cyber-purple: 270 100% 80%;
-    --cyber-pink: 330 100% 80%;
-    --cyber-green: 150 100% 70%;
-    --neon-glow: 195 100% 85%;
+    /* Dark mode brand adjustments */
+    --brand-blue: 210 100% 60%;
+    --brand-blue-light: 210 100% 70%;
+    --brand-blue-dark: 210 100% 50%;
+    --brand-gray: 210 20% 98%;
+    --brand-gray-light: 210 10% 25%;
   }
 }
 
@@ -108,17 +107,15 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--cyber-blue) / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--cyber-purple) / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(var(--cyber-pink) / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, hsl(var(--brand-blue) / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--brand-blue-light) / 0.03) 0%, transparent 50%),
       linear-gradient(135deg, hsl(var(--neural-50)) 0%, hsl(var(--neural-100)) 100%);
   }
 
   .dark body {
     background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--cyber-blue) / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--cyber-purple) / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(var(--cyber-pink) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, hsl(var(--brand-blue) / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--brand-blue-light) / 0.05) 0%, transparent 50%),
       linear-gradient(135deg, hsl(var(--neural-900)) 0%, hsl(var(--neural-800)) 100%);
   }
 
@@ -131,8 +128,8 @@
     width: 100%;
     height: 100%;
     background-image: 
-      linear-gradient(hsl(var(--cyber-blue) / 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--cyber-blue) / 0.03) 1px, transparent 1px);
+      linear-gradient(hsl(var(--brand-blue) / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--brand-blue) / 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     opacity: 0.4;
     pointer-events: none;
@@ -141,8 +138,8 @@
 
   .dark body::before {
     background-image: 
-      linear-gradient(hsl(var(--neon-glow) / 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--neon-glow) / 0.08) 1px, transparent 1px);
+      linear-gradient(hsl(var(--brand-blue-light) / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--brand-blue-light) / 0.08) 1px, transparent 1px);
     opacity: 0.2;
   }
 
@@ -198,18 +195,14 @@
   }
 }
 
-/* Futuristic utility classes */
+/* Professional utility classes */
 @layer utilities {
-  .text-cyber-blue {
-    color: hsl(var(--cyber-blue));
+  .text-brand-blue {
+    color: hsl(var(--brand-blue));
   }
   
-  .text-cyber-purple {
-    color: hsl(var(--cyber-purple));
-  }
-  
-  .text-cyber-pink {
-    color: hsl(var(--cyber-pink));
+  .text-brand-gray {
+    color: hsl(var(--brand-gray));
   }
   
   .text-brand-primary {
@@ -220,7 +213,7 @@
     background-color: hsl(var(--brand-primary));
   }
 
-  .text-gradient-cyber {
+  .text-gradient-brand {
     background: linear-gradient(135deg, 
       hsl(var(--brand-gradient-start)), 
       hsl(var(--brand-gradient-mid)), 
@@ -229,16 +222,15 @@
     @apply bg-clip-text text-transparent;
   }
   
-  .text-gradient-neon {
+  .text-gradient-professional {
     background: linear-gradient(90deg, 
-      hsl(var(--cyber-blue)), 
-      hsl(var(--cyber-purple)), 
-      hsl(var(--cyber-pink))
+      hsl(var(--brand-blue)), 
+      hsl(var(--brand-blue-light))
     );
     @apply bg-clip-text text-transparent;
   }
 
-  .bg-gradient-cyber {
+  .bg-gradient-brand {
     background: linear-gradient(135deg, 
       hsl(var(--brand-gradient-start)), 
       hsl(var(--brand-gradient-mid)), 
@@ -246,26 +238,24 @@
     );
   }
 
-  .bg-gradient-neon {
+  .bg-gradient-professional {
     background: linear-gradient(135deg, 
-      hsl(var(--cyber-blue)), 
-      hsl(var(--cyber-purple))
+      hsl(var(--brand-blue)), 
+      hsl(var(--brand-blue-light))
     );
   }
 
-  .bg-gradient-quantum {
+  .bg-gradient-professional-subtle {
     background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--cyber-blue) / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--cyber-purple) / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(var(--cyber-pink) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, hsl(var(--brand-blue) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--brand-blue-light) / 0.05) 0%, transparent 50%),
       linear-gradient(135deg, hsl(var(--neural-50)) 0%, hsl(var(--neural-100)) 100%);
   }
 
-  .dark .bg-gradient-quantum {
+  .dark .bg-gradient-professional-subtle {
     background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--cyber-blue) / 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--cyber-purple) / 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(var(--cyber-pink) / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, hsl(var(--brand-blue) / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--brand-blue-light) / 0.08) 0%, transparent 50%),
       linear-gradient(135deg, hsl(var(--neural-900)) 0%, hsl(var(--neural-800)) 100%);
   }
 
@@ -292,42 +282,40 @@
     pointer-events: none;
   }
 
-  .shadow-cyber {
+  .shadow-brand {
     box-shadow: 
-      0 4px 20px -4px hsl(var(--cyber-blue) / 0.3),
-      0 0 30px -10px hsl(var(--cyber-purple) / 0.2);
+      0 4px 20px -4px hsl(var(--brand-blue) / 0.3),
+      0 0 30px -10px hsl(var(--brand-blue-light) / 0.2);
   }
 
-  .shadow-cyber-lg {
+  .shadow-brand-lg {
     box-shadow: 
-      0 10px 40px -8px hsl(var(--cyber-blue) / 0.4),
-      0 0 60px -15px hsl(var(--cyber-purple) / 0.3),
-      0 0 100px -20px hsl(var(--cyber-pink) / 0.1);
+      0 10px 40px -8px hsl(var(--brand-blue) / 0.4),
+      0 0 60px -15px hsl(var(--brand-blue-light) / 0.3);
   }
 
-  .glass-cyber {
+  .glass-professional {
     background: hsl(var(--background) / 0.7);
     backdrop-filter: blur(20px) saturate(1.2);
-    border: 1px solid hsl(var(--cyber-blue) / 0.2);
+    border: 1px solid hsl(var(--brand-blue) / 0.2);
   }
 
-  .dark .glass-cyber {
+  .dark .glass-professional {
     background: hsl(var(--background) / 0.5);
-    border: 1px solid hsl(var(--neon-glow) / 0.3);
+    border: 1px solid hsl(var(--brand-blue-light) / 0.3);
   }
 
-  .glow-cyber {
+  .glow-brand {
     box-shadow: 
-      0 0 20px hsl(var(--cyber-blue) / 0.4),
-      inset 0 0 20px hsl(var(--cyber-purple) / 0.1);
+      0 0 20px hsl(var(--brand-blue) / 0.4),
+      inset 0 0 20px hsl(var(--brand-blue-light) / 0.1);
   }
 
-  .border-cyber {
+  .border-brand {
     border: 1px solid;
     border-image: linear-gradient(90deg, 
-      hsl(var(--cyber-blue)), 
-      hsl(var(--cyber-purple)), 
-      hsl(var(--cyber-pink))
+      hsl(var(--brand-blue)), 
+      hsl(var(--brand-blue-light))
     ) 1;
   }
 
@@ -357,28 +345,27 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .hover-glow-cyber:hover {
+  .hover-glow-brand:hover {
     box-shadow: 
-      0 0 30px hsl(var(--cyber-blue) / 0.6),
-      0 0 60px hsl(var(--cyber-purple) / 0.4),
-      0 20px 40px -10px hsl(var(--cyber-blue) / 0.3);
+      0 0 30px hsl(var(--brand-blue) / 0.6),
+      0 0 60px hsl(var(--brand-blue-light) / 0.4),
+      0 20px 40px -10px hsl(var(--brand-blue) / 0.3);
     transition: all 0.3s ease;
   }
 
-  .cyber-border-glow {
+  .brand-border-glow {
     position: relative;
   }
 
-  .cyber-border-glow::before {
+  .brand-border-glow::before {
     content: '';
     position: absolute;
     inset: -2px;
     padding: 2px;
     background: linear-gradient(45deg, 
-      hsl(var(--cyber-blue)), 
-      hsl(var(--cyber-purple)), 
-      hsl(var(--cyber-pink)), 
-      hsl(var(--cyber-blue))
+      hsl(var(--brand-blue)), 
+      hsl(var(--brand-blue-light)), 
+      hsl(var(--brand-blue))
     );
     border-radius: inherit;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
