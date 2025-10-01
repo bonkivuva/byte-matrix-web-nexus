@@ -68,7 +68,7 @@ const Career = () => {
                 className="glass-cyber border-cyber-blue/30 text-cyber-blue hover:bg-cyber-blue/10"
                 asChild
               >
-                <Link to="/about">
+                <Link to="/">
                   Learn More About Us
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
@@ -88,77 +88,6 @@ const Career = () => {
                 <p className="text-lg font-medium">Innovation • Excellence • Growth</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills We're Looking For */}
-      <section className="relative z-10 py-20">
-        <div className="container-professional">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-cyber/10 backdrop-blur-sm border border-cyber-purple/20 rounded-full text-cyber-purple font-medium mb-8 text-lg">
-              <Brain className="w-5 h-5 mr-3" />
-              Future Skills
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gradient-cyber mb-6">
-              Technologies We Master
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We're always seeking talented individuals who are passionate about cutting-edge technology
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Code,
-                title: "Development",
-                skills: ["React", "Node.js", "Python", "TypeScript"],
-                gradient: "from-cyber-blue to-cyber-purple"
-              },
-              {
-                icon: Shield,
-                title: "Cybersecurity",
-                skills: ["Penetration Testing", "SOC", "Risk Assessment", "Compliance"],
-                gradient: "from-cyber-purple to-cyber-pink"
-              },
-              {
-                icon: Cloud,
-                title: "Cloud Solutions",
-                skills: ["AWS", "Azure", "DevOps", "Kubernetes"],
-                gradient: "from-cyber-green to-cyber-blue"
-              },
-              {
-                icon: Brain,
-                title: "AI & ML",
-                skills: ["Machine Learning", "Data Science", "Neural Networks", "AI"],
-                gradient: "from-cyber-yellow to-cyber-green"
-              }
-            ].map((area, index) => (
-              <Card 
-                key={index}
-                className="glass-cyber border border-cyber-blue/20 hover:border-cyber-purple/40 transition-all duration-500 hover-lift-cyber group"
-              >
-                <CardContent className="p-6 text-center">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${area.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <area.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-cyber-blue mb-4 group-hover:text-gradient-cyber transition-all duration-300">
-                    {area.title}
-                  </h3>
-                  <div className="space-y-2">
-                    {area.skills.map((skill, idx) => (
-                      <div 
-                        key={idx}
-                        className="px-3 py-1 bg-cyber-blue/10 border border-cyber-blue/20 rounded-full text-sm text-cyber-blue"
-                      >
-                        {skill}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

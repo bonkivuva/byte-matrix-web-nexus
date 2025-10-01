@@ -60,10 +60,27 @@ const LeadCaptureForm = ({
     setIsSubmitting(true);
     
     try {
-      // Simulate form submission - replace with actual API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const { supabase } = await import("@/integrations/supabase/client");
       
-      console.log("Lead form submitted:", data);
+      const { data: response, error } = await supabase.functions.invoke(
+        'send-consultation-email',
+        {
+          body: {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            company: data.company,
+            service: data.service,
+            message: data.message,
+          }
+        }
+      );
+
+      if (error) {
+        throw error;
+      }
+
+      console.log("Consultation request sent successfully:", response);
       
       // Track analytics event
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -82,9 +99,10 @@ const LeadCaptureForm = ({
 
       form.reset();
     } catch (error) {
+      console.error("Error submitting consultation request:", error);
       toast({
         title: "Something went wrong",
-        description: "Please try again or contact us directly.",
+        description: "Please try again or contact us directly at support@bytematrixtechnologies.co.ke",
         variant: "destructive",
       });
     } finally {
@@ -177,7 +195,7 @@ const LeadCaptureForm = ({
                       Phone Number *
                     </FormLabel>
                     <FormControl>
-                      <Input placeholder="+254 724 367 794" {...field} />
+                      <Input placeholder="+254 7xx xxx xxx" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
