@@ -184,9 +184,9 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background font-poppins transition-all duration-300">
       <SEOHead 
-        title="Next-Gen IT Services - Byte Matrix Technologies"
-        description="Comprehensive IT services including quantum-secure consulting, neural hardware procurement, AI-powered cybersecurity, cloud solutions, and 24/7 intelligent technical support."
-        keywords="IT services, technology consulting, hardware procurement, cybersecurity, cloud solutions, technical support, system integration, AI, quantum security"
+        title="Professional IT Services - Byte Matrix Technologies"
+        description="Comprehensive IT services including technology consulting, hardware procurement, cybersecurity, cloud solutions, and 24/7 technical support for businesses."
+        keywords="IT services, technology consulting, hardware procurement, cybersecurity, cloud solutions, technical support, system integration, business technology"
       />
       
       <FuturisticHeader currentPage="services" />
@@ -203,7 +203,7 @@ const Services = () => {
           <div className="text-center max-w-5xl mx-auto">
             <div className="inline-flex items-center px-6 py-3 glass-cyber rounded-full mb-8 border border-cyber-blue/20">
               <Zap className="w-5 h-5 mr-3 text-cyber-yellow animate-glow" />
-              <span className="text-lg font-medium text-gradient-neon">Next-Gen IT Solutions</span>
+              <span className="text-lg font-medium text-gradient-neon">Professional IT Solutions</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
@@ -333,7 +333,7 @@ const Services = () => {
               Ready to <span className="text-gradient-cyber">Join the Matrix?</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-              Let's discuss how our next-gen IT services can quantum-leap your business operations and drive exponential growth
+              Let's discuss how our IT services can improve your business operations and drive growth
             </p>
           </div>
           

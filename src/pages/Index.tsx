@@ -141,7 +141,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">IT Infrastructure</h3>
               <p className="text-muted-foreground font-light leading-relaxed mb-4">
-                Next-gen infrastructure management with quantum-secure networks and AI-powered monitoring
+                Modern infrastructure management with secure networks and intelligent monitoring
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
                 <span className="px-3 py-1 text-xs bg-cyber-blue/20 text-cyber-blue rounded-full">Cloud Native</span>
@@ -235,7 +235,7 @@ const Index = () => {
                 © 2024 Byte Matrix Technologies. All rights reserved.
               </p>
               <p className="text-cyber-blue mt-2 font-light">
-                Next-Gen IT Solutions for Tomorrow's Businesses
+                Professional IT Solutions for Growing Businesses
               </p>
             </div>
           </div>
