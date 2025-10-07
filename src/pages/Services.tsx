@@ -4,6 +4,9 @@ import { useState } from "react";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import Testimonials from "@/components/Testimonials";
+import ClientLogos from "@/components/ClientLogos";
+import TrustIndicators from "@/components/TrustIndicators";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -249,6 +252,9 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Trust Indicators */}
+      <TrustIndicators />
+
       {/* Services Grid */}
       <section className="section-spacing">
         <div className="container-professional">
@@ -257,7 +263,7 @@ const Services = () => {
               Our <span className="text-gradient-cyber">Neural Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-              Advanced IT solutions engineered for the digital frontier, powered by AI and secured with quantum technology
+              Comprehensive IT solutions designed to transform your business operations
             </p>
           </div>
           
@@ -306,6 +312,12 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      {/* Client Logos */}
+      <ClientLogos />
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* Lead Capture Section */}
       <section className="section-spacing glass-cyber relative">

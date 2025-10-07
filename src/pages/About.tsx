@@ -8,7 +8,6 @@ import {
   Users,
   Award,
   Zap,
-  
   Star,
   ChevronDown,
 } from "lucide-react";
@@ -16,6 +15,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
+import ClientLogos from "@/components/ClientLogos";
+import Testimonials from "@/components/Testimonials";
+import TrustIndicators from "@/components/TrustIndicators";
 
 const About = () => {
   return (
@@ -100,6 +102,9 @@ const About = () => {
         </div>
       </section>
 
+      {/* Trust Indicators */}
+      <TrustIndicators />
+
       {/* Premium Features Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-6">
@@ -149,7 +154,7 @@ const About = () => {
               {
                 icon: Award,
                 title: "Industry Leading",
-                description: "Award-winning solutions trusted by Fortune 500 companies worldwide with proven track record of success.",
+                description: "Award-winning solutions trusted by leading companies with proven track record of success.",
                 gradient: "from-indigo-500 to-purple-500",
                 delay: "0.4s"
               },
@@ -184,6 +189,12 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Client Logos */}
+      <ClientLogos />
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* Enhanced CTA Section */}
       <section className="py-20 relative overflow-hidden">

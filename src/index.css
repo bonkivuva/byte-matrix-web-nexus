@@ -496,8 +496,71 @@
   color: hsl(var(--cyber-yellow));
 }
 
-/* Professional scrollbar */
-::-webkit-scrollbar {
+  /* Professional container classes */
+  .container-professional {
+    @apply container mx-auto px-6 lg:px-8 max-w-7xl;
+  }
+
+  .section-spacing {
+    @apply py-16 lg:py-24;
+  }
+
+  /* Card styles */
+  .card-cyber {
+    @apply glass-professional hover:shadow-brand-lg transition-all duration-300;
+  }
+
+  /* Button styles */
+  .btn-cyber {
+    @apply bg-gradient-professional text-white hover:opacity-90 shadow-brand;
+  }
+
+  .btn-cyber-outline {
+    @apply border-2 border-brand-blue/30 text-brand-blue hover:bg-brand-blue/10;
+  }
+
+  /* Cyber theme colors - using brand colors */
+  :root {
+    --cyber-blue: var(--brand-blue);
+    --cyber-purple: 280 100% 60%;
+    --cyber-pink: 330 100% 60%;
+    --cyber-green: 142 76% 36%;
+    --cyber-yellow: 48 100% 50%;
+  }
+
+  .text-gradient-cyber {
+    background: linear-gradient(135deg, 
+      hsl(var(--brand-blue)), 
+      hsl(var(--brand-blue-light))
+    );
+    @apply bg-clip-text text-transparent;
+  }
+
+  .text-gradient-neon {
+    background: linear-gradient(90deg, 
+      hsl(var(--cyber-blue)), 
+      hsl(var(--cyber-purple))
+    );
+    @apply bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-cyber {
+    background: linear-gradient(135deg, 
+      hsl(var(--brand-blue)), 
+      hsl(var(--brand-blue-light))
+    );
+  }
+
+  .glass-cyber {
+    @apply glass-professional;
+  }
+
+  .shadow-cyber {
+    @apply shadow-brand;
+  }
+
+  /* Professional scrollbar */
+  ::-webkit-scrollbar {
   width: 8px;
 }
 
