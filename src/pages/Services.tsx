@@ -260,7 +260,7 @@ const Services = () => {
         <div className="container-professional">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-              Our <span className="text-gradient-cyber">Neural Services</span>
+              Our <span className="text-gradient-cyber">IT Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
               Comprehensive IT solutions designed to transform your business operations
@@ -338,8 +338,8 @@ const Services = () => {
           </div>
           
           <LeadCaptureForm 
-            title="Get Your Custom Neural IT Solution"
-            subtitle="Tell us about your business needs and we'll architect a tailored technology matrix for your digital transformation."
+            title="Get Your Custom IT Solution"
+            subtitle="Tell us about your business needs and we'll create a tailored technology solution for your digital transformation."
           />
         </div>
       </section>
@@ -357,8 +357,8 @@ const Services = () => {
             Need <span className="text-cyber-yellow">Immediate</span> IT Support?
           </h2>
           <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto font-light">
-            Our neural-enhanced technicians are available 24/7 to resolve your IT issues with quantum speed 
-            and keep your business matrix running smoothly.
+            Our expert technicians are available 24/7 to resolve your IT issues quickly 
+            and keep your business running smoothly.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button size="lg" variant="secondary" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white hover:text-primary text-lg px-8 py-4">

@@ -159,11 +159,11 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">Smart Hardware</h3>
               <p className="text-muted-foreground font-light leading-relaxed mb-4">
-                Enterprise-grade equipment with neural processing and adaptive performance optimization
+                Enterprise-grade equipment with advanced processing and optimized performance
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                <span className="px-3 py-1 text-xs bg-cyber-pink/20 text-cyber-pink rounded-full">Neural Chips</span>
-                <span className="px-3 py-1 text-xs bg-cyber-green/20 text-cyber-green rounded-full">Self-Healing</span>
+                <span className="px-3 py-1 text-xs bg-cyber-pink/20 text-cyber-pink rounded-full">High Performance</span>
+                <span className="px-3 py-1 text-xs bg-cyber-green/20 text-cyber-green rounded-full">Reliable</span>
               </div>
             </div>
 

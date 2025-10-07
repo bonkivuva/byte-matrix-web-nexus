@@ -4,9 +4,9 @@ const TrustIndicators = () => {
   const indicators = [
     {
       icon: Shield,
-      value: "ISO 27001",
-      label: "Certified Security",
-      description: "Industry-standard security practices"
+      value: "24/7",
+      label: "Support Available",
+      description: "Round-the-clock technical assistance"
     },
     {
       icon: Award,

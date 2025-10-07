@@ -119,10 +119,10 @@ const LeadCaptureForm = ({
             Connection Established!
           </h3>
           <p className="text-foreground mb-4">
-            Your neural link request has been processed successfully.
+            Your request has been received successfully.
           </p>
           <p className="text-sm text-muted-foreground">
-            Our digital matrix team will interface with you within 24 hours.
+            Our team will contact you within 24 hours.
           </p>
           <Button 
             onClick={() => setIsSubmitted(false)}
