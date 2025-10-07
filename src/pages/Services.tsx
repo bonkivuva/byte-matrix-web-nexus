@@ -210,8 +210,8 @@ const Services = () => {
             </h1>
             
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed font-light max-w-4xl mx-auto">
-              From quantum-secure consulting to neural-powered automation, we provide comprehensive IT solutions 
-              that drive exponential growth, enhance security, and optimize your technology investments for the digital frontier.
+              From strategic IT consulting to enterprise hardware solutions, we deliver expert technology services 
+              that enhance your business operations, strengthen cybersecurity, and provide reliable 24/7 technical support.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
