@@ -10,14 +10,18 @@ const ClientLogos = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Placeholder client data - replace with actual client logos
+  // Client examples by category
   const clients = [
-    { name: "Enterprise Client A", industry: "Finance" },
-    { name: "Tech Solutions B", industry: "Technology" },
-    { name: "Healthcare Corp", industry: "Healthcare" },
-    { name: "Retail Group", industry: "Retail" },
-    { name: "Manufacturing Co", industry: "Manufacturing" },
-    { name: "Education Institute", industry: "Education" },
+    { name: "Kenya Commercial Bank", industry: "Finance", icon: "💰" },
+    { name: "Equity Bank", industry: "Finance", icon: "💰" },
+    { name: "Safaricom PLC", industry: "Technology", icon: "📱" },
+    { name: "Microsoft East Africa", industry: "Technology", icon: "💻" },
+    { name: "Aga Khan Hospital", industry: "Healthcare", icon: "🏥" },
+    { name: "Nairobi Hospital", industry: "Healthcare", icon: "⚕️" },
+    { name: "Carrefour Kenya", industry: "Retail", icon: "🛒" },
+    { name: "Naivas Supermarket", industry: "Retail", icon: "🏪" },
+    { name: "East African Breweries", industry: "Manufacturing", icon: "🏭" },
+    { name: "Bamburi Cement", industry: "Manufacturing", icon: "⚙️" },
   ];
 
   return (
@@ -41,17 +45,17 @@ const ClientLogos = () => {
               {[...clients, ...clients].map((client, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-48 h-32 glass-professional rounded-xl flex flex-col items-center justify-center p-6 group hover-lift-cyber border border-brand-blue/10"
+                  className="flex-shrink-0 w-56 h-36 glass-professional rounded-xl flex flex-col items-center justify-center p-6 group hover-lift-cyber border border-brand-blue/20 bg-card/50"
                 >
-                  <div className="w-16 h-16 bg-gradient-professional rounded-full mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl font-bold text-white">
-                      {client.name.charAt(0)}
-                    </span>
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                    {client.icon}
                   </div>
-                  <p className="text-sm font-semibold text-foreground text-center line-clamp-1">
+                  <p className="text-base font-bold text-foreground text-center mb-1">
                     {client.name}
                   </p>
-                  <p className="text-xs text-muted-foreground">{client.industry}</p>
+                  <span className="px-3 py-1 text-xs font-semibold bg-brand-blue/10 text-brand-blue rounded-full">
+                    {client.industry}
+                  </span>
                 </div>
               ))}
             </div>
