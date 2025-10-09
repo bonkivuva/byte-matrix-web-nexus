@@ -368,9 +368,9 @@ const Services = () => {
               </a>
             </Button>
             <Button size="lg" className="bg-white text-primary hover:bg-white/90 border-2 border-white text-lg px-8 py-4 shadow-xl font-bold" asChild>
-              <a href="mailto:support@bytematrix.co.ke">
+              <a href="mailto:support@bytematrixtechnologies.co.ke">
                 <Zap className="w-6 h-6 mr-3" />
-                Email: support@bytematrix.co.ke
+                Email: support@bytematrixtechnologies.co.ke
               </a>
             </Button>
           </div>
