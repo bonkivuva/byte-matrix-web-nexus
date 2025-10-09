@@ -12,16 +12,16 @@ const ClientLogos = () => {
 
   // Client examples by category
   const clients = [
-    { name: "Kenya Commercial Bank", industry: "Finance", icon: "💰" },
-    { name: "Equity Bank", industry: "Finance", icon: "💰" },
-    { name: "Safaricom PLC", industry: "Technology", icon: "📱" },
-    { name: "Microsoft East Africa", industry: "Technology", icon: "💻" },
-    { name: "Aga Khan Hospital", industry: "Healthcare", icon: "🏥" },
-    { name: "Nairobi Hospital", industry: "Healthcare", icon: "⚕️" },
-    { name: "Carrefour Kenya", industry: "Retail", icon: "🛒" },
-    { name: "Naivas Supermarket", industry: "Retail", icon: "🏪" },
-    { name: "East African Breweries", industry: "Manufacturing", icon: "🏭" },
-    { name: "Bamburi Cement", industry: "Manufacturing", icon: "⚙️" },
+    { name: "Banks & Financial Institutions", industry: "Finance", icon: "💰" },
+    { name: "Insurance Companies & SACCOs", industry: "Finance", icon: "🏦" },
+    { name: "Telecom & Tech Companies", industry: "Technology", icon: "📱" },
+    { name: "Software & IT Firms", industry: "Technology", icon: "💻" },
+    { name: "Hospitals & Clinics", industry: "Healthcare", icon: "🏥" },
+    { name: "Medical Centers & Pharmacies", industry: "Healthcare", icon: "⚕️" },
+    { name: "Supermarkets & Retail Chains", industry: "Retail", icon: "🛒" },
+    { name: "Shopping Malls & Stores", industry: "Retail", icon: "🏪" },
+    { name: "Food & Beverage Companies", industry: "Manufacturing", icon: "🏭" },
+    { name: "Industrial & Production Plants", industry: "Manufacturing", icon: "⚙️" },
   ];
 
   return (
