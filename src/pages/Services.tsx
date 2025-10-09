@@ -361,13 +361,17 @@ const Services = () => {
             and keep your business running smoothly.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white hover:text-primary text-lg px-8 py-4">
-              <Phone className="w-6 h-6 mr-3" />
-              Call: +254 724367794
+            <Button size="lg" variant="secondary" className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 hover:bg-white hover:text-primary text-lg px-8 py-4 shadow-xl" asChild>
+              <a href="tel:+254724367794">
+                <Phone className="w-6 h-6 mr-3" />
+                Call: +254 724367794
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8 py-4">
-              <Zap className="w-6 h-6 mr-3" />
-              Email Support
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 border-2 border-white text-lg px-8 py-4 shadow-xl font-bold" asChild>
+              <a href="mailto:support@bytematrix.co.ke">
+                <Zap className="w-6 h-6 mr-3" />
+                Email: support@bytematrix.co.ke
+              </a>
             </Button>
           </div>
         </div>
