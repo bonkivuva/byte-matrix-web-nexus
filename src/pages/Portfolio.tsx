@@ -1,7 +1,6 @@
 
 import {
   ArrowRight,
-  
   Star,
   Zap,
   CheckCircle,
@@ -9,10 +8,10 @@ import {
   Award,
   Target,
   Rocket,
-  Building,
   Shield,
   Server,
   Computer,
+  Clock,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -20,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
+import TrustIndicators from "@/components/TrustIndicators";
 
 const Portfolio = () => {
   return (
@@ -46,10 +46,10 @@ const Portfolio = () => {
               Our Success Stories
             </div>
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 tracking-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent">
-              TRANSFORMING BUSINESSES
+              Our Track Record Speaks for Itself
             </h1>
             <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-5xl mx-auto leading-relaxed">
-              Discover how we've helped organizations across Kenya achieve digital excellence through innovative technology solutions and strategic partnerships
+              Take a look at what we've accomplished for businesses just like yours. Real results, real impact, real success stories.
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto mt-8 rounded-full shadow-lg"></div>
           </div>
@@ -179,18 +179,104 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* Value Proposition Section */}
+          {/* Trust Indicators */}
+          <TrustIndicators />
+
+          {/* Our Capabilities Section */}
+          <div className="mb-20">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg shadow-lg">
+                <Star className="w-6 h-6 mr-3 text-blue-600" />
+                What We Bring to the Table
+              </div>
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                Comprehensive <span className="text-gradient-primary">IT Solutions</span>
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-light">
+                From small business networks to enterprise infrastructure, we have the expertise and resources to handle any challenge you throw our way.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+              {[
+                {
+                  icon: Server,
+                  title: "Enterprise-Grade Solutions",
+                  description: "Scalable infrastructure that grows with your business. We design systems that can handle today's demands while being ready for tomorrow's opportunities.",
+                  gradient: "from-blue-500 to-cyan-500",
+                  delay: "0s"
+                },
+                {
+                  icon: Shield,
+                  title: "Top-Tier Security",
+                  description: "Your data is precious. We implement military-grade security measures to keep your business safe from threats, both known and emerging.",
+                  gradient: "from-purple-500 to-pink-500",
+                  delay: "0.1s"
+                },
+                {
+                  icon: Clock,
+                  title: "Always Here for You",
+                  description: "Technology doesn't sleep, and neither do we. Our support team is available around the clock to keep your business running smoothly.",
+                  gradient: "from-green-500 to-emerald-500",
+                  delay: "0.2s"
+                },
+                {
+                  icon: Users,
+                  title: "Seasoned Professionals",
+                  description: "Our team brings years of hands-on experience and industry certifications. When you work with us, you're getting the best in the business.",
+                  gradient: "from-orange-500 to-red-500",
+                  delay: "0.3s"
+                },
+                {
+                  icon: Award,
+                  title: "Proven Excellence",
+                  description: "We've earned our reputation through consistent delivery and client satisfaction. Our awards are nice, but your success is our real trophy.",
+                  gradient: "from-indigo-500 to-purple-500",
+                  delay: "0.4s"
+                },
+                {
+                  icon: Zap,
+                  title: "Speed That Matters",
+                  description: "We know you need results fast. Our optimized processes and efficient solutions mean you get up and running quickly without cutting corners.",
+                  gradient: "from-yellow-500 to-orange-500",
+                  delay: "0.5s"
+                }
+              ].map((feature, index) => (
+                <Card 
+                  key={index} 
+                  className="glass-card hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-6 hover:scale-105 animate-fade-in group border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl overflow-hidden relative"
+                  style={{ animationDelay: feature.delay }}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`}></div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <CardContent className="p-8 text-center relative z-10">
+                    <div className={`inline-flex p-4 rounded-3xl bg-gradient-to-r ${feature.gradient} mb-6 group-hover:scale-125 transition-all duration-500 shadow-xl group-hover:shadow-2xl`}>
+                      <feature.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-montserrat font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                      {feature.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-source font-light">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Why Choose Us Section */}
           <div className="mb-20">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600/10 to-emerald-600/10 backdrop-blur-sm border border-green-200/30 dark:border-green-700/30 rounded-full text-green-700 dark:text-green-300 font-semibold mb-8 text-lg shadow-lg">
                 <Award className="w-6 h-6 mr-3 text-green-600" />
-                Why Choose Byte Matrix
+                The Byte Matrix Advantage
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Your Success Is <span className="text-gradient-primary">Our Priority</span>
+                Why Businesses <span className="text-gradient-primary">Choose Us</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-light">
-                We understand that technology is the backbone of modern business. That's why we deliver solutions that not only work but drive measurable results.
+                We're not just another IT company. Here's what makes partnering with us different (and better) for your business.
               </p>
             </div>
 
@@ -198,38 +284,38 @@ const Portfolio = () => {
               {[
                 {
                   icon: Target,
-                  title: "Results-Driven Solutions",
-                  description: "Every project is designed with clear objectives and measurable outcomes. We don't just implement technology - we deliver business transformation.",
+                  title: "We Focus on Your Goals",
+                  description: "Technology should serve your business, not complicate it. We start by understanding what you're trying to achieve, then build solutions that get you there.",
                   gradient: "from-blue-500 to-cyan-500"
                 },
                 {
                   icon: Shield,
-                  title: "Enterprise-Grade Security", 
-                  description: "Your business data is invaluable. Our security implementations follow international standards to protect what matters most to your organization.",
+                  title: "Your Data Stays Safe", 
+                  description: "We take security seriously so you can sleep soundly. From small businesses to large enterprises, we protect your information like it's our own.",
                   gradient: "from-red-500 to-pink-500"
                 },
                 {
                   icon: Rocket,
-                  title: "Future-Ready Infrastructure",
-                  description: "We build scalable solutions that grow with your business. Our forward-thinking approach ensures your technology investment pays dividends for years.",
+                  title: "Built to Grow With You",
+                  description: "Today's solution, tomorrow's foundation. We design systems that scale effortlessly as your business expands and evolves.",
                   gradient: "from-purple-500 to-indigo-500"
                 },
                 {
                   icon: Users,
-                  title: "Dedicated Support Team",
-                  description: "Our certified professionals are available 24/7 to ensure your operations never skip a beat. When technology challenges arise, we're here.",
+                  title: "Support That Actually Helps",
+                  description: "No automated runarounds or endless hold times. When you call, you get a real person who knows your setup and genuinely wants to help.",
                   gradient: "from-green-500 to-emerald-500"
                 },
                 {
                   icon: CheckCircle,
-                  title: "Proven Track Record",
-                  description: "With hundreds of successful implementations across Kenya, we bring experience and expertise that translates to reliable, efficient solutions.",
+                  title: "Experience You Can Trust",
+                  description: "We've been there, done that, and learned from it. With hundreds of successful projects under our belt, we know how to get things right.",
                   gradient: "from-orange-500 to-yellow-500"
                 },
                 {
                   icon: Zap,
-                  title: "Rapid Deployment",
-                  description: "Time is money in business. Our streamlined processes and pre-configured solutions mean faster implementation and quicker returns on investment.",
+                  title: "Fast Without the Hassle",
+                  description: "We value your time. Our efficient processes and well-tested solutions mean you're up and running quickly—without the growing pains.",
                   gradient: "from-indigo-500 to-purple-500"
                 }
               ].map((benefit, index) => (
@@ -259,10 +345,10 @@ const Portfolio = () => {
           <div className="text-center">
             <div className="bg-gradient-to-br from-blue-50/60 via-indigo-50/40 to-purple-50/30 dark:from-blue-900/20 dark:via-indigo-900/15 dark:to-purple-900/15 rounded-3xl p-12 lg:p-16 shadow-2xl border border-blue-100/30 dark:border-blue-800/30 backdrop-blur-sm">
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Ready to Start Your <span className="text-gradient-primary">Success Story?</span>
+                Let's Write Your <span className="text-gradient-primary">Success Story</span>
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto font-light leading-relaxed">
-                Join our growing list of satisfied clients and experience the Byte Matrix Technologies difference. Let's build something amazing together.
+                Hundreds of businesses trust us with their technology. Ready to see what we can do for yours? Let's have a conversation about your goals and how we can help you achieve them.
               </p>
               <Button
                 size="lg"
