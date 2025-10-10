@@ -133,12 +133,13 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
             <div className="hidden md:block">
               <Button 
                 asChild
-                className="btn-cyber relative overflow-hidden group"
+                className="btn-cyber relative overflow-hidden group shadow-lg hover:shadow-2xl"
               >
                 <Link to="/contact">
-                  <Zap className="w-4 h-4 mr-2" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+                  <Zap className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                   Get Started
-                  <ChevronRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                  <ChevronRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-2 duration-300" />
                 </Link>
               </Button>
             </div>

@@ -40,18 +40,19 @@ const Index = () => {
           <div className="max-w-6xl mx-auto text-center">
             {/* Logo showcase */}
             <div className="mb-12 animate-fade-up">
-              <div className="relative inline-block">
+              <div className="relative inline-block group">
                 <img
                   src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                   alt="Byte Matrix Technologies"
-                  className="h-48 w-auto mx-auto mb-8 hover-lift-cyber transition-all duration-500"
+                  className="h-48 w-auto mx-auto mb-8 hover-lift-cyber transition-all duration-700 group-hover:scale-110"
                   style={{
                     imageRendering: "crisp-edges",
-                    filter: "drop-shadow(0 0 30px hsl(var(--cyber-blue) / 0.3))",
+                    filter: "drop-shadow(0 0 40px hsl(var(--cyber-blue) / 0.5))",
                   }}
                   loading="eager"
                 />
-                <div className="absolute inset-0 bg-gradient-cyber opacity-20 blur-3xl animate-glow"></div>
+                <div className="absolute inset-0 bg-gradient-cyber opacity-20 blur-3xl animate-pulse-slow group-hover:opacity-40 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 animate-border-glow rounded-full"></div>
               </div>
             </div>
 
@@ -88,23 +89,25 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-up" style={{ animationDelay: '0.8s' }}>
               <Button
                 size="lg"
-                className="btn-cyber text-lg px-10 py-4"
+                className="btn-cyber text-lg px-10 py-4 relative overflow-hidden group shadow-lg hover:shadow-2xl"
                 asChild
               >
                 <Link to="/services">
-                  <Zap className="mr-3 h-6 w-6" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+                  <Zap className="mr-3 h-6 w-6 group-hover:rotate-12 transition-transform duration-300" />
                   Get Started
-                  <ArrowRight className="ml-3 h-6 w-6" />
+                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
                 </Link>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="btn-cyber-outline text-lg px-10 py-4"
+                className="btn-cyber-outline text-lg px-10 py-4 relative overflow-hidden group shadow-lg hover:shadow-2xl"
                 asChild
               >
                 <Link to="/about">
-                  <Network className="mr-3 h-6 w-6" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-shimmer"></div>
+                  <Network className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                   Learn More
                 </Link>
               </Button>
@@ -132,56 +135,56 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* IT Infrastructure */}
-            <div className="card-cyber p-8 text-center group">
+            <div className="card-cyber p-8 text-center group hover:scale-105 transition-all duration-500 cursor-pointer">
               <div className="relative mb-6">
-                <div className="w-20 h-20 mx-auto bg-gradient-cyber rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300 shadow-cyber">
-                  <Server className="h-10 w-10 text-white" />
+                <div className="w-20 h-20 mx-auto bg-gradient-cyber rounded-2xl flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 shadow-cyber">
+                  <Server className="h-10 w-10 text-white group-hover:animate-pulse" />
                 </div>
-                <div className="absolute inset-0 bg-cyber-blue/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-cyber-blue/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">IT Infrastructure</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-cyber-blue transition-colors duration-300">IT Infrastructure</h3>
               <p className="text-muted-foreground font-light leading-relaxed mb-4">
                 Modern infrastructure management with secure networks and intelligent monitoring
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                <span className="px-3 py-1 text-xs bg-cyber-blue/20 text-cyber-blue rounded-full">Cloud Native</span>
-                <span className="px-3 py-1 text-xs bg-cyber-purple/20 text-cyber-purple rounded-full">AI Powered</span>
+                <span className="px-3 py-1 text-xs bg-cyber-blue/20 text-cyber-blue rounded-full group-hover:bg-cyber-blue group-hover:text-white transition-all duration-300">Cloud Native</span>
+                <span className="px-3 py-1 text-xs bg-cyber-purple/20 text-cyber-purple rounded-full group-hover:bg-cyber-purple group-hover:text-white transition-all duration-300">AI Powered</span>
               </div>
             </div>
 
             {/* Hardware Solutions */}
-            <div className="card-cyber p-8 text-center group">
+            <div className="card-cyber p-8 text-center group hover:scale-105 transition-all duration-500 cursor-pointer" style={{ animationDelay: '0.1s' }}>
               <div className="relative mb-6">
-                <div className="w-20 h-20 mx-auto bg-gradient-neon rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300 shadow-cyber">
-                  <Cpu className="h-10 w-10 text-white" />
+                <div className="w-20 h-20 mx-auto bg-gradient-neon rounded-2xl flex items-center justify-center mb-4 group-hover:scale-125 group-hover:-rotate-6 transition-all duration-500 shadow-cyber">
+                  <Cpu className="h-10 w-10 text-white group-hover:animate-pulse" />
                 </div>
-                <div className="absolute inset-0 bg-cyber-purple/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-cyber-purple/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Smart Hardware</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-cyber-purple transition-colors duration-300">Smart Hardware</h3>
               <p className="text-muted-foreground font-light leading-relaxed mb-4">
                 Enterprise-grade equipment with advanced processing and optimized performance
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                <span className="px-3 py-1 text-xs bg-cyber-pink/20 text-cyber-pink rounded-full">High Performance</span>
-                <span className="px-3 py-1 text-xs bg-cyber-green/20 text-cyber-green rounded-full">Reliable</span>
+                <span className="px-3 py-1 text-xs bg-cyber-pink/20 text-cyber-pink rounded-full group-hover:bg-cyber-pink group-hover:text-white transition-all duration-300">High Performance</span>
+                <span className="px-3 py-1 text-xs bg-cyber-green/20 text-cyber-green rounded-full group-hover:bg-cyber-green group-hover:text-white transition-all duration-300">Reliable</span>
               </div>
             </div>
 
             {/* Cybersecurity */}
-            <div className="card-cyber p-8 text-center group">
+            <div className="card-cyber p-8 text-center group hover:scale-105 transition-all duration-500 cursor-pointer" style={{ animationDelay: '0.2s' }}>
               <div className="relative mb-6">
-                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-cyber-pink to-cyber-yellow rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300 shadow-cyber">
-                  <Shield className="h-10 w-10 text-white" />
+                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-cyber-pink to-cyber-yellow rounded-2xl flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-cyber">
+                  <Shield className="h-10 w-10 text-white group-hover:animate-pulse" />
                 </div>
-                <div className="absolute inset-0 bg-cyber-pink/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-cyber-pink/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Quantum Security</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-cyber-pink transition-colors duration-300">Quantum Security</h3>
               <p className="text-muted-foreground font-light leading-relaxed mb-4">
                 Advanced threat protection with quantum encryption and predictive security analytics
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                <span className="px-3 py-1 text-xs bg-cyber-yellow/20 text-cyber-yellow rounded-full">Quantum Safe</span>
-                <span className="px-3 py-1 text-xs bg-cyber-blue/20 text-cyber-blue rounded-full">24/7 AI</span>
+                <span className="px-3 py-1 text-xs bg-cyber-yellow/20 text-cyber-yellow rounded-full group-hover:bg-cyber-yellow group-hover:text-white transition-all duration-300">Quantum Safe</span>
+                <span className="px-3 py-1 text-xs bg-cyber-blue/20 text-cyber-blue rounded-full group-hover:bg-cyber-blue group-hover:text-white transition-all duration-300">24/7 AI</span>
               </div>
             </div>
           </div>
