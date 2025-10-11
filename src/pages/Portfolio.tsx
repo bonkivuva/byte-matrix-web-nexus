@@ -20,6 +20,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
 import TrustIndicators from "@/components/TrustIndicators";
+import Testimonials from "@/components/Testimonials";
 
 const Portfolio = () => {
   return (
@@ -31,13 +32,11 @@ const Portfolio = () => {
       />
       
       <FuturisticHeader currentPage="portfolio" />
-      {/* Subtle professional background */}
+      
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-slate-100/30 dark:from-blue-950/30 dark:to-slate-900/30"></div>
       </div>
 
-
-      {/* Hero Section */}
       <section className="py-24 relative z-10">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in">
@@ -54,7 +53,6 @@ const Portfolio = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto mt-8 rounded-full shadow-lg"></div>
           </div>
 
-          {/* Success Metrics */}
           <div className="grid md:grid-cols-4 gap-8 mb-20">
             {[
               { number: "500+", label: "Happy Clients", icon: Users, gradient: "from-blue-500 to-cyan-500" },
@@ -80,7 +78,6 @@ const Portfolio = () => {
             ))}
           </div>
 
-          {/* Featured Projects */}
           <div className="mb-20">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm border border-purple-200/30 dark:border-purple-700/30 rounded-full text-purple-700 dark:text-purple-300 font-semibold mb-8 text-lg shadow-lg">
@@ -179,93 +176,10 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* Trust Indicators */}
           <TrustIndicators />
 
-          {/* Our Capabilities Section */}
-          <div className="mb-20">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg shadow-lg">
-                <Star className="w-6 h-6 mr-3 text-blue-600" />
-                What We Bring to the Table
-              </div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Comprehensive <span className="text-gradient-primary">IT Solutions</span>
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-light">
-                From small business networks to enterprise infrastructure, we have the expertise and resources to handle any challenge you throw our way.
-              </p>
-            </div>
+          <Testimonials />
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-              {[
-                {
-                  icon: Server,
-                  title: "Enterprise-Grade Solutions",
-                  description: "Scalable infrastructure that grows with your business. We design systems that can handle today's demands while being ready for tomorrow's opportunities.",
-                  gradient: "from-blue-500 to-cyan-500",
-                  delay: "0s"
-                },
-                {
-                  icon: Shield,
-                  title: "Top-Tier Security",
-                  description: "Your data is precious. We implement military-grade security measures to keep your business safe from threats, both known and emerging.",
-                  gradient: "from-purple-500 to-pink-500",
-                  delay: "0.1s"
-                },
-                {
-                  icon: Clock,
-                  title: "Always Here for You",
-                  description: "Technology doesn't sleep, and neither do we. Our support team is available around the clock to keep your business running smoothly.",
-                  gradient: "from-green-500 to-emerald-500",
-                  delay: "0.2s"
-                },
-                {
-                  icon: Users,
-                  title: "Seasoned Professionals",
-                  description: "Our team brings years of hands-on experience and industry certifications. When you work with us, you're getting the best in the business.",
-                  gradient: "from-orange-500 to-red-500",
-                  delay: "0.3s"
-                },
-                {
-                  icon: Award,
-                  title: "Proven Excellence",
-                  description: "We've earned our reputation through consistent delivery and client satisfaction. Our awards are nice, but your success is our real trophy.",
-                  gradient: "from-indigo-500 to-purple-500",
-                  delay: "0.4s"
-                },
-                {
-                  icon: Zap,
-                  title: "Speed That Matters",
-                  description: "We know you need results fast. Our optimized processes and efficient solutions mean you get up and running quickly without cutting corners.",
-                  gradient: "from-yellow-500 to-orange-500",
-                  delay: "0.5s"
-                }
-              ].map((feature, index) => (
-                <Card 
-                  key={index} 
-                  className="glass-card hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-6 hover:scale-105 animate-fade-in group border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl overflow-hidden relative"
-                  style={{ animationDelay: feature.delay }}
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`}></div>
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <CardContent className="p-8 text-center relative z-10">
-                    <div className={`inline-flex p-4 rounded-3xl bg-gradient-to-r ${feature.gradient} mb-6 group-hover:scale-125 transition-all duration-500 shadow-xl group-hover:shadow-2xl`}>
-                      <feature.icon className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="text-lg font-montserrat font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-source font-light">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Why Choose Us Section */}
           <div className="mb-20">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600/10 to-emerald-600/10 backdrop-blur-sm border border-green-200/30 dark:border-green-700/30 rounded-full text-green-700 dark:text-green-300 font-semibold mb-8 text-lg shadow-lg">
@@ -341,7 +255,6 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
           <div className="text-center">
             <div className="bg-gradient-to-br from-blue-50/60 via-indigo-50/40 to-purple-50/30 dark:from-blue-900/20 dark:via-indigo-900/15 dark:to-purple-900/15 rounded-3xl p-12 lg:p-16 shadow-2xl border border-blue-100/30 dark:border-blue-800/30 backdrop-blur-sm">
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
@@ -365,7 +278,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Floating Action Button */}
       <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
