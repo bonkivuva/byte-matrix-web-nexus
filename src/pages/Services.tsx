@@ -6,7 +6,6 @@ import SEOHead from "@/components/SEOHead";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import Testimonials from "@/components/Testimonials";
 import ClientLogos from "@/components/ClientLogos";
-import TrustIndicators from "@/components/TrustIndicators";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -19,9 +18,6 @@ import {
   Zap,
   CheckCircle2,
   ArrowRight,
-  TrendingUp,
-  Award,
-  Clock,
   Phone
 } from "lucide-react";
 
@@ -174,12 +170,6 @@ const Services = () => {
     }
   ];
 
-  const stats = [
-    { number: "500+", label: "Satisfied Clients", icon: Users },
-    { number: "99.9%", label: "Uptime Guarantee", icon: TrendingUp },
-    { number: "24/7", label: "Support Available", icon: Clock },
-    { number: "15+", label: "Years Experience", icon: Award }
-  ];
 
   return (
     <div className="min-h-screen bg-background font-poppins transition-all duration-300">
@@ -235,25 +225,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 glass-cyber backdrop-blur-sm">
-        <div className="container-professional">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-cyber rounded-2xl mb-6 shadow-cyber group-hover:scale-110 transition-all duration-300">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-foreground mb-3 group-hover:text-cyber-blue transition-colors duration-300">{stat.number}</div>
-                <div className="text-muted-foreground font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Indicators */}
-      <TrustIndicators />
 
       {/* Services Grid */}
       <section className="section-spacing">
