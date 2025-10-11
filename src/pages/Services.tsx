@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
-import LeadCaptureForm from "@/components/LeadCaptureForm";
-import Testimonials from "@/components/Testimonials";
-import ClientLogos from "@/components/ClientLogos";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -281,37 +278,6 @@ const Services = () => {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Client Logos */}
-      <ClientLogos />
-
-      {/* Testimonials */}
-      <Testimonials />
-
-      {/* Lead Capture Section */}
-      <section className="section-spacing glass-cyber relative">
-        {/* Futuristic background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-cyber-purple/10 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute bottom-10 left-10 w-80 h-80 bg-cyber-pink/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-        </div>
-
-        <div className="container-professional relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-              Ready to <span className="text-gradient-cyber">Join the Matrix?</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-              Let's discuss how our IT services can improve your business operations and drive growth
-            </p>
-          </div>
-          
-          <LeadCaptureForm 
-            title="Get Your Custom IT Solution"
-            subtitle="Tell us about your business needs and we'll create a tailored technology solution for your digital transformation."
-          />
         </div>
       </section>
 
