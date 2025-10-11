@@ -15,9 +15,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
-import ClientLogos from "@/components/ClientLogos";
-import Testimonials from "@/components/Testimonials";
-import TrustIndicators from "@/components/TrustIndicators";
 
 const About = () => {
   return (
@@ -133,11 +130,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Client Logos */}
-      <ClientLogos />
-
-      {/* Testimonials */}
-      <Testimonials />
 
       {/* Enhanced CTA Section */}
       <section className="py-20 relative overflow-hidden">
