@@ -79,9 +79,8 @@ const Index = () => {
             {/* Description */}
             <div className="mb-12 animate-fade-up" style={{ animationDelay: '0.6s' }}>
               <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed font-light">
-                We specialize in comprehensive IT infrastructure management, enterprise-grade hardware deployment, and
-                strategic technology consulting. From quantum-secure networks to AI-powered automation, we transform 
-                complex technology challenges into competitive advantages for businesses of all sizes.
+                We provide complete IT infrastructure management, enterprise hardware solutions, and strategic technology consulting. 
+                We help businesses of all sizes transform technology challenges into competitive advantages.
               </p>
             </div>
 
@@ -128,8 +127,7 @@ const Index = () => {
               Complete <span className="text-gradient-cyber">Technology Matrix</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-              From quantum-secure infrastructure to AI-powered automation, we deliver comprehensive tech solutions 
-              designed for the digital frontier
+              Complete technology solutions for modern businesses
             </p>
           </div>
 

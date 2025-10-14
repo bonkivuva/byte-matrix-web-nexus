@@ -66,9 +66,7 @@ const About = () => {
               </div>
               
               <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-6xl mx-auto leading-relaxed font-source font-light animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 font-medium">"Connecting Your Digital Matrix"</span> is more than just our tagline—it's our commitment to you.
-                <br /><br />
-                We're a team of passionate IT professionals dedicated to helping businesses like yours thrive in the digital age. Whether you need reliable IT infrastructure, cutting-edge hardware solutions, or expert technology guidance, we're here to make technology work for you, not the other way around.
+                We're passionate IT professionals dedicated to helping your business succeed in the digital world. From IT infrastructure to hardware solutions and expert guidance, we make technology work for you—simply and reliably.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
@@ -115,15 +113,15 @@ const About = () => {
 
             <div className="space-y-8 text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-source font-light">
               <p className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                At Byte Matrix Technologies, we believe that every business deserves access to reliable, professional IT solutions. Founded with a vision to bridge the technology gap for businesses across Kenya, we've grown into a trusted partner for organizations of all sizes.
+                We believe every business deserves reliable, professional IT solutions. We've grown into a trusted partner for organizations across Kenya, helping businesses of all sizes succeed with technology.
               </p>
               
               <p className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                What sets us apart? It's simple: we genuinely care about your success. We take the time to understand your unique challenges and goals, then craft solutions that actually fit your needs—not just what's trendy or what we happen to sell.
+                What makes us different? We take time to understand your challenges and create solutions that fit your actual needs—practical, effective, and straightforward.
               </p>
 
               <p className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                From setting up your first computer network to managing complex enterprise infrastructure, we handle it all with the same level of dedication and expertise. Our team stays up-to-date with the latest technologies so you don't have to, and we're always just a phone call away when you need us.
+                Whether it's your first network setup or managing complex enterprise systems, we handle everything with dedication and expertise. We stay current with technology trends so you can focus on your business.
               </p>
             </div>
           </div>
@@ -140,7 +138,7 @@ const About = () => {
               Ready to Experience the <span className="text-gradient-primary font-bold">Byte Matrix Difference?</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-4xl mx-auto font-source font-light leading-relaxed">
-              We'd love to hear about your business and explore how we can help you achieve your goals. Let's start a conversation today—no pressure, just friendly advice and expert guidance.
+              Let's discuss how we can help your business succeed. Reach out for friendly, expert guidance tailored to your needs.
             </p>
             <Button
               size="lg"

@@ -59,7 +59,7 @@ const Contact = () => {
                 Enterprise Technology Excellence
               </h1>
               <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-source-sans">
-                Partner with Kenya's premier technology consultancy. We deliver enterprise-grade solutions that drive digital transformation and business growth across East Africa and beyond.
+                Get in touch with our team for professional IT solutions that help your business grow. We're here to help with expert guidance and reliable service.
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto mt-8 rounded-full shadow-lg"></div>
             </div>
@@ -98,8 +98,8 @@ const Contact = () => {
               {[
                 {
                   icon: Phone,
-                  title: "Professional Phone Support",
-                  description: "Direct access to our senior technology consultants for immediate assistance and strategic IT guidance",
+                  title: "Phone Support",
+                  description: "Call us for immediate assistance and IT guidance",
                   contact: "+254 724367794",
                   href: "tel:+254724367794",
                   gradient: "from-green-500 via-emerald-500 to-teal-600",
@@ -107,8 +107,8 @@ const Contact = () => {
                 },
                 {
                   icon: Mail,
-                  title: "support@bytematrixtechnologies.co.ke",
-                  description: "Connect with our technology consultants for detailed project discussions and comprehensive solution proposals",
+                  title: "Email Us",
+                  description: "Send us your questions and project details",
                   contact: "support@bytematrixtechnologies.co.ke",
                   href: "mailto:support@bytematrixtechnologies.co.ke",
                   gradient: "from-blue-500 via-indigo-500 to-purple-600",
@@ -164,7 +164,7 @@ const Contact = () => {
                   Professional Networks
                 </h2>
                 <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 font-light max-w-4xl mx-auto mb-8 leading-relaxed font-source-sans">
-                  Stay connected with our latest technology insights, industry updates, and innovative solutions through our professional social channels.
+                  Follow us for technology updates and insights.
                 </p>
               </div>
               

@@ -47,7 +47,7 @@ const Career = () => {
               Build Tomorrow's Technology Today
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-              Transform your career with cutting-edge technology. We empower businesses through innovative solutions and foster a culture of growth and collaboration in the digital matrix.
+              Join us in creating innovative technology solutions. We foster a culture of growth, collaboration, and professional excellence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -117,7 +117,7 @@ const Career = () => {
                 </h3>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
-                  Thank you for your interest in joining the BYTE MATRIX TECHNOLOGIES team! While we currently do not have any open positions, we are always on the lookout for talented individuals who share our passion for innovation and excellence in the digital realm.
+                  Thank you for your interest in joining our team! While we don't have open positions right now, we're always looking for talented individuals who share our passion for technology and excellence.
                 </p>
                 
                 <div className="space-y-4 mb-8">
