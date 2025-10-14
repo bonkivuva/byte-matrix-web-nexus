@@ -19,7 +19,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
-import TrustIndicators from "@/components/TrustIndicators";
 import Testimonials from "@/components/Testimonials";
 
 const Portfolio = () => {
@@ -175,8 +174,6 @@ const Portfolio = () => {
               ))}
             </div>
           </div>
-
-          <TrustIndicators />
 
           <Testimonials />
 
