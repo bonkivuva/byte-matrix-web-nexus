@@ -296,9 +296,16 @@
   }
 
   .glass-professional {
-    background: hsl(var(--background) / 0.7);
-    backdrop-filter: blur(20px) saturate(1.2);
+    background: linear-gradient(135deg, hsl(var(--background) / 0.8), hsl(var(--background) / 0.6));
+    backdrop-filter: blur(24px) saturate(1.3);
+    border: 1px solid hsl(var(--brand-blue) / 0.15);
+  }
+
+  .glass-premium {
+    background: linear-gradient(135deg, hsl(var(--background) / 0.9), hsl(var(--background) / 0.7));
+    backdrop-filter: blur(32px) saturate(1.4);
     border: 1px solid hsl(var(--brand-blue) / 0.2);
+    box-shadow: 0 8px 32px -8px hsl(var(--brand-blue) / 0.2);
   }
 
   .dark .glass-professional {
@@ -481,6 +488,33 @@
   }
 }
 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+@keyframes float-smooth {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px hsl(var(--cyber-blue) / 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px hsl(var(--cyber-blue) / 0.6));
+  }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -534,6 +568,33 @@
   color: hsl(var(--cyber-yellow));
 }
 
+.hover-lift-cyber {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.hover-lift-cyber:hover {
+  transform: translateY(-12px) scale(1.03);
+  filter: drop-shadow(0 25px 50px hsl(var(--cyber-blue) / 0.4));
+}
+
+.hover-lift-premium {
+  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover-lift-premium:hover {
+  transform: translateY(-16px) scale(1.05);
+  filter: drop-shadow(0 30px 60px hsl(var(--brand-blue) / 0.5));
+}
+
+.animate-float-smooth {
+  animation: float-smooth 6s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
   /* Professional container classes */
   .container-professional {
     @apply container mx-auto px-6 lg:px-8 max-w-7xl;
@@ -545,16 +606,90 @@
 
   /* Card styles */
   .card-cyber {
-    @apply glass-professional hover:shadow-brand-lg transition-all duration-300;
+    @apply glass-premium border border-cyber-blue/20 rounded-2xl shadow-cyber transition-all duration-500;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-cyber::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--cyber-blue) / 0.1), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .card-cyber:hover::before {
+    left: 100%;
+  }
+
+  .card-premium {
+    @apply glass-premium rounded-3xl shadow-brand-lg transition-all duration-700;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+  }
+
+  .card-premium:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px -12px hsl(var(--brand-blue) / 0.4);
   }
 
   /* Button styles */
   .btn-cyber {
-    @apply bg-gradient-professional text-white hover:opacity-90 shadow-brand;
+    @apply bg-gradient-cyber text-white font-semibold rounded-xl shadow-cyber hover:scale-105 hover:shadow-cyber-lg transition-all duration-500;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-cyber::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: hsl(var(--background) / 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .btn-cyber:hover::before {
+    width: 300px;
+    height: 300px;
   }
 
   .btn-cyber-outline {
-    @apply border-2 border-brand-blue/30 text-brand-blue hover:bg-brand-blue/10;
+    @apply border-2 border-cyber-blue text-cyber-blue bg-transparent font-semibold rounded-xl hover:bg-cyber-blue hover:text-white hover:scale-105 transition-all duration-500;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-premium {
+    @apply bg-gradient-brand text-white font-bold rounded-2xl shadow-brand-lg hover:shadow-brand-lg transition-all duration-700;
+    transform: translateY(0);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-premium:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  .btn-premium::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, hsl(var(--background) / 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
   }
 
   /* Cyber theme colors - using brand colors */

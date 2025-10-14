@@ -36,55 +36,57 @@ const Portfolio = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-slate-100/30 dark:from-blue-950/30 dark:to-slate-900/30"></div>
       </div>
 
-      <section className="py-24 relative z-10">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20 animate-fade-in">
-            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg shadow-lg">
-              <Star className="w-6 h-6 mr-3 text-blue-600" />
+      <section className="section-spacing relative z-10">
+        <div className="container-professional">
+          <div className="text-center mb-20 animate-fade-up">
+            <div className="inline-flex items-center px-8 py-4 glass-premium rounded-full text-cyber-blue dark:text-cyber-blue font-semibold mb-8 text-lg shadow-brand animate-float-smooth">
+              <Star className="w-6 h-6 mr-3 text-cyber-yellow animate-glow-pulse" />
               Our Success Stories
             </div>
-            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 tracking-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent">
-              Our Track Record Speaks for Itself
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 tracking-tight">
+              <span className="text-foreground">Our Track Record</span>
+              <br />
+              <span className="text-gradient-cyber">Speaks for Itself</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-5xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-2xl text-muted-foreground font-light max-w-5xl mx-auto leading-relaxed">
               Take a look at what we've accomplished for businesses just like yours. Real results, real impact, real success stories.
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto mt-8 rounded-full shadow-lg"></div>
+            <div className="w-32 h-1 bg-gradient-cyber mx-auto mt-8 rounded-full shadow-cyber"></div>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8 mb-20">
             {[
-              { number: "500+", label: "Happy Clients", icon: Users, gradient: "from-blue-500 to-cyan-500" },
-              { number: "1000+", label: "Projects Completed", icon: CheckCircle, gradient: "from-green-500 to-emerald-500" },
-              { number: "5+", label: "Years Experience", icon: Award, gradient: "from-purple-500 to-pink-500" },
-              { number: "24/7", label: "Support Available", icon: Shield, gradient: "from-orange-500 to-red-500" },
+              { number: "500+", label: "Happy Clients", icon: Users, gradient: "from-cyber-blue to-cyber-purple" },
+              { number: "1000+", label: "Projects Completed", icon: CheckCircle, gradient: "from-cyber-green to-cyber-blue" },
+              { number: "5+", label: "Years Experience", icon: Award, gradient: "from-cyber-purple to-cyber-pink" },
+              { number: "24/7", label: "Support Available", icon: Shield, gradient: "from-cyber-orange to-cyber-yellow" },
             ].map((metric, index) => (
               <Card
                 key={index}
-                className="glass-card hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 animate-fade-in group border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl text-center"
+                className="card-premium hover-lift-premium animate-fade-in group text-center border-0"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-8">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${metric.gradient} rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 transition-all duration-500 shadow-xl`}>
-                    <metric.icon className="h-8 w-8 text-white" />
+                <CardContent className="p-10">
+                  <div className={`w-20 h-20 bg-gradient-to-br ${metric.gradient} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700 shadow-brand-lg`}>
+                    <metric.icon className="h-10 w-10 text-white group-hover:animate-pulse" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                  <h3 className="text-4xl font-bold text-foreground mb-3 group-hover:text-gradient-cyber transition-all duration-500">
                     {metric.number}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 font-light">{metric.label}</p>
+                  <p className="text-muted-foreground font-light text-lg">{metric.label}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           <div className="mb-20">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm border border-purple-200/30 dark:border-purple-700/30 rounded-full text-purple-700 dark:text-purple-300 font-semibold mb-8 text-lg shadow-lg">
-                <Target className="w-6 h-6 mr-3 text-purple-600" />
+            <div className="text-center mb-16 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              <div className="inline-flex items-center px-8 py-4 glass-premium rounded-full text-cyber-purple dark:text-cyber-purple font-semibold mb-8 text-lg shadow-brand">
+                <Target className="w-6 h-6 mr-3 text-cyber-pink animate-glow" />
                 Featured Projects
               </div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Solutions That <span className="text-gradient-primary">Make a Difference</span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                Solutions That <span className="text-gradient-cyber">Make a Difference</span>
               </h2>
             </div>
 
@@ -111,44 +113,46 @@ const Portfolio = () => {
               ].map((project, index) => (
                 <Card
                   key={index}
-                  className="group border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-6 hover:scale-105 bg-white/85 dark:bg-gray-800/85 backdrop-blur-xl overflow-hidden animate-fade-in relative"
+                  className="card-premium hover-lift-premium group border-0 overflow-hidden animate-fade-up relative"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`}></div>
-                  <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-15 transition-opacity duration-700`}></div>
+                  <div className="absolute top-0 left-0 w-full h-3 bg-gradient-cyber opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   <div className="relative z-10">
                     <div className="relative overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                        className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-115"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/60 transition-all duration-700"></div>
-                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <Zap className="h-8 w-8 text-white" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/70 transition-all duration-700"></div>
+                      <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:rotate-12">
+                        <div className="w-16 h-16 bg-gradient-cyber rounded-2xl flex items-center justify-center shadow-cyber-lg">
+                          <Zap className="h-8 w-8 text-white animate-pulse" />
+                        </div>
                       </div>
                     </div>
-                    <CardHeader className="pb-4">
-                      <div className="flex items-center mb-4">
-                        <div className={`w-12 h-12 bg-gradient-to-br ${project.gradient} rounded-2xl flex items-center justify-center mr-4 group-hover:scale-125 transition-all duration-500 shadow-xl`}>
-                          <project.icon className="h-6 w-6 text-white" />
+                    <CardHeader className="pb-6">
+                      <div className="flex items-center mb-6">
+                        <div className={`w-16 h-16 bg-gradient-to-br ${project.gradient} rounded-3xl flex items-center justify-center mr-5 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700 shadow-brand-lg`}>
+                          <project.icon className="h-8 w-8 text-white group-hover:animate-pulse" />
                         </div>
-                        <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                        <CardTitle className="text-2xl font-bold text-foreground group-hover:text-gradient-cyber transition-all duration-500">
                           {project.title}
                         </CardTitle>
                       </div>
-                      <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed font-light text-lg">
+                      <CardDescription className="text-muted-foreground leading-relaxed font-light text-lg">
                         {project.description}
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="pt-0">
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Technologies Used:</h4>
-                        <div className="flex flex-wrap gap-2">
+                      <div className="mb-8">
+                        <h4 className="font-bold text-foreground mb-4 text-lg">Technologies Used:</h4>
+                        <div className="flex flex-wrap gap-3">
                           {project.technologies.map((tech, idx) => (
                             <span
                               key={idx}
-                              className="px-3 py-1 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 text-blue-700 dark:text-blue-300 text-sm rounded-full border border-blue-200/30 dark:border-blue-700/30"
+                              className="px-4 py-2 glass-professional text-cyber-blue dark:text-cyber-blue text-sm rounded-full border border-cyber-blue/20 hover:border-cyber-blue hover:bg-cyber-blue hover:text-white transition-all duration-300 shadow-brand"
                             >
                               {tech}
                             </span>
@@ -156,14 +160,14 @@ const Portfolio = () => {
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Results:</h4>
-                        <div className="space-y-2">
+                        <h4 className="font-bold text-foreground mb-4 text-lg">Key Results:</h4>
+                        <div className="space-y-3">
                           {project.results.map((result, idx) => (
-                            <div key={idx} className="flex items-center space-x-3">
-                              <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <CheckCircle className="h-3 w-3 text-white" />
+                            <div key={idx} className="flex items-center space-x-4">
+                              <div className="w-8 h-8 bg-gradient-to-r from-cyber-green to-cyber-blue rounded-full flex items-center justify-center flex-shrink-0 shadow-brand">
+                                <CheckCircle className="h-4 w-4 text-white" />
                               </div>
-                              <span className="text-gray-700 dark:text-gray-300 font-light">{result}</span>
+                              <span className="text-muted-foreground font-light text-lg">{result}</span>
                             </div>
                           ))}
                         </div>
@@ -178,15 +182,15 @@ const Portfolio = () => {
           <Testimonials />
 
           <div className="mb-20">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600/10 to-emerald-600/10 backdrop-blur-sm border border-green-200/30 dark:border-green-700/30 rounded-full text-green-700 dark:text-green-300 font-semibold mb-8 text-lg shadow-lg">
-                <Award className="w-6 h-6 mr-3 text-green-600" />
+            <div className="text-center mb-16 animate-fade-up" style={{ animationDelay: '0.5s' }}>
+              <div className="inline-flex items-center px-8 py-4 glass-premium rounded-full text-cyber-green dark:text-cyber-green font-semibold mb-8 text-lg shadow-brand">
+                <Award className="w-6 h-6 mr-3 text-cyber-yellow animate-glow" />
                 The Byte Matrix Advantage
               </div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Why Businesses <span className="text-gradient-primary">Choose Us</span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                Why Businesses <span className="text-gradient-cyber">Choose Us</span>
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-light">
+              <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light">
                 We're not just another IT company. Here's what makes partnering with us different (and better) for your business.
               </p>
             </div>
@@ -232,18 +236,18 @@ const Portfolio = () => {
               ].map((benefit, index) => (
                 <Card
                   key={index}
-                  className="glass-card hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 animate-fade-in group border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl"
+                  className="card-premium hover-lift-premium animate-fade-up group border-0 text-center"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`}></div>
-                  <CardContent className="p-8 relative z-10">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${benefit.gradient} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 transition-all duration-500 shadow-xl`}>
-                      <benefit.icon className="h-8 w-8 text-white" />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-15 transition-opacity duration-700 rounded-3xl`}></div>
+                  <CardContent className="p-10 relative z-10">
+                    <div className={`w-20 h-20 bg-gradient-to-br ${benefit.gradient} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-6 transition-all duration-700 shadow-brand-lg`}>
+                      <benefit.icon className="h-10 w-10 text-white group-hover:animate-pulse" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500">
+                    <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-gradient-cyber transition-all duration-500">
                       {benefit.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+                    <p className="text-muted-foreground leading-relaxed font-light text-lg">
                       {benefit.description}
                     </p>
                   </CardContent>
@@ -252,24 +256,30 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="text-center">
-            <div className="bg-gradient-to-br from-blue-50/60 via-indigo-50/40 to-purple-50/30 dark:from-blue-900/20 dark:via-indigo-900/15 dark:to-purple-900/15 rounded-3xl p-12 lg:p-16 shadow-2xl border border-blue-100/30 dark:border-blue-800/30 backdrop-blur-sm">
-              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Let's Write Your <span className="text-gradient-primary">Success Story</span>
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto font-light leading-relaxed">
-                Hundreds of businesses trust us with their technology. Ready to see what we can do for yours? Let's have a conversation about your goals and how we can help you achieve them.
-              </p>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-16 py-8 text-2xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 font-medium rounded-2xl group"
-                asChild
-              >
-                <Link to="/contact">
-                  <Rocket className="mr-4 h-8 w-8" />
-                  Start Your Project
-                </Link>
-              </Button>
+          <div className="text-center animate-fade-up" style={{ animationDelay: '0.7s' }}>
+            <div className="glass-premium rounded-3xl p-12 lg:p-20 shadow-brand-lg border border-cyber-blue/20 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-cyber opacity-5"></div>
+              <div className="absolute top-0 left-1/4 w-64 h-64 bg-cyber-blue/10 rounded-full blur-3xl animate-pulse-slow"></div>
+              <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-cyber-purple/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+              <div className="relative z-10">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                  Let's Write Your <span className="text-gradient-cyber">Success Story</span>
+                </h2>
+                <p className="text-xl lg:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                  Hundreds of businesses trust us with their technology. Ready to see what we can do for yours? Let's have a conversation about your goals and how we can help you achieve them.
+                </p>
+                <Button
+                  size="lg"
+                  className="btn-cyber text-2xl px-16 py-8 shadow-brand-lg hover:shadow-brand-lg transition-all duration-700 transform hover:-translate-y-4 hover:scale-110 font-bold rounded-2xl group relative overflow-hidden"
+                  asChild
+                >
+                  <Link to="/contact">
+                    <Rocket className="mr-4 h-8 w-8 group-hover:rotate-12 transition-transform duration-500" />
+                    Start Your Project
+                    <ArrowRight className="ml-4 h-8 w-8 group-hover:translate-x-2 transition-transform duration-500" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -277,10 +287,10 @@ const Portfolio = () => {
 
       <Button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
-        size="sm"
+        className="fixed bottom-8 right-8 bg-gradient-cyber text-white p-5 rounded-full shadow-brand-lg hover:shadow-brand-lg transition-all duration-500 z-50 hover:scale-110 group"
+        size="icon"
       >
-        <ArrowRight className="h-5 w-5 transform -rotate-90" />
+        <ArrowRight className="h-6 w-6 transform -rotate-90 group-hover:animate-pulse" />
       </Button>
     </div>
   );
