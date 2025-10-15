@@ -29,85 +29,79 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="section-spacing relative overflow-hidden">
-        {/* Futuristic background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyber-blue/10 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-purple/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-pink/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        {/* Subtle professional background */}
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute top-20 left-10 w-96 h-96 bg-brand-blue/8 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-blue-light/6 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container-professional relative z-10">
           <div className="max-w-6xl mx-auto text-center">
             {/* Logo showcase */}
-            <div className="mb-12 animate-fade-up">
+            <div className="mb-16 animate-fade-up">
               <div className="relative inline-block group">
                 <img
                   src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
-                  alt="Byte Matrix Technologies"
-                  className="h-48 w-auto mx-auto mb-8 hover-lift-cyber transition-all duration-700 group-hover:scale-110"
+                  alt="Byte Matrix Technologies - Enterprise IT Solutions"
+                  className="h-40 w-auto mx-auto mb-8 transition-all duration-500 group-hover:scale-105"
                   style={{
                     imageRendering: "crisp-edges",
-                    filter: "drop-shadow(0 0 40px hsl(var(--cyber-blue) / 0.5))",
+                    filter: "drop-shadow(0 8px 24px hsl(var(--brand-blue) / 0.2))",
                   }}
                   loading="eager"
                 />
-                <div className="absolute inset-0 bg-gradient-cyber opacity-20 blur-3xl animate-pulse-slow group-hover:opacity-40 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 animate-border-glow rounded-full"></div>
               </div>
             </div>
 
             {/* Tagline */}
-            <div className="mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              <div className="inline-flex items-center px-6 py-3 glass-cyber rounded-full mb-6">
-                <Sparkles className="w-5 h-5 mr-3 text-cyber-yellow animate-glow" />
-                <span className="text-lg font-medium text-gradient-cyber">
-                  "Connecting Your Digital Matrix"
+            <div className="mb-12 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              <div className="inline-flex items-center px-8 py-4 glass-professional rounded-full mb-6 border border-brand-blue/10">
+                <Sparkles className="w-5 h-5 mr-3 text-brand-blue" />
+                <span className="text-lg font-medium text-brand-blue">
+                  Connecting Your Digital Matrix
                 </span>
               </div>
-              <div className="w-32 h-1 bg-gradient-cyber mx-auto rounded-full shadow-cyber"></div>
             </div>
 
             {/* Main headline */}
-            <div className="mb-8 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
-                <span className="text-foreground">Enterprise IT Excellence</span>
+            <div className="mb-10 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight">
+                <span className="text-foreground">Enterprise IT Solutions for</span>
                 <br />
-                <span className="text-gradient-cyber">Delivered with Precision</span>
+                <span className="text-gradient-professional">Global Organizations</span>
               </h1>
             </div>
 
             {/* Description */}
-            <div className="mb-12 animate-fade-up" style={{ animationDelay: '0.6s' }}>
-              <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed font-light">
-                We provide complete IT infrastructure management, enterprise hardware solutions, and strategic technology consulting. 
-                We help businesses of all sizes transform technology challenges into competitive advantages.
+            <div className="mb-14 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+              <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+                Trusted by UN agencies, NGOs, and corporations across East Africa. We deliver enterprise-grade IT infrastructure, 
+                strategic consulting, and reliable support that powers mission-critical operations.
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-up" style={{ animationDelay: '0.8s' }}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-up" style={{ animationDelay: '0.5s' }}>
               <Button
                 size="lg"
-                className="btn-cyber text-lg px-10 py-4 relative overflow-hidden group shadow-lg hover:shadow-2xl"
+                className="bg-brand-primary hover:bg-brand-primary/90 text-white text-lg px-12 py-6 rounded-xl shadow-brand hover:shadow-brand-lg transition-all duration-300"
                 asChild
               >
-                <Link to="/services">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
-                  <Zap className="mr-3 h-6 w-6 group-hover:rotate-12 transition-transform duration-300" />
-                  Get Started
-                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
+                <Link to="/contact">
+                  <Zap className="mr-3 h-5 w-5" />
+                  Schedule Consultation
+                  <ArrowRight className="ml-3 h-5 w-5" />
                 </Link>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="btn-cyber-outline text-lg px-10 py-4 relative overflow-hidden group shadow-lg hover:shadow-2xl"
+                className="border-2 border-brand-blue/30 hover:bg-brand-blue/5 text-foreground text-lg px-12 py-6 rounded-xl transition-all duration-300"
                 asChild
               >
-                <Link to="/about">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-shimmer"></div>
-                  <Network className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-                  Learn More
+                <Link to="/services">
+                  <Network className="mr-3 h-5 w-5" />
+                  Our Services
                 </Link>
               </Button>
             </div>
@@ -116,73 +110,70 @@ const Index = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="section-spacing glass-cyber relative">
+      <section className="section-spacing glass-professional relative">
         <div className="container-professional">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 glass-cyber rounded-full mb-6 border border-cyber-blue/20">
-              <Star className="w-5 h-5 mr-3 text-cyber-yellow animate-glow" />
-              <span className="text-lg font-medium text-gradient-neon">Our Expertise</span>
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-8 py-4 glass-professional rounded-full mb-8 border border-brand-blue/10">
+              <Star className="w-5 h-5 mr-3 text-brand-blue" />
+              <span className="text-lg font-medium text-brand-blue">Core Services</span>
             </div>
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
-              Complete <span className="text-gradient-cyber">Technology Matrix</span>
+              Comprehensive <span className="text-gradient-professional">Technology Solutions</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-              Complete technology solutions for modern businesses
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Enterprise-grade IT services designed for demanding environments
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* IT Infrastructure */}
-            <div className="card-cyber p-8 text-center group hover:scale-105 transition-all duration-500 cursor-pointer">
-              <div className="relative mb-6">
-                <div className="w-20 h-20 mx-auto bg-gradient-cyber rounded-2xl flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 shadow-cyber">
-                  <Server className="h-10 w-10 text-white group-hover:animate-pulse" />
+            <div className="card-premium p-10 text-center group">
+              <div className="relative mb-8">
+                <div className="w-20 h-20 mx-auto bg-gradient-professional rounded-2xl flex items-center justify-center mb-6 shadow-brand group-hover:shadow-brand-lg transition-all duration-500">
+                  <Server className="h-10 w-10 text-white" />
                 </div>
-                <div className="absolute inset-0 bg-cyber-blue/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-cyber-blue transition-colors duration-300">IT Infrastructure</h3>
-              <p className="text-muted-foreground font-light leading-relaxed mb-4">
-                Modern infrastructure management with secure networks and intelligent monitoring
+              <h3 className="text-2xl font-bold text-foreground mb-4">IT Infrastructure</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Enterprise infrastructure management with secure networks, intelligent monitoring, and 24/7 support for mission-critical operations.
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                <span className="px-3 py-1 text-xs bg-cyber-blue/20 text-cyber-blue rounded-full group-hover:bg-cyber-blue group-hover:text-white transition-all duration-300">Cloud Native</span>
-                <span className="px-3 py-1 text-xs bg-cyber-purple/20 text-cyber-purple rounded-full group-hover:bg-cyber-purple group-hover:text-white transition-all duration-300">AI Powered</span>
+                <span className="px-4 py-2 text-sm bg-brand-blue/10 text-brand-blue rounded-lg font-medium">Cloud Native</span>
+                <span className="px-4 py-2 text-sm bg-brand-blue/10 text-brand-blue rounded-lg font-medium">Scalable</span>
               </div>
             </div>
 
             {/* Hardware Solutions */}
-            <div className="card-cyber p-8 text-center group hover:scale-105 transition-all duration-500 cursor-pointer" style={{ animationDelay: '0.1s' }}>
-              <div className="relative mb-6">
-                <div className="w-20 h-20 mx-auto bg-gradient-neon rounded-2xl flex items-center justify-center mb-4 group-hover:scale-125 group-hover:-rotate-6 transition-all duration-500 shadow-cyber">
-                  <Cpu className="h-10 w-10 text-white group-hover:animate-pulse" />
+            <div className="card-premium p-10 text-center group">
+              <div className="relative mb-8">
+                <div className="w-20 h-20 mx-auto bg-gradient-professional rounded-2xl flex items-center justify-center mb-6 shadow-brand group-hover:shadow-brand-lg transition-all duration-500">
+                  <Cpu className="h-10 w-10 text-white" />
                 </div>
-                <div className="absolute inset-0 bg-cyber-purple/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-cyber-purple transition-colors duration-300">Smart Hardware</h3>
-              <p className="text-muted-foreground font-light leading-relaxed mb-4">
-                Enterprise-grade equipment with advanced processing and optimized performance
+              <h3 className="text-2xl font-bold text-foreground mb-4">Enterprise Hardware</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Premium enterprise equipment with professional deployment, configuration, and ongoing maintenance for optimal performance.
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                <span className="px-3 py-1 text-xs bg-cyber-pink/20 text-cyber-pink rounded-full group-hover:bg-cyber-pink group-hover:text-white transition-all duration-300">High Performance</span>
-                <span className="px-3 py-1 text-xs bg-cyber-green/20 text-cyber-green rounded-full group-hover:bg-cyber-green group-hover:text-white transition-all duration-300">Reliable</span>
+                <span className="px-4 py-2 text-sm bg-brand-blue/10 text-brand-blue rounded-lg font-medium">Certified</span>
+                <span className="px-4 py-2 text-sm bg-brand-blue/10 text-brand-blue rounded-lg font-medium">Reliable</span>
               </div>
             </div>
 
             {/* Cybersecurity */}
-            <div className="card-cyber p-8 text-center group hover:scale-105 transition-all duration-500 cursor-pointer" style={{ animationDelay: '0.2s' }}>
-              <div className="relative mb-6">
-                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-cyber-pink to-cyber-yellow rounded-2xl flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-cyber">
-                  <Shield className="h-10 w-10 text-white group-hover:animate-pulse" />
+            <div className="card-premium p-10 text-center group">
+              <div className="relative mb-8">
+                <div className="w-20 h-20 mx-auto bg-gradient-professional rounded-2xl flex items-center justify-center mb-6 shadow-brand group-hover:shadow-brand-lg transition-all duration-500">
+                  <Shield className="h-10 w-10 text-white" />
                 </div>
-                <div className="absolute inset-0 bg-cyber-pink/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-cyber-pink transition-colors duration-300">Quantum Security</h3>
-              <p className="text-muted-foreground font-light leading-relaxed mb-4">
-                Advanced threat protection with quantum encryption and predictive security analytics
+              <h3 className="text-2xl font-bold text-foreground mb-4">Cybersecurity</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Advanced threat protection with multi-layered security, compliance support, and 24/7 monitoring for complete peace of mind.
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
-                <span className="px-3 py-1 text-xs bg-cyber-yellow/20 text-cyber-yellow rounded-full group-hover:bg-cyber-yellow group-hover:text-white transition-all duration-300">Quantum Safe</span>
-                <span className="px-3 py-1 text-xs bg-cyber-blue/20 text-cyber-blue rounded-full group-hover:bg-cyber-blue group-hover:text-white transition-all duration-300">24/7 AI</span>
+                <span className="px-4 py-2 text-sm bg-brand-blue/10 text-brand-blue rounded-lg font-medium">Secure</span>
+                <span className="px-4 py-2 text-sm bg-brand-blue/10 text-brand-blue rounded-lg font-medium">24/7 SOC</span>
               </div>
             </div>
           </div>
@@ -190,13 +181,12 @@ const Index = () => {
           <div className="text-center">
             <Button
               size="lg"
-              className="btn-cyber text-lg px-10 py-4"
+              className="bg-brand-primary hover:bg-brand-primary/90 text-white text-lg px-12 py-6 rounded-xl shadow-brand hover:shadow-brand-lg transition-all duration-300"
               asChild
             >
               <Link to="/services">
-                <Network className="mr-3 h-6 w-6" />
-                Explore All Solutions
-                <ArrowRight className="ml-3 h-6 w-6" />
+                View All Services
+                <ArrowRight className="ml-3 h-5 w-5" />
               </Link>
             </Button>
           </div>
@@ -204,13 +194,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="relative py-16 glass-cyber border-t border-cyber-blue/20">
-        {/* Futuristic background patterns */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-cyber-blue/10 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-cyber-purple/10 rounded-full blur-3xl animate-pulse-slow"></div>
-        </div>
-
+      <footer className="relative py-20 glass-professional border-t border-brand-blue/10">
         <div className="container-professional relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
             <div className="flex flex-col items-center md:items-start space-y-4 mb-8 md:mb-0">
@@ -218,31 +202,30 @@ const Index = () => {
                 <img
                   src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                   alt="Byte Matrix Technologies"
-                  className="h-16 w-auto hover-lift-cyber transition-all duration-300"
+                  className="h-16 w-auto transition-all duration-300 group-hover:scale-105"
                   loading="lazy"
                   style={{
                     imageRendering: "crisp-edges",
-                    filter: "drop-shadow(0 0 10px hsl(var(--cyber-blue) / 0.3))",
+                    filter: "drop-shadow(0 4px 12px hsl(var(--brand-blue) / 0.2))",
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-cyber opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-lg blur-sm"></div>
               </div>
-              <p className="text-gradient-neon font-light italic text-lg">
-                "Connecting Your Digital Matrix"
+              <p className="text-brand-blue italic text-lg font-medium">
+                Connecting Your Digital Matrix
               </p>
             </div>
             <div className="text-center md:text-right">
-              <p className="text-muted-foreground font-light">
+              <p className="text-muted-foreground font-medium">
                 © 2024 Byte Matrix Technologies. All rights reserved.
               </p>
-              <p className="text-cyber-blue mt-2 font-light">
-                Professional IT Solutions for Growing Businesses
+              <p className="text-brand-blue mt-2">
+                Enterprise IT Solutions Provider
               </p>
             </div>
           </div>
           
-          <div className="border-t border-cyber-blue/20 pt-8 text-center">
-            <div className="flex flex-wrap justify-center gap-6">
+          <div className="border-t border-brand-blue/10 pt-8 text-center">
+            <div className="flex flex-wrap justify-center gap-8">
               {[
                 { name: "Services", path: "/services" },
                 { name: "About", path: "/about" },
@@ -253,11 +236,10 @@ const Index = () => {
                 <Link
                   key={index}
                   to={item.path}
-                  className="relative text-muted-foreground hover:text-cyber-blue transition-all duration-300 font-light group px-3 py-2"
+                  className="relative text-muted-foreground hover:text-brand-blue transition-all duration-300 font-medium group px-3 py-2"
                 >
                   {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-cyber transition-all duration-300 group-hover:w-full"></span>
-                  <div className="absolute inset-0 bg-cyber-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-blue transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
             </div>

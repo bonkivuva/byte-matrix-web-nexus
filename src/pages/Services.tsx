@@ -180,41 +180,41 @@ const Services = () => {
       
       {/* Hero Section */}
       <section className="section-spacing relative overflow-hidden">
-        {/* Futuristic background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyber-blue/10 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-purple/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+        {/* Subtle professional background */}
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute top-20 left-10 w-96 h-96 bg-brand-blue/8 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-blue-light/6 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container-professional relative z-10">
           <div className="text-center max-w-5xl mx-auto">
-            <div className="inline-flex items-center px-6 py-3 glass-cyber rounded-full mb-8 border border-cyber-blue/20">
-              <Zap className="w-5 h-5 mr-3 text-cyber-yellow animate-glow" />
-              <span className="text-lg font-medium text-gradient-neon">Professional IT Solutions</span>
+            <div className="inline-flex items-center px-8 py-4 glass-professional rounded-full mb-10 border border-brand-blue/10">
+              <Zap className="w-5 h-5 mr-3 text-brand-blue" />
+              <span className="text-lg font-medium text-brand-blue">Professional IT Solutions</span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
-              <span className="text-foreground">Transform Your Business with</span>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 leading-tight tracking-tight">
+              <span className="text-foreground">Enterprise Technology Solutions</span>
               <br />
-              <span className="text-gradient-cyber">Expert Technology Matrix</span>
+              <span className="text-gradient-professional">for Global Organizations</span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed font-light max-w-4xl mx-auto">
-              From strategic IT consulting to enterprise hardware solutions, we deliver expert technology services 
-              that enhance your business operations, strengthen cybersecurity, and provide reliable 24/7 technical support.
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-14 leading-relaxed max-w-4xl mx-auto">
+              Comprehensive IT services including strategic consulting, enterprise hardware, advanced cybersecurity, 
+              and 24/7 technical support for mission-critical operations.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="btn-cyber text-lg px-10 py-4" asChild>
+              <Button size="lg" className="bg-brand-primary hover:bg-brand-primary/90 text-white text-lg px-12 py-6 rounded-xl shadow-brand hover:shadow-brand-lg transition-all duration-300" asChild>
                 <Link to="/contact">
-                  <Phone className="w-6 h-6 mr-3" />
-                  Get Free Consultation
+                  <Phone className="w-5 h-5 mr-3" />
+                  Schedule Consultation
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="btn-cyber-outline text-lg px-10 py-4" asChild>
+              <Button variant="outline" size="lg" className="border-2 border-brand-blue/30 hover:bg-brand-blue/5 text-foreground text-lg px-12 py-6 rounded-xl transition-all duration-300" asChild>
                 <Link to="/portfolio">
-                  View Our Portfolio
-                  <ArrowRight className="w-6 h-6 ml-3" />
+                  View Portfolio
+                  <ArrowRight className="w-5 h-5 ml-3" />
                 </Link>
               </Button>
             </div>
@@ -224,56 +224,53 @@ const Services = () => {
 
 
       {/* Services Grid */}
-      <section className="section-spacing">
+      <section className="section-spacing bg-gradient-professional-subtle">
         <div className="container-professional">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-              Our <span className="text-gradient-cyber">IT Services</span>
+          <div className="text-center mb-20">
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
+              Enterprise <span className="text-gradient-professional">IT Services</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-              Comprehensive IT solutions designed to transform your business operations
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Professional technology solutions for demanding business environments
             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="card-cyber group hover-lift-cyber">
-                <CardContent className="p-8">
-                  <div className="relative mb-6">
-                    <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${service.gradient} rounded-2xl mb-4 group-hover:scale-110 transition-all duration-300 shadow-cyber`}>
+              <Card key={index} className="card-premium group">
+                <CardContent className="p-10">
+                  <div className="relative mb-8">
+                    <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${service.gradient} rounded-2xl mb-6 shadow-brand group-hover:shadow-brand-lg transition-all duration-500`}>
                       <service.icon className="w-10 h-10 text-white" />
                     </div>
-                    <div className="absolute inset-0 bg-cyber-blue/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-foreground mb-4">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">
                     {service.title}
                   </h3>
                   
-                  <p className="text-muted-foreground mb-6 leading-relaxed font-light">
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
                     {service.description}
                   </p>
                   
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-3 mb-8">
                     {service.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-center text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-cyber-green mr-3 flex-shrink-0" />
-                        <span className="text-muted-foreground">{benefit}</span>
+                        <CheckCircle2 className="w-5 h-5 text-brand-blue mr-3 flex-shrink-0" />
+                        <span className="text-muted-foreground font-medium">{benefit}</span>
                       </div>
                     ))}
                   </div>
                   
-                  <div className="flex justify-end">
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="btn-cyber-outline group-hover:btn-cyber transition-all duration-300"
-                      onClick={() => setSelectedService(index)}
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </div>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="border-2 border-brand-blue/30 hover:bg-brand-blue hover:text-white transition-all duration-300 w-full"
+                    onClick={() => setSelectedService(index)}
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -282,32 +279,25 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-cyber relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-32 h-32 bg-cyber-yellow/20 rounded-full blur-2xl animate-pulse-slow"></div>
-          <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-cyber-pink/20 rounded-full blur-2xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-        </div>
-
+      <section className="py-20 bg-gradient-professional relative overflow-hidden">
         <div className="container-professional text-center relative z-10">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Need <span className="text-cyber-yellow">Immediate</span> IT Support?
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 tracking-tight">
+            Need Professional IT Support?
           </h2>
-          <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto font-light">
-            Our expert technicians are available 24/7 to resolve your IT issues quickly 
-            and keep your business running smoothly.
+          <p className="text-xl text-white/95 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Our certified technicians provide 24/7 enterprise support to keep your operations running smoothly.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 hover:bg-white hover:text-primary text-lg px-8 py-4 shadow-xl" asChild>
+            <Button size="lg" className="bg-white text-brand-primary hover:bg-white/95 text-lg px-10 py-6 shadow-xl rounded-xl font-semibold" asChild>
               <a href="tel:+254724367794">
-                <Phone className="w-6 h-6 mr-3" />
-                Call: +254 724367794
+                <Phone className="w-5 h-5 mr-3" />
+                +254 724 367 794
               </a>
             </Button>
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 border-2 border-white text-lg px-8 py-4 shadow-xl font-bold" asChild>
+            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/40 hover:bg-white hover:text-brand-primary text-lg px-10 py-6 shadow-xl rounded-xl" asChild>
               <a href="mailto:support@bytematrixtechnologies.co.ke">
-                <Zap className="w-6 h-6 mr-3" />
-                Email: support@bytematrixtechnologies.co.ke
+                <Zap className="w-5 h-5 mr-3" />
+                Email Support
               </a>
             </Button>
           </div>

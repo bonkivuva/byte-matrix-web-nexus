@@ -58,33 +58,32 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full glass-cyber border-b border-cyber-blue/20 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full glass-professional border-b border-brand-blue/10 backdrop-blur-xl">
       <div className="container-professional">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-3 group hover-lift-cyber"
+            className="flex items-center space-x-3 group transition-all duration-300"
           >
             <div className="relative">
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-12 w-auto transition-all duration-300 group-hover:scale-110"
+                className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
                 loading="eager"
                 style={{
                   imageRendering: "crisp-edges",
-                  filter: "drop-shadow(0 0 10px hsl(var(--cyber-blue) / 0.3))",
+                  filter: "drop-shadow(0 2px 8px hsl(var(--brand-blue) / 0.2))",
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-cyber opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-lg blur-sm"></div>
             </div>
             <div className="hidden md:block">
-              <h1 className="text-lg font-bold text-gradient-cyber">
+              <h1 className="text-lg font-bold text-brand-blue">
                 Byte Matrix Technologies
               </h1>
-              <p className="text-xs text-cyber-blue font-light italic">
-                "Connecting Your Digital Matrix"
+              <p className="text-xs text-muted-foreground italic">
+                Connecting Your Digital Matrix
               </p>
             </div>
           </Link>
@@ -95,17 +94,16 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg group ${
+                className={`relative px-5 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
                   isActive(link.path)
-                    ? 'text-cyber-blue bg-cyber-blue/10'
-                    : 'text-foreground hover:text-cyber-blue'
+                    ? 'text-brand-blue bg-brand-blue/10'
+                    : 'text-foreground hover:text-brand-blue hover:bg-brand-blue/5'
                 }`}
               >
                 <span className="relative z-10">{link.label}</span>
                 {isActive(link.path) && (
-                  <div className="absolute inset-0 bg-gradient-cyber opacity-10 rounded-lg"></div>
+                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-brand-blue rounded-full"></div>
                 )}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-cyber transition-all duration-300 group-hover:w-full"></div>
               </Link>
             ))}
           </nav>
@@ -117,29 +115,25 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               variant="ghost"
               size="sm"
               onClick={toggleDarkMode}
-              className="relative w-10 h-10 rounded-full hover:bg-cyber-blue/10 transition-all duration-300 group"
+              className="relative w-10 h-10 rounded-full hover:bg-brand-blue/10 transition-all duration-300"
             >
-              <div className="relative">
-                {isDarkMode ? (
-                  <Sun className="h-5 w-5 text-cyber-yellow transition-all duration-300 group-hover:scale-110" />
-                ) : (
-                  <Moon className="h-5 w-5 text-cyber-purple transition-all duration-300 group-hover:scale-110" />
-                )}
-                <div className="absolute inset-0 rounded-full bg-gradient-cyber opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
-              </div>
+              {isDarkMode ? (
+                <Sun className="h-5 w-5 text-brand-blue" />
+              ) : (
+                <Moon className="h-5 w-5 text-brand-blue" />
+              )}
             </Button>
 
             {/* CTA Button */}
             <div className="hidden md:block">
               <Button 
                 asChild
-                className="btn-cyber relative overflow-hidden group shadow-lg hover:shadow-2xl"
+                className="bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-2 rounded-lg shadow-brand hover:shadow-brand-lg transition-all duration-300"
               >
                 <Link to="/contact">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
-                  <Zap className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                  <Zap className="w-4 h-4 mr-2" />
                   Get Started
-                  <ChevronRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-2 duration-300" />
+                  <ChevronRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
             </div>
@@ -149,12 +143,12 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               variant="ghost"
               size="sm"
               onClick={toggleMenu}
-              className="lg:hidden w-10 h-10 rounded-full hover:bg-cyber-blue/10 transition-all duration-300"
+              className="lg:hidden w-10 h-10 rounded-full hover:bg-brand-blue/10 transition-all duration-300"
             >
               {isMenuOpen ? (
-                <X className="h-5 w-5 text-cyber-pink" />
+                <X className="h-5 w-5 text-brand-blue" />
               ) : (
-                <Menu className="h-5 w-5 text-cyber-blue" />
+                <Menu className="h-5 w-5 text-brand-blue" />
               )}
             </Button>
           </div>
@@ -162,28 +156,28 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 glass-cyber border-t border-cyber-blue/20 backdrop-blur-xl animate-fade-up">
+          <div className="lg:hidden absolute top-full left-0 right-0 glass-professional border-t border-brand-blue/10 backdrop-blur-xl animate-fade-up">
             <nav className="container-professional py-6">
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col space-y-3">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`flex items-center px-4 py-3 text-base font-medium transition-all duration-300 rounded-xl group ${
+                    className={`flex items-center px-5 py-3 text-base font-medium transition-all duration-300 rounded-lg ${
                       isActive(link.path)
-                        ? 'text-cyber-blue bg-cyber-blue/10 border border-cyber-blue/20'
-                        : 'text-foreground hover:text-cyber-blue hover:bg-cyber-blue/5'
+                        ? 'text-brand-blue bg-brand-blue/10'
+                        : 'text-foreground hover:text-brand-blue hover:bg-brand-blue/5'
                     }`}
                   >
                     <span className="flex-1">{link.label}</span>
-                    <ChevronRight className="w-4 h-4 opacity-50 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1" />
+                    <ChevronRight className="w-4 h-4 opacity-50" />
                   </Link>
                 ))}
-                <div className="pt-4 border-t border-cyber-blue/20">
+                <div className="pt-4 border-t border-brand-blue/10">
                   <Button 
                     asChild
-                    className="btn-cyber w-full"
+                    className="bg-brand-primary hover:bg-brand-primary/90 text-white w-full"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Link to="/contact">
