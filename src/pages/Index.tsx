@@ -1,28 +1,18 @@
 
-import {
-  ArrowRight,
-  Server,
-  Star,
-  Shield,
-  Cloud,
-  Zap,
-  CheckCircle2,
-  Sparkles,
-  Network,
-  Cpu
-} from "lucide-react";
+import { ArrowRight, Server, Star, Shield, Zap, Sparkles, Network, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import FuturisticHeader from "@/components/FuturisticHeader";
+import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background font-poppins transition-all duration-300">
+    <div className="min-h-screen transition-all duration-300">
       <SEOHead 
-        title="Byte Matrix Technologies - Professional IT Solutions & Digital Innovation"
-        description="Leading IT infrastructure management, enterprise hardware deployment, cybersecurity solutions, and strategic technology consulting. Transform your business with expert IT services."
-        keywords="IT infrastructure, enterprise hardware, cybersecurity, cloud solutions, technology consulting, system integration, 24/7 support"
+        title="Byte Matrix Technologies - Enterprise IT Solutions & Digital Transformation"
+        description="Leading provider of enterprise IT infrastructure, hardware deployment, cybersecurity solutions, and strategic technology consulting. Trusted by UN agencies, NGOs, and corporations across East Africa."
+        keywords="IT infrastructure, enterprise hardware, cybersecurity, cloud solutions, technology consulting, system integration, IT support, Kenya IT services"
       />
       
       <FuturisticHeader />
@@ -66,7 +56,7 @@ const Index = () => {
             {/* Main headline */}
             <div className="mb-10 animate-fade-up" style={{ animationDelay: '0.3s' }}>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight">
-                <span className="text-foreground">Enterprise IT Solutions for</span>
+                <span className="text-foreground">Professional IT Solutions for</span>
                 <br />
                 <span className="text-gradient-professional">Global Organizations</span>
               </h1>
@@ -75,8 +65,7 @@ const Index = () => {
             {/* Description */}
             <div className="mb-14 animate-fade-up" style={{ animationDelay: '0.4s' }}>
               <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-                Trusted by UN agencies, NGOs, and corporations across East Africa. We deliver enterprise-grade IT infrastructure, 
-                strategic consulting, and reliable support that powers mission-critical operations.
+                Trusted by UN agencies, NGOs, and corporations across East Africa. We deliver enterprise-grade IT infrastructure, strategic consulting, and reliable support that powers mission-critical operations.
               </p>
             </div>
 
@@ -84,23 +73,21 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-up" style={{ animationDelay: '0.5s' }}>
               <Button
                 size="lg"
-                className="bg-brand-primary hover:bg-brand-primary/90 text-white text-lg px-12 py-6 rounded-xl shadow-brand hover:shadow-brand-lg transition-all duration-300"
                 asChild
               >
                 <Link to="/contact">
-                  <Zap className="mr-3 h-5 w-5" />
+                  <Zap className="mr-2 h-5 w-5" />
                   Schedule Consultation
-                  <ArrowRight className="ml-3 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-brand-blue/30 hover:bg-brand-blue/5 text-foreground text-lg px-12 py-6 rounded-xl transition-all duration-300"
                 asChild
               >
                 <Link to="/services">
-                  <Network className="mr-3 h-5 w-5" />
+                  <Network className="mr-2 h-5 w-5" />
                   Our Services
                 </Link>
               </Button>
@@ -181,71 +168,18 @@ const Index = () => {
           <div className="text-center">
             <Button
               size="lg"
-              className="bg-brand-primary hover:bg-brand-primary/90 text-white text-lg px-12 py-6 rounded-xl shadow-brand hover:shadow-brand-lg transition-all duration-300"
               asChild
             >
               <Link to="/services">
                 View All Services
-                <ArrowRight className="ml-3 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="relative py-20 glass-professional border-t border-brand-blue/10">
-        <div className="container-professional relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <div className="flex flex-col items-center md:items-start space-y-4 mb-8 md:mb-0">
-              <div className="relative group">
-                <img
-                  src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
-                  alt="Byte Matrix Technologies"
-                  className="h-16 w-auto transition-all duration-300 group-hover:scale-105"
-                  loading="lazy"
-                  style={{
-                    imageRendering: "crisp-edges",
-                    filter: "drop-shadow(0 4px 12px hsl(var(--brand-blue) / 0.2))",
-                  }}
-                />
-              </div>
-              <p className="text-brand-blue italic text-lg font-medium">
-                Connecting Your Digital Matrix
-              </p>
-            </div>
-            <div className="text-center md:text-right">
-              <p className="text-muted-foreground font-medium">
-                © 2024 Byte Matrix Technologies. All rights reserved.
-              </p>
-              <p className="text-brand-blue mt-2">
-                Enterprise IT Solutions Provider
-              </p>
-            </div>
-          </div>
-          
-          <div className="border-t border-brand-blue/10 pt-8 text-center">
-            <div className="flex flex-wrap justify-center gap-8">
-              {[
-                { name: "Services", path: "/services" },
-                { name: "About", path: "/about" },
-                { name: "Portfolio", path: "/portfolio" },
-                { name: "Careers", path: "/careers" },
-                { name: "Contact", path: "/contact" },
-              ].map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.path}
-                  className="relative text-muted-foreground hover:text-brand-blue transition-all duration-300 font-medium group px-3 py-2"
-                >
-                  {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-blue transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

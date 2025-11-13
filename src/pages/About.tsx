@@ -1,35 +1,21 @@
 
 import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  Server,
-  Shield,
-  Clock,
-  Users,
-  Award,
-  Zap,
-  Star,
-  ChevronDown,
-} from "lucide-react";
+import { ArrowRight, Star, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import FuturisticHeader from "@/components/FuturisticHeader";
+import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-quantum font-cyber text-foreground overflow-hidden">
+    <div className="min-h-screen text-foreground overflow-hidden">
       <SEOHead 
-        title="About Byte Matrix Technologies - IT Solutions & Digital Transformation"
-        description="Learn about Byte Matrix Technologies, Kenya's leading IT solutions provider. We specialize in digital transformation, enterprise solutions, and technology consulting."
-        keywords="about byte matrix technologies, IT company Kenya, digital transformation, enterprise solutions, technology consulting"
+        title="About Byte Matrix Technologies - Professional IT Solutions Provider"
+        description="Discover Byte Matrix Technologies, your trusted partner for professional IT solutions, digital transformation, and enterprise technology services in Kenya and beyond."
+        keywords="about byte matrix technologies, IT company Kenya, digital transformation, enterprise solutions, technology consulting, professional IT services"
       />
       
       <FuturisticHeader currentPage="about" />
-      {/* Clean professional background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-slate-100/20 dark:from-blue-950/20 dark:to-slate-900/20"></div>
-      </div>
 
 
       {/* Hero Section with Company Logo */}
@@ -57,38 +43,36 @@ const About = () => {
             </div>
 
             {/* Main Content */}
-            <div className="space-y-12 animate-slide-up">
+            <div className="space-y-12 animate-fade-up">
               <div>
-                <h1 className="text-2xl lg:text-3xl xl:text-4xl font-playfair font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-8 animate-gradient leading-tight tracking-tight">
+                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-professional mb-8 leading-tight tracking-tight">
                   Welcome to Byte Matrix Technologies
                 </h1>
-                <div className="w-32 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto rounded-full animate-scale-in shadow-lg mb-6"></div>
+                <div className="w-32 h-1 bg-gradient-brand mx-auto rounded-full shadow-brand mb-6"></div>
               </div>
               
-              <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-6xl mx-auto leading-relaxed font-source font-light animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                We're passionate IT professionals dedicated to helping your business succeed in the digital world. From IT infrastructure to hardware solutions and expert guidance, we make technology work for you—simply and reliably.
+              <p className="text-lg lg:text-xl text-muted-foreground max-w-6xl mx-auto leading-relaxed animate-fade-in">
+                We're passionate IT professionals dedicated to helping your business thrive in the digital world. From robust IT infrastructure to comprehensive hardware solutions and expert guidance, we make technology work for you—simply, effectively, and reliably.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-8 py-4 text-base font-montserrat font-medium shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-3 hover:scale-105 rounded-xl"
                   asChild
                 >
                   <Link to="/services">
                     Explore Our Services
-                    <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="px-8 py-4 text-base font-montserrat font-medium glass-card hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-800 dark:hover:to-gray-700 border-2 border-blue-200 dark:border-blue-700 text-blue-600 dark:text-blue-400 transition-all duration-700 transform hover:-translate-y-3 rounded-xl shadow-lg hover:shadow-xl"
                   asChild
                 >
                   <Link to="/contact">
-                    Let's Talk
-                    <ChevronDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+                    <Zap className="mr-2 h-5 w-5" />
+                    Get Started
                   </Link>
                 </Button>
               </div>
@@ -100,28 +84,28 @@ const About = () => {
       {/* Our Story Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16 animate-fade-in">
-              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-blue-200/30 dark:border-blue-700/30 rounded-full text-blue-700 dark:text-blue-300 font-semibold mb-8 text-lg shadow-lg">
-                <Star className="w-5 h-5 mr-3 text-blue-600" />
+              <div className="inline-flex items-center px-6 py-3 glass-professional rounded-full text-brand-blue font-semibold mb-8 shadow-brand">
+                <Star className="w-5 h-5 mr-2" />
                 Our Story
               </div>
-              <h2 className="text-xl lg:text-2xl font-playfair font-semibold text-gray-900 dark:text-white mb-8 tracking-tight">
-                Empowering Businesses Through <span className="text-gradient-primary font-bold">Technology</span>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-8 tracking-tight">
+                Empowering Businesses Through <span className="text-gradient-professional">Innovation</span>
               </h2>
             </div>
 
-            <div className="space-y-8 text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-source font-light">
-              <p className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                We believe every business deserves reliable, professional IT solutions. We've grown into a trusted partner for organizations across Kenya, helping businesses of all sizes succeed with technology.
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p className="animate-fade-in">
+                Founded on the belief that every business deserves reliable, professional IT solutions, we've grown into a trusted partner for organizations across Kenya and beyond. Our mission is simple: help businesses of all sizes succeed through technology.
               </p>
               
-              <p className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                What makes us different? We take time to understand your challenges and create solutions that fit your actual needs—practical, effective, and straightforward.
+              <p className="animate-fade-in">
+                What sets us apart is our commitment to understanding your unique challenges. We don't believe in one-size-fits-all solutions. Instead, we take the time to listen, analyze, and create tailored strategies that address your specific needs—practical, effective, and results-driven.
               </p>
 
-              <p className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                Whether it's your first network setup or managing complex enterprise systems, we handle everything with dedication and expertise. We stay current with technology trends so you can focus on your business.
+              <p className="animate-fade-in">
+                Whether you're setting up your first network or managing complex enterprise systems, our team brings dedication, expertise, and a customer-first approach to every project. We stay at the forefront of technology trends so you can focus on what you do best—running your business.
               </p>
             </div>
           </div>
@@ -129,72 +113,30 @@ const About = () => {
       </section>
 
 
-      {/* Enhanced CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-indigo-600/10 backdrop-blur-sm"></div>
+      {/* CTA Section */}
+      <section className="py-20 relative overflow-hidden glass-professional">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <h2 className="text-xl lg:text-2xl font-playfair font-semibold text-gray-900 dark:text-white mb-8 tracking-tight">
-              Ready to Experience the <span className="text-gradient-primary font-bold">Byte Matrix Difference?</span>
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 tracking-tight">
+              Ready to Experience the <span className="text-gradient-professional">Byte Matrix Difference</span>?
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-4xl mx-auto font-source font-light leading-relaxed">
-              Let's discuss how we can help your business succeed. Reach out for friendly, expert guidance tailored to your needs.
+            <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
+              Let's discuss how we can help your business succeed. Reach out today for expert guidance tailored to your unique needs.
             </p>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-8 py-4 text-lg font-montserrat font-medium shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 rounded-xl"
               asChild
             >
               <Link to="/contact">
                 Get In Touch
-                <ArrowRight className="ml-4 h-8 w-8 group-hover:translate-x-2 transition-transform" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Enhanced Footer */}
-      <footer className="bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-gray-400 py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-gray-950/90"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <div className="flex flex-col items-center md:items-start space-y-4 mb-8 md:mb-0">
-              <img
-                src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
-                alt="Byte Matrix Technologies"
-                className="h-16 w-auto opacity-80 hover:opacity-100 transition-all duration-500 hover:scale-110"
-                style={{
-                  filter: "drop-shadow(0 8px 16px rgba(59, 130, 246, 0.3))",
-                }}
-              />
-              <p className="text-blue-400 font-light italic text-lg">"Connecting Your Digital Matrix"</p>
-            </div>
-            <div className="text-center md:text-right">
-              <p className="text-lg font-light">© 2024 Byte Matrix Technologies. All rights reserved.</p>
-              <p className="text-lg mt-2 text-gray-500">Expert IT Solutions for Modern Businesses</p>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center">
-            <div className="flex justify-center space-x-8">
-              {[
-                { name: "Services", path: "/services" },
-                { name: "Portfolio", path: "/portfolio" },
-                { name: "Contact", path: "/contact" },
-              ].map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.path}
-                  className="text-gray-400 hover:text-blue-400 transition-all duration-500 relative group text-lg font-medium"
-                >
-                  {item.name}
-                  <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-500 group-hover:w-full rounded-full"></span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
