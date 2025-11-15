@@ -18,7 +18,7 @@ const Career = () => {
       <FuturisticHeader currentPage="careers" />
       
       {/* Hero Section */}
-      <section className="relative z-10 py-24">
+      <section className="py-20 pt-32 relative z-10">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto animate-fade-up">
             <div className="inline-flex items-center px-6 py-3 glass-professional rounded-full text-brand-blue font-semibold mb-8 shadow-brand">

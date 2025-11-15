@@ -204,19 +204,20 @@ const Services = () => {
               and 24/7 technical support for mission-critical operations.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="bg-brand-primary hover:bg-brand-primary/90 text-white text-lg px-12 py-6 rounded-xl shadow-brand hover:shadow-brand-lg transition-all duration-300" asChild>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button size="lg" asChild className="bg-brand-blue hover:bg-brand-blue/90 text-white shadow-brand text-lg px-8 py-6 h-auto">
                 <Link to="/contact">
-                  <Phone className="w-5 h-5 mr-3" />
-                  Schedule Consultation
+                  Get Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-brand-blue/30 hover:bg-brand-blue/5 text-foreground text-lg px-12 py-6 rounded-xl transition-all duration-300" asChild>
-                <Link to="/portfolio">
-                  View Portfolio
-                  <ArrowRight className="w-5 h-5 ml-3" />
-                </Link>
-              </Button>
+              <a
+                href="tel:+254724367794"
+                className="flex items-center gap-2 text-lg font-semibold text-brand-blue hover:text-brand-blue/80 transition-colors"
+              >
+                <Phone className="h-5 w-5" />
+                Call: +254 724 367 794
+              </a>
             </div>
           </div>
         </div>
@@ -282,22 +283,22 @@ const Services = () => {
       <section className="py-20 bg-gradient-professional relative overflow-hidden">
         <div className="container-professional text-center relative z-10">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 tracking-tight">
-            Need Professional IT Support?
+            Ready to Minimize Downtime & Maximize Productivity?
           </h2>
           <p className="text-xl text-white/95 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Our certified technicians provide 24/7 enterprise support to keep your operations running smoothly.
+            Join leading organizations across East Africa who trust us with their IT infrastructure. Our certified technicians provide 24/7 enterprise support to keep your operations running smoothly.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="bg-white text-brand-primary hover:bg-white/95 text-lg px-10 py-6 shadow-xl rounded-xl font-semibold" asChild>
+            <Button size="lg" className="bg-white text-brand-blue hover:bg-white/95 text-lg px-10 py-6 shadow-xl rounded-xl font-semibold" asChild>
+              <Link to="/contact">
+                Get Free Consultation
+                <ArrowRight className="w-5 h-5 ml-3" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/40 hover:bg-white hover:text-brand-blue text-lg px-10 py-6 shadow-xl rounded-xl" asChild>
               <a href="tel:+254724367794">
                 <Phone className="w-5 h-5 mr-3" />
-                +254 724 367 794
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/40 hover:bg-white hover:text-brand-primary text-lg px-10 py-6 shadow-xl rounded-xl" asChild>
-              <a href="mailto:support@bytematrixtechnologies.co.ke">
-                <Zap className="w-5 h-5 mr-3" />
-                Email Support
+                Call: +254 724 367 794
               </a>
             </Button>
           </div>

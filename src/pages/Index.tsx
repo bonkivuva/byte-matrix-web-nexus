@@ -1,10 +1,12 @@
 
-import { ArrowRight, Server, Star, Shield, Zap, Sparkles, Network, Cpu } from "lucide-react";
+import { ArrowRight, Server, Star, Shield, Zap, Sparkles, Network, Cpu, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import Testimonials from "@/components/Testimonials";
+import ClientLogos from "@/components/ClientLogos";
 
 const Index = () => {
   return (
@@ -18,7 +20,7 @@ const Index = () => {
       <FuturisticHeader />
 
       {/* Hero Section */}
-      <section className="section-spacing relative overflow-hidden">
+      <section className="section-spacing relative overflow-hidden pt-32">
         {/* Subtle professional background */}
         <div className="absolute inset-0 opacity-40">
           <div className="absolute top-20 left-10 w-96 h-96 bg-brand-blue/8 rounded-full blur-3xl"></div>
@@ -70,27 +72,32 @@ const Index = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-up" style={{ animationDelay: '0.5s' }}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-up" style={{ animationDelay: '0.5s' }}>
               <Button
                 size="lg"
                 asChild
+                className="bg-brand-blue hover:bg-brand-blue/90 text-white shadow-brand text-lg px-8 py-6 h-auto"
               >
                 <Link to="/contact">
                   <Zap className="mr-2 h-5 w-5" />
-                  Schedule Consultation
+                  Get Free Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                asChild
+              <a
+                href="tel:+254724367794"
+                className="flex items-center gap-2 text-lg font-semibold text-brand-blue hover:text-brand-blue/80 transition-colors"
               >
-                <Link to="/services">
-                  <Network className="mr-2 h-5 w-5" />
-                  Our Services
-                </Link>
-              </Button>
+                <Phone className="h-5 w-5" />
+                +254 724 367 794
+              </a>
+            </div>
+            
+            {/* Trust Badge */}
+            <div className="mt-8 animate-fade-up" style={{ animationDelay: '0.6s' }}>
+              <p className="text-sm text-muted-foreground">
+                Trusted by <span className="font-semibold text-brand-blue">UN agencies, NGOs, and corporations</span> across East Africa
+              </p>
             </div>
           </div>
         </div>
@@ -178,6 +185,12 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Client Logos Section */}
+      <ClientLogos />
 
       <Footer />
     </div>

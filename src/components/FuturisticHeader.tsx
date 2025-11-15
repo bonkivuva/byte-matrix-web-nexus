@@ -7,7 +7,8 @@ import {
   Menu, 
   X,
   Zap,
-  ChevronRight 
+  ChevronRight,
+  Phone 
 } from 'lucide-react';
 
 interface FuturisticHeaderProps {
@@ -58,7 +59,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full glass-professional border-b border-brand-blue/10 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 right-0 z-50 glass-professional border-b border-border/40 backdrop-blur-xl shadow-sm transition-all duration-300">
       <div className="container-professional">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
@@ -109,7 +110,16 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
           </nav>
 
           {/* Right side actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center gap-3">
+            {/* Phone number - hidden on mobile */}
+            <a
+              href="tel:+254724367794"
+              className="hidden md:flex items-center text-sm font-medium text-muted-foreground hover:text-brand-blue transition-colors"
+            >
+              <Phone className="mr-2 h-4 w-4" />
+              +254 724 367 794
+            </a>
+
             {/* Dark mode toggle */}
             <Button
               variant="ghost"
@@ -125,15 +135,13 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
             </Button>
 
             {/* CTA Button */}
-            <div className="hidden md:block">
+            <div className="hidden sm:block">
               <Button 
                 asChild
-                className="bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-2 rounded-lg shadow-brand hover:shadow-brand-lg transition-all duration-300"
+                className="bg-brand-blue hover:bg-brand-blue/90 text-white px-6 py-2 rounded-lg shadow-brand hover:shadow-brand-lg transition-all duration-300"
               >
                 <Link to="/contact">
-                  <Zap className="w-4 h-4 mr-2" />
-                  Get Started
-                  <ChevronRight className="w-4 h-4 ml-2" />
+                  Get Free Consultation
                 </Link>
               </Button>
             </div>
