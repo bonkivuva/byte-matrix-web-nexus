@@ -34,7 +34,7 @@ const handler = async (req: Request): Promise<Response> => {
       from: "Byte Matrix Technologies <onboarding@resend.dev>",
       to: ["support@bytematrixtechnologies.co.ke"],
       replyTo: email,
-      subject: `New Consultation Request - ${service}`,
+      subject: "New Contact Form Submission",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #2563eb;">New Consultation Request</h2>
