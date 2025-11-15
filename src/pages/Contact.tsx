@@ -20,7 +20,7 @@ const Contact = () => {
 
 
       {/* Hero Contact Section */}
-      <section className="py-24 relative z-10">
+      <section className="py-24 pt-32 relative z-10">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20 animate-fade-in">

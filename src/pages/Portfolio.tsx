@@ -36,7 +36,8 @@ const Portfolio = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-slate-100/30 dark:from-blue-950/30 dark:to-slate-900/30"></div>
       </div>
 
-      <section className="section-spacing relative z-10">
+      {/* Hero Section */}
+      <section className="section-spacing pt-32 relative z-10">
         <div className="container-professional">
           <div className="text-center mb-20 animate-fade-up">
             <div className="inline-flex items-center px-8 py-4 glass-premium rounded-full text-cyber-blue dark:text-cyber-blue font-semibold mb-8 text-lg shadow-brand animate-float-smooth">

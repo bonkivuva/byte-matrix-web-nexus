@@ -18,8 +18,8 @@ const About = () => {
       <FuturisticHeader currentPage="about" />
 
 
-      {/* Hero Section with Company Logo */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      {/* Hero Section */}
+      <section className="py-20 pt-32 relative z-10">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             {/* Clean Logo Showcase */}
