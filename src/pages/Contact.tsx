@@ -78,8 +78,8 @@ const Contact = () => {
                   icon: Mail,
                   title: "Email Us",
                   description: "Send us your questions and project requirements",
-                  contact: "support@bytematrixtechnologies.co.ke",
-                  href: "mailto:support@bytematrixtechnologies.co.ke",
+                  contact: "info@bytematrixtechnologies.co.ke",
+                  href: "mailto:info@bytematrixtechnologies.co.ke",
                 },
               ].map((contact, index) => (
                 <Card
@@ -180,7 +180,7 @@ const Contact = () => {
                 size="lg"
                 asChild
               >
-                <a href="mailto:support@bytematrixtechnologies.co.ke">
+                <a href="mailto:info@bytematrixtechnologies.co.ke">
                   <Send className="mr-2 h-5 w-5" />
                   Send Email
                 </a>

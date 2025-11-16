@@ -124,7 +124,7 @@ const Career = () => {
                     size="lg"
                     asChild
                   >
-                    <a href="mailto:support@bytematrixtechnologies.co.ke">
+                    <a href="mailto:info@bytematrixtechnologies.co.ke">
                       Email Us Directly
                     </a>
                   </Button>

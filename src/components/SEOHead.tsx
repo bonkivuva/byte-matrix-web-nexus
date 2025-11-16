@@ -97,7 +97,7 @@ const SEOHead = ({
       "logo": "https://bytematrixtech.com/logo.png",
       "image": image,
       "telephone": "+254724367794",
-      "email": "support@bytematrixtechnologies.co.ke",
+      "email": "info@bytematrixtechnologies.co.ke",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "KE"
