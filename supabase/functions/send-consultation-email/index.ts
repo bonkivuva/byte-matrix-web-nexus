@@ -32,7 +32,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email to support team
     const emailResponse = await resend.emails.send({
       from: "Byte Matrix Technologies <onboarding@resend.dev>",
-      to: ["support@bytematrixtechnologies.co.ke"],
+      to: ["info@bytematrixtechnologies.co.ke"],
       replyTo: email,
       subject: "New Contact Form Submission",
       html: `
@@ -94,7 +94,7 @@ const handler = async (req: Request): Promise<Response> => {
           </p>
           
           <p style="font-size: 16px;">
-            <strong>Email:</strong> <a href="mailto:support@bytematrixtechnologies.co.ke">support@bytematrixtechnologies.co.ke</a><br/>
+            <strong>Email:</strong> <a href="mailto:info@bytematrixtechnologies.co.ke">info@bytematrixtechnologies.co.ke</a><br/>
             <strong>Phone:</strong> +254 724 367 794
           </p>
 

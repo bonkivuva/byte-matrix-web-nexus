@@ -102,7 +102,7 @@ const LeadCaptureForm = ({
       console.error("Error submitting consultation request:", error);
       toast({
         title: "Something went wrong",
-        description: "Please try again or contact us directly at support@bytematrixtechnologies.co.ke",
+        description: "Please try again or contact us directly at info@bytematrixtechnologies.co.ke",
         variant: "destructive",
       });
     } finally {

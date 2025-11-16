@@ -28,7 +28,7 @@ const Footer = () => {
       links: [
         { name: "Get in Touch", path: "/contact" },
         { name: "+254 724 367 794", path: "tel:+254724367794", external: true },
-        { name: "Email Us", path: "mailto:support@bytematrixtechnologies.co.ke", external: true },
+        { name: "Email Us", path: "mailto:info@bytematrixtechnologies.co.ke", external: true },
       ]
     }
   ];
