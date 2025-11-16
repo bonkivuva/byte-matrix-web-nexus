@@ -45,7 +45,7 @@ const About = () => {
             {/* Main Content */}
             <div className="space-y-12 animate-fade-up">
               <div>
-                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gradient-professional mb-8 leading-tight tracking-tight">
+                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gradient-professional mb-8 leading-tight tracking-tight">
                   Welcome to Byte Matrix Technologies
                 </h1>
                 <div className="w-32 h-1 bg-gradient-brand mx-auto rounded-full shadow-brand mb-6"></div>
