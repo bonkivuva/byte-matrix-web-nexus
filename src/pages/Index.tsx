@@ -58,16 +58,16 @@ const Index = () => {
             {/* Main headline */}
             <div className="mb-10 animate-fade-up" style={{ animationDelay: '0.3s' }}>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight">
-                <span className="text-foreground">Professional IT Solutions for</span>
+                <span className="text-foreground">Transform Your Business with</span>
                 <br />
-                <span className="text-gradient-professional">Global Organizations</span>
+                <span className="text-gradient-professional">Scalable IT Solutions</span>
               </h1>
             </div>
 
             {/* Description */}
             <div className="mb-14 animate-fade-up" style={{ animationDelay: '0.4s' }}>
               <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-                Trusted by UN agencies, NGOs, and corporations across East Africa. We deliver enterprise-grade IT infrastructure, strategic consulting, and reliable support that powers mission-critical operations.
+                Minimize downtime. Maximize efficiency. Trusted by UN agencies, NGOs, and corporations across East Africa to deliver enterprise-grade IT infrastructure that powers mission-critical operations.
               </p>
             </div>
 
@@ -76,12 +76,12 @@ const Index = () => {
               <Button
                 size="lg"
                 asChild
-                className="bg-brand-blue hover:bg-brand-blue/90 text-white shadow-brand text-lg px-8 py-6 h-auto"
+                className="bg-brand-blue hover:bg-brand-blue/90 text-white shadow-brand text-lg px-8 py-6 h-auto group"
               >
                 <Link to="/contact">
                   <Zap className="mr-2 h-5 w-5" />
-                  Get Free Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Get a Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
               <a

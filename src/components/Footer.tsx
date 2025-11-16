@@ -8,7 +8,7 @@ const Footer = () => {
     {
       title: "Company",
       links: [
-        { name: "About Us", path: "/" },
+        { name: "About Us", path: "/about" },
         { name: "Our Services", path: "/services" },
         { name: "Portfolio", path: "/portfolio" },
         { name: "Careers", path: "/careers" },
@@ -140,13 +140,44 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Contact Information */}
+        <div className="bg-brand-blue/5 rounded-xl p-6 mb-8 border border-brand-blue/10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
+              <MapPin className="w-5 h-5 text-brand-blue flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-semibold text-sm text-foreground mb-1">Our Office</h4>
+                <p className="text-sm text-muted-foreground">Nairobi, Kenya</p>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
+              <Phone className="w-5 h-5 text-brand-blue flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-semibold text-sm text-foreground mb-1">Call Us</h4>
+                <a href="tel:+254724367794" className="text-sm text-muted-foreground hover:text-brand-blue transition-colors">
+                  +254 724 367 794
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
+              <Mail className="w-5 h-5 text-brand-blue flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-semibold text-sm text-foreground mb-1">Email Us</h4>
+                <a href="mailto:info@bytematrixtechnologies.co.ke" className="text-sm text-muted-foreground hover:text-brand-blue transition-colors">
+                  info@bytematrixtechnologies.co.ke
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-brand-blue/10">
           <p className="text-sm text-muted-foreground">
             © {currentYear} Byte Matrix Technologies. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground mt-2">
-            Professional IT Solutions | Enterprise Hardware | Technical Support
+            Professional IT Solutions | Enterprise Hardware | Technical Support | Nairobi, Kenya
           </p>
         </div>
       </div>
