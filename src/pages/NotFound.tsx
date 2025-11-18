@@ -37,59 +37,70 @@ const NotFound = () => {
           {/* Error icon */}
           <div className="relative">
             <div className="w-32 h-32 mx-auto mb-8 relative">
-              <div className="absolute inset-0 bg-gradient-cyber rounded-full opacity-20 animate-cyber-glow"></div>
-              <div className="relative w-full h-full bg-gradient-cyber rounded-full flex items-center justify-center backdrop-blur-sm border border-cyber-blue/30">
-                <AlertTriangle className="w-16 h-16 text-cyber-yellow" />
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl"></div>
+              <div className="relative w-full h-full bg-gradient-to-br from-primary to-primary/60 rounded-full flex items-center justify-center shadow-xl border-2 border-primary/30">
+                <AlertTriangle className="w-16 h-16 text-primary-foreground" />
               </div>
             </div>
           </div>
 
           {/* Error message */}
           <div className="space-y-4">
-            <h1 className="text-8xl font-bold text-gradient-cyber mb-4 tracking-tight">
+            <h1 className="text-8xl font-bold text-gradient-professional mb-4 tracking-tight">
               404
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-cyber-blue mb-4">
-              Neural Network Not Found
+            <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-4">
+              Page Not Found
             </h2>
             <p className="text-lg text-muted-foreground max-w-md mx-auto leading-relaxed">
-              The digital matrix you're looking for has been disconnected. Let us help you navigate back to the secure network.
+              The page you're looking for doesn't exist or has been moved. Let us help you find what you need.
             </p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="bg-card border-2 border-border rounded-2xl p-6 max-w-md mx-auto">
+            <h3 className="font-semibold text-foreground mb-4">Popular Pages:</h3>
+            <div className="grid grid-cols-2 gap-3 text-sm">
+              <Link to="/" className="text-primary hover:underline">Home</Link>
+              <Link to="/services" className="text-primary hover:underline">Services</Link>
+              <Link to="/portfolio" className="text-primary hover:underline">Portfolio</Link>
+              <Link to="/contact" className="text-primary hover:underline">Contact</Link>
+            </div>
           </div>
 
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Button 
               asChild 
-              className="btn-cyber hover-lift-cyber group"
+              className="shadow-lg hover:shadow-xl"
             >
               <Link to="/">
                 <Home className="w-5 h-5 mr-2" />
-                Return to Matrix
+                Return to Homepage
               </Link>
             </Button>
             
             <Button 
-              variant="outline" 
-              onClick={() => window.location.reload()}
-              className="glass-cyber border-cyber-blue/30 text-cyber-blue hover:bg-cyber-blue/10 group"
+              asChild
+              variant="outline"
             >
-              <RefreshCw className="w-5 h-5 mr-2 group-hover:animate-spin" />
-              Reconnect
+              <Link to="/contact">
+                Contact Support
+              </Link>
             </Button>
           </div>
 
           {/* Help text */}
           <div className="pt-8 text-sm text-muted-foreground">
             <p>
-              Lost in the digital matrix? Contact our{" "}
+              Need assistance? Our{" "}
               <Link 
                 to="/contact" 
-                className="text-cyber-blue hover:text-cyber-purple transition-colors duration-300 underline decoration-cyber-blue/30 hover:decoration-cyber-purple/30"
+                className="text-primary hover:underline font-semibold"
               >
                 support team
               </Link>{" "}
-              for assistance.
+              is ready to help you.
             </p>
           </div>
         </div>
