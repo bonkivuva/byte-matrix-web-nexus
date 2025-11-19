@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import TrustBar from "@/components/TrustBar";
 
 const About = () => {
   return (
@@ -112,8 +111,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      <TrustBar />
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden glass-professional">
