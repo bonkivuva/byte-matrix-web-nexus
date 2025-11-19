@@ -8,7 +8,7 @@ const Footer = () => {
     {
       title: "Company",
       links: [
-        { name: "About Us", path: "/about" },
+        { name: "About Us", path: "/" },
         { name: "Our Services", path: "/services" },
         { name: "Portfolio", path: "/portfolio" },
         { name: "Careers", path: "/careers" },
