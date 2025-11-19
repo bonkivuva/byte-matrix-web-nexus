@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Home, AlertTriangle, RefreshCw } from "lucide-react";
 import FuturisticHeader from "@/components/FuturisticHeader";
+import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 
 const NotFound = () => {
@@ -105,6 +106,8 @@ const NotFound = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Twitter, Facebook, Instagram, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -33,54 +34,103 @@ const Footer = () => {
     }
   ];
 
+  const contactInfo = [
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+254 724 367 794",
+      href: "tel:+254724367794",
+    },
+    {
+      icon: Mail,
+      label: "Email",
+      value: "info@bytematrixtechnologies.co.ke",
+      href: "mailto:info@bytematrixtechnologies.co.ke",
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "Nairobi, Kenya",
+      href: null,
+    }
+  ];
+
   return (
-    <footer className="relative bg-gradient-to-br from-neural-900 via-neural-800 to-neural-900 text-foreground py-16 mt-20 border-t border-brand-blue/10">
-      {/* Subtle background effect */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent"></div>
+    <footer className="relative bg-gradient-to-br from-card via-background to-card border-t-2 border-primary/20 mt-20 overflow-hidden">
+      {/* Vibrant background effects */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Company Info */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-3">
+
+      {/* Main footer content */}
+      <div className="container mx-auto px-6 py-16 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
+          {/* Company Info - Takes 4 columns on large screens */}
+          <div className="lg:col-span-4 space-y-6">
+            <div className="flex items-center space-x-3 group">
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-12 w-auto"
+                className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
                 style={{
-                  filter: "drop-shadow(0 4px 12px hsl(var(--brand-blue) / 0.3))",
+                  filter: "drop-shadow(0 4px 16px hsl(var(--primary) / 0.4))",
                 }}
               />
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Professional IT solutions and digital transformation services for modern businesses.
+            <p className="text-sm text-foreground/80 leading-relaxed max-w-sm">
+              Professional IT solutions and digital transformation services for modern businesses. Empowering organizations across East Africa.
             </p>
-            <p className="text-sm text-brand-blue font-medium italic">
+            <p className="text-base text-primary font-semibold italic bg-primary/10 px-4 py-2 rounded-lg inline-block border border-primary/20">
               "Connecting Your Digital Matrix"
             </p>
+
+            {/* Contact Info Cards */}
+            <div className="space-y-3 pt-4">
+              {contactInfo.map((info, idx) => (
+                <div key={idx} className="flex items-center space-x-3 text-sm group">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300 border border-primary/20">
+                    <info.icon className="w-4 h-4 text-primary" />
+                  </div>
+                  {info.href ? (
+                    <a 
+                      href={info.href}
+                      className="text-foreground/70 hover:text-primary transition-colors duration-300 font-medium"
+                    >
+                      {info.value}
+                    </a>
+                  ) : (
+                    <span className="text-foreground/70 font-medium">{info.value}</span>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Footer Links */}
+          {/* Footer Links - Each takes 2-3 columns */}
           {footerLinks.map((section, idx) => (
-            <div key={idx} className="space-y-4">
-              <h3 className="text-base font-semibold text-foreground">{section.title}</h3>
+            <div key={idx} className="lg:col-span-2 space-y-5">
+              <h3 className="text-lg font-bold text-foreground relative inline-block pb-2">
+                {section.title}
+                <span className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+              </h3>
               <ul className="space-y-3">
                 {section.links.map((link, linkIdx) => (
                   <li key={linkIdx}>
                     {link.external ? (
                       <a
                         href={link.path}
-                        className="text-sm text-muted-foreground hover:text-brand-blue transition-colors duration-300 hover:translate-x-1 inline-block"
+                        className="text-sm text-foreground/70 hover:text-primary transition-all duration-300 hover:translate-x-2 inline-flex items-center group font-medium"
                       >
+                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
                         {link.name}
                       </a>
                     ) : (
                       <Link
                         to={link.path}
-                        className="text-sm text-muted-foreground hover:text-brand-blue transition-colors duration-300 hover:translate-x-1 inline-block"
+                        className="text-sm text-foreground/70 hover:text-primary transition-all duration-300 hover:translate-x-2 inline-flex items-center group font-medium"
                       >
+                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
                         {link.name}
                       </Link>
                     )}
@@ -89,98 +139,66 @@ const Footer = () => {
               </ul>
             </div>
           ))}
+
+          {/* CTA Section - Takes remaining columns */}
+          <div className="lg:col-span-2 space-y-5">
+            <h3 className="text-lg font-bold text-foreground relative inline-block pb-2">
+              Get Started
+              <span className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+            </h3>
+            <p className="text-sm text-foreground/70 leading-relaxed">
+              Ready to transform your business with cutting-edge IT solutions?
+            </p>
+            <Button 
+              asChild
+              className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+            >
+              <Link to="/contact" className="flex items-center justify-center">
+                Contact Us
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </Button>
+          </div>
         </div>
 
-        {/* Social Media Links */}
-        <div className="border-t border-brand-blue/10 pt-8 mb-8">
+        {/* Social Media & Bottom Bar */}
+        <div className="border-t border-primary/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex gap-6">
-              <a
-                href="https://x.com/ByteMatrixTech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-brand-blue transition-all duration-300 hover:scale-110"
-                aria-label="Follow us on X (Twitter)"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a
-                href="https://www.facebook.com/share/1BSjKFRCUd/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-brand-blue transition-all duration-300 hover:scale-110"
-                aria-label="Follow us on Facebook"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/byte_matrix_technologies"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-brand-blue transition-all duration-300 hover:scale-110"
-                aria-label="Follow us on Instagram"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </a>
+            {/* Social Media Icons */}
+            <div className="flex gap-4">
+              {[
+                { icon: Twitter, href: "https://x.com/ByteMatrixTech", label: "Twitter" },
+                { icon: Facebook, href: "https://facebook.com/bytematrixtech", label: "Facebook" },
+                { icon: Instagram, href: "https://instagram.com/bytematrixtech", label: "Instagram" }
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-11 h-11 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-primary/20 hover:border-primary"
+                >
+                  <social.icon className="w-5 h-5 text-primary group-hover:text-white transition-colors duration-300" />
+                </a>
+              ))}
             </div>
-            
-            <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm text-muted-foreground">
-              <span>Privacy Policy</span>
-              <span>•</span>
-              <span>Terms of Service</span>
-              <span>•</span>
-              <span>Cookie Policy</span>
+
+            {/* Copyright */}
+            <div className="text-center md:text-right">
+              <p className="text-sm text-foreground/60 font-medium">
+                &copy; {currentYear} <span className="text-primary font-semibold">Byte Matrix Technologies</span>. All rights reserved.
+              </p>
+              <p className="text-xs text-foreground/50 mt-1">
+                Crafted with precision • Powered by innovation
+              </p>
             </div>
           </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="bg-brand-blue/5 rounded-xl p-6 mb-8 border border-brand-blue/10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
-              <MapPin className="w-5 h-5 text-brand-blue flex-shrink-0 mt-1" />
-              <div>
-                <h4 className="font-semibold text-sm text-foreground mb-1">Our Office</h4>
-                <p className="text-sm text-muted-foreground">Nairobi, Kenya</p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
-              <Phone className="w-5 h-5 text-brand-blue flex-shrink-0 mt-1" />
-              <div>
-                <h4 className="font-semibold text-sm text-foreground mb-1">Call Us</h4>
-                <a href="tel:+254724367794" className="text-sm text-muted-foreground hover:text-brand-blue transition-colors">
-                  +254 724 367 794
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
-              <Mail className="w-5 h-5 text-brand-blue flex-shrink-0 mt-1" />
-              <div>
-                <h4 className="font-semibold text-sm text-foreground mb-1">Email Us</h4>
-                <a href="mailto:info@bytematrixtechnologies.co.ke" className="text-sm text-muted-foreground hover:text-brand-blue transition-colors">
-                  info@bytematrixtechnologies.co.ke
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="text-center pt-8 border-t border-brand-blue/10">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} Byte Matrix Technologies. All rights reserved.
-          </p>
-          <p className="text-xs text-muted-foreground mt-2">
-            Professional IT Solutions | Enterprise Hardware | Technical Support | Nairobi, Kenya
-          </p>
         </div>
       </div>
+
+      {/* Bottom accent line */}
+      <div className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
     </footer>
   );
 };

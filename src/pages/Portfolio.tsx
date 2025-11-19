@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import FuturisticHeader from "@/components/FuturisticHeader";
+import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import Testimonials from "@/components/Testimonials";
 
@@ -293,6 +294,8 @@ const Portfolio = () => {
       >
         <ArrowRight className="h-6 w-6 transform -rotate-90 group-hover:animate-pulse" />
       </Button>
+
+      <Footer />
     </div>
   );
 };
