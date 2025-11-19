@@ -11,10 +11,7 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Career from "./pages/Career";
-import Process from "./pages/Process";
 import NotFound from "./pages/NotFound";
-import StickyCTABar from "./components/StickyCTABar";
-import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -32,8 +29,6 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <StickyCTABar />
-          <ScrollToTop />
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/home" element={<Index />} />
@@ -41,7 +36,6 @@ const App = () => (
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Career />} />
-            <Route path="/process" element={<Process />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

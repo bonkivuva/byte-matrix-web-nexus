@@ -4,7 +4,6 @@ import { useState } from "react";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -371,7 +370,6 @@ const Services = () => {
         </DialogContent>
       </Dialog>
 
-      <FAQ />
       <Footer />
     </div>
   );
