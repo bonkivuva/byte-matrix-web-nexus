@@ -31,6 +31,14 @@ const Footer = () => {
         { name: "+254 724 367 794", path: "tel:+254724367794", external: true },
         { name: "Email Us", path: "mailto:info@bytematrixtechnologies.co.ke", external: true },
       ]
+    },
+    {
+      title: "Legal",
+      links: [
+        { name: "Privacy Policy", path: "/privacy-policy" },
+        { name: "Terms of Service", path: "/terms-of-service" },
+        { name: "Cookie Policy", path: "/cookie-policy" },
+      ]
     }
   ];
 
@@ -189,6 +197,13 @@ const Footer = () => {
               <p className="text-sm text-foreground/60 font-medium">
                 &copy; {currentYear} <span className="text-primary font-semibold">Byte Matrix Technologies</span>. All rights reserved.
               </p>
+              <div className="flex flex-wrap gap-1 justify-center md:justify-end text-xs text-foreground/50 mt-2">
+                <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                <span>•</span>
+                <Link to="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
+                <span>•</span>
+                <Link to="/cookie-policy" className="hover:text-primary transition-colors">Cookie Policy</Link>
+              </div>
               <p className="text-xs text-foreground/50 mt-1">
                 Crafted with precision • Powered by innovation
               </p>
