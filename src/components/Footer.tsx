@@ -9,27 +9,10 @@ const Footer = () => {
     {
       title: "Company",
       links: [
-        { name: "About Us", path: "/" },
-        { name: "Our Services", path: "/services" },
+        { name: "About", path: "/" },
+        { name: "Services", path: "/services" },
         { name: "Portfolio", path: "/portfolio" },
         { name: "Careers", path: "/careers" },
-      ]
-    },
-    {
-      title: "Services",
-      links: [
-        { name: "IT Consulting", path: "/services" },
-        { name: "Hardware Solutions", path: "/services" },
-        { name: "Technical Support", path: "/services" },
-        { name: "Cloud Services", path: "/services" },
-      ]
-    },
-    {
-      title: "Contact",
-      links: [
-        { name: "Get in Touch", path: "/contact" },
-        { name: "+254 724 367 794", path: "tel:+254724367794", external: true },
-        { name: "Email Us", path: "mailto:info@bytematrixtechnologies.co.ke", external: true },
       ]
     },
     {
@@ -42,169 +25,135 @@ const Footer = () => {
     }
   ];
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+254 724 367 794",
-      href: "tel:+254724367794",
-    },
-    {
-      icon: Mail,
-      label: "Email",
-      value: "info@bytematrixtechnologies.co.ke",
-      href: "mailto:info@bytematrixtechnologies.co.ke",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Nairobi, Kenya",
-      href: null,
-    }
+  const socialLinks = [
+    { icon: Twitter, href: "https://x.com/ByteMatrixTech", label: "Twitter", color: "hover:bg-[#1DA1F2]" },
+    { icon: Facebook, href: "https://facebook.com/bytematrixtech", label: "Facebook", color: "hover:bg-[#1877F2]" },
+    { icon: Instagram, href: "https://instagram.com/bytematrixtech", label: "Instagram", color: "hover:bg-[#E4405F]" }
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-card via-background to-card border-t-2 border-primary/20 mt-20 overflow-hidden">
-      {/* Vibrant background effects */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+    <footer className="relative bg-card/50 backdrop-blur-sm border-t border-border/50 mt-20 overflow-hidden">
+      {/* Subtle animated background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/40 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/40 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      {/* Main footer content */}
-      <div className="container mx-auto px-6 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
-          {/* Company Info - Takes 4 columns on large screens */}
-          <div className="lg:col-span-4 space-y-6">
-            <div className="flex items-center space-x-3 group">
+      <div className="container mx-auto px-6 py-12 relative z-10">
+        {/* Main footer grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8">
+          
+          {/* Brand Section */}
+          <div className="lg:col-span-1 space-y-4">
+            <Link to="/" className="inline-block group">
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
                 style={{
-                  filter: "drop-shadow(0 4px 16px hsl(var(--primary) / 0.4))",
+                  filter: "drop-shadow(0 2px 8px hsl(var(--primary) / 0.3))",
                 }}
               />
-            </div>
-            <p className="text-sm text-foreground/80 leading-relaxed max-w-sm">
-              Professional IT solutions and digital transformation services for modern businesses. Empowering organizations across East Africa.
+            </Link>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Professional IT solutions and digital transformation for modern businesses across East Africa.
             </p>
-            <p className="text-base text-primary font-semibold italic bg-primary/10 px-4 py-2 rounded-lg inline-block border border-primary/20">
+            <p className="text-xs text-primary font-medium italic">
               "Connecting Your Digital Matrix"
             </p>
-
-            {/* Contact Info Cards */}
-            <div className="space-y-3 pt-4">
-              {contactInfo.map((info, idx) => (
-                <div key={idx} className="flex items-center space-x-3 text-sm group">
-                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300 border border-primary/20">
-                    <info.icon className="w-4 h-4 text-primary" />
-                  </div>
-                  {info.href ? (
-                    <a 
-                      href={info.href}
-                      className="text-foreground/70 hover:text-primary transition-colors duration-300 font-medium"
-                    >
-                      {info.value}
-                    </a>
-                  ) : (
-                    <span className="text-foreground/70 font-medium">{info.value}</span>
-                  )}
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* Footer Links - Each takes 2-3 columns */}
+          {/* Quick Links */}
           {footerLinks.map((section, idx) => (
-            <div key={idx} className="lg:col-span-2 space-y-5">
-              <h3 className="text-lg font-bold text-foreground relative inline-block pb-2">
+            <div key={idx} className="space-y-4">
+              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
                 {section.title}
-                <span className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></span>
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {section.links.map((link, linkIdx) => (
                   <li key={linkIdx}>
-                    {link.external ? (
-                      <a
-                        href={link.path}
-                        className="text-sm text-foreground/70 hover:text-primary transition-all duration-300 hover:translate-x-2 inline-flex items-center group font-medium"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
-                        {link.name}
-                      </a>
-                    ) : (
-                      <Link
-                        to={link.path}
-                        className="text-sm text-foreground/70 hover:text-primary transition-all duration-300 hover:translate-x-2 inline-flex items-center group font-medium"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
-                        {link.name}
-                      </Link>
-                    )}
+                    <Link
+                      to={link.path}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 inline-flex items-center group"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-1 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200 text-primary" />
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
 
-          {/* CTA Section - Takes remaining columns */}
-          <div className="lg:col-span-2 space-y-5">
-            <h3 className="text-lg font-bold text-foreground relative inline-block pb-2">
-              Get Started
-              <span className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></span>
+          {/* Contact & CTA */}
+          <div className="space-y-4">
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
+              Get In Touch
             </h3>
-            <p className="text-sm text-foreground/70 leading-relaxed">
-              Ready to transform your business with cutting-edge IT solutions?
-            </p>
+            <div className="space-y-3">
+              <a 
+                href="tel:+254724367794"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group"
+              >
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Phone className="w-4 h-4 text-primary" />
+                </div>
+                <span>+254 724 367 794</span>
+              </a>
+              <a 
+                href="mailto:info@bytematrixtechnologies.co.ke"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group"
+              >
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Mail className="w-4 h-4 text-primary" />
+                </div>
+                <span className="break-all">info@bytematrixtechnologies.co.ke</span>
+              </a>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <MapPin className="w-4 h-4 text-primary" />
+                </div>
+                <span>Nairobi, Kenya</span>
+              </div>
+            </div>
             <Button 
               asChild
-              className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="w-full mt-4 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               <Link to="/contact" className="flex items-center justify-center">
-                Contact Us
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                Start Your Project
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
           </div>
         </div>
 
-        {/* Social Media & Bottom Bar */}
-        <div className="border-t border-primary/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Social Media Icons */}
-            <div className="flex gap-4">
-              {[
-                { icon: Twitter, href: "https://x.com/ByteMatrixTech", label: "Twitter" },
-                { icon: Facebook, href: "https://facebook.com/bytematrixtech", label: "Facebook" },
-                { icon: Instagram, href: "https://instagram.com/bytematrixtech", label: "Instagram" }
-              ].map((social, idx) => (
+        {/* Bottom Bar */}
+        <div className="border-t border-border/50 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            {/* Social Media */}
+            <div className="flex gap-3">
+              {socialLinks.map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-11 h-11 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-primary/20 hover:border-primary"
+                  className={`w-10 h-10 rounded-full bg-muted hover:bg-primary flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-border ${social.color}`}
                 >
-                  <social.icon className="w-5 h-5 text-primary group-hover:text-white transition-colors duration-300" />
+                  <social.icon className="w-4 h-4 text-foreground group-hover:text-primary-foreground transition-colors" />
                 </a>
               ))}
             </div>
 
             {/* Copyright */}
             <div className="text-center md:text-right">
-              <p className="text-sm text-foreground/60 font-medium">
-                &copy; {currentYear} <span className="text-primary font-semibold">Byte Matrix Technologies</span>. All rights reserved.
+              <p className="text-xs text-muted-foreground">
+                © {currentYear} <span className="text-foreground font-medium">Byte Matrix Technologies</span>. All rights reserved.
               </p>
-              <div className="flex flex-wrap gap-1 justify-center md:justify-end text-xs text-foreground/50 mt-2">
-                <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-                <span>•</span>
-                <Link to="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
-                <span>•</span>
-                <Link to="/cookie-policy" className="hover:text-primary transition-colors">Cookie Policy</Link>
-              </div>
-              <p className="text-xs text-foreground/50 mt-1">
+              <p className="text-xs text-muted-foreground/70 mt-1">
                 Crafted with precision • Powered by innovation
               </p>
             </div>
@@ -212,8 +161,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom accent line */}
-      <div className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+      {/* Accent line */}
+      <div className="h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
     </footer>
   );
 };
