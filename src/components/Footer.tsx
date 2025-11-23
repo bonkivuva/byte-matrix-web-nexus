@@ -55,10 +55,7 @@ const Footer = () => {
                 }}
               />
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Professional IT solutions and digital transformation for modern businesses across East Africa.
-            </p>
-            <p className="text-xs text-primary font-medium italic">
+            <p className="text-xs text-primary font-medium italic mt-3">
               "Connecting Your Digital Matrix"
             </p>
           </div>
