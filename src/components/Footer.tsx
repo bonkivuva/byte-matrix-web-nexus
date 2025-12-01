@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Twitter, Facebook, Instagram, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -25,10 +25,16 @@ const Footer = () => {
     }
   ];
 
+  const XIcon = () => (
+    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+  );
+
   const socialLinks = [
-    { icon: Twitter, href: "https://x.com/ByteMatrixTech", label: "Twitter", color: "hover:bg-[#1DA1F2]" },
-    { icon: Facebook, href: "https://facebook.com/bytematrixtech", label: "Facebook", color: "hover:bg-[#1877F2]" },
-    { icon: Instagram, href: "https://instagram.com/bytematrixtech", label: "Instagram", color: "hover:bg-[#E4405F]" }
+    { icon: XIcon, href: "https://x.com/ByteMatrixTech", label: "X", color: "hover:bg-foreground", isCustom: true },
+    { icon: Facebook, href: "https://facebook.com/bytematrixtech", label: "Facebook", color: "hover:bg-[#1877F2]", isCustom: false },
+    { icon: Instagram, href: "https://instagram.com/bytematrixtech", label: "Instagram", color: "hover:bg-[#E4405F]", isCustom: false }
   ];
 
   return (
@@ -131,18 +137,25 @@ const Footer = () => {
             
             {/* Social Media */}
             <div className="flex gap-3">
-              {socialLinks.map((social, idx) => (
-                <a
-                  key={idx}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className={`w-10 h-10 rounded-full bg-muted hover:bg-primary flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-border ${social.color}`}
-                >
-                  <social.icon className="w-4 h-4 text-foreground group-hover:text-primary-foreground transition-colors" />
-                </a>
-              ))}
+              {socialLinks.map((social, idx) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={idx}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className={`w-10 h-10 rounded-full bg-muted hover:bg-primary flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-border ${social.color}`}
+                  >
+                    {social.isCustom ? (
+                      <IconComponent />
+                    ) : (
+                      <IconComponent className="w-4 h-4 text-foreground group-hover:text-primary-foreground transition-colors" />
+                    )}
+                  </a>
+                );
+              })}
             </div>
 
             {/* Copyright */}
