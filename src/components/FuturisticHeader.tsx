@@ -71,7 +71,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
+                className="h-10 w-auto transition-all duration-300 group-hover:scale-105"
                 loading="eager"
                 style={{
                   imageRendering: "crisp-edges",

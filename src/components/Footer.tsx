@@ -55,7 +55,7 @@ const Footer = () => {
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
                 style={{
                   filter: "drop-shadow(0 2px 8px hsl(var(--primary) / 0.3))",
                 }}
