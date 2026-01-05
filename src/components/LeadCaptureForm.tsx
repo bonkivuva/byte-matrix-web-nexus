@@ -77,8 +77,8 @@ const LeadCaptureForm = ({
       // You'll need to create a template in EmailJS with these variables
       // Service ID and Template ID should be configured in your EmailJS dashboard
       await emailjs.send(
-        "service_bytematrix", // Replace with your EmailJS service ID
-        "template_contact",   // Replace with your EmailJS template ID
+        "service_tdje7sp",
+        "template_9quy7do",
         templateParams
       );
 
