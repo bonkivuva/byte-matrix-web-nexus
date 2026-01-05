@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,6 +17,9 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, Building, MessageSquare, Send, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+
+// Initialize EmailJS
+emailjs.init("WKdHvlBGEVoUs7Biw");
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -60,27 +63,26 @@ const LeadCaptureForm = ({
     setIsSubmitting(true);
     
     try {
-      const { supabase } = await import("@/integrations/supabase/client");
-      
-      const { data: response, error } = await supabase.functions.invoke(
-        'send-consultation-email',
-        {
-          body: {
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            company: data.company,
-            service: data.service,
-            message: data.message,
-          }
-        }
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        phone: data.phone,
+        company: data.company || "Not provided",
+        service: data.service,
+        message: data.message,
+        to_email: "info@bytematrixtechnologies.co.ke",
+      };
+
+      // You'll need to create a template in EmailJS with these variables
+      // Service ID and Template ID should be configured in your EmailJS dashboard
+      await emailjs.send(
+        "service_bytematrix", // Replace with your EmailJS service ID
+        "template_contact",   // Replace with your EmailJS template ID
+        templateParams
       );
 
-      if (error) {
-        throw error;
-      }
-
-      console.log("Consultation request sent successfully:", response);
+      console.log("Consultation request sent successfully via EmailJS");
       
       // Track analytics event
       if (typeof window !== 'undefined' && (window as any).gtag) {
