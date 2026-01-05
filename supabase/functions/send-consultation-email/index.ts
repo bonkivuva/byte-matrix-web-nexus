@@ -27,56 +27,92 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, phone, company, service, message }: ConsultationEmailRequest = await req.json();
 
-    console.log("Consultation request received:", { name, email, service });
+    // Input validation
+    if (!name || !email || !phone || !service || !message) {
+      console.error("Missing required fields:", { name: !!name, email: !!email, phone: !!phone, service: !!service, message: !!message });
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: "Missing required fields" 
+        }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
 
-    // Send email to support team
+    // Sanitize inputs
+    const sanitizedName = name.trim().substring(0, 100);
+    const sanitizedEmail = email.trim().toLowerCase().substring(0, 255);
+    const sanitizedPhone = phone.trim().substring(0, 20);
+    const sanitizedCompany = company ? company.trim().substring(0, 100) : '';
+    const sanitizedService = service.trim().substring(0, 100);
+    const sanitizedMessage = message.trim().substring(0, 2000);
+
+    console.log("Consultation request received:", { 
+      name: sanitizedName, 
+      email: sanitizedEmail, 
+      service: sanitizedService,
+      timestamp: new Date().toISOString()
+    });
+
+    // Send email to support team - FROM your business email, REPLY-TO client's email
+    console.log("Attempting to send notification email to team...");
     const emailResponse = await resend.emails.send({
-      from: "Byte Matrix Technologies <onboarding@resend.dev>",
+      from: "Byte Matrix Technologies <info@bytematrixtechnologies.co.ke>",
       to: ["info@bytematrixtechnologies.co.ke"],
-      replyTo: email,
-      subject: "New Contact Form Submission",
+      replyTo: sanitizedEmail,
+      subject: `New Contact Form Submission - ${sanitizedService}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #2563eb;">New Consultation Request</h2>
           
           <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #1f2937; margin-top: 0;">Contact Information</h3>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-            <p><strong>Phone:</strong> ${phone}</p>
-            ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
+            <p><strong>Name:</strong> ${sanitizedName}</p>
+            <p><strong>Email:</strong> <a href="mailto:${sanitizedEmail}">${sanitizedEmail}</a></p>
+            <p><strong>Phone:</strong> ${sanitizedPhone}</p>
+            ${sanitizedCompany ? `<p><strong>Company:</strong> ${sanitizedCompany}</p>` : ''}
           </div>
 
           <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #1f2937; margin-top: 0;">Service Interest</h3>
-            <p><strong>${service}</strong></p>
+            <p><strong>${sanitizedService}</strong></p>
           </div>
 
           <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #1f2937; margin-top: 0;">Project Details</h3>
-            <p style="white-space: pre-wrap;">${message}</p>
+            <p style="white-space: pre-wrap;">${sanitizedMessage}</p>
           </div>
 
           <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
-            This email was sent from the Byte Matrix Technologies contact form.
+            This email was sent from the Byte Matrix Technologies contact form.<br/>
+            <strong>Reply directly to this email to respond to the client.</strong>
           </p>
         </div>
       `,
     });
 
+    if (emailResponse.error) {
+      console.error("Failed to send notification email:", emailResponse.error);
+      throw new Error(`Notification email failed: ${emailResponse.error.message}`);
+    }
+
     console.log("Email sent successfully to support team:", emailResponse);
 
     // Send confirmation email to the user
+    console.log("Attempting to send confirmation email to client...");
     const confirmationResponse = await resend.emails.send({
-      from: "Byte Matrix Technologies <onboarding@resend.dev>",
-      to: [email],
+      from: "Byte Matrix Technologies <info@bytematrixtechnologies.co.ke>",
+      to: [sanitizedEmail],
       subject: "We received your consultation request!",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #2563eb;">Thank you for contacting us, ${name}!</h2>
+          <h2 style="color: #2563eb;">Thank you for contacting us, ${sanitizedName}!</h2>
           
           <p style="font-size: 16px; line-height: 1.6;">
-            We have received your consultation request for <strong>${service}</strong> 
+            We have received your consultation request for <strong>${sanitizedService}</strong> 
             and will get back to you within 24 hours.
           </p>
 
@@ -106,12 +142,19 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Confirmation email sent to user:", confirmationResponse);
+    if (confirmationResponse.error) {
+      console.error("Failed to send confirmation email:", confirmationResponse.error);
+      // Don't throw - notification was sent, just log the confirmation failure
+    } else {
+      console.log("Confirmation email sent to user:", confirmationResponse);
+    }
 
     return new Response(
       JSON.stringify({ 
         success: true, 
-        message: "Consultation request sent successfully" 
+        message: "Consultation request sent successfully",
+        notificationSent: !emailResponse.error,
+        confirmationSent: !confirmationResponse.error
       }), 
       {
         status: 200,
@@ -122,7 +165,11 @@ const handler = async (req: Request): Promise<Response> => {
       }
     );
   } catch (error: any) {
-    console.error("Error in send-consultation-email function:", error);
+    console.error("Error in send-consultation-email function:", {
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString()
+    });
     return new Response(
       JSON.stringify({ 
         success: false, 
