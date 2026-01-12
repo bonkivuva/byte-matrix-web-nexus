@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,17 +16,34 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, Building, MessageSquare, Send, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
-// Initialize EmailJS
-emailjs.init("WKdHvlBGEVoUs7Biw");
-
+// Enhanced validation schema with security limits
 const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
-  company: z.string().optional(),
-  service: z.string().min(1, "Please select a service"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  name: z.string()
+    .trim()
+    .min(2, "Name must be at least 2 characters")
+    .max(100, "Name must be less than 100 characters"),
+  email: z.string()
+    .trim()
+    .email("Please enter a valid email address")
+    .max(255, "Email must be less than 255 characters"),
+  phone: z.string()
+    .trim()
+    .min(10, "Please enter a valid phone number")
+    .max(20, "Phone number is too long"),
+  company: z.string()
+    .trim()
+    .max(100, "Company name must be less than 100 characters")
+    .optional(),
+  service: z.string()
+    .trim()
+    .min(1, "Please select a service")
+    .max(100, "Service name is too long"),
+  message: z.string()
+    .trim()
+    .min(10, "Message must be at least 10 characters")
+    .max(2000, "Message must be less than 2000 characters"),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -63,26 +79,28 @@ const LeadCaptureForm = ({
     setIsSubmitting(true);
     
     try {
-      // Send email using EmailJS
-      const templateParams = {
-        from_name: data.name,
-        from_email: data.email,
-        phone: data.phone,
-        company: data.company || "Not provided",
-        service: data.service,
-        message: data.message,
-        to_email: "info@bytematrixtechnologies.co.ke",
-      };
-
-      // You'll need to create a template in EmailJS with these variables
-      // Service ID and Template ID should be configured in your EmailJS dashboard
-      await emailjs.send(
-        "service_bop7shj",
-        "template_9quy7do",
-        templateParams
+      // Call secure edge function instead of client-side EmailJS
+      const { data: response, error } = await supabase.functions.invoke(
+        "send-consultation-email",
+        {
+          body: {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            company: data.company || "",
+            service: data.service,
+            message: data.message,
+          },
+        }
       );
 
-      console.log("Consultation request sent successfully via EmailJS");
+      if (error) {
+        throw new Error(error.message || "Failed to send consultation request");
+      }
+
+      if (!response?.success) {
+        throw new Error(response?.error || "Failed to send consultation request");
+      }
       
       // Track analytics event
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -114,14 +132,14 @@ const LeadCaptureForm = ({
 
   if (isSubmitted) {
     return (
-      <Card className={`w-full max-w-2xl mx-auto glass-cyber border border-cyber-green/20 shadow-cyber-lg ${className}`}>
+      <Card className={`w-full max-w-2xl mx-auto bg-card border border-brand-blue/20 shadow-lg ${className}`}>
         <CardContent className="p-8 text-center">
-          <CheckCircle2 className="w-16 h-16 text-cyber-green mx-auto mb-4 animate-pulse-slow" />
-          <h3 className="text-2xl font-semibold text-gradient-cyber mb-2">
-            Connection Established!
+          <CheckCircle2 className="w-16 h-16 text-brand-blue mx-auto mb-4" />
+          <h3 className="text-2xl font-semibold text-brand-blue mb-2">
+            Request Received!
           </h3>
           <p className="text-foreground mb-4">
-            Your request has been received successfully.
+            Your consultation request has been sent successfully.
           </p>
           <p className="text-sm text-muted-foreground">
             Our team will contact you within 24 hours.
@@ -129,7 +147,7 @@ const LeadCaptureForm = ({
           <Button 
             onClick={() => setIsSubmitted(false)}
             variant="outline"
-            className="mt-4"
+            className="mt-4 border-brand-blue/30"
           >
             Submit Another Request
           </Button>
@@ -139,9 +157,9 @@ const LeadCaptureForm = ({
   }
 
   return (
-    <Card className={`w-full max-w-2xl mx-auto glass-cyber shadow-cyber-lg hover:shadow-cyber hover-lift-cyber border border-cyber-blue/20 ${className}`}>
+    <Card className={`w-full max-w-2xl mx-auto bg-card border border-border shadow-lg hover:shadow-xl transition-shadow ${className}`}>
       <CardHeader className="text-center pb-6">
-        <CardTitle className="text-2xl lg:text-3xl font-bold text-gradient-cyber mb-2">
+        <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
           {title}
         </CardTitle>
         <p className="text-muted-foreground">
@@ -162,7 +180,11 @@ const LeadCaptureForm = ({
                       Full Name *
                     </FormLabel>
                     <FormControl>
-                      <Input placeholder="Your full name" {...field} />
+                      <Input 
+                        placeholder="Your full name" 
+                        maxLength={100}
+                        {...field} 
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -178,7 +200,12 @@ const LeadCaptureForm = ({
                       Email Address *
                     </FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="your@email.com" {...field} />
+                      <Input 
+                        type="email" 
+                        placeholder="your@email.com" 
+                        maxLength={255}
+                        {...field} 
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -197,7 +224,11 @@ const LeadCaptureForm = ({
                       Phone Number *
                     </FormLabel>
                     <FormControl>
-                      <Input placeholder="+254 7xx xxx xxx" {...field} />
+                      <Input 
+                        placeholder="+254 7xx xxx xxx" 
+                        maxLength={20}
+                        {...field} 
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -213,7 +244,11 @@ const LeadCaptureForm = ({
                       Company (Optional)
                     </FormLabel>
                     <FormControl>
-                      <Input placeholder="Your company name" {...field} />
+                      <Input 
+                        placeholder="Your company name" 
+                        maxLength={100}
+                        {...field} 
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -233,14 +268,14 @@ const LeadCaptureForm = ({
                       className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       <option value="">Select a service</option>
-                      <option value="it-consulting">IT Consulting & Strategy</option>
-                      <option value="hardware-procurement">Hardware Procurement</option>
-                      <option value="system-integration">System Integration</option>
-                      <option value="technical-support">24/7 Technical Support</option>
-                      <option value="cloud-solutions">Cloud Solutions</option>
-                      <option value="cybersecurity">Cybersecurity Services</option>
-                      <option value="network-setup">Network Setup & Management</option>
-                      <option value="other">Other</option>
+                      <option value="IT Consulting & Strategy">IT Consulting & Strategy</option>
+                      <option value="Hardware Procurement">Hardware Procurement</option>
+                      <option value="System Integration">System Integration</option>
+                      <option value="24/7 Technical Support">24/7 Technical Support</option>
+                      <option value="Cloud Solutions">Cloud Solutions</option>
+                      <option value="Cybersecurity Services">Cybersecurity Services</option>
+                      <option value="Network Setup & Management">Network Setup & Management</option>
+                      <option value="Other">Other</option>
                     </select>
                   </FormControl>
                   <FormMessage />
@@ -261,6 +296,7 @@ const LeadCaptureForm = ({
                     <Textarea 
                       placeholder="Tell us about your IT needs, current challenges, and project requirements..."
                       className="min-h-[120px]"
+                      maxLength={2000}
                       {...field}
                     />
                   </FormControl>
@@ -273,12 +309,12 @@ const LeadCaptureForm = ({
               type="submit"
               size="lg"
               disabled={isSubmitting}
-              className="w-full btn-cyber py-3 text-lg font-medium hover-lift-cyber"
+              className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white py-3 text-lg font-medium"
             >
               {isSubmitting ? (
                 <>
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
-                  Submitting...
+                  Sending...
                 </>
               ) : (
                 <>
