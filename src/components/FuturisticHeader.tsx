@@ -51,7 +51,8 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
   };
 
   const navLinks = [
-    { path: '/', label: 'About', name: 'about' },
+    { path: '/', label: 'Home', name: 'home' },
+    { path: '/about', label: 'About', name: 'about' },
     { path: '/services', label: 'Services', name: 'services' },
     { path: '/portfolio', label: 'Portfolio', name: 'portfolio' },
     { path: '/careers', label: 'Careers', name: 'careers' },
@@ -59,9 +60,9 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-professional border-b border-border/40 backdrop-blur-xl shadow-sm transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm transition-all duration-300">
       <div className="container-professional">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-16 lg:h-18 items-center justify-between">
           {/* Logo */}
           <Link 
             to="/" 

@@ -9,7 +9,7 @@ const Footer = () => {
     {
       title: "Company",
       links: [
-        { name: "About", path: "/" },
+        { name: "About", path: "/about" },
         { name: "Services", path: "/services" },
         { name: "Portfolio", path: "/portfolio" },
         { name: "Careers", path: "/careers" },
@@ -38,14 +38,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-card/50 backdrop-blur-sm border-t border-border/50 mt-20 overflow-hidden">
-      {/* Subtle animated background */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/40 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/40 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
-
-      <div className="container mx-auto px-6 py-12 relative z-10">
+    <footer className="bg-muted/50 border-t border-border mt-auto">
+      <div className="container-professional py-12 lg:py-16">
         {/* Main footer grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8">
           
@@ -171,8 +165,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Accent line */}
-      <div className="h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
     </footer>
   );
 };
