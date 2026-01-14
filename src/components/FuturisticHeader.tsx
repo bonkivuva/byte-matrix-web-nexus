@@ -62,28 +62,33 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm transition-all duration-300">
       <div className="container-professional">
         <div className="flex h-16 lg:h-18 items-center justify-between">
-          {/* Logo */}
+{/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-3 group transition-all duration-300"
+            className="flex items-center space-x-3 group transition-all duration-500"
           >
-            <div className="relative">
-              <img
-                src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
-                alt="Byte Matrix Technologies"
-                className="h-10 w-auto transition-all duration-300 group-hover:scale-105"
-                loading="eager"
-                style={{
-                  imageRendering: "crisp-edges",
-                  filter: "drop-shadow(0 2px 8px hsl(var(--brand-blue) / 0.2))",
-                }}
-              />
+            <div className="relative logo-ring-effect">
+              {/* Animated glow background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 via-brand-blue-light/30 to-brand-blue/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-150" />
+              
+              {/* Logo with animations */}
+              <div className="relative logo-shimmer-effect rounded-xl overflow-hidden">
+                <img
+                  src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
+                  alt="Byte Matrix Technologies"
+                  className="h-10 w-auto transition-all duration-500 animate-logo-glow group-hover:scale-110 group-hover:rotate-3"
+                  loading="eager"
+                  style={{
+                    imageRendering: "crisp-edges",
+                  }}
+                />
+              </div>
             </div>
-            <div className="hidden md:block">
-              <h1 className="text-lg font-bold text-brand-blue">
+            <div className="hidden md:block transition-all duration-300 group-hover:translate-x-1">
+              <h1 className="text-lg font-bold text-brand-blue transition-all duration-300 group-hover:text-gradient-professional">
                 Byte Matrix Technologies
               </h1>
-              <p className="text-xs text-muted-foreground italic">
+              <p className="text-xs text-muted-foreground italic transition-all duration-300 group-hover:text-brand-blue/70">
                 Connecting Your Digital Matrix
               </p>
             </div>
