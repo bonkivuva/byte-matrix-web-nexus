@@ -125,18 +125,29 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               +254 724 367 794
             </a>
 
-            {/* Dark mode toggle */}
+            {/* Dark mode toggle with animation */}
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleDarkMode}
-              className="relative w-10 h-10 rounded-full hover:bg-brand-blue/10 transition-all duration-300"
+              className="relative w-10 h-10 rounded-full hover:bg-brand-blue/10 transition-all duration-300 overflow-hidden group"
             >
-              {isDarkMode ? (
-                <Sun className="h-5 w-5 text-brand-blue" />
-              ) : (
-                <Moon className="h-5 w-5 text-brand-blue" />
-              )}
+              <div className="relative w-full h-full flex items-center justify-center">
+                <Sun 
+                  className={`absolute h-5 w-5 transition-all duration-500 ${
+                    isDarkMode 
+                      ? 'rotate-90 scale-0 opacity-0' 
+                      : 'rotate-0 scale-100 opacity-100 text-amber-500'
+                  }`} 
+                />
+                <Moon 
+                  className={`absolute h-5 w-5 transition-all duration-500 ${
+                    isDarkMode 
+                      ? 'rotate-0 scale-100 opacity-100 text-brand-blue' 
+                      : '-rotate-90 scale-0 opacity-0'
+                  }`} 
+                />
+              </div>
             </Button>
 
             {/* CTA Button */}
