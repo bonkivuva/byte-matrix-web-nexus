@@ -20,11 +20,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Poppins', 'system-ui', 'sans-serif'],
+				'sans': ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
+				'display': ['Inter', 'system-ui', 'sans-serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 				'montserrat': ['Montserrat', 'sans-serif'],
-				'playfair': ['Playfair Display', 'serif'],
-				'source': ['Source Sans Pro', 'sans-serif'],
 				'cyber': ['JetBrains Mono', 'monospace'],
 			},
 			colors: {
