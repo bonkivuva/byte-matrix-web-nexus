@@ -3,93 +3,106 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Futuristic design system with professional aesthetics */
+/* Corporate Design System - Professional & Sleek */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 11% 15%;
+    --background: 210 20% 99%;
+    --foreground: 220 20% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 210 11% 15%;
+    --card-foreground: 220 20% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 11% 15%;
-    --primary: 210 100% 50%;
+    --popover-foreground: 220 20% 12%;
+    --primary: 217 91% 45%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 8% 95%;
-    --secondary-foreground: 210 11% 15%;
-    --muted: 210 8% 95%;
-    --muted-foreground: 210 6% 46%;
-    --accent: 210 100% 60%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 20% 12%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 217 91% 55%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 210 8% 90%;
-    --input: 210 8% 90%;
-    --ring: 210 100% 50%;
-    --radius: 0.75rem;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 45%;
+    --radius: 0.625rem;
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 210 11% 15%;
-    --sidebar-primary: 210 100% 50%;
+    --sidebar-foreground: 220 20% 12%;
+    --sidebar-primary: 217 91% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 8% 95%;
-    --sidebar-accent-foreground: 210 11% 15%;
-    --sidebar-border: 210 8% 90%;
-    --sidebar-ring: 210 100% 50%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 220 20% 12%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 45%;
     
-    /* Brand colors matching Byte Matrix logo */
-    --brand-blue: 210 100% 50%;
-    --brand-blue-light: 210 100% 60%;
-    --brand-blue-dark: 210 100% 40%;
-    --brand-gray: 210 11% 15%;
-    --brand-gray-light: 210 8% 85%;
-    --brand-accent: 210 100% 55%;
+    /* Corporate Brand Colors */
+    --brand-blue: 217 91% 45%;
+    --brand-blue-light: 217 91% 60%;
+    --brand-blue-dark: 217 91% 35%;
+    --brand-gray: 220 20% 12%;
+    --brand-gray-light: 220 14% 90%;
+    --brand-accent: 217 91% 50%;
     
-    /* Professional color palette */
-    --brand-primary: 210 100% 50%;
-    --brand-secondary: 210 8% 85%;
-    --brand-gradient-start: 210 100% 50%;
-    --brand-gradient-mid: 210 100% 60%;
-    --brand-gradient-end: 210 100% 70%;
+    /* Corporate gradient */
+    --brand-gradient-start: 217 91% 45%;
+    --brand-gradient-mid: 217 91% 55%;
+    --brand-gradient-end: 220 70% 60%;
     
-    /* Professional neutrals matching logo */
-    --neural-50: 210 20% 98%;
-    --neural-100: 210 15% 96%;
-    --neural-200: 210 12% 92%;
-    --neural-300: 210 10% 85%;
-    --neural-400: 210 8% 70%;
-    --neural-500: 210 6% 55%;
-    --neural-600: 210 8% 40%;
-    --neural-700: 210 10% 25%;
-    --neural-800: 210 12% 15%;
-    --neural-900: 210 15% 8%;
+    /* Professional neutrals */
+    --neural-50: 220 20% 98%;
+    --neural-100: 220 16% 96%;
+    --neural-200: 220 14% 92%;
+    --neural-300: 220 12% 85%;
+    --neural-400: 220 10% 65%;
+    --neural-500: 220 9% 50%;
+    --neural-600: 220 10% 38%;
+    --neural-700: 220 14% 25%;
+    --neural-800: 220 18% 14%;
+    --neural-900: 220 22% 8%;
+    
+    /* Success/Trust color */
+    --success: 160 84% 39%;
+    --success-light: 160 70% 45%;
   }
 
   .dark {
-    --background: 210 15% 8%;
-    --foreground: 210 20% 98%;
-    --card: 210 12% 12%;
-    --card-foreground: 210 20% 98%;
-    --popover: 210 12% 12%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 210 100% 60%;
-    --primary-foreground: 210 15% 8%;
-    --secondary: 210 10% 18%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 210 10% 18%;
-    --muted-foreground: 210 8% 70%;
-    --accent: 210 100% 65%;
-    --accent-foreground: 210 15% 8%;
+    --background: 222 22% 7%;
+    --foreground: 220 20% 96%;
+    --card: 222 20% 10%;
+    --card-foreground: 220 20% 96%;
+    --popover: 222 20% 10%;
+    --popover-foreground: 220 20% 96%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 22% 7%;
+    --secondary: 222 16% 16%;
+    --secondary-foreground: 220 20% 96%;
+    --muted: 222 16% 16%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 217 91% 65%;
+    --accent-foreground: 222 22% 7%;
     --destructive: 0 62% 50%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 210 10% 18%;
-    --input: 210 10% 18%;
-    --ring: 210 100% 60%;
+    --destructive-foreground: 220 20% 96%;
+    --border: 222 16% 18%;
+    --input: 222 16% 18%;
+    --ring: 217 91% 60%;
     
     /* Dark mode brand adjustments */
-    --brand-blue: 210 100% 60%;
-    --brand-blue-light: 210 100% 70%;
-    --brand-blue-dark: 210 100% 50%;
-    --brand-gray: 210 20% 98%;
-    --brand-gray-light: 210 10% 25%;
+    --brand-blue: 217 91% 60%;
+    --brand-blue-light: 217 91% 70%;
+    --brand-blue-dark: 217 91% 50%;
+    --brand-gray: 220 20% 96%;
+    --brand-gray-light: 222 16% 22%;
+    
+    --neural-50: 222 22% 12%;
+    --neural-100: 222 20% 14%;
+    --neural-200: 222 18% 18%;
+    --neural-300: 222 16% 25%;
+    --neural-400: 222 14% 40%;
+    --neural-500: 222 12% 55%;
+    --neural-600: 220 14% 70%;
+    --neural-700: 220 16% 82%;
+    --neural-800: 220 18% 92%;
+    --neural-900: 220 20% 96%;
   }
 }
 
@@ -100,26 +113,16 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', 'Montserrat', system-ui, sans-serif;
+    font-family: 'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--brand-blue) / 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--brand-blue-light) / 0.03) 0%, transparent 50%),
-      linear-gradient(135deg, hsl(var(--neural-50)) 0%, hsl(var(--neural-100)) 100%);
+    letter-spacing: -0.01em;
   }
 
-  .dark body {
-    background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--brand-blue) / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--brand-blue-light) / 0.05) 0%, transparent 50%),
-      linear-gradient(135deg, hsl(var(--neural-900)) 0%, hsl(var(--neural-800)) 100%);
-  }
-
-  /* Futuristic grid pattern with animation */
+  /* Subtle professional background */
   body::before {
     content: '';
     position: fixed;
@@ -127,76 +130,55 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-      linear-gradient(hsl(var(--brand-blue) / 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--brand-blue) / 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.5;
+    background: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--brand-blue) / 0.03), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 100%, hsl(var(--brand-blue-light) / 0.02), transparent);
     pointer-events: none;
     z-index: -1;
-    animation: gridPulse 4s ease-in-out infinite;
   }
 
   .dark body::before {
-    background-image: 
-      linear-gradient(hsl(var(--brand-blue-light) / 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--brand-blue-light) / 0.1) 1px, transparent 1px);
-    opacity: 0.3;
+    background: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--brand-blue) / 0.08), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 100%, hsl(var(--brand-blue-light) / 0.05), transparent);
   }
 
-  /* Neural network background pattern */
-  body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 30% auto;
-    opacity: 0.02;
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  .dark body::after {
-    opacity: 0.04;
-  }
-
-  /* Professional headings hierarchy */
+  /* Professional headings - Clean corporate typography */
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
-    font-family: 'Inter', 'Open Sans', system-ui, sans-serif;
+    @apply text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight;
+    font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.1;
+    letter-spacing: -0.025em;
   }
 
   h2 {
     @apply text-3xl md:text-4xl font-semibold tracking-tight;
-    font-family: 'Inter', 'Open Sans', system-ui, sans-serif;
-    line-height: 1.2;
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-semibold tracking-tight;
-    font-family: 'Inter', 'Open Sans', system-ui, sans-serif;
-    line-height: 1.3;
+    @apply text-xl md:text-2xl font-semibold;
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
   }
 
   h4 {
-    @apply text-xl md:text-2xl font-medium tracking-tight;
-    font-family: 'Inter', 'Open Sans', system-ui, sans-serif;
-    line-height: 1.4;
+    @apply text-lg md:text-xl font-medium;
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.35;
   }
 
   p {
     @apply leading-relaxed;
-    font-family: 'Inter', 'Open Sans', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
-/* Professional utility classes */
+
+/* Corporate utility classes */
 @layer utilities {
   .text-brand-blue {
     color: hsl(var(--brand-blue));
@@ -207,26 +189,33 @@
   }
   
   .text-brand-primary {
-    color: hsl(var(--brand-primary));
+    color: hsl(var(--primary));
   }
   
   .bg-brand-primary {
-    background-color: hsl(var(--brand-primary));
+    background-color: hsl(var(--primary));
   }
 
   .text-gradient-brand {
     background: linear-gradient(135deg, 
       hsl(var(--brand-gradient-start)), 
-      hsl(var(--brand-gradient-mid)), 
       hsl(var(--brand-gradient-end))
     );
     @apply bg-clip-text text-transparent;
   }
   
   .text-gradient-professional {
-    background: linear-gradient(90deg, 
+    background: linear-gradient(135deg, 
       hsl(var(--brand-blue)), 
       hsl(var(--brand-blue-light))
+    );
+    @apply bg-clip-text text-transparent;
+  }
+
+  .text-gradient-corporate {
+    background: linear-gradient(135deg, 
+      hsl(var(--foreground)), 
+      hsl(var(--brand-blue))
     );
     @apply bg-clip-text text-transparent;
   }
@@ -234,7 +223,6 @@
   .bg-gradient-brand {
     background: linear-gradient(135deg, 
       hsl(var(--brand-gradient-start)), 
-      hsl(var(--brand-gradient-mid)), 
       hsl(var(--brand-gradient-end))
     );
   }
@@ -247,138 +235,119 @@
   }
 
   .bg-gradient-professional-subtle {
-    background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--brand-blue) / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--brand-blue-light) / 0.05) 0%, transparent 50%),
-      linear-gradient(135deg, hsl(var(--neural-50)) 0%, hsl(var(--neural-100)) 100%);
+    background: hsl(var(--neural-50));
   }
 
   .dark .bg-gradient-professional-subtle {
-    background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--brand-blue) / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--brand-blue-light) / 0.08) 0%, transparent 50%),
-      linear-gradient(135deg, hsl(var(--neural-900)) 0%, hsl(var(--neural-800)) 100%);
+    background: hsl(var(--neural-900));
   }
 
-  .matrix-rain {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .matrix-rain::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: 0;
-    width: 100%;
-    height: calc(100% + 100px);
-    background-image: 
-      repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 98px,
-        hsl(var(--cyber-green) / 0.1) 100px
-      );
-    animation: matrix-rain 20s linear infinite;
-    pointer-events: none;
-  }
-
+  /* Corporate shadows - cleaner, more refined */
   .shadow-brand {
     box-shadow: 
-      0 4px 20px -4px hsl(var(--brand-blue) / 0.3),
-      0 0 30px -10px hsl(var(--brand-blue-light) / 0.2);
+      0 1px 3px hsl(var(--brand-blue) / 0.08),
+      0 4px 16px -4px hsl(var(--brand-blue) / 0.15);
   }
 
   .shadow-brand-lg {
     box-shadow: 
-      0 10px 40px -8px hsl(var(--brand-blue) / 0.4),
-      0 0 60px -15px hsl(var(--brand-blue-light) / 0.3);
+      0 4px 6px -1px hsl(var(--brand-blue) / 0.1),
+      0 10px 30px -5px hsl(var(--brand-blue) / 0.2);
   }
 
+  .shadow-corporate {
+    box-shadow: 
+      0 1px 2px hsl(var(--foreground) / 0.04),
+      0 4px 12px hsl(var(--foreground) / 0.06);
+  }
+
+  .shadow-corporate-lg {
+    box-shadow: 
+      0 4px 6px -1px hsl(var(--foreground) / 0.05),
+      0 12px 24px -4px hsl(var(--foreground) / 0.08);
+  }
+
+  /* Glass effects - refined for corporate */
   .glass-professional {
-    background: linear-gradient(135deg, hsl(var(--background) / 0.8), hsl(var(--background) / 0.6));
-    backdrop-filter: blur(24px) saturate(1.3);
-    border: 1px solid hsl(var(--brand-blue) / 0.15);
+    background: hsl(var(--card) / 0.85);
+    backdrop-filter: blur(16px) saturate(1.2);
+    border: 1px solid hsl(var(--border));
   }
 
   .glass-premium {
-    background: linear-gradient(135deg, hsl(var(--background) / 0.9), hsl(var(--background) / 0.7));
-    backdrop-filter: blur(32px) saturate(1.4);
-    border: 1px solid hsl(var(--brand-blue) / 0.2);
-    box-shadow: 0 8px 32px -8px hsl(var(--brand-blue) / 0.2);
+    background: hsl(var(--card) / 0.95);
+    backdrop-filter: blur(20px) saturate(1.3);
+    border: 1px solid hsl(var(--border));
+    box-shadow: 
+      0 1px 2px hsl(var(--foreground) / 0.03),
+      0 4px 16px hsl(var(--brand-blue) / 0.06);
   }
 
   .dark .glass-professional {
-    background: hsl(var(--background) / 0.5);
-    border: 1px solid hsl(var(--brand-blue-light) / 0.3);
+    background: hsl(var(--card) / 0.6);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .dark .glass-premium {
+    background: hsl(var(--card) / 0.8);
+    border: 1px solid hsl(var(--border));
   }
 
   .glow-brand {
-    box-shadow: 
-      0 0 20px hsl(var(--brand-blue) / 0.4),
-      inset 0 0 20px hsl(var(--brand-blue-light) / 0.1);
+    box-shadow: 0 0 24px hsl(var(--brand-blue) / 0.25);
   }
 
   .border-brand {
-    border: 1px solid;
-    border-image: linear-gradient(90deg, 
-      hsl(var(--brand-blue)), 
-      hsl(var(--brand-blue-light))
-    ) 1;
+    border: 1px solid hsl(var(--brand-blue) / 0.3);
   }
 
-  /* Futuristic animations */
+  /* Professional animations - subtle and refined */
   .animate-fade-up {
-    animation: fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .animate-slide-in-left {
-    animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slideInLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .animate-scale-in-center {
-    animation: scaleInCenter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: scaleInCenter 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
+    animation: subtleGlow 3s ease-in-out infinite;
   }
 
   .animate-pulse-slow {
-    animation: pulseGlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: subtlePulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Hover effects - professional transitions */
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .hover-lift-cyber:hover {
-    transform: translateY(-6px) scale(1.02);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px -8px hsl(var(--brand-blue) / 0.25);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .hover-glow-brand:hover {
     box-shadow: 
-      0 0 30px hsl(var(--brand-blue) / 0.6),
-      0 0 60px hsl(var(--brand-blue-light) / 0.4),
-      0 20px 40px -10px hsl(var(--brand-blue) / 0.3);
+      0 0 0 1px hsl(var(--brand-blue) / 0.2),
+      0 8px 24px -8px hsl(var(--brand-blue) / 0.3);
     transition: all 0.3s ease;
   }
 
   .brand-border-glow {
     position: relative;
+    border: 1px solid hsl(var(--brand-blue) / 0.2);
   }
 
-  .brand-border-glow::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    padding: 2px;
-    background: linear-gradient(45deg, 
-      hsl(var(--brand-blue)), 
-      hsl(var(--brand-blue-light)), 
-      hsl(var(--brand-blue))
-    );
-    border-radius: inherit;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    opacity: 0.8;
+  .brand-border-glow:hover {
+    border-color: hsl(var(--brand-blue) / 0.4);
   }
 }
 
@@ -673,79 +642,67 @@
   color: hsl(var(--cyber-green));
 }
 
-.text-cyber-yellow {
-  color: hsl(var(--cyber-yellow));
-}
-
+/* Refined corporate hover effects */
 .hover-lift-cyber {
-  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
 }
 
 .hover-lift-cyber:hover {
-  transform: translateY(-12px) scale(1.03);
-  filter: drop-shadow(0 25px 50px hsl(var(--cyber-blue) / 0.4));
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px -8px hsl(var(--brand-blue) / 0.2);
 }
 
 .hover-lift-premium {
-  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hover-lift-premium:hover {
-  transform: translateY(-16px) scale(1.05);
-  filter: drop-shadow(0 30px 60px hsl(var(--brand-blue) / 0.5));
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px -12px hsl(var(--brand-blue) / 0.25);
 }
 
 .animate-float-smooth {
-  animation: float-smooth 6s ease-in-out infinite;
+  animation: float-smooth 8s ease-in-out infinite;
 }
 
 .animate-glow-pulse {
-  animation: glow-pulse 3s ease-in-out infinite;
+  animation: subtleGlow 4s ease-in-out infinite;
 }
 
-  /* Professional container classes */
-  .container-professional {
-    @apply container mx-auto px-6 lg:px-8 max-w-7xl;
-  }
+/* Professional container classes */
+.container-professional {
+  @apply container mx-auto px-6 lg:px-8 max-w-7xl;
+}
 
-  .section-spacing {
-    @apply py-16 lg:py-24;
-  }
+.section-spacing {
+  @apply py-16 lg:py-24;
+}
 
-  /* Card styles */
-  .card-cyber {
-    @apply glass-premium border border-cyber-blue/20 rounded-2xl shadow-cyber transition-all duration-500;
-    position: relative;
-    overflow: hidden;
-  }
+/* Card styles - refined corporate */
+.card-cyber {
+  @apply bg-card border border-border rounded-xl shadow-corporate transition-all duration-300;
+  position: relative;
+  overflow: hidden;
+}
 
-  .card-cyber::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, hsl(var(--cyber-blue) / 0.1), transparent);
-    transition: left 0.6s ease;
-  }
+.card-cyber:hover {
+  @apply shadow-corporate-lg border-brand-blue/20;
+}
 
-  .card-cyber:hover::before {
-    left: 100%;
-  }
+.card-premium {
+  @apply bg-card rounded-xl border border-border shadow-corporate transition-all duration-300;
+  position: relative;
+  overflow: hidden;
+}
 
-  .card-premium {
-    @apply glass-premium rounded-3xl shadow-brand-lg transition-all duration-700;
-    position: relative;
-    overflow: hidden;
-    transform: translateY(0);
-  }
-
-  .card-premium:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px -12px hsl(var(--brand-blue) / 0.4);
-  }
+.card-premium:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 4px 6px -1px hsl(var(--foreground) / 0.05),
+    0 16px 32px -8px hsl(var(--brand-blue) / 0.12);
+  border-color: hsl(var(--brand-blue) / 0.2);
+}
 
   /* Button styles */
   .btn-cyber {

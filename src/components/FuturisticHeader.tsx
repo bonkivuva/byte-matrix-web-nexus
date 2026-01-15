@@ -59,37 +59,31 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50 transition-all duration-300">
       <div className="container-professional">
-        <div className="flex h-16 lg:h-18 items-center justify-between">
-{/* Logo */}
+        <div className="flex h-16 lg:h-[68px] items-center justify-between">
+          {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-3 group transition-all duration-500"
+            className="flex items-center space-x-3 group transition-all duration-300"
           >
-            <div className="relative logo-ring-effect">
-              {/* Animated glow background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 via-brand-blue-light/30 to-brand-blue/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-150" />
-              
-              {/* Logo with animations */}
-              <div className="relative logo-shimmer-effect rounded-xl overflow-hidden">
-                <img
-                  src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
-                  alt="Byte Matrix Technologies"
-                  className="h-10 w-auto transition-all duration-500 animate-logo-glow group-hover:scale-110 group-hover:rotate-3"
-                  loading="eager"
-                  style={{
-                    imageRendering: "crisp-edges",
-                  }}
-                />
-              </div>
+            <div className="relative">
+              <img
+                src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
+                alt="Byte Matrix Technologies"
+                className="h-9 w-auto transition-all duration-300 group-hover:scale-105"
+                loading="eager"
+                style={{
+                  filter: "drop-shadow(0 2px 8px hsl(var(--primary) / 0.15))",
+                }}
+              />
             </div>
-            <div className="hidden md:block transition-all duration-300 group-hover:translate-x-1">
-              <h1 className="text-lg font-bold text-brand-blue transition-all duration-300 group-hover:text-gradient-professional">
+            <div className="hidden md:block">
+              <h1 className="text-base font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
                 Byte Matrix Technologies
               </h1>
-              <p className="text-xs text-muted-foreground italic transition-all duration-300 group-hover:text-brand-blue/70">
-                Connecting Your Digital Matrix
+              <p className="text-xs text-muted-foreground">
+                Enterprise IT Solutions
               </p>
             </div>
           </Link>
@@ -100,64 +94,63 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-5 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
+                className={`relative px-4 py-2 text-sm font-medium transition-all duration-200 rounded-md ${
                   isActive(link.path)
-                    ? 'text-brand-blue bg-brand-blue/10'
-                    : 'text-foreground hover:text-brand-blue hover:bg-brand-blue/5'
+                    ? 'text-primary bg-primary/5'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                 }`}
               >
                 <span className="relative z-10">{link.label}</span>
                 {isActive(link.path) && (
-                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-brand-blue rounded-full"></div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-primary rounded-full"></div>
                 )}
               </Link>
             ))}
           </nav>
 
           {/* Right side actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             {/* Phone number - hidden on mobile */}
             <a
               href="tel:+254724367794"
-              className="hidden md:flex items-center text-sm font-medium text-muted-foreground hover:text-brand-blue transition-colors"
+              className="hidden xl:flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-2"
             >
               <Phone className="mr-2 h-4 w-4" />
               +254 724 367 794
             </a>
 
-            {/* Dark mode toggle with animation */}
+            {/* Dark mode toggle */}
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleDarkMode}
-              className="relative w-10 h-10 rounded-full hover:bg-brand-blue/10 transition-all duration-300 overflow-hidden group"
+              className="w-9 h-9 rounded-lg hover:bg-muted transition-colors"
             >
-              <div className="relative w-full h-full flex items-center justify-center">
-                <Sun 
-                  className={`absolute h-5 w-5 transition-all duration-500 ${
-                    isDarkMode 
-                      ? 'rotate-90 scale-0 opacity-0' 
-                      : 'rotate-0 scale-100 opacity-100 text-amber-500'
-                  }`} 
-                />
-                <Moon 
-                  className={`absolute h-5 w-5 transition-all duration-500 ${
-                    isDarkMode 
-                      ? 'rotate-0 scale-100 opacity-100 text-brand-blue' 
-                      : '-rotate-90 scale-0 opacity-0'
-                  }`} 
-                />
-              </div>
+              <Sun 
+                className={`absolute h-4 w-4 transition-all duration-300 ${
+                  isDarkMode 
+                    ? 'rotate-90 scale-0 opacity-0' 
+                    : 'rotate-0 scale-100 opacity-100 text-amber-500'
+                }`} 
+              />
+              <Moon 
+                className={`absolute h-4 w-4 transition-all duration-300 ${
+                  isDarkMode 
+                    ? 'rotate-0 scale-100 opacity-100 text-primary' 
+                    : '-rotate-90 scale-0 opacity-0'
+                }`} 
+              />
             </Button>
 
             {/* CTA Button */}
             <div className="hidden sm:block">
               <Button 
                 asChild
-                className="bg-brand-blue hover:bg-brand-blue/90 text-white px-6 py-2 rounded-lg shadow-brand hover:shadow-brand-lg transition-all duration-300"
+                size="sm"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
               >
                 <Link to="/contact">
-                  Get Free Consultation
+                  Get Consultation
                 </Link>
               </Button>
             </div>
@@ -167,46 +160,43 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               variant="ghost"
               size="sm"
               onClick={toggleMenu}
-              className="lg:hidden w-10 h-10 rounded-full hover:bg-brand-blue/10 transition-all duration-300"
+              className="lg:hidden w-9 h-9 rounded-lg hover:bg-muted transition-colors"
             >
               {isMenuOpen ? (
-                <X className="h-5 w-5 text-brand-blue" />
+                <X className="h-5 w-5" />
               ) : (
-                <Menu className="h-5 w-5 text-brand-blue" />
+                <Menu className="h-5 w-5" />
               )}
             </Button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 glass-professional border-t border-brand-blue/10 backdrop-blur-xl animate-fade-up">
-            <nav className="container-professional py-6">
-              <div className="flex flex-col space-y-3">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border animate-fade-up">
+            <nav className="container-professional py-4">
+              <div className="flex flex-col space-y-1">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`flex items-center px-5 py-3 text-base font-medium transition-all duration-300 rounded-lg ${
+                    className={`flex items-center px-4 py-3 text-sm font-medium transition-all duration-200 rounded-lg ${
                       isActive(link.path)
-                        ? 'text-brand-blue bg-brand-blue/10'
-                        : 'text-foreground hover:text-brand-blue hover:bg-brand-blue/5'
+                        ? 'text-primary bg-primary/5'
+                        : 'text-foreground hover:bg-muted'
                     }`}
                   >
                     <span className="flex-1">{link.label}</span>
-                    <ChevronRight className="w-4 h-4 opacity-50" />
+                    <ChevronRight className="w-4 h-4 opacity-40" />
                   </Link>
                 ))}
-                <div className="pt-4 border-t border-brand-blue/10">
+                <div className="pt-4 mt-2 border-t border-border">
                   <Button 
                     asChild
-                    className="bg-brand-primary hover:bg-brand-primary/90 text-white w-full"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Link to="/contact">
-                      <Zap className="w-4 h-4 mr-2" />
-                      Get Started
+                      Get Consultation
                     </Link>
                   </Button>
                 </div>
