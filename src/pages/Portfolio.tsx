@@ -15,6 +15,7 @@ import {
   FolderCheck,
   Calendar,
   Headphones,
+  Handshake,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -31,7 +32,7 @@ const Portfolio = () => {
     { 
       number: "500+", 
       label: "Happy Clients", 
-      icon: Heart, 
+      icon: Handshake, 
       gradient: "from-rose-500 via-pink-500 to-red-500",
       bgGlow: "bg-rose-500/20",
       description: "Satisfied customers worldwide"
