@@ -1,4 +1,3 @@
-
 import {
   ArrowRight,
   Star,
@@ -12,8 +11,13 @@ import {
   Server,
   Computer,
   Clock,
+  Heart,
+  FolderCheck,
+  Calendar,
+  Headphones,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -23,6 +27,41 @@ import SEOHead from "@/components/SEOHead";
 import Testimonials from "@/components/Testimonials";
 
 const Portfolio = () => {
+  const statsData = [
+    { 
+      number: "500+", 
+      label: "Happy Clients", 
+      icon: Heart, 
+      gradient: "from-rose-500 via-pink-500 to-red-500",
+      bgGlow: "bg-rose-500/20",
+      description: "Satisfied customers worldwide"
+    },
+    { 
+      number: "1000+", 
+      label: "Projects Completed", 
+      icon: FolderCheck, 
+      gradient: "from-emerald-500 via-green-500 to-teal-500",
+      bgGlow: "bg-emerald-500/20",
+      description: "Successful deliveries"
+    },
+    { 
+      number: "5+", 
+      label: "Years Experience", 
+      icon: Calendar, 
+      gradient: "from-violet-500 via-purple-500 to-indigo-500",
+      bgGlow: "bg-violet-500/20",
+      description: "Industry expertise"
+    },
+    { 
+      number: "24/7", 
+      label: "Support Available", 
+      icon: Headphones, 
+      gradient: "from-amber-500 via-orange-500 to-yellow-500",
+      bgGlow: "bg-amber-500/20",
+      description: "Always here to help"
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-quantum font-cyber text-foreground relative overflow-hidden">
       <SEOHead 
@@ -56,29 +95,64 @@ const Portfolio = () => {
             <div className="w-32 h-1 bg-gradient-cyber mx-auto mt-8 rounded-full shadow-cyber"></div>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8 mb-20">
-            {[
-              { number: "500+", label: "Happy Clients", icon: Users, gradient: "from-cyber-blue to-cyber-purple" },
-              { number: "1000+", label: "Projects Completed", icon: CheckCircle, gradient: "from-cyber-green to-cyber-blue" },
-              { number: "5+", label: "Years Experience", icon: Award, gradient: "from-cyber-purple to-cyber-pink" },
-              { number: "24/7", label: "Support Available", icon: Shield, gradient: "from-cyber-orange to-cyber-yellow" },
-            ].map((metric, index) => (
-              <Card
-                key={index}
-                className="card-premium hover-lift-premium animate-fade-in group text-center border-0"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-10">
-                  <div className={`w-20 h-20 bg-gradient-to-br ${metric.gradient} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700 shadow-brand-lg`}>
-                    <metric.icon className="h-10 w-10 text-white group-hover:animate-pulse" />
-                  </div>
-                  <h3 className="text-4xl font-bold text-foreground mb-3 group-hover:text-gradient-cyber transition-all duration-500">
-                    {metric.number}
-                  </h3>
-                  <p className="text-muted-foreground font-light text-lg">{metric.label}</p>
-                </CardContent>
-              </Card>
-            ))}
+          {/* Enhanced Stats Section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+            {statsData.map((metric, index) => {
+              const IconComponent = metric.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="card-premium hover-lift-premium group text-center border-0 relative overflow-hidden h-full">
+                    {/* Background glow effect */}
+                    <div className={`absolute -top-20 -right-20 w-40 h-40 ${metric.bgGlow} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+                    <div className={`absolute -bottom-20 -left-20 w-40 h-40 ${metric.bgGlow} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+                    
+                    <CardContent className="p-8 lg:p-10 relative z-10">
+                      {/* Icon Container with enhanced styling */}
+                      <motion.div 
+                        className={`relative w-24 h-24 mx-auto mb-6`}
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        {/* Outer ring */}
+                        <div className={`absolute inset-0 bg-gradient-to-br ${metric.gradient} rounded-2xl opacity-20 animate-pulse`} 
+                          style={{ transform: 'rotate(45deg)' }} 
+                        />
+                        {/* Inner container */}
+                        <div className={`absolute inset-2 bg-gradient-to-br ${metric.gradient} rounded-xl shadow-2xl flex items-center justify-center`}>
+                          {/* Icon glow */}
+                          <div className="absolute inset-0 bg-white/20 rounded-xl" />
+                          <IconComponent className="h-12 w-12 text-white drop-shadow-lg relative z-10" strokeWidth={1.5} />
+                        </div>
+                        {/* Decorative dots */}
+                        <div className={`absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br ${metric.gradient} rounded-full animate-ping`} />
+                        <div className={`absolute -bottom-1 -left-1 w-2 h-2 bg-gradient-to-br ${metric.gradient} rounded-full opacity-60`} />
+                      </motion.div>
+                      
+                      {/* Number */}
+                      <h3 className={`text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r ${metric.gradient} bg-clip-text text-transparent`}>
+                        {metric.number}
+                      </h3>
+                      
+                      {/* Label */}
+                      <p className="text-foreground font-semibold text-lg mb-1">
+                        {metric.label}
+                      </p>
+                      
+                      {/* Description */}
+                      <p className="text-muted-foreground text-sm font-light">
+                        {metric.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
 
           <div className="mb-20">
