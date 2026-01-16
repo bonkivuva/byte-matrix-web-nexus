@@ -67,42 +67,42 @@
 
   .dark {
     --background: 222 22% 7%;
-    --foreground: 220 20% 96%;
+    --foreground: 220 20% 98%;
     --card: 222 20% 10%;
-    --card-foreground: 220 20% 96%;
+    --card-foreground: 220 20% 98%;
     --popover: 222 20% 10%;
-    --popover-foreground: 220 20% 96%;
-    --primary: 217 91% 60%;
+    --popover-foreground: 220 20% 98%;
+    --primary: 217 91% 65%;
     --primary-foreground: 222 22% 7%;
     --secondary: 222 16% 16%;
-    --secondary-foreground: 220 20% 96%;
+    --secondary-foreground: 220 20% 98%;
     --muted: 222 16% 16%;
-    --muted-foreground: 220 10% 60%;
-    --accent: 217 91% 65%;
+    --muted-foreground: 220 14% 75%;
+    --accent: 217 91% 70%;
     --accent-foreground: 222 22% 7%;
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 220 20% 96%;
-    --border: 222 16% 18%;
-    --input: 222 16% 18%;
-    --ring: 217 91% 60%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 220 20% 98%;
+    --border: 222 16% 22%;
+    --input: 222 16% 22%;
+    --ring: 217 91% 65%;
     
-    /* Dark mode brand adjustments */
-    --brand-blue: 217 91% 60%;
-    --brand-blue-light: 217 91% 70%;
-    --brand-blue-dark: 217 91% 50%;
-    --brand-gray: 220 20% 96%;
-    --brand-gray-light: 222 16% 22%;
+    /* Dark mode brand adjustments - brighter for visibility */
+    --brand-blue: 217 91% 65%;
+    --brand-blue-light: 217 91% 75%;
+    --brand-blue-dark: 217 91% 55%;
+    --brand-gray: 220 20% 98%;
+    --brand-gray-light: 222 16% 25%;
     
     --neural-50: 222 22% 12%;
     --neural-100: 222 20% 14%;
     --neural-200: 222 18% 18%;
-    --neural-300: 222 16% 25%;
-    --neural-400: 222 14% 40%;
-    --neural-500: 222 12% 55%;
-    --neural-600: 220 14% 70%;
-    --neural-700: 220 16% 82%;
+    --neural-300: 222 16% 28%;
+    --neural-400: 222 14% 45%;
+    --neural-500: 222 12% 60%;
+    --neural-600: 220 14% 75%;
+    --neural-700: 220 16% 85%;
     --neural-800: 220 18% 92%;
-    --neural-900: 220 20% 96%;
+    --neural-900: 220 20% 98%;
   }
 }
 
@@ -284,13 +284,15 @@
   }
 
   .dark .glass-professional {
-    background: hsl(var(--card) / 0.6);
-    border: 1px solid hsl(var(--border));
+    background: hsl(var(--card) / 0.75);
+    border: 1px solid hsl(var(--border) / 0.8);
+    box-shadow: 0 2px 8px hsl(0 0% 0% / 0.2);
   }
 
   .dark .glass-premium {
-    background: hsl(var(--card) / 0.8);
-    border: 1px solid hsl(var(--border));
+    background: hsl(var(--card) / 0.9);
+    border: 1px solid hsl(var(--border) / 0.8);
+    box-shadow: 0 4px 16px hsl(0 0% 0% / 0.25);
   }
 
   .glow-brand {

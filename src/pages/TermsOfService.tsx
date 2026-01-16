@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import FuturisticHeader from "@/components/FuturisticHeader";
 import SEOHead from "@/components/SEOHead";
 
 const TermsOfService = () => {
@@ -10,11 +11,12 @@ const TermsOfService = () => {
       />
       
       <div className="min-h-screen bg-background">
-        <div className="container mx-auto px-6 py-16">
+        <FuturisticHeader />
+        <div className="container mx-auto px-6 py-16 pt-28">
           <h1 className="text-4xl font-bold text-foreground mb-8">Terms of Service</h1>
           
-          <div className="prose prose-lg max-w-none text-foreground/80 space-y-6">
-            <p className="text-sm text-foreground/60">Last updated: {new Date().toLocaleDateString()}</p>
+          <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground space-y-6">
+            <p className="text-sm text-muted-foreground/80">Last updated: {new Date().toLocaleDateString()}</p>
             
             <section>
               <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. Acceptance of Terms</h2>

@@ -64,9 +64,9 @@ const Career = () => {
                 alt="Professional success and growth at Byte Matrix Technologies"
                 className="w-full h-64 lg:h-80 object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <p className="text-lg font-semibold">Innovation • Excellence • Growth</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+              <div className="absolute bottom-6 left-6">
+                <p className="text-lg font-semibold text-foreground drop-shadow-lg">Innovation • Excellence • Growth</p>
               </div>
             </div>
           </div>
@@ -102,7 +102,7 @@ const Career = () => {
                 </p>
                 
                 <div className="space-y-4 mb-10">
-                  <p className="text-brand-blue font-semibold text-lg">
+                  <p className="text-primary font-semibold text-lg">
                     Submit your portfolio and connect with us for future opportunities
                   </p>
                 </div>
