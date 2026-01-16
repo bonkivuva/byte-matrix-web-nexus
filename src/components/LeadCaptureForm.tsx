@@ -225,7 +225,7 @@ const LeadCaptureForm = ({
                     </FormLabel>
                     <FormControl>
                       <Input 
-                        placeholder="+254 7xx xxx xxx" 
+                        placeholder="+2547XXXXXXXX" 
                         maxLength={20}
                         {...field} 
                       />
