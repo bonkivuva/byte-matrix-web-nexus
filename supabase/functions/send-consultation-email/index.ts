@@ -9,6 +9,25 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
+// Simple in-memory rate limiting (resets on cold start)
+const rateLimitMap = new Map<string, number[]>();
+const RATE_LIMIT = 3; // max 3 requests
+const RATE_WINDOW = 3600000; // 1 hour in ms
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const requests = rateLimitMap.get(ip) || [];
+  const recentRequests = requests.filter(time => now - time < RATE_WINDOW);
+  
+  if (recentRequests.length >= RATE_LIMIT) {
+    return false;
+  }
+  
+  recentRequests.push(now);
+  rateLimitMap.set(ip, recentRequests);
+  return true;
+}
+
 interface ConsultationEmailRequest {
   name: string;
   email: string;
@@ -22,6 +41,29 @@ const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
+  }
+
+  // Rate limiting check
+  const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
+                   req.headers.get('cf-connecting-ip') || 
+                   'unknown';
+  
+  if (!checkRateLimit(clientIp)) {
+    console.warn("Rate limit exceeded for IP:", clientIp);
+    return new Response(
+      JSON.stringify({ 
+        success: false, 
+        error: "Too many requests. Please try again later." 
+      }),
+      {
+        status: 429,
+        headers: { 
+          "Content-Type": "application/json",
+          "Retry-After": "3600",
+          ...corsHeaders 
+        },
+      }
+    );
   }
 
   try {

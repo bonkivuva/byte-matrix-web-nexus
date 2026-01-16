@@ -82,8 +82,8 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               <h1 className="text-base font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
                 Byte Matrix Technologies
               </h1>
-              <p className="text-xs text-muted-foreground">
-                Enterprise IT Solutions
+              <p className="text-xs text-primary font-medium uppercase tracking-wider">
+                Connecting Your Digital Matrix
               </p>
             </div>
           </Link>

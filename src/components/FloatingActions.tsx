@@ -51,7 +51,7 @@ const FloatingActions = () => {
         className={`w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 ${
           isContactOpen 
             ? 'bg-destructive hover:bg-destructive/90' 
-            : 'bg-brand-blue hover:bg-brand-blue/90'
+            : 'bg-primary hover:bg-primary/90'
         }`}
         aria-label="Quick contact"
       >

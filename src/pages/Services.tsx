@@ -329,26 +329,26 @@ const Services = () => {
               
               <div className="space-y-6 mt-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Our Process</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">Our Process</h3>
                   <div className="space-y-3">
                     {services[selectedService].explanation.process.map((step, idx) => (
                       <div key={idx} className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-6 h-6 bg-gradient-brand rounded-full flex items-center justify-center text-white text-sm font-bold">
                           {idx + 1}
                         </div>
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{step}</p>
+                        <p className="text-muted-foreground leading-relaxed">{step}</p>
                       </div>
                     ))}
                   </div>
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">What You Get</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">What You Get</h3>
                   <div className="grid gap-3">
                     {services[selectedService].explanation.deliverables.map((deliverable, idx) => (
                       <div key={idx} className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{deliverable}</p>
+                        <p className="text-muted-foreground leading-relaxed">{deliverable}</p>
                       </div>
                     ))}
                   </div>
