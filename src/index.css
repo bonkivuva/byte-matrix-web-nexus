@@ -67,42 +67,61 @@
 
   .dark {
     --background: 222 22% 7%;
-    --foreground: 220 20% 98%;
+    --foreground: 210 40% 98%;
     --card: 222 20% 10%;
-    --card-foreground: 220 20% 98%;
+    --card-foreground: 210 40% 98%;
     --popover: 222 20% 10%;
-    --popover-foreground: 220 20% 98%;
+    --popover-foreground: 210 40% 98%;
     --primary: 217 91% 65%;
     --primary-foreground: 222 22% 7%;
-    --secondary: 222 16% 16%;
-    --secondary-foreground: 220 20% 98%;
-    --muted: 222 16% 16%;
-    --muted-foreground: 220 14% 75%;
+    --secondary: 222 16% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 222 16% 18%;
+    --muted-foreground: 215 20% 70%;
     --accent: 217 91% 70%;
     --accent-foreground: 222 22% 7%;
-    --destructive: 0 70% 55%;
-    --destructive-foreground: 220 20% 98%;
-    --border: 222 16% 22%;
-    --input: 222 16% 22%;
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 222 16% 25%;
+    --input: 222 16% 25%;
     --ring: 217 91% 65%;
+    --sidebar-background: 222 20% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 222 22% 7%;
+    --sidebar-accent: 222 16% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 16% 25%;
+    --sidebar-ring: 217 91% 65%;
     
     /* Dark mode brand adjustments - brighter for visibility */
-    --brand-blue: 217 91% 65%;
-    --brand-blue-light: 217 91% 75%;
-    --brand-blue-dark: 217 91% 55%;
-    --brand-gray: 220 20% 98%;
-    --brand-gray-light: 222 16% 25%;
+    --brand-blue: 217 91% 70%;
+    --brand-blue-light: 217 91% 80%;
+    --brand-blue-dark: 217 91% 60%;
+    --brand-gray: 210 40% 98%;
+    --brand-gray-light: 222 16% 28%;
+    --brand-accent: 217 91% 70%;
     
+    /* Dark mode gradient adjustments */
+    --brand-gradient-start: 217 91% 65%;
+    --brand-gradient-mid: 217 91% 70%;
+    --brand-gradient-end: 220 70% 75%;
+    
+    /* Dark mode neural colors - lighter for visibility */
     --neural-50: 222 22% 12%;
-    --neural-100: 222 20% 14%;
-    --neural-200: 222 18% 18%;
-    --neural-300: 222 16% 28%;
-    --neural-400: 222 14% 45%;
-    --neural-500: 222 12% 60%;
-    --neural-600: 220 14% 75%;
-    --neural-700: 220 16% 85%;
-    --neural-800: 220 18% 92%;
-    --neural-900: 220 20% 98%;
+    --neural-100: 222 20% 15%;
+    --neural-200: 222 18% 20%;
+    --neural-300: 222 16% 32%;
+    --neural-400: 222 14% 50%;
+    --neural-500: 222 12% 65%;
+    --neural-600: 215 16% 78%;
+    --neural-700: 210 18% 88%;
+    --neural-800: 210 20% 94%;
+    --neural-900: 210 40% 98%;
+    
+    /* Dark mode success color */
+    --success: 160 84% 45%;
+    --success-light: 160 70% 55%;
   }
 }
 
@@ -284,15 +303,60 @@
   }
 
   .dark .glass-professional {
-    background: hsl(var(--card) / 0.75);
-    border: 1px solid hsl(var(--border) / 0.8);
-    box-shadow: 0 2px 8px hsl(0 0% 0% / 0.2);
+    background: hsl(var(--card) / 0.9);
+    border: 1px solid hsl(var(--border) / 0.9);
+    box-shadow: 0 2px 12px hsl(0 0% 0% / 0.3);
   }
 
   .dark .glass-premium {
-    background: hsl(var(--card) / 0.9);
-    border: 1px solid hsl(var(--border) / 0.8);
-    box-shadow: 0 4px 16px hsl(0 0% 0% / 0.25);
+    background: hsl(var(--card) / 0.95);
+    border: 1px solid hsl(var(--border) / 0.9);
+    box-shadow: 0 4px 20px hsl(0 0% 0% / 0.35);
+  }
+
+  /* Dark mode text visibility enhancements */
+  .dark .text-gradient-professional {
+    background: linear-gradient(135deg, 
+      hsl(217 91% 75%), 
+      hsl(217 91% 85%)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .dark .text-gradient-cyber {
+    background: linear-gradient(135deg, 
+      hsl(217 91% 75%), 
+      hsl(217 91% 85%)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .dark .text-brand-blue {
+    color: hsl(217 91% 75%);
+  }
+
+  .dark .text-cyber-blue {
+    color: hsl(217 91% 75%);
+  }
+
+  .dark .text-cyber-green {
+    color: hsl(142 76% 60%);
+  }
+
+  .dark .text-cyber-purple {
+    color: hsl(280 100% 78%);
+  }
+
+  .dark .text-cyber-pink {
+    color: hsl(330 100% 78%);
+  }
+
+  .dark .text-cyber-yellow {
+    color: hsl(48 100% 70%);
   }
 
   .glow-brand {
@@ -762,11 +826,19 @@
 
   /* Cyber theme colors - using brand colors */
   :root {
-    --cyber-blue: var(--brand-blue);
+    --cyber-blue: 217 91% 55%;
     --cyber-purple: 280 100% 60%;
     --cyber-pink: 330 100% 60%;
-    --cyber-green: 142 76% 36%;
-    --cyber-yellow: 48 100% 50%;
+    --cyber-green: 142 76% 45%;
+    --cyber-yellow: 48 100% 55%;
+  }
+  
+  .dark {
+    --cyber-blue: 217 91% 70%;
+    --cyber-purple: 280 100% 75%;
+    --cyber-pink: 330 100% 75%;
+    --cyber-green: 142 76% 55%;
+    --cyber-yellow: 48 100% 65%;
   }
 
   .text-gradient-cyber {
