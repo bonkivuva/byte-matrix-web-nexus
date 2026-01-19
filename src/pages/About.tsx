@@ -1,13 +1,10 @@
-
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import ScrollReveal from "@/components/ScrollReveal";
 import FloatingActions from "@/components/FloatingActions";
-import AnimatedCounter from "@/components/AnimatedCounter";
 
 const About = () => {
   return (
