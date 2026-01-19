@@ -79,8 +79,8 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               />
             </div>
             <div className="hidden md:block">
-              <h1 className="text-base font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
-                Byte Matrix Technologies
+              <h1 className="text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-primary tracking-wide">
+                BYTE MATRIX TECHNOLOGIES
               </h1>
               <p className="text-xs text-primary font-medium uppercase tracking-wider">
                 Connecting Your Digital Matrix
