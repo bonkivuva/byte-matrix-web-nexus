@@ -20,8 +20,8 @@ import { useToast } from "@/hooks/use-toast";
 
 // EmailJS configuration
 const EMAILJS_SERVICE_ID = "service_bop7shj";
-const EMAILJS_TEMPLATE_ID = "service_bop7shj"; // Note: You may need to provide the correct template ID
-const EMAILJS_PUBLIC_KEY = ""; // TODO: Add your EmailJS public key here
+const EMAILJS_TEMPLATE_ID = "template_v1xulch";
+const EMAILJS_PUBLIC_KEY = "mNDVzW6T8-R3guNId";
 
 // Enhanced validation schema with security limits
 const formSchema = z.object({
