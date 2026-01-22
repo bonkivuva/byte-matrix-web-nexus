@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,7 +17,11 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, Building, MessageSquare, Send, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+
+// EmailJS configuration
+const EMAILJS_SERVICE_ID = "service_bop7shj";
+const EMAILJS_TEMPLATE_ID = "service_bop7shj"; // Note: You may need to provide the correct template ID
+const EMAILJS_PUBLIC_KEY = ""; // TODO: Add your EmailJS public key here
 
 // Enhanced validation schema with security limits
 const formSchema = z.object({
@@ -79,27 +84,26 @@ const LeadCaptureForm = ({
     setIsSubmitting(true);
     
     try {
-      // Call secure edge function instead of client-side EmailJS
-      const { data: response, error } = await supabase.functions.invoke(
-        "send-consultation-email",
-        {
-          body: {
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            company: data.company || "",
-            service: data.service,
-            message: data.message,
-          },
-        }
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        phone: data.phone,
+        company: data.company || "Not provided",
+        service: data.service,
+        message: data.message,
+        to_email: "info@bytematrixtechnologies.co.ke",
+      };
+
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
       );
 
-      if (error) {
-        throw new Error(error.message || "Failed to send consultation request");
-      }
-
-      if (!response?.success) {
-        throw new Error(response?.error || "Failed to send consultation request");
+      if (response.status !== 200) {
+        throw new Error("Failed to send email");
       }
       
       // Track analytics event
