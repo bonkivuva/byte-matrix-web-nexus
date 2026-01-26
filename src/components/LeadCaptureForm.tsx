@@ -89,10 +89,11 @@ const LeadCaptureForm = ({
         from_name: data.name,
         from_email: data.email,
         phone: data.phone,
-        company: data.company || "Not provided",
-        service: data.service,
+        subject: data.service,
         message: data.message,
-        to_email: "info@bytematrixtechnologies.co.ke",
+        company_name: "Byte Matrix Technologies",
+        company_email: "info@bytematrixtechnologies.co.ke",
+        company_website: "bytematrixtechnologies.co.ke",
       };
 
       const response = await emailjs.send(
