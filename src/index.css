@@ -139,6 +139,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: -0.01em;
+    overflow-x: hidden;
   }
 
   /* Subtle professional background */
@@ -162,37 +163,45 @@
       radial-gradient(ellipse 60% 40% at 100% 100%, hsl(var(--brand-blue-light) / 0.05), transparent);
   }
 
-  /* Professional headings - Clean corporate typography */
+  /* Enhanced Professional Typography - Improved Hierarchy */
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.1;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.03em;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl font-semibold tracking-tight;
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight;
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.15;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 
   h3 {
     @apply text-xl md:text-2xl font-semibold;
     font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.25;
-    letter-spacing: -0.015em;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
   }
 
   h4 {
-    @apply text-lg md:text-xl font-medium;
+    @apply text-lg md:text-xl font-semibold;
     font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.35;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
   }
 
+  /* Enhanced body text with better line-height for readability */
   p {
-    @apply leading-relaxed;
     font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.7;
+    letter-spacing: -0.005em;
+  }
+
+  /* Ensure all text has good contrast */
+  .text-muted-foreground {
+    opacity: 0.85;
   }
 }
 
@@ -736,59 +745,108 @@
   animation: subtleGlow 4s ease-in-out infinite;
 }
 
-/* Professional container classes */
+/* Professional container classes - Enhanced with mobile padding */
 .container-professional {
-  @apply container mx-auto px-6 lg:px-8 max-w-7xl;
+  @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
 }
 
+/* Standardized section spacing for consistent rhythm */
 .section-spacing {
-  @apply py-16 lg:py-24;
+  @apply py-16 md:py-20 lg:py-28;
 }
 
-/* Card styles - refined corporate */
+.section-spacing-sm {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+.section-spacing-lg {
+  @apply py-20 md:py-28 lg:py-36;
+}
+
+/* Card styles - refined corporate with enhanced hover */
 .card-cyber {
-  @apply bg-card border border-border rounded-xl shadow-corporate transition-all duration-300;
+  @apply bg-card border border-border rounded-2xl shadow-corporate transition-all duration-300 ease-out;
   position: relative;
   overflow: hidden;
 }
 
 .card-cyber:hover {
   @apply shadow-corporate-lg border-brand-blue/20;
+  transform: translateY(-4px);
 }
 
 .card-premium {
-  @apply bg-card rounded-xl border border-border shadow-corporate transition-all duration-300;
+  @apply bg-card rounded-2xl border border-border shadow-corporate transition-all duration-300 ease-out;
   position: relative;
   overflow: hidden;
 }
 
 .card-premium:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 
     0 4px 6px -1px hsl(var(--foreground) / 0.05),
-    0 16px 32px -8px hsl(var(--brand-blue) / 0.12);
-  border-color: hsl(var(--brand-blue) / 0.2);
+    0 20px 40px -10px hsl(var(--brand-blue) / 0.15);
+  border-color: hsl(var(--brand-blue) / 0.25);
 }
 
-  /* Button styles */
-  .btn-cyber {
-    @apply bg-gradient-cyber text-white font-semibold rounded-xl shadow-cyber hover:scale-105 hover:shadow-cyber-lg transition-all duration-500;
-    position: relative;
-    overflow: hidden;
-  }
+/* Interactive card with glow effect on hover */
+.card-interactive {
+  @apply bg-card rounded-2xl border border-border shadow-corporate transition-all duration-300 ease-out cursor-pointer;
+  position: relative;
+  overflow: hidden;
+}
 
-  .btn-cyber::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: hsl(var(--background) / 0.2);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-  }
+.card-interactive::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, hsl(var(--brand-blue) / 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.card-interactive:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 4px 6px -1px hsl(var(--foreground) / 0.05),
+    0 20px 40px -10px hsl(var(--brand-blue) / 0.15);
+  border-color: hsl(var(--brand-blue) / 0.25);
+}
+
+.card-interactive:hover::before {
+  opacity: 1;
+}
+
+/* Button styles with enhanced transitions */
+.btn-cyber {
+  @apply bg-gradient-cyber text-white font-semibold rounded-xl shadow-cyber transition-all duration-200 ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cyber:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 4px 12px hsl(var(--brand-blue) / 0.3),
+    0 8px 24px -4px hsl(var(--brand-blue) / 0.2);
+}
+
+.btn-cyber:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-cyber::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: hsl(var(--background) / 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease-out, height 0.4s ease-out;
+}
 
   .btn-cyber:hover::before {
     width: 300px;
@@ -969,9 +1027,9 @@
   @apply shadow-cyber-lg;
 }
 
-/* Professional spacing system */
+/* Professional spacing system - Enhanced */
 .section-spacing {
-  @apply py-16 md:py-20 lg:py-24;
+  @apply py-16 md:py-20 lg:py-28;
 }
 
 .container-professional {
@@ -980,20 +1038,20 @@
 
 /* Professional grid layouts */
 .grid-professional-2 {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12;
 }
 
 .grid-professional-3 {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8;
 }
 
 .grid-professional-4 {
-  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6;
 }
 
 /* Enhanced micro-interactions */
 .interactive-card {
-  @apply transition-all duration-500 ease-out;
+  @apply transition-all duration-300 ease-out;
 }
 
 .interactive-card:hover {
@@ -1004,7 +1062,7 @@
 @keyframes slideInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -1015,7 +1073,7 @@
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-24px);
   }
   to {
     opacity: 1;
@@ -1026,7 +1084,7 @@
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(24px);
   }
   to {
     opacity: 1;
@@ -1037,7 +1095,7 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
@@ -1045,37 +1103,56 @@
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-slide-in-up {
-  animation: slideInUp 0.6s ease-out forwards;
+  animation: slideInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.6s ease-out forwards;
+  animation: slideInLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.6s ease-out forwards;
+  animation: slideInRight 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.5s ease-out forwards;
+  animation: scaleIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Staggered animation delays */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
-.stagger-6 { animation-delay: 0.6s; }
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+.stagger-6 { animation-delay: 0.3s; }
 
-/* Button hover enhancements */
+/* Button hover enhancements - smooth 200ms transitions */
 .btn-hover-lift {
-  @apply transition-all duration-300;
+  @apply transition-all duration-200 ease-out;
 }
 
 .btn-hover-lift:hover {
-  @apply -translate-y-1 shadow-lg;
+  @apply -translate-y-0.5 shadow-lg;
+}
+
+.btn-hover-lift:active {
+  @apply translate-y-0 shadow-md;
 }
 
 /* Card hover glow effect */
@@ -1085,8 +1162,8 @@
 
 .card-hover-glow::before {
   content: '';
-  @apply absolute inset-0 opacity-0 transition-opacity duration-500;
-  background: radial-gradient(circle at center, hsl(var(--brand-blue) / 0.1) 0%, transparent 70%);
+  @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+  background: radial-gradient(circle at center, hsl(var(--brand-blue) / 0.08) 0%, transparent 70%);
 }
 
 .card-hover-glow:hover::before {
@@ -1166,4 +1243,177 @@
   );
   background-size: 200% 100%;
   animation: skeleton 1.5s ease-in-out infinite;
+}
+
+/* ============================================
+   MOBILE OPTIMIZATION UTILITIES
+   ============================================ */
+
+/* Ensure minimum touch target size of 44px */
+.touch-target {
+  @apply min-h-[44px] min-w-[44px];
+}
+
+/* Mobile-friendly button sizing */
+@media (max-width: 640px) {
+  button, 
+  [role="button"],
+  a.inline-flex {
+    min-height: 44px;
+  }
+}
+
+/* Prevent horizontal overflow */
+.overflow-x-safe {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Mobile text edge padding */
+.mobile-safe-text {
+  @apply px-4 sm:px-6;
+}
+
+/* Enhanced link styling for touch */
+.touch-link {
+  @apply py-3 px-4 -mx-4 rounded-lg active:bg-muted transition-colors;
+}
+
+/* Improved readability utilities */
+.readable-width {
+  @apply max-w-prose mx-auto;
+}
+
+.readable-wide {
+  @apply max-w-4xl mx-auto;
+}
+
+/* ============================================
+   VIEWPORT ANIMATION UTILITIES
+   ============================================ */
+
+/* Animation on scroll - fade up */
+[data-animate="fade-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), 
+              transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-animate="fade-up"].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation on scroll - fade in */
+[data-animate="fade-in"] {
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-animate="fade-in"].is-visible {
+  opacity: 1;
+}
+
+/* Animation on scroll - scale up */
+[data-animate="scale-up"] {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), 
+              transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-animate="scale-up"].is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ============================================
+   ENHANCED HOVER TRANSITIONS (200ms)
+   ============================================ */
+
+/* Smooth hover for all interactive elements */
+.hover-smooth {
+  @apply transition-all duration-200 ease-out;
+}
+
+/* Lift effect on hover */
+.hover-lift-sm:hover {
+  transform: translateY(-2px);
+}
+
+.hover-lift-md:hover {
+  transform: translateY(-4px);
+}
+
+.hover-lift-lg:hover {
+  transform: translateY(-6px);
+}
+
+/* Shadow enhancement on hover */
+.hover-shadow:hover {
+  box-shadow: 
+    0 4px 6px -1px hsl(var(--foreground) / 0.05),
+    0 10px 20px -5px hsl(var(--brand-blue) / 0.1);
+}
+
+.hover-shadow-lg:hover {
+  box-shadow: 
+    0 6px 12px -2px hsl(var(--foreground) / 0.06),
+    0 16px 32px -8px hsl(var(--brand-blue) / 0.15);
+}
+
+/* Border enhancement on hover */
+.hover-border:hover {
+  border-color: hsl(var(--brand-blue) / 0.3);
+}
+
+/* ============================================
+   PREMIUM COMPONENT STYLES
+   ============================================ */
+
+/* Premium glass card */
+.glass-card-premium {
+  @apply bg-card/95 backdrop-blur-xl rounded-2xl border border-border/80;
+  box-shadow: 
+    0 1px 2px hsl(var(--foreground) / 0.03),
+    0 4px 16px hsl(var(--brand-blue) / 0.04);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-card-premium:hover {
+  border-color: hsl(var(--brand-blue) / 0.2);
+  box-shadow: 
+    0 4px 8px hsl(var(--foreground) / 0.04),
+    0 16px 32px -8px hsl(var(--brand-blue) / 0.12);
+  transform: translateY(-4px);
+}
+
+/* Premium badge/chip styling */
+.badge-premium {
+  @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium;
+  @apply bg-brand-blue/10 text-brand-blue border border-brand-blue/20;
+  @apply transition-all duration-200;
+}
+
+.badge-premium:hover {
+  @apply bg-brand-blue/15 border-brand-blue/30;
+}
+
+/* Premium section header */
+.section-header {
+  @apply text-center mb-12 md:mb-16 lg:mb-20;
+}
+
+.section-header h2 {
+  @apply mb-4 md:mb-6;
+}
+
+.section-header p {
+  @apply text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto;
+}
+
+/* Divider line */
+.divider-gradient {
+  @apply w-20 md:w-24 h-1 bg-gradient-brand rounded-full mx-auto mt-6;
 }

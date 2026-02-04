@@ -1,4 +1,22 @@
 import { Star, Quote } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
+
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.5, ease: "easeOut" as const } 
+  }
+};
+
+const staggerContainer: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.1 }
+  }
+};
 
 const Testimonials = () => {
   const testimonials = [
@@ -26,66 +44,91 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28">
+    <section className="section-spacing">
       <div className="container-professional">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-brand-blue/10 text-brand-blue text-sm font-medium rounded-full mb-4">
+        <motion.div 
+          className="section-header"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+        >
+          <motion.span 
+            className="badge-premium mb-4"
+            variants={fadeInUp}
+          >
             Testimonials
-          </span>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          </motion.span>
+          <motion.h2 variants={fadeInUp}>
             What Our Clients Say
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto"
+            variants={fadeInUp}
+          >
             Don't just take our word for it — hear from the businesses we've helped transform
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <motion.div 
+          className="grid-professional-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+        >
           {testimonials.map((testimonial, index) => (
-            <div 
+            <motion.div 
               key={index}
-              className="bg-card rounded-2xl p-8 border border-border hover:border-brand-blue/20 hover:shadow-lg transition-all duration-300 relative"
+              className="glass-card-premium p-6 md:p-8 relative"
+              variants={fadeInUp}
             >
               {/* Quote Icon */}
-              <Quote className="w-10 h-10 text-brand-blue/10 absolute top-6 right-6" />
+              <Quote className="w-8 h-8 md:w-10 md:h-10 text-brand-blue/10 absolute top-4 md:top-6 right-4 md:right-6" />
               
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-3 md:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
                 ))}
               </div>
 
               {/* Content */}
-              <blockquote className="text-foreground mb-6 leading-relaxed">
+              <blockquote className="text-foreground mb-4 md:mb-6 text-sm md:text-base">
                 "{testimonial.content}"
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-4 pt-4 border-t border-border">
-                <div className="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-sm">
+              <div className="flex items-center gap-3 md:gap-4 pt-3 md:pt-4 border-t border-border">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-xs md:text-sm">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  <div className="text-sm text-brand-blue font-medium">{testimonial.company}</div>
+                  <div className="font-semibold text-foreground text-sm md:text-base">{testimonial.name}</div>
+                  <div className="text-xs md:text-sm text-muted-foreground">{testimonial.role}</div>
+                  <div className="text-xs md:text-sm text-brand-blue font-medium">{testimonial.company}</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Trust Indicator */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground">
+        <motion.div 
+          className="text-center mt-10 md:mt-12"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <p className="text-muted-foreground text-sm md:text-base">
             Join <span className="text-brand-blue font-semibold">500+ satisfied clients</span> across East Africa
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
