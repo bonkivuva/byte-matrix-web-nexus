@@ -162,18 +162,18 @@ const LeadCaptureForm = ({
   }
 
   return (
-    <Card className={`w-full max-w-2xl mx-auto bg-card border border-border shadow-lg hover:shadow-xl transition-shadow ${className}`}>
-      <CardHeader className="text-center pb-6">
-        <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
+    <Card className={`w-full max-w-2xl mx-auto glass-card-premium ${className}`}>
+      <CardHeader className="text-center pb-4 md:pb-6 px-4 sm:px-6">
+        <CardTitle className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-2">
           {title}
         </CardTitle>
-        <p className="text-muted-foreground">
+        <p className="text-sm sm:text-base text-muted-foreground">
           {subtitle}
         </p>
       </CardHeader>
-      <CardContent className="p-6 pt-0">
+      <CardContent className="p-4 sm:p-6 pt-0">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 md:space-y-6">
             <div className="grid md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
@@ -270,7 +270,7 @@ const LeadCaptureForm = ({
                   <FormControl>
                     <select 
                       {...field}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-11 min-h-[44px] w-full rounded-xl border border-input bg-background px-4 py-2.5 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:border-brand-blue/50 disabled:cursor-not-allowed disabled:opacity-50 transition-colors duration-200 md:text-sm"
                     >
                       <option value="">Select a service</option>
                       <option value="IT Consulting & Strategy">IT Consulting & Strategy</option>

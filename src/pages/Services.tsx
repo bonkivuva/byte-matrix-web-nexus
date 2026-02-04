@@ -181,33 +181,33 @@ const Services = () => {
       <FuturisticHeader currentPage="services" />
       
       {/* Hero Section */}
-      <section className="section-spacing relative overflow-hidden">
+      <section className="section-spacing pt-28 md:pt-32 relative overflow-hidden">
         {/* Subtle professional background */}
         <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-brand-blue/8 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-blue-light/6 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-64 md:w-96 h-64 md:h-96 bg-brand-blue/8 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-64 md:w-96 h-64 md:h-96 bg-brand-blue-light/6 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container-professional relative z-10">
           <div className="text-center max-w-5xl mx-auto">
-            <div className="inline-flex items-center px-8 py-4 glass-professional rounded-full mb-10 border border-brand-blue/10">
-              <Zap className="w-5 h-5 mr-3 text-brand-blue" />
-              <span className="text-lg font-medium text-brand-blue">Professional IT Solutions</span>
+            <div className="badge-premium mb-6 md:mb-10">
+              <Zap className="w-5 h-5 mr-2 md:mr-3" />
+              <span className="text-sm md:text-lg font-medium">Professional IT Solutions</span>
             </div>
             
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 leading-tight tracking-tight">
+            <h1 className="mb-6 md:mb-8 text-balance">
               <span className="text-foreground">Enterprise Technology Solutions</span>
-              <br />
-              <span className="text-gradient-professional">for Global Organizations</span>
+              <br className="hidden sm:block" />
+              <span className="text-gradient-professional"> for Global Organizations</span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-14 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-14 max-w-4xl mx-auto">
               Comprehensive IT services including strategic consulting, enterprise hardware, advanced cybersecurity, 
               and 24/7 technical support for mission-critical operations.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button size="lg" asChild className="bg-brand-blue hover:bg-brand-blue/90 text-white shadow-brand text-lg px-8 py-6 h-auto">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
+              <Button size="lg" asChild>
                 <Link to="/contact">
                   Get Free Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -215,7 +215,7 @@ const Services = () => {
               </Button>
               <a
                 href="tel:+254724367794"
-                className="flex items-center gap-2 text-lg font-semibold text-brand-blue hover:text-brand-blue/80 transition-colors"
+                className="flex items-center gap-2 text-base md:text-lg font-semibold text-brand-blue hover:text-brand-blue/80 transition-colors min-h-[44px]"
               >
                 <Phone className="h-5 w-5" />
                 Call: +254 724 367 794
@@ -229,37 +229,37 @@ const Services = () => {
       {/* Services Grid */}
       <section className="section-spacing bg-gradient-professional-subtle">
         <div className="container-professional">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
+          <div className="section-header">
+            <h2 className="text-balance">
               Enterprise <span className="text-gradient-professional">IT Services</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Professional technology solutions for demanding business environments
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
             {services.map((service, index) => (
               <Card key={index} className="card-premium group">
-                <CardContent className="p-10">
-                  <div className="relative mb-8">
-                    <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${service.gradient} rounded-2xl mb-6 shadow-brand group-hover:shadow-brand-lg transition-all duration-500`}>
-                      <service.icon className="w-10 h-10 text-white" />
+                <CardContent className="p-5 sm:p-6 md:p-8 lg:p-10">
+                  <div className="relative mb-5 md:mb-8">
+                    <div className={`inline-flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-gradient-to-r ${service.gradient} rounded-xl md:rounded-2xl mb-4 md:mb-6 shadow-brand group-hover:shadow-brand-lg transition-all duration-300 group-hover:scale-105`}>
+                      <service.icon className="w-7 h-7 md:w-10 md:h-10 text-white" />
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
+                  <h3 className="text-lg md:text-2xl font-bold text-foreground mb-3 md:mb-4">
                     {service.title}
                   </h3>
                   
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6">
                     {service.description}
                   </p>
                   
-                  <div className="space-y-3 mb-8">
+                  <div className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                     {service.benefits.map((benefit, idx) => (
-                      <div key={idx} className="flex items-center text-sm">
-                        <CheckCircle2 className="w-5 h-5 text-brand-blue mr-3 flex-shrink-0" />
+                      <div key={idx} className="flex items-center text-xs md:text-sm">
+                        <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-brand-blue mr-2 md:mr-3 flex-shrink-0" />
                         <span className="text-muted-foreground font-medium">{benefit}</span>
                       </div>
                     ))}
@@ -267,8 +267,7 @@ const Services = () => {
                   
                   <Button 
                     variant="outline" 
-                    size="sm" 
-                    className="border-2 border-brand-blue/30 hover:bg-brand-blue hover:text-white transition-all duration-300 w-full"
+                    className="w-full"
                     onClick={() => setSelectedService(index)}
                   >
                     Learn More
