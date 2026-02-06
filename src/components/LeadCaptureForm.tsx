@@ -14,13 +14,11 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, Building, MessageSquare, Send, CheckCircle2 } from "lucide-react";
+import { Send, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-// Company email for mailto
 const COMPANY_EMAIL = "info@bytematrixtechnologies.co.ke";
 
-// Enhanced validation schema with security limits
 const formSchema = z.object({
   name: z.string()
     .trim()
@@ -30,18 +28,6 @@ const formSchema = z.object({
     .trim()
     .email("Please enter a valid email address")
     .max(255, "Email must be less than 255 characters"),
-  phone: z.string()
-    .trim()
-    .min(10, "Please enter a valid phone number")
-    .max(20, "Phone number is too long"),
-  company: z.string()
-    .trim()
-    .max(100, "Company name must be less than 100 characters")
-    .optional(),
-  service: z.string()
-    .trim()
-    .min(1, "Please select a service")
-    .max(100, "Service name is too long"),
   message: z.string()
     .trim()
     .min(10, "Message must be at least 10 characters")
@@ -57,8 +43,8 @@ interface LeadCaptureFormProps {
 }
 
 const LeadCaptureForm = ({ 
-  title = "Get Your Free IT Consultation",
-  subtitle = "Transform your business with our expert IT solutions. Fill out the form below and we'll contact you within 24 hours.",
+  title = "Send Us a Message",
+  subtitle = "Fill out the form below and we'll get back to you within 24 hours.",
   className = ""
 }: LeadCaptureFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -70,9 +56,6 @@ const LeadCaptureForm = ({
     defaultValues: {
       name: "",
       email: "",
-      phone: "",
-      company: "",
-      service: "",
       message: "",
     },
   });
@@ -81,16 +64,12 @@ const LeadCaptureForm = ({
     setIsSubmitting(true);
     
     try {
-      // Construct mailto body
-      const subject = encodeURIComponent(`Consultation Request: ${data.service}`);
+      const subject = encodeURIComponent(`Contact Form: Message from ${data.name}`);
       const body = encodeURIComponent(
-`New Consultation Request
+`New Contact Form Submission
 
 Name: ${data.name}
 Email: ${data.email}
-Phone: ${data.phone}
-Company: ${data.company || 'Not provided'}
-Service Interest: ${data.service}
 
 Message:
 ${data.message}
@@ -99,10 +78,8 @@ ${data.message}
 Sent from Byte Matrix Technologies website`
       );
       
-      // Open mailto link
       window.location.href = `mailto:${COMPANY_EMAIL}?subject=${subject}&body=${body}`;
       
-      // Track analytics event
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'form_submit', {
           event_category: 'lead_generation',
@@ -114,7 +91,7 @@ Sent from Byte Matrix Technologies website`
       setIsSubmitted(true);
       toast({
         title: "Email client opened!",
-        description: "Please send the email from your mail application to complete your request.",
+        description: "Please send the email from your mail application.",
       });
 
       form.reset();
@@ -132,24 +109,24 @@ Sent from Byte Matrix Technologies website`
 
   if (isSubmitted) {
     return (
-      <Card className={`w-full max-w-2xl mx-auto bg-card border border-brand-blue/20 shadow-lg ${className}`}>
+      <Card className={`w-full max-w-xl mx-auto glass-card-premium ${className}`}>
         <CardContent className="p-8 text-center">
           <CheckCircle2 className="w-16 h-16 text-brand-blue mx-auto mb-4" />
           <h3 className="text-2xl font-semibold text-brand-blue mb-2">
-            Request Received!
+            Thank You!
           </h3>
           <p className="text-foreground mb-4">
-            Your consultation request has been sent successfully.
+            Your message has been prepared.
           </p>
-          <p className="text-sm text-muted-foreground">
-            Our team will contact you within 24 hours.
+          <p className="text-sm text-muted-foreground mb-4">
+            Please send the email from your mail application to complete your request.
           </p>
           <Button 
             onClick={() => setIsSubmitted(false)}
             variant="outline"
-            className="mt-4 border-brand-blue/30"
+            className="border-brand-blue/30"
           >
-            Submit Another Request
+            Send Another Message
           </Button>
         </CardContent>
       </Card>
@@ -157,9 +134,9 @@ Sent from Byte Matrix Technologies website`
   }
 
   return (
-    <Card className={`w-full max-w-2xl mx-auto glass-card-premium ${className}`}>
-      <CardHeader className="text-center pb-4 md:pb-6 px-4 sm:px-6">
-        <CardTitle className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-2">
+    <Card className={`w-full max-w-xl mx-auto glass-card-premium ${className}`}>
+      <CardHeader className="text-center pb-4 px-4 sm:px-6">
+        <CardTitle className="text-xl sm:text-2xl font-bold text-foreground mb-2">
           {title}
         </CardTitle>
         <p className="text-sm sm:text-base text-muted-foreground">
@@ -168,115 +145,38 @@ Sent from Byte Matrix Technologies website`
       </CardHeader>
       <CardContent className="p-4 sm:p-6 pt-0">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 md:space-y-6">
-            <div className="grid md:grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="flex items-center gap-2">
-                      <Building className="w-4 h-4" />
-                      Full Name *
-                    </FormLabel>
-                    <FormControl>
-                      <Input 
-                        placeholder="Your full name" 
-                        maxLength={100}
-                        {...field} 
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="flex items-center gap-2">
-                      <Mail className="w-4 h-4" />
-                      Email Address *
-                    </FormLabel>
-                    <FormControl>
-                      <Input 
-                        type="email" 
-                        placeholder="your@email.com" 
-                        maxLength={255}
-                        {...field} 
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="phone"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="flex items-center gap-2">
-                      <Phone className="w-4 h-4" />
-                      Phone Number *
-                    </FormLabel>
-                    <FormControl>
-                      <Input 
-                        placeholder="+2547XXXXXXXX" 
-                        maxLength={20}
-                        {...field} 
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="company"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="flex items-center gap-2">
-                      <Building className="w-4 h-4" />
-                      Company (Optional)
-                    </FormLabel>
-                    <FormControl>
-                      <Input 
-                        placeholder="Your company name" 
-                        maxLength={100}
-                        {...field} 
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name *</FormLabel>
+                  <FormControl>
+                    <Input 
+                      placeholder="Your name" 
+                      maxLength={100}
+                      {...field} 
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
             <FormField
               control={form.control}
-              name="service"
+              name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Service Interest *</FormLabel>
+                  <FormLabel>Email *</FormLabel>
                   <FormControl>
-                    <select 
-                      {...field}
-                      className="flex h-11 min-h-[44px] w-full rounded-xl border border-input bg-background px-4 py-2.5 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:border-brand-blue/50 disabled:cursor-not-allowed disabled:opacity-50 transition-colors duration-200 md:text-sm"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="IT Consulting & Strategy">IT Consulting & Strategy</option>
-                      <option value="Hardware Procurement">Hardware Procurement</option>
-                      <option value="System Integration">System Integration</option>
-                      <option value="24/7 Technical Support">24/7 Technical Support</option>
-                      <option value="Cloud Solutions">Cloud Solutions</option>
-                      <option value="Cybersecurity Services">Cybersecurity Services</option>
-                      <option value="Network Setup & Management">Network Setup & Management</option>
-                      <option value="Other">Other</option>
-                    </select>
+                    <Input 
+                      type="email" 
+                      placeholder="your@email.com" 
+                      maxLength={255}
+                      {...field} 
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -288,13 +188,10 @@ Sent from Byte Matrix Technologies website`
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="flex items-center gap-2">
-                    <MessageSquare className="w-4 h-4" />
-                    Project Details *
-                  </FormLabel>
+                  <FormLabel>Message *</FormLabel>
                   <FormControl>
                     <Textarea 
-                      placeholder="Tell us about your IT needs, current challenges, and project requirements..."
+                      placeholder="Your message..."
                       className="min-h-[120px]"
                       maxLength={2000}
                       {...field}
@@ -309,17 +206,17 @@ Sent from Byte Matrix Technologies website`
               type="submit"
               size="lg"
               disabled={isSubmitting}
-              className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white py-3 text-lg font-medium"
+              className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white"
             >
               {isSubmitting ? (
                 <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                   Sending...
                 </>
               ) : (
                 <>
-                  <Send className="w-5 h-5 mr-3" />
-                  Get Free Consultation
+                  <Send className="w-5 h-5 mr-2" />
+                  Send
                 </>
               )}
             </Button>
