@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -18,10 +17,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, Building, MessageSquare, Send, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-// EmailJS configuration
-const EMAILJS_SERVICE_ID = "service_bop7shj";
-const EMAILJS_TEMPLATE_ID = "template_v1xulch";
-const EMAILJS_PUBLIC_KEY = "mNDVzW6T8-R3guNId";
+// Company email for mailto
+const COMPANY_EMAIL = "info@bytematrixtechnologies.co.ke";
 
 // Enhanced validation schema with security limits
 const formSchema = z.object({
@@ -84,28 +81,26 @@ const LeadCaptureForm = ({
     setIsSubmitting(true);
     
     try {
-      // Send email using EmailJS
-      const templateParams = {
-        from_name: data.name,
-        from_email: data.email,
-        phone: data.phone,
-        subject: data.service,
-        message: data.message,
-        company_name: "Byte Matrix Technologies",
-        company_email: "info@bytematrixtechnologies.co.ke",
-        company_website: "bytematrixtechnologies.co.ke",
-      };
+      // Construct mailto body
+      const subject = encodeURIComponent(`Consultation Request: ${data.service}`);
+      const body = encodeURIComponent(
+`New Consultation Request
 
-      const response = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone}
+Company: ${data.company || 'Not provided'}
+Service Interest: ${data.service}
+
+Message:
+${data.message}
+
+---
+Sent from Byte Matrix Technologies website`
       );
-
-      if (response.status !== 200) {
-        throw new Error("Failed to send email");
-      }
+      
+      // Open mailto link
+      window.location.href = `mailto:${COMPANY_EMAIL}?subject=${subject}&body=${body}`;
       
       // Track analytics event
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -118,16 +113,16 @@ const LeadCaptureForm = ({
 
       setIsSubmitted(true);
       toast({
-        title: "Thank you for your interest!",
-        description: "We'll contact you within 24 hours to discuss your IT needs.",
+        title: "Email client opened!",
+        description: "Please send the email from your mail application to complete your request.",
       });
 
       form.reset();
     } catch (error) {
-      console.error("Error submitting consultation request:", error);
+      console.error("Error opening email client:", error);
       toast({
         title: "Something went wrong",
-        description: "Please try again or contact us directly at info@bytematrixtechnologies.co.ke",
+        description: "Please contact us directly at info@bytematrixtechnologies.co.ke",
         variant: "destructive",
       });
     } finally {
