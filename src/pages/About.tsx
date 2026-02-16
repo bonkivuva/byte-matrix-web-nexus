@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Star, Zap, Shield, Users, CheckCircle, Phone, Monitor, Cloud, Settings } from "lucide-react";
+import { 
+  ArrowRight, Shield, Users, CheckCircle, Phone, 
+  Monitor, Cloud, Settings, Server, Camera, Cpu, 
+  Building2, GraduationCap, Landmark, ShoppingBag, Factory, Heart
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import FloatingActions from "@/components/FloatingActions";
-import Testimonials from "@/components/Testimonials";
 import { motion, type Variants } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroEnterprise from "@/assets/hero-enterprise.jpg";
 
 const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
     y: 0, 
@@ -22,157 +25,204 @@ const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.1 }
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 }
   }
 };
 
 const About = () => {
-  const values = [
-    { Icon: Zap, title: "Innovation", desc: "Adopting and implementing the latest technologies" },
-    { Icon: Shield, title: "Integrity", desc: "Building trust through transparency and ethical practices" },
-    { Icon: Users, title: "Customer Focus", desc: "Delivering tailored solutions that meet client needs" },
-    { Icon: Star, title: "Reliability", desc: "Ensuring consistent performance and dependable support" }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Satisfied Clients" },
-    { number: "1000+", label: "Projects Delivered" },
-    { number: "5+", label: "Years Experience" },
-    { number: "24/7", label: "Support Available" },
-  ];
-
   const services = [
-    { icon: Monitor, title: "IT Consulting", desc: "Strategic technology planning for your business" },
-    { icon: Shield, title: "Cybersecurity", desc: "Enterprise-grade protection for your data" },
-    { icon: Cloud, title: "Cloud Solutions", desc: "Scalable cloud infrastructure & migration" },
-    { icon: Settings, title: "Hardware Setup", desc: "Professional procurement & installation" },
+    { 
+      icon: Monitor, 
+      title: "ICT Infrastructure", 
+      impact: "Designing secure and scalable enterprise networks." 
+    },
+    { 
+      icon: Shield, 
+      title: "Cybersecurity", 
+      impact: "Protecting critical business data with enterprise-grade defence." 
+    },
+    { 
+      icon: Cloud, 
+      title: "Cloud Solutions", 
+      impact: "Enabling seamless migration and cloud-first operations." 
+    },
+    { 
+      icon: Settings, 
+      title: "Hardware Procurement", 
+      impact: "Sourcing, configuring and deploying reliable equipment." 
+    },
+    { 
+      icon: Camera, 
+      title: "Surveillance & Security", 
+      impact: "Installing intelligent monitoring systems for total visibility." 
+    },
+    { 
+      icon: Cpu, 
+      title: "System Integration", 
+      impact: "Connecting business systems for streamlined operations." 
+    },
+  ];
+
+  const pillars = [
+    { 
+      icon: CheckCircle, 
+      title: "Certified & Experienced Engineers", 
+      desc: "Our team holds industry certifications and brings hands-on expertise to every project." 
+    },
+    { 
+      icon: Shield, 
+      title: "Enterprise-Grade Solutions", 
+      desc: "We deploy the same calibre of technology trusted by leading institutions." 
+    },
+    { 
+      icon: Server, 
+      title: "Rapid Deployment & Support", 
+      desc: "From planning to go-live, we move fast — with 24/7 support after delivery." 
+    },
+    { 
+      icon: Users, 
+      title: "Trusted by Institutions & Businesses", 
+      desc: "500+ organisations across Kenya rely on our solutions every day." 
+    },
+  ];
+
+  const industries = [
+    { icon: Building2, name: "Corporate Offices" },
+    { icon: GraduationCap, name: "Education" },
+    { icon: Landmark, name: "Government" },
+    { icon: ShoppingBag, name: "Retail & Commerce" },
+    { icon: Factory, name: "Manufacturing" },
+    { icon: Heart, name: "Healthcare" },
   ];
 
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
-        title="Byte Matrix Technologies - Professional IT Solutions Provider in Kenya"
-        description="Byte Matrix Technologies delivers advanced digital solutions for growth & innovation. IT consulting, cybersecurity, cloud solutions, and 24/7 support in Kenya."
-        keywords="IT solutions Kenya, digital transformation, enterprise technology, cybersecurity, cloud solutions, IT consulting, Byte Matrix Technologies"
+        title="Byte Matrix Technologies — Enterprise IT Solutions in Kenya"
+        description="BYTE MATRIX TECHNOLOGIES delivers secure, scalable and future-ready ICT, surveillance and automation solutions for businesses and institutions across Kenya."
+        keywords="IT solutions Kenya, enterprise ICT, cybersecurity Kenya, cloud solutions, IT consulting, surveillance systems, Byte Matrix Technologies"
       />
       
       <FuturisticHeader currentPage="about" />
 
-      {/* Hero Section - Full-width with background image */}
-      <section className="relative min-h-[90vh] flex items-center pt-16 overflow-hidden">
-        {/* Background Image */}
+      {/* ═══════════════════════════════════════════
+          SECTION 1 — AUTHORITY HERO
+          ═══════════════════════════════════════════ */}
+      <section className="relative min-h-[92vh] flex items-center pt-16 overflow-hidden">
+        {/* Background */}
         <div className="absolute inset-0">
           <img 
-            src={heroBg} 
-            alt="Professional IT team" 
+            src={heroEnterprise} 
+            alt="Enterprise server infrastructure" 
             className="w-full h-full object-cover"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40 dark:from-background/98 dark:via-background/85 dark:to-background/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,22%,7%)]/95 via-[hsl(220,22%,7%)]/80 to-[hsl(220,22%,7%)]/40" />
         </div>
 
         <div className="container-professional relative z-10">
           <div className="max-w-3xl">
             <motion.div 
-              className="space-y-6 md:space-y-8"
+              className="space-y-8"
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
             >
-              <motion.div className="badge-premium" variants={fadeInUp}>
-                <Zap className="w-4 h-4 mr-2" />
-                Trusted IT Partner Since 2019
-              </motion.div>
+              <motion.p 
+                className="text-sm font-semibold uppercase tracking-[0.2em] text-primary"
+                variants={fadeInUp}
+              >
+                Connecting Your Digital Matrix
+              </motion.p>
               
-              <motion.h1 className="text-balance" variants={fadeInUp}>
-                We Build Advanced Digital Solutions for{" "}
-                <span className="text-gradient-professional">Growth & Innovation</span>
+              <motion.h1 
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.05] text-white"
+                variants={fadeInUp}
+              >
+                Engineering Intelligent Technology Infrastructure for Modern Enterprises.
               </motion.h1>
               
               <motion.p 
-                className="text-lg sm:text-xl text-muted-foreground max-w-2xl"
+                className="text-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed"
                 variants={fadeInUp}
               >
-                From robust IT infrastructure to comprehensive cybersecurity, we help businesses across East Africa thrive in the digital world—simply, effectively, and reliably.
+                BYTE MATRIX TECHNOLOGIES delivers secure, scalable and future-ready ICT, surveillance and automation solutions for businesses and institutions across Kenya.
               </motion.p>
 
               <motion.div 
-                className="flex flex-col sm:flex-row gap-4 pt-2"
+                className="flex flex-col sm:flex-row gap-4 pt-4"
                 variants={fadeInUp}
               >
                 <Button size="lg" asChild>
                   <Link to="/contact">
-                    Request a Free Quote
+                    Request a Consultation
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white/30 text-white hover:bg-white/10 hover:text-white hover:border-white/50"
+                  asChild
+                >
                   <Link to="/services">
-                    Explore Services
+                    View Our Capabilities
                   </Link>
                 </Button>
-                <a
-                  href="tel:+254724367794"
-                  className="hidden sm:flex items-center gap-2 text-base font-semibold text-primary hover:text-primary/80 transition-colors min-h-[44px] px-4"
-                >
-                  <Phone className="h-5 w-5" />
-                  +254 724 367 794
-                </a>
+              </motion.div>
+
+              {/* Trust line */}
+              <motion.div 
+                className="flex items-center gap-6 pt-4 text-sm text-white/50"
+                variants={fadeInUp}
+              >
+                <span className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  500+ Clients Served
+                </span>
+                <span className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  24/7 Support
+                </span>
+                <span className="hidden sm:flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  5+ Years Experience
+                </span>
               </motion.div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section className="relative z-10 -mt-1">
-        <div className="bg-primary">
-          <div className="container-professional">
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 md:py-10"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-            >
-              {stats.map((stat, idx) => (
-                <motion.div 
-                  key={idx} 
-                  className="text-center"
-                  variants={fadeInUp}
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-1">{stat.number}</div>
-                  <div className="text-sm md:text-base text-primary-foreground/80">{stat.label}</div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* What We Do - Services Overview */}
-      <section className="section-spacing relative">
+      {/* ═══════════════════════════════════════════
+          SECTION 2 — WHAT WE DO (Services)
+          ═══════════════════════════════════════════ */}
+      <section className="section-spacing-lg">
         <div className="container-professional">
           <motion.div 
-            className="section-header"
+            className="max-w-2xl mb-14 md:mb-20"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
           >
-            <motion.span className="badge-premium mb-4" variants={fadeInUp}>
+            <motion.p 
+              className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-4"
+              variants={fadeInUp}
+            >
               What We Do
-            </motion.span>
-            <motion.h2 variants={fadeInUp}>
-              Enterprise Technology Solutions <span className="text-gradient-professional">That Deliver Results</span>
-            </motion.h2>
-            <motion.p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto" variants={fadeInUp}>
-              Comprehensive IT services designed to streamline your operations and accelerate growth
             </motion.p>
+            <motion.h2 
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6"
+              variants={fadeInUp}
+            >
+              Technology Solutions That <span className="text-gradient-professional">Deliver Results</span>
+            </motion.h2>
+            <motion.div className="w-16 h-1 bg-primary rounded-full" variants={fadeInUp} />
           </motion.div>
 
           <motion.div 
-            className="grid-professional-4"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -181,21 +231,20 @@ const About = () => {
             {services.map((service, idx) => (
               <motion.div 
                 key={idx}
-                className="glass-card-premium p-6 md:p-8 text-center group"
+                className="group p-6 md:p-8 rounded-2xl border border-border bg-card hover:border-primary/25 hover:shadow-corporate-lg transition-all duration-300 hover:-translate-y-1"
                 variants={fadeInUp}
               >
-                <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-5 group-hover:bg-primary/15 group-hover:scale-110 transition-all duration-300">
-                  <service.icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors duration-300">
+                  <service.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{service.desc}</p>
+                <h3 className="text-lg font-bold mb-2">{service.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{service.impact}</p>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Section CTA */}
           <motion.div 
-            className="text-center mt-10 md:mt-14"
+            className="mt-12 md:mt-16"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -203,7 +252,7 @@ const About = () => {
           >
             <Button size="lg" variant="outline" asChild>
               <Link to="/services">
-                See All Services
+                Explore All Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -211,130 +260,166 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Story Section */}
-      <section className="section-spacing relative bg-gradient-professional-subtle">
+      {/* ═══════════════════════════════════════════
+          SECTION 3 — WHY CHOOSE BYTE MATRIX
+          ═══════════════════════════════════════════ */}
+      <section className="section-spacing-lg bg-gradient-professional-subtle">
         <div className="container-professional">
-          <div className="max-w-6xl mx-auto">
-            
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              
-              {/* Left - Story content */}
+          <motion.div 
+            className="max-w-2xl mb-14 md:mb-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.p 
+              className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-4"
+              variants={fadeInUp}
+            >
+              Why Byte Matrix
+            </motion.p>
+            <motion.h2 
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6"
+              variants={fadeInUp}
+            >
+              A Structured Technology Partner You Can <span className="text-gradient-professional">Trust</span>
+            </motion.h2>
+            <motion.div className="w-16 h-1 bg-primary rounded-full" variants={fadeInUp} />
+          </motion.div>
+
+          <motion.div 
+            className="grid md:grid-cols-2 gap-6 lg:gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            {pillars.map((pillar, idx) => (
               <motion.div 
-                className="space-y-6 md:space-y-8"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={staggerContainer}
+                key={idx}
+                className="flex gap-5 p-6 md:p-8 rounded-2xl border border-border bg-card hover:border-primary/25 hover:shadow-corporate-lg transition-all duration-300 hover:-translate-y-1"
+                variants={fadeInUp}
               >
-                <motion.div variants={fadeInUp}>
-                  <div className="badge-premium mb-6">
-                    <Star className="w-4 h-4 mr-2" />
-                    Our Story
-                  </div>
-                  <h2 className="mb-4 md:mb-6 text-balance">
-                    Empowering Businesses Through <span className="text-gradient-professional">Innovation</span>
-                  </h2>
-                  <div className="w-20 h-1 bg-gradient-brand rounded-full"></div>
-                </motion.div>
-
-                <motion.div 
-                  className="space-y-4 md:space-y-5 text-base text-muted-foreground"
-                  variants={fadeInUp}
-                >
-                  <p>
-                    Founded on the belief that every business deserves reliable, professional IT solutions, we've grown into a trusted partner for organizations across Kenya and beyond. Our mission is simple: help businesses of all sizes succeed through technology.
-                  </p>
-                  
-                  <p>
-                    What sets us apart is our commitment to understanding your unique challenges. We don't believe in one-size-fits-all solutions. Instead, we take the time to listen, analyze, and create tailored strategies that address your specific needs—practical, effective, and results-driven.
-                  </p>
-
-                  <p>
-                    Whether you're setting up your first network or managing complex enterprise systems, our team brings dedication, expertise, and a customer-first approach to every project.
-                  </p>
-                </motion.div>
-
-                {/* Story Section CTA */}
-                <motion.div variants={fadeInUp}>
-                  <Button asChild>
-                    <Link to="/contact">
-                      Talk to an Expert
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                </motion.div>
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <pillar.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-2">{pillar.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{pillar.desc}</p>
+                </div>
               </motion.div>
-
-              {/* Right - Values grid */}
-              <motion.div 
-                className="grid grid-cols-2 gap-3 sm:gap-4"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={staggerContainer}
-              >
-                {values.map((item, idx) => (
-                  <motion.div 
-                    key={idx}
-                    className="glass-card-premium p-4 sm:p-6"
-                    variants={fadeInUp}
-                  >
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-                      <item.Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                    </div>
-                    <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">{item.title}</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">{item.desc}</p>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-            </div>
-          </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
-      {/* Testimonials / Social Proof */}
-      <Testimonials />
-
-      {/* CTA Section */}
-      <section className="section-spacing relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-professional opacity-5"></div>
-        <div className="container-professional relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <motion.div 
-              className="glass-card-premium p-8 sm:p-12 lg:p-16 text-center"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+      {/* ═══════════════════════════════════════════
+          SECTION 4 — INDUSTRIES WE SERVE
+          ═══════════════════════════════════════════ */}
+      <section className="section-spacing">
+        <div className="container-professional">
+          <motion.div 
+            className="text-center mb-14 md:mb-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.p 
+              className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-4"
+              variants={fadeInUp}
             >
-              <div className="space-y-6 md:space-y-8">
-                <div>
-                  <h2 className="mb-4 text-balance">
-                    Ready to Transform Your <span className="text-gradient-professional">Business</span>?
-                  </h2>
-                  <div className="divider-gradient mb-6"></div>
+              Industries We Serve
+            </motion.p>
+            <motion.h2 
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6"
+              variants={fadeInUp}
+            >
+              Trusted Across <span className="text-gradient-professional">Sectors</span>
+            </motion.h2>
+            <motion.p 
+              className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto"
+              variants={fadeInUp}
+            >
+              Delivering mission-critical technology solutions with precision and reliability to organisations of every size.
+            </motion.p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            {industries.map((industry, idx) => (
+              <motion.div 
+                key={idx}
+                className="flex flex-col items-center text-center p-6 md:p-8 rounded-2xl border border-border bg-card hover:border-primary/25 hover:shadow-corporate transition-all duration-300 hover:-translate-y-1 group"
+                variants={fadeInUp}
+              >
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors duration-300">
+                  <industry.icon className="w-7 h-7 text-primary" />
                 </div>
-                
-                <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Join 500+ satisfied clients across East Africa. Let's discuss how we can help your business succeed with expert guidance tailored to your unique needs.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2 md:pt-4">
-                  <Button size="lg" asChild>
-                    <Link to="/contact">
-                      Get Free Consultation
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild>
-                    <a href="tel:+254724367794">
-                      <Phone className="mr-2 h-5 w-5" />
-                      Call Now
-                    </a>
-                  </Button>
-                </div>
-              </div>
+                <span className="text-sm font-semibold">{industry.name}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          SECTION 5 — STRONG CTA
+          ═══════════════════════════════════════════ */}
+      <section className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,22%,8%)] via-[hsl(217,91%,15%)] to-[hsl(220,22%,8%)]" />
+        <div className="container-professional relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div 
+              className="space-y-8"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+            >
+              <motion.h2 
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+                variants={fadeInUp}
+              >
+                Let's Build Your Technology Infrastructure the Right Way.
+              </motion.h2>
+              <motion.p 
+                className="text-lg text-white/60 max-w-2xl mx-auto"
+                variants={fadeInUp}
+              >
+                Whether you're upgrading an existing setup or starting fresh, our team is ready to deliver a solution tailored to your business.
+              </motion.p>
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
+                variants={fadeInUp}
+              >
+                <Button 
+                  size="lg" 
+                  className="bg-white text-foreground hover:bg-white/90 font-semibold shadow-xl"
+                  asChild
+                >
+                  <Link to="/contact">
+                    Schedule a Strategy Call
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white/30 text-white hover:bg-white/10 hover:text-white hover:border-white/50"
+                  asChild
+                >
+                  <a href="tel:+254724367794">
+                    <Phone className="mr-2 h-5 w-5" />
+                    +254 724 367 794
+                  </a>
+                </Button>
+              </motion.div>
             </motion.div>
           </div>
         </div>
