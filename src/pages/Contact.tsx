@@ -78,7 +78,7 @@ const Contact = () => {
               className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mt-6"
               variants={fadeInUp}
             >
-              We're ready to help your business thrive. Reach out for expert guidance, reliable support, and technology solutions tailored to your needs.
+              Reach out to a team that values transparency, reliability, and long-term partnerships. We're ready to deliver technology solutions tailored to your unique needs.
             </motion.p>
             <motion.div className="w-16 h-1 bg-primary rounded-full mt-6" variants={fadeInUp} />
           </motion.div>

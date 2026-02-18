@@ -136,7 +136,7 @@ const Portfolio = () => {
               className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mt-6 mb-10"
               variants={fadeInUp}
             >
-              Real projects that transformed business operations. Every solution engineered for reliability, performance, and long-term value.
+              Every project reflects our commitment to innovation, integrity, and customer-focused delivery — engineered for reliability, performance, and long-term value.
             </motion.p>
             <motion.div className="w-16 h-1 bg-primary rounded-full" variants={fadeInUp} />
           </motion.div>
