@@ -86,6 +86,29 @@ const About = () => {
     },
   ];
 
+  const coreValues = [
+    {
+      icon: Cpu,
+      title: "Innovation",
+      desc: "Adopting and implementing the latest technologies to help businesses stay ahead in a rapidly evolving digital world.",
+    },
+    {
+      icon: Shield,
+      title: "Integrity",
+      desc: "We build long-term relationships through transparency, honesty, and ethical business practices in every engagement.",
+    },
+    {
+      icon: Users,
+      title: "Customer Focus",
+      desc: "Every solution we design is tailored to meet the unique goals and operational needs of our clients.",
+    },
+    {
+      icon: Server,
+      title: "Reliability",
+      desc: "We ensure consistent system performance, dependable support, and long-term technology stability for your business.",
+    },
+  ];
+
   const industries = [
     { icon: Building2, name: "Corporate Offices" },
     { icon: GraduationCap, name: "Education" },
@@ -369,7 +392,64 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════
-          SECTION 5 — STRONG CTA
+          SECTION 5 — CORE VALUES
+          ═══════════════════════════════════════════ */}
+      <section className="section-spacing-lg bg-gradient-professional-subtle">
+        <div className="container-professional">
+          <motion.div 
+            className="max-w-2xl mb-14 md:mb-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.p 
+              className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-4"
+              variants={fadeInUp}
+            >
+              Our Core Values
+            </motion.p>
+            <motion.h2 
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4"
+              variants={fadeInUp}
+            >
+              The Principles That Guide <span className="text-gradient-professional">Every Solution</span>
+            </motion.h2>
+            <motion.p 
+              className="text-muted-foreground text-base md:text-lg max-w-2xl"
+              variants={fadeInUp}
+            >
+              These values aren't aspirational — they are the operating standards that shape every project, every partnership, and every outcome we deliver.
+            </motion.p>
+            <motion.div className="w-16 h-1 bg-primary rounded-full mt-6" variants={fadeInUp} />
+          </motion.div>
+
+          <motion.div 
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            {coreValues.map((value, idx) => (
+              <motion.div 
+                key={idx}
+                className="group p-6 md:p-8 rounded-2xl border border-border bg-card hover:border-primary/25 hover:shadow-corporate-lg transition-all duration-300 hover:-translate-y-1"
+                variants={fadeInUp}
+              >
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors duration-300">
+                  <value.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">{value.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{value.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          SECTION 6 — STRONG CTA
           ═══════════════════════════════════════════ */}
       <section className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,22%,8%)] via-[hsl(217,91%,15%)] to-[hsl(220,22%,8%)]" />

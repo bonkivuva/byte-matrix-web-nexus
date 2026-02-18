@@ -26,10 +26,10 @@ const staggerContainer: Variants = {
 
 const Career = () => {
   const values = [
-    { icon: Lightbulb, title: "Innovation", desc: "We encourage creative thinking and fresh approaches to solving complex challenges." },
-    { icon: Users, title: "Collaboration", desc: "Every project is a team effort — we learn from each other and grow together." },
-    { icon: TrendingUp, title: "Growth", desc: "Continuous learning, mentorship, and clear paths for career advancement." },
-    { icon: Heart, title: "Impact", desc: "Your work directly improves how businesses operate across East Africa." },
+    { icon: Lightbulb, title: "Drive Innovation", desc: "We encourage continuous learning and the adoption of cutting-edge technologies to solve complex challenges." },
+    { icon: Users, title: "Operate with Integrity", desc: "We uphold transparency and ethical practices in every project, every interaction, and every decision." },
+    { icon: TrendingUp, title: "Put Customers First", desc: "Our teams are aligned around delivering tailored outcomes that genuinely serve our clients' goals." },
+    { icon: Heart, title: "Build Reliable Systems", desc: "Consistent performance and dependable support are the standards we hold ourselves to — for clients and for each other." },
   ];
 
   return (
@@ -107,11 +107,17 @@ const Career = () => {
               className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-4"
               variants={fadeInUp}
             >
-              Our Culture
+              Our Culture & Values
             </motion.p>
             <motion.h2 variants={fadeInUp}>
               Why Work With <span className="text-gradient-professional">Us</span>
             </motion.h2>
+            <motion.p 
+              className="text-muted-foreground text-base md:text-lg max-w-2xl mt-4"
+              variants={fadeInUp}
+            >
+              At Byte Matrix Technologies, we believe that great teams are built on shared values. When you join us, you become part of a culture that lives these principles every day.
+            </motion.p>
             <motion.div className="w-16 h-1 bg-primary rounded-full mt-6" variants={fadeInUp} />
           </motion.div>
 

@@ -205,13 +205,13 @@ const Services = () => {
               className="mb-6 md:mb-8"
               variants={fadeInUp}
             >
-              Our Expert Technology Services
+            Our Expert Technology Services
             </motion.h1>
             <motion.p 
               className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10"
               variants={fadeInUp}
             >
-              Solutions designed to grow your business faster and smarter. From infrastructure to software — we deliver with precision and reliability.
+              Our services are built around a deep understanding of our clients' unique needs — delivering precision-engineered solutions with reliability and transparency at every step.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4"
@@ -321,7 +321,7 @@ const Services = () => {
               className="text-lg text-white/70 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
-              Join leading organisations across East Africa who trust us with their IT infrastructure. Our certified technicians provide 24/7 enterprise support.
+              We operate with full transparency in pricing, project timelines, and technical recommendations. Powered by innovation, our certified team delivers 24/7 enterprise support you can depend on.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
