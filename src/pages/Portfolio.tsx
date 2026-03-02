@@ -25,7 +25,7 @@ import Testimonials from "@/components/Testimonials";
 
 import portfolioNetworkImg from "@/assets/portfolio-network-infrastructure.jpg";
 import portfolioEducationImg from "@/assets/portfolio-education-tech.jpg";
-import portfolioWebImg from "@/assets/portfolio-web-system.jpg";
+import portfolioTechSupportImg from "@/assets/portfolio-technical-support.jpg";
 import portfolioCloudImg from "@/assets/portfolio-cloud-migration.jpg";
 import portfolioWifiImg from "@/assets/portfolio-wifi-network.jpg";
 import portfolioHardwareImg from "@/assets/portfolio-hardware-upgrade.jpg";
@@ -73,12 +73,12 @@ const Portfolio = () => {
       icon: Computer,
     },
     {
-      title: "Custom Web System",
-      description: "Built a bespoke CRM and management platform enabling real-time data access, workflow automation, and reporting for a growing enterprise.",
-      image: portfolioWebImg,
-      technologies: ["React", "Node.js", "PostgreSQL", "REST API"],
-      results: ["60% Time Saved", "Automated Workflows", "Real-time Dashboards"],
-      icon: Globe,
+      title: "Technical Support",
+      description: "We provide reliable on-site and remote technical support to ensure your IT systems run smoothly. Our team diagnoses, repairs, and maintains computers, servers, networks, printers, and security systems to minimize downtime and improve productivity.",
+      image: portfolioTechSupportImg,
+      technologies: ["Hardware Repair", "Software Config", "Network Support", "Remote Assistance"],
+      results: ["Fast Response", "Minimal Downtime", "Reliable IT Support"],
+      icon: Headphones,
     },
     {
       title: "Cloud Migration Project",
