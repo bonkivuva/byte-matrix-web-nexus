@@ -107,8 +107,8 @@ const About = () => {
             className="w-full h-full object-cover"
             loading="eager"
           />
-          {/* Dark overlay using design-system background token at opacity */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background/97 via-background/82 to-background/40" />
+          {/* Soft overlay for text readability in both modes */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
         </div>
 
         <div className="container-professional relative z-10">
@@ -127,17 +127,24 @@ const About = () => {
               </motion.p>
 
               <motion.h1
-                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.05] text-foreground"
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.1] text-foreground"
                 variants={fadeInUp}
               >
-                Engineering Secure & Scalable ICT Infrastructure for Modern Enterprises.
+                Reliable IT Solutions That Help Your Business Grow
               </motion.h1>
 
               <motion.p
-                className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+                className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-[1.8]"
                 variants={fadeInUp}
               >
-                BYTE MATRIX TECHNOLOGIES is a professional ICT solutions provider specialising in enterprise infrastructure, cybersecurity, cloud systems, surveillance, and automation. We design, deploy, and support technology environments that are secure, resilient, and built for growth.
+                BYTE MATRIX TECHNOLOGIES provides practical and secure ICT solutions for businesses. We supply, install, and maintain IT systems including networks, security systems, cloud services, and office automation.
+              </motion.p>
+
+              <motion.p
+                className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-[1.8]"
+                variants={fadeInUp}
+              >
+                Our goal is simple — to help your organization run smoothly, stay secure, and grow with confidence.
               </motion.p>
 
               <motion.div
@@ -152,7 +159,7 @@ const About = () => {
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <Link to="/services">
-                    View Our Capabilities
+                    View Our Services
                   </Link>
                 </Button>
               </motion.div>
