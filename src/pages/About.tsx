@@ -3,8 +3,9 @@ import {
   ArrowRight, Shield, Users, CheckCircle, Phone,
   Cloud, Server, Camera, Cpu,
   Building2, GraduationCap, Landmark, ShoppingBag, Factory, Heart,
-  Lightbulb, Eye, Target, Layers
+  Lightbulb, Eye, Target, Layers, Award
 } from "lucide-react";
+import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
@@ -393,7 +394,65 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════
-          SECTION 6 — CTA
+          SECTION 6 — TESTIMONIALS
+          ═══════════════════════════════════════════ */}
+      <Testimonials />
+
+      {/* ═══════════════════════════════════════════
+          SECTION 7 — CERTIFICATIONS & PARTNERSHIPS
+          ═══════════════════════════════════════════ */}
+      <section className="section-spacing bg-gradient-professional-subtle">
+        <div className="container-professional">
+          <motion.div
+            className="text-center mb-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.p
+              className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-4"
+              variants={fadeInUp}
+            >
+              Trusted Partnerships
+            </motion.p>
+            <motion.h2
+              className="text-2xl sm:text-3xl font-bold tracking-tight mb-4"
+              variants={fadeInUp}
+            >
+              Technology Partners & Certifications
+            </motion.h2>
+            <motion.p
+              className="text-muted-foreground max-w-xl mx-auto"
+              variants={fadeInUp}
+            >
+              We work with industry-leading vendors to deliver enterprise-grade solutions.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            className="flex flex-wrap items-center justify-center gap-8 md:gap-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            {["Microsoft", "Cisco", "HP Enterprise", "Dell Technologies", "Ubiquiti", "Hikvision"].map((partner, idx) => (
+              <motion.div
+                key={idx}
+                className="flex items-center gap-2 px-5 py-3 rounded-xl border border-border bg-card hover:border-primary/25 transition-all duration-300"
+                variants={fadeInUp}
+              >
+                <Award className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-sm font-semibold text-foreground whitespace-nowrap">{partner}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          SECTION 8 — CTA
           ═══════════════════════════════════════════ */}
       <section className="relative py-20 md:py-28 lg:py-32 overflow-hidden bg-foreground">
         <div className="container-professional relative z-10">
