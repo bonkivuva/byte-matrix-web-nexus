@@ -163,13 +163,17 @@ const Contact = () => {
 
             {/* Right — Form */}
             <motion.div 
-              className="lg:col-span-3"
+              className="lg:col-span-3 space-y-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <LeadCaptureForm />
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <Zap className="w-4 h-4 text-primary" />
+                <span>We respond within <strong className="text-foreground">2 hours</strong> during business hours.</span>
+              </div>
             </motion.div>
           </div>
         </div>
