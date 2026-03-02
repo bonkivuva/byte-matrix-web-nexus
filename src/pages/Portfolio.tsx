@@ -23,6 +23,13 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import Testimonials from "@/components/Testimonials";
 
+import portfolioNetworkImg from "@/assets/portfolio-network-infrastructure.jpg";
+import portfolioEducationImg from "@/assets/portfolio-education-tech.jpg";
+import portfolioWebImg from "@/assets/portfolio-web-system.jpg";
+import portfolioCloudImg from "@/assets/portfolio-cloud-migration.jpg";
+import portfolioWifiImg from "@/assets/portfolio-wifi-network.jpg";
+import portfolioHardwareImg from "@/assets/portfolio-hardware-upgrade.jpg";
+
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { 
@@ -52,7 +59,7 @@ const Portfolio = () => {
     {
       title: "Enterprise Network Infrastructure",
       description: "Complete network overhaul for a 200+ employee organisation, including server installation, security implementation, and cloud migration.",
-      image: "/lovable-uploads/8a8cda77-4bf8-4392-97fc-d1cb7057e068.png",
+      image: portfolioNetworkImg,
       technologies: ["Cisco Networking", "Windows Server", "Cloud Migration", "Cybersecurity"],
       results: ["99.9% Uptime", "50% Faster Operations", "Zero Security Incidents"],
       icon: Server,
@@ -60,7 +67,7 @@ const Portfolio = () => {
     {
       title: "Educational Technology Suite",
       description: "Comprehensive IT solutions for educational institutions including computer labs, interactive displays, and learning management systems.",
-      image: "/lovable-uploads/f858d253-338e-48f5-bfea-74af9143bbcd.png",
+      image: portfolioEducationImg,
       technologies: ["Computer Labs", "Interactive Displays", "Network Setup", "Educational Software"],
       results: ["300+ Students Served", "Enhanced Learning", "Teacher Satisfaction"],
       icon: Computer,
@@ -68,7 +75,7 @@ const Portfolio = () => {
     {
       title: "Custom Web System",
       description: "Built a bespoke CRM and management platform enabling real-time data access, workflow automation, and reporting for a growing enterprise.",
-      image: "/lovable-uploads/6118b34b-4d85-4de5-b29f-798c1f7e9cec.png",
+      image: portfolioWebImg,
       technologies: ["React", "Node.js", "PostgreSQL", "REST API"],
       results: ["60% Time Saved", "Automated Workflows", "Real-time Dashboards"],
       icon: Globe,
@@ -76,7 +83,7 @@ const Portfolio = () => {
     {
       title: "Cloud Migration Project",
       description: "Transitioned a mid-size company's on-premise infrastructure to the cloud with zero downtime and comprehensive data protection.",
-      image: "/lovable-uploads/d29f94dc-9102-4701-adec-42bc48de5bfb.png",
+      image: portfolioCloudImg,
       technologies: ["AWS", "Azure", "Data Migration", "Backup & Recovery"],
       results: ["Zero Downtime", "40% Cost Reduction", "Scalable Architecture"],
       icon: Cloud,
@@ -84,7 +91,7 @@ const Portfolio = () => {
     {
       title: "Office Wi-Fi & Network Setup",
       description: "Installed and optimised secure office Wi-Fi and structured cabling for a multi-floor corporate headquarters.",
-      image: "/lovable-uploads/babb4625-0209-4f12-95b2-209a31633356.png",
+      image: portfolioWifiImg,
       technologies: ["Enterprise Wi-Fi", "Structured Cabling", "Firewall", "VPN"],
       results: ["Full Coverage", "99.9% Reliability", "Secure Access"],
       icon: Wifi,
@@ -92,7 +99,7 @@ const Portfolio = () => {
     {
       title: "Hardware Upgrade Project",
       description: "Upgraded desktops, servers, and peripherals across multiple branch offices for improved reliability and performance.",
-      image: "/lovable-uploads/e5991571-5cba-4577-9fde-337db462a94c.png",
+      image: portfolioHardwareImg,
       technologies: ["Dell Servers", "HP Workstations", "UPS Systems", "Deployment"],
       results: ["3x Faster Systems", "5-Year Lifecycle", "Unified Management"],
       icon: Monitor,
@@ -257,7 +264,7 @@ const Portfolio = () => {
 
       {/* CTA */}
       <section className="relative py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,22%,8%)] via-[hsl(217,91%,15%)] to-[hsl(220,22%,8%)]" />
+        <div className="absolute inset-0 bg-primary" />
         <div className="container-professional relative z-10 text-center">
           <motion.div 
             className="max-w-3xl mx-auto space-y-8"
@@ -267,13 +274,13 @@ const Portfolio = () => {
             variants={staggerContainer}
           >
             <motion.h2 
-              className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white tracking-tight leading-tight"
+              className="text-3xl lg:text-4xl xl:text-5xl font-bold text-primary-foreground tracking-tight leading-tight"
               variants={fadeInUp}
             >
               Let's Write Your Success Story
             </motion.h2>
             <motion.p 
-              className="text-lg text-white/70 max-w-2xl mx-auto"
+              className="text-lg text-primary-foreground/80 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
               Hundreds of businesses trust us with their technology. Ready to see what we can do for yours?
@@ -284,7 +291,7 @@ const Portfolio = () => {
             >
               <Button 
                 size="lg" 
-                className="bg-white text-foreground hover:bg-white/90 font-semibold shadow-xl"
+                className="bg-background text-foreground hover:bg-background/90 font-semibold shadow-xl"
                 asChild
               >
                 <Link to="/contact">
@@ -295,7 +302,7 @@ const Portfolio = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 hover:text-white hover:border-white/50"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground hover:border-primary-foreground/50"
                 asChild
               >
                 <a href="tel:+254724367794">
