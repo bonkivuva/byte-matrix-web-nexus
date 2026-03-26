@@ -336,8 +336,8 @@
   /* Dark mode text visibility enhancements */
   .dark .text-gradient-professional {
     background: linear-gradient(135deg, 
-      hsl(217 91% 75%), 
-      hsl(217 91% 85%)
+      hsl(38 85% 62%), 
+      hsl(40 90% 72%)
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -346,8 +346,8 @@
 
   .dark .text-gradient-cyber {
     background: linear-gradient(135deg, 
-      hsl(217 91% 75%), 
-      hsl(217 91% 85%)
+      hsl(38 85% 62%), 
+      hsl(40 90% 72%)
     );
     -webkit-background-clip: text;
     background-clip: text;
