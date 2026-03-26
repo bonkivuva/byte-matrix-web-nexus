@@ -13,6 +13,7 @@ import SEOHead from "@/components/SEOHead";
 import FloatingActions from "@/components/FloatingActions";
 import { motion, type Variants } from "framer-motion";
 import heroEnterprise from "@/assets/hero-enterprise.jpg";
+import nairobiSkyline from "@/assets/nairobi-skyline-divider.jpg";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -448,6 +449,24 @@ const About = () => {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          NAIROBI SKYLINE DIVIDER
+          ═══════════════════════════════════════════ */}
+      <section className="relative h-48 md:h-64 overflow-hidden">
+        <img
+          src={nairobiSkyline}
+          alt="Nairobi city skyline — Kenya's technology hub"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,55%,28%,0.85)] via-[hsl(215,55%,28%,0.6)] to-[hsl(38,85%,52%,0.4)]" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <p className="text-sm md:text-base font-semibold uppercase tracking-[0.25em] text-white/90 drop-shadow-lg">
+            Proudly Serving East Africa from Nairobi
+          </p>
         </div>
       </section>
 

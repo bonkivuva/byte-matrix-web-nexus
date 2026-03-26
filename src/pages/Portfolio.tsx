@@ -29,6 +29,7 @@ import portfolioTechSupportImg from "@/assets/portfolio-technical-support.jpg";
 import portfolioCloudImg from "@/assets/portfolio-cloud-migration.jpg";
 import portfolioWifiImg from "@/assets/portfolio-wifi-network.jpg";
 import portfolioHardwareImg from "@/assets/portfolio-hardware-upgrade.jpg";
+import nairobiSkyline from "@/assets/nairobi-skyline-divider.jpg";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -261,6 +262,22 @@ const Portfolio = () => {
 
       {/* Testimonials */}
       <Testimonials />
+
+      {/* Nairobi Skyline Divider */}
+      <section className="relative h-48 md:h-64 overflow-hidden">
+        <img
+          src={nairobiSkyline}
+          alt="Nairobi city skyline — Kenya's technology hub"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,55%,28%,0.85)] via-[hsl(215,55%,28%,0.6)] to-[hsl(38,85%,52%,0.4)]" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <p className="text-sm md:text-base font-semibold uppercase tracking-[0.25em] text-white/90 drop-shadow-lg">
+            Delivering Technology Excellence Across Kenya
+          </p>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="relative py-20 md:py-28 overflow-hidden">
