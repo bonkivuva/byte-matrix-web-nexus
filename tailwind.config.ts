@@ -80,7 +80,12 @@ export default {
 					'blue-dark': 'hsl(var(--brand-blue-dark))',
 					gray: 'hsl(var(--brand-gray))',
 					'gray-light': 'hsl(var(--brand-gray-light))',
-					accent: 'hsl(var(--brand-accent))',
+				accent: 'hsl(var(--brand-accent))',
+				},
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					light: 'hsl(var(--gold-light))',
+					dark: 'hsl(var(--gold-dark))',
 				},
 				neural: {
 					50: 'hsl(var(--neural-50))',
