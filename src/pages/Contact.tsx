@@ -179,6 +179,41 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Google Maps Embed */}
+      <section className="section-spacing-sm bg-gradient-professional-subtle">
+        <div className="container-professional">
+          <motion.div
+            className="text-center mb-8"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">Find Us in Nairobi</h2>
+            <p className="text-muted-foreground">Visit our office in Kenya's capital city</p>
+          </motion.div>
+          <motion.div
+            className="rounded-2xl overflow-hidden border border-border shadow-corporate-lg"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.35853731544!2d36.68218105!3d-1.3028617849999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Byte Matrix Technologies — Nairobi, Kenya"
+              className="w-full"
+            />
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section-spacing">
         <div className="container-professional">

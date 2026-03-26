@@ -6,7 +6,6 @@ import {
   Sun, 
   Menu, 
   X,
-  Zap,
   ChevronRight,
   Phone 
 } from 'lucide-react';
@@ -25,7 +24,17 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
   });
   
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  // Scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Dark mode effect
   useEffect(() => {
@@ -59,7 +68,11 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50 transition-all duration-300">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-background/95 backdrop-blur-xl border-b border-border shadow-corporate' 
+        : 'bg-background/60 backdrop-blur-md border-b border-transparent'
+    }`}>
       <div className="container-professional">
         <div className="flex h-16 lg:h-[68px] items-center justify-between">
           {/* Logo */}
