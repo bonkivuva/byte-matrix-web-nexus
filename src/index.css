@@ -71,55 +71,55 @@
   }
 
   .dark {
-    --background: 222 22% 7%;
+    --background: 215 30% 7%;
     --foreground: 210 40% 98%;
-    --card: 222 20% 10%;
+    --card: 215 25% 10%;
     --card-foreground: 210 40% 98%;
-    --popover: 222 20% 10%;
+    --popover: 215 25% 10%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217 91% 65%;
-    --primary-foreground: 222 22% 7%;
-    --secondary: 222 16% 18%;
+    --primary: 38 85% 58%;
+    --primary-foreground: 215 55% 10%;
+    --secondary: 215 20% 18%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 222 16% 18%;
-    --muted-foreground: 215 20% 70%;
-    --accent: 217 91% 70%;
-    --accent-foreground: 222 22% 7%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 210 20% 70%;
+    --accent: 38 85% 62%;
+    --accent-foreground: 215 55% 10%;
     --destructive: 0 70% 60%;
     --destructive-foreground: 210 40% 98%;
-    --border: 222 16% 25%;
-    --input: 222 16% 25%;
-    --ring: 217 91% 65%;
-    --sidebar-background: 222 20% 10%;
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 38 85% 58%;
+    --sidebar-background: 215 25% 10%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217 91% 65%;
-    --sidebar-primary-foreground: 222 22% 7%;
-    --sidebar-accent: 222 16% 18%;
+    --sidebar-primary: 38 85% 58%;
+    --sidebar-primary-foreground: 215 55% 10%;
+    --sidebar-accent: 215 20% 18%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222 16% 25%;
-    --sidebar-ring: 217 91% 65%;
+    --sidebar-border: 215 20% 25%;
+    --sidebar-ring: 38 85% 58%;
     
-    /* Dark mode brand adjustments - brighter for visibility */
-    --brand-blue: 217 91% 70%;
-    --brand-blue-light: 217 91% 80%;
-    --brand-blue-dark: 217 91% 60%;
+    /* Dark mode brand — gold primary for visibility */
+    --brand-blue: 38 85% 62%;
+    --brand-blue-light: 40 90% 72%;
+    --brand-blue-dark: 36 80% 52%;
     --brand-gray: 210 40% 98%;
-    --brand-gray-light: 222 16% 28%;
-    --brand-accent: 217 91% 70%;
+    --brand-gray-light: 215 20% 28%;
+    --brand-accent: 38 85% 62%;
     
-    /* Dark mode gradient adjustments */
-    --brand-gradient-start: 217 91% 65%;
-    --brand-gradient-mid: 217 91% 70%;
-    --brand-gradient-end: 220 70% 75%;
+    /* Dark mode gradient — gold warm */
+    --brand-gradient-start: 38 85% 58%;
+    --brand-gradient-mid: 38 80% 52%;
+    --brand-gradient-end: 215 45% 45%;
     
-    /* Dark mode neural colors - lighter for visibility */
-    --neural-50: 222 22% 12%;
-    --neural-100: 222 20% 15%;
-    --neural-200: 222 18% 20%;
-    --neural-300: 222 16% 32%;
-    --neural-400: 222 14% 50%;
-    --neural-500: 222 12% 65%;
-    --neural-600: 215 16% 78%;
+    /* Dark mode neural colors */
+    --neural-50: 215 25% 12%;
+    --neural-100: 215 22% 15%;
+    --neural-200: 215 20% 20%;
+    --neural-300: 215 18% 32%;
+    --neural-400: 215 16% 50%;
+    --neural-500: 215 14% 65%;
+    --neural-600: 210 16% 78%;
     --neural-700: 210 18% 88%;
     --neural-800: 210 20% 94%;
     --neural-900: 210 40% 98%;
@@ -127,6 +127,11 @@
     /* Dark mode success color */
     --success: 160 84% 45%;
     --success-light: 160 70% 55%;
+    
+    /* Gold accent (dark mode) */
+    --gold: 38 85% 62%;
+    --gold-light: 40 90% 72%;
+    --gold-dark: 36 80% 52%;
   }
 }
 
