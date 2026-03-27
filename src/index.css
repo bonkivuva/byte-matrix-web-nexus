@@ -6,68 +6,68 @@
 /* Corporate Design System - Professional & Sleek */
 @layer base {
   :root {
-    --background: 210 20% 99%;
-    --foreground: 215 40% 12%;
+    --background: 216 33% 97%;
+    --foreground: 0 0% 18%;
     --card: 0 0% 100%;
-    --card-foreground: 215 40% 12%;
+    --card-foreground: 0 0% 18%;
     --popover: 0 0% 100%;
-    --popover-foreground: 215 40% 12%;
-    --primary: 215 55% 28%;
-    --primary-foreground: 45 100% 96%;
-    --secondary: 210 14% 96%;
-    --secondary-foreground: 215 40% 12%;
+    --popover-foreground: 0 0% 18%;
+    --primary: 200 75% 41%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 201 68% 95%;
+    --secondary-foreground: 0 0% 18%;
     --muted: 210 14% 96%;
-    --muted-foreground: 215 12% 46%;
-    --accent: 38 85% 52%;
-    --accent-foreground: 215 55% 12%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 197 73% 52%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 210 13% 91%;
-    --input: 210 13% 91%;
-    --ring: 215 55% 28%;
+    --border: 201 68% 95%;
+    --input: 201 68% 95%;
+    --ring: 200 75% 41%;
     --radius: 0.625rem;
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 215 40% 12%;
-    --sidebar-primary: 215 55% 28%;
-    --sidebar-primary-foreground: 45 100% 96%;
-    --sidebar-accent: 210 14% 96%;
-    --sidebar-accent-foreground: 215 40% 12%;
-    --sidebar-border: 210 13% 91%;
-    --sidebar-ring: 215 55% 28%;
+    --sidebar-foreground: 0 0% 18%;
+    --sidebar-primary: 200 75% 41%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 201 68% 95%;
+    --sidebar-accent-foreground: 0 0% 18%;
+    --sidebar-border: 201 68% 95%;
+    --sidebar-ring: 200 75% 41%;
     
-    /* Kenya-Inspired Brand Colors — Deep Navy + Gold/Amber */
-    --brand-blue: 215 55% 28%;
-    --brand-blue-light: 215 50% 42%;
-    --brand-blue-dark: 215 60% 20%;
-    --brand-gray: 215 40% 12%;
-    --brand-gray-light: 210 14% 90%;
-    --brand-accent: 38 85% 52%;
+    /* Logo-Matched Brand Colors */
+    --brand-blue: 200 75% 41%;
+    --brand-blue-light: 197 73% 52%;
+    --brand-blue-dark: 200 80% 32%;
+    --brand-gray: 0 0% 18%;
+    --brand-gray-light: 201 68% 95%;
+    --brand-accent: 197 73% 52%;
     
-    /* Brand gradient — navy to gold */
-    --brand-gradient-start: 215 55% 28%;
-    --brand-gradient-mid: 215 50% 38%;
-    --brand-gradient-end: 38 70% 45%;
+    /* Brand gradient */
+    --brand-gradient-start: 200 75% 41%;
+    --brand-gradient-mid: 198 74% 46%;
+    --brand-gradient-end: 197 73% 52%;
     
     /* Professional neutrals */
-    --neural-50: 210 20% 98%;
+    --neural-50: 216 33% 98%;
     --neural-100: 210 16% 96%;
     --neural-200: 210 14% 92%;
     --neural-300: 210 12% 85%;
     --neural-400: 210 10% 65%;
     --neural-500: 210 9% 50%;
     --neural-600: 210 10% 38%;
-    --neural-700: 215 14% 25%;
-    --neural-800: 215 18% 14%;
-    --neural-900: 215 22% 8%;
+    --neural-700: 0 0% 23%;
+    --neural-800: 0 0% 18%;
+    --neural-900: 0 0% 10%;
     
     /* Success/Trust color */
     --success: 160 84% 39%;
     --success-light: 160 70% 45%;
     
-    /* Gold accent */
-    --gold: 38 85% 52%;
-    --gold-light: 40 90% 62%;
-    --gold-dark: 36 80% 42%;
+    /* Gold accent (kept for compatibility) */
+    --gold: 197 73% 52%;
+    --gold-light: 197 73% 62%;
+    --gold-dark: 200 75% 41%;
   }
 
   .dark {
