@@ -12,7 +12,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import FloatingActions from "@/components/FloatingActions";
 import { motion, type Variants } from "framer-motion";
-import heroEnterprise from "@/assets/hero-enterprise.jpg";
 import nairobiSkyline from "@/assets/nairobi-skyline-divider.jpg";
 
 const fadeInUp: Variants = {
@@ -103,12 +102,16 @@ const About = () => {
           ═══════════════════════════════════════════ */}
       <section className="relative min-h-[92vh] flex items-center pt-16 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={heroEnterprise}
-            alt="Enterprise server infrastructure"
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
             className="w-full h-full object-cover"
-            loading="eager"
-          />
+            poster=""
+          >
+            <source src="https://videos.pexels.com/video-files/3255275/3255275-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          </video>
           {/* Soft overlay for text readability in both modes */}
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
         </div>
