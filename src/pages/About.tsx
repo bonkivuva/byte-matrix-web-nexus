@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+const ABOUT_VIDEO_URL = "/__l5e/assets-v1/0e0a28b2-40a0-4321-a245-e647d79f0db7/about-office.mp4";
 import {
   ArrowRight, Shield, Users, CheckCircle, Phone,
   Cloud, Server, Camera, Cpu,
@@ -110,7 +111,7 @@ const About = () => {
             className="w-full h-full object-cover"
             poster=""
           >
-            <source src="https://videos.pexels.com/video-files/3194524/3194524-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+            <source src={ABOUT_VIDEO_URL} type="video/mp4" />
           </video>
           {/* Soft overlay for text readability in both modes */}
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
@@ -226,7 +227,7 @@ const About = () => {
               {/* Right — video */}
               <motion.div variants={fadeInUp} className="flex justify-center">
                 <video
-                  src="https://videos.pexels.com/video-files/3194524/3194524-uhd_2560_1440_25fps.mp4"
+                  src={ABOUT_VIDEO_URL}
                   autoPlay
                   muted
                   loop
