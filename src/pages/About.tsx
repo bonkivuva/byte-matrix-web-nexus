@@ -227,7 +227,7 @@ const About = () => {
               {/* Right — video */}
               <motion.div variants={fadeInUp} className="flex justify-center">
                 <video
-                  src={aboutVideoAsset.url}
+                  src={ABOUT_VIDEO_URL}
                   autoPlay
                   muted
                   loop
