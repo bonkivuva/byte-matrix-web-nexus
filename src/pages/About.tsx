@@ -103,16 +103,11 @@ const About = () => {
           ═══════════════════════════════════════════ */}
       <section className="relative min-h-[92vh] flex items-center pt-16 overflow-hidden">
         <div className="absolute inset-0">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <img
+            src={futuristicDataCentre}
+            alt="Futuristic data centre with glowing server racks"
             className="w-full h-full object-cover"
-            poster=""
-          >
-            <source src={ABOUT_VIDEO_URL} type="video/mp4" />
-          </video>
+          />
           {/* Soft overlay for text readability in both modes */}
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
         </div>
