@@ -219,15 +219,15 @@ const About = () => {
                 </div>
               </motion.div>
 
-              {/* Right — video */}
+              {/* Right — image */}
               <motion.div variants={fadeInUp} className="flex justify-center">
-                <video
-                  src={ABOUT_VIDEO_URL}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full max-w-[640px] min-h-[300px] object-cover rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.18)]"
+                <img
+                  src={futuristicDataCentre}
+                  alt="Futuristic data centre with glowing server racks"
+                  loading="lazy"
+                  width={1280}
+                  height={720}
+                  className="w-full max-w-[640px] min-h-[300px] object-cover rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.18)] ring-1 ring-border"
                 />
               </motion.div>
             </motion.div>
