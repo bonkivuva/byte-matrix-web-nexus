@@ -197,35 +197,42 @@ const About = () => {
           ═══════════════════════════════════════════ */}
       <section className="section-spacing-lg">
         <div className="container-professional">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <motion.div
-              className="grid md:grid-cols-[1fr_2px_1fr] gap-10 md:gap-14 items-start"
+              className="grid md:grid-cols-2 gap-10 md:gap-14 items-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
             >
-              {/* Left — heading */}
+              {/* Left — text */}
               <motion.div variants={fadeInUp}>
                 <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-4">
                   Who We Are
                 </p>
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight mb-6">
                   An ICT Engineering Company Built for Enterprise
                 </h2>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    We are an ICT engineering company focused on delivering structured, standards-driven technology solutions for institutions and enterprises across Kenya.
+                  </p>
+                  <p>
+                    Our approach combines technical precision, strategic planning, and long-term system reliability — ensuring every deployment meets the operational demands of modern business environments.
+                  </p>
+                </div>
               </motion.div>
 
-              {/* Divider */}
-              <div className="hidden md:block w-px bg-border self-stretch" />
-
-              {/* Right — body */}
-              <motion.div className="space-y-4 text-muted-foreground leading-relaxed" variants={fadeInUp}>
-                <p>
-                  We are an ICT engineering company focused on delivering structured, standards-driven technology solutions for institutions and enterprises across Kenya.
-                </p>
-                <p>
-                  Our approach combines technical precision, strategic planning, and long-term system reliability — ensuring every deployment meets the operational demands of modern business environments.
-                </p>
+              {/* Right — video */}
+              <motion.div variants={fadeInUp} className="flex justify-center">
+                <video
+                  src="https://videos.pexels.com/video-files/3194524/3194524-uhd_2560_1440_25fps.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full max-w-[640px] min-h-[300px] object-cover rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.18)]"
+                />
               </motion.div>
             </motion.div>
           </div>
