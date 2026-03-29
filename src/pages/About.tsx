@@ -111,7 +111,7 @@ const About = () => {
             className="w-full h-full object-cover"
             poster=""
           >
-            <source src={aboutVideoAsset.url} type="video/mp4" />
+            <source src={ABOUT_VIDEO_URL} type="video/mp4" />
           </video>
           {/* Soft overlay for text readability in both modes */}
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
