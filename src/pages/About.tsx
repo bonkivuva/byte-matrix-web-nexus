@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const ABOUT_VIDEO_URL = "/__l5e/assets-v1/0e0a28b2-40a0-4321-a245-e647d79f0db7/about-office.mp4";
+import futuristicDataCentre from "@/assets/futuristic-data-centre.jpg";
 import {
   ArrowRight, Shield, Users, CheckCircle, Phone,
   Cloud, Server, Camera, Cpu,
@@ -103,16 +103,11 @@ const About = () => {
           ═══════════════════════════════════════════ */}
       <section className="relative min-h-[92vh] flex items-center pt-16 overflow-hidden">
         <div className="absolute inset-0">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <img
+            src={futuristicDataCentre}
+            alt="Futuristic data centre with glowing server racks"
             className="w-full h-full object-cover"
-            poster=""
-          >
-            <source src={ABOUT_VIDEO_URL} type="video/mp4" />
-          </video>
+          />
           {/* Soft overlay for text readability in both modes */}
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
         </div>
@@ -224,15 +219,15 @@ const About = () => {
                 </div>
               </motion.div>
 
-              {/* Right — video */}
+              {/* Right — image */}
               <motion.div variants={fadeInUp} className="flex justify-center">
-                <video
-                  src={ABOUT_VIDEO_URL}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full max-w-[640px] min-h-[300px] object-cover rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.18)]"
+                <img
+                  src={futuristicDataCentre}
+                  alt="Futuristic data centre with glowing server racks"
+                  loading="lazy"
+                  width={1280}
+                  height={720}
+                  className="w-full max-w-[640px] min-h-[300px] object-cover rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.18)] ring-1 ring-border"
                 />
               </motion.div>
             </motion.div>
