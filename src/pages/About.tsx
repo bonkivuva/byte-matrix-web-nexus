@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import aboutVideoAsset from "/public/videos/about-office.mp4.asset.json";
 import {
   ArrowRight, Shield, Users, CheckCircle, Phone,
   Cloud, Server, Camera, Cpu,
