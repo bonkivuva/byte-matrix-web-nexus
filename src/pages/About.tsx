@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const ABOUT_VIDEO_URL = "/__l5e/assets-v1/0e0a28b2-40a0-4321-a245-e647d79f0db7/about-office.mp4";
+import futuristicDataCentre from "@/assets/futuristic-data-centre.jpg";
 import {
   ArrowRight, Shield, Users, CheckCircle, Phone,
   Cloud, Server, Camera, Cpu,
