@@ -40,7 +40,7 @@ const Career = () => {
         keywords="IT jobs Kenya, software developer jobs, technology careers, tech jobs Nairobi, career opportunities"
       />
       
-      <FuturisticHeader currentPage="careers" />
+      <FuturisticHeader  />
       
       {/* Hero */}
       <section className="relative pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
