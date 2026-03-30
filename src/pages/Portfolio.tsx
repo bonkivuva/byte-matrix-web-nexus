@@ -29,7 +29,7 @@ import portfolioTechSupportImg from "@/assets/portfolio-technical-support.jpg";
 import portfolioCloudImg from "@/assets/portfolio-cloud-migration.jpg";
 import portfolioWifiImg from "@/assets/portfolio-wifi-network.jpg";
 import portfolioHardwareImg from "@/assets/portfolio-hardware-upgrade.jpg";
-import nairobiSkyline from "@/assets/nairobi-skyline-divider.jpg";
+import futuristicCity from "@/assets/futuristic-tech-city.jpg";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -263,11 +263,11 @@ const Portfolio = () => {
       {/* Testimonials */}
       <Testimonials />
 
-      {/* Nairobi Skyline Divider */}
+      {/* Futuristic Tech City Divider */}
       <section className="relative h-48 md:h-64 overflow-hidden">
         <img
-          src={nairobiSkyline}
-          alt="Nairobi city skyline — Kenya's technology hub"
+          src={futuristicCity}
+          alt="Futuristic smart city — technology powering the future"
           className="w-full h-full object-cover"
           loading="lazy"
         />

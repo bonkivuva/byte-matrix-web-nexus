@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import FloatingActions from "@/components/FloatingActions";
 import { motion, type Variants } from "framer-motion";
-import nairobiSkyline from "@/assets/nairobi-skyline-divider.jpg";
+import futuristicCity from "@/assets/futuristic-tech-city.jpg";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -459,12 +459,12 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════
-          NAIROBI SKYLINE DIVIDER
+          FUTURISTIC TECH CITY DIVIDER
           ═══════════════════════════════════════════ */}
       <section className="relative h-48 md:h-64 overflow-hidden">
         <img
-          src={nairobiSkyline}
-          alt="Nairobi city skyline — Kenya's technology hub"
+          src={futuristicCity}
+          alt="Futuristic smart city — technology powering the future"
           className="w-full h-full object-cover"
           loading="lazy"
         />
