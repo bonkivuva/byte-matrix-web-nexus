@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import FloatingActions from "@/components/FloatingActions";
 import { motion, type Variants } from "framer-motion";
-import nairobiSkyline from "@/assets/nairobi-skyline-divider.jpg";
+import futuristicCity from "@/assets/futuristic-tech-city.jpg";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
