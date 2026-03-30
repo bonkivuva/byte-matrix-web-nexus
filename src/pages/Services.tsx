@@ -3,8 +3,7 @@ import { useState } from "react";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import WhatsAppButton from "@/components/WhatsAppButton";
-
+import FloatingActions from "@/components/FloatingActions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -180,7 +179,7 @@ const Services = () => {
         keywords="IT services Kenya, managed IT services, network solutions, custom software, cloud migration, cybersecurity, hardware sales, enterprise IT"
       />
       
-      <FuturisticHeader  />
+      <FuturisticHeader currentPage="services" />
       
       {/* Hero Section */}
       <section className="relative pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
@@ -430,7 +429,7 @@ const Services = () => {
       </Dialog>
 
       <Footer />
-      <WhatsAppButton />
+      <FloatingActions />
     </div>
   );
 };
