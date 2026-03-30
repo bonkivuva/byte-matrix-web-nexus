@@ -459,12 +459,12 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════
-          NAIROBI SKYLINE DIVIDER
+          FUTURISTIC TECH CITY DIVIDER
           ═══════════════════════════════════════════ */}
       <section className="relative h-48 md:h-64 overflow-hidden">
         <img
-          src={nairobiSkyline}
-          alt="Nairobi city skyline — Kenya's technology hub"
+          src={futuristicCity}
+          alt="Futuristic smart city — technology powering the future"
           className="w-full h-full object-cover"
           loading="lazy"
         />
