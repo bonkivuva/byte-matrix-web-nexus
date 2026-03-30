@@ -96,7 +96,7 @@ const About = () => {
         keywords="IT solutions Kenya, enterprise ICT, cybersecurity Kenya, cloud solutions, IT consulting, surveillance systems, Byte Matrix Technologies"
       />
 
-      <FuturisticHeader currentPage="about" />
+      <FuturisticHeader  />
 
       {/* ═══════════════════════════════════════════
           SECTION 1 — HERO

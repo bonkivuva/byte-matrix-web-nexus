@@ -54,7 +54,7 @@ const Contact = () => {
         keywords="contact IT services, IT consultation, technology support, professional IT help, enterprise solutions contact, IT company Kenya"
       />
       
-      <FuturisticHeader currentPage="contact" />
+      <FuturisticHeader  />
 
       {/* Hero */}
       <section className="relative pt-28 md:pt-32 pb-16 md:pb-20">

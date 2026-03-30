@@ -115,7 +115,7 @@ const Portfolio = () => {
         keywords="IT portfolio, client success stories, technology projects, digital transformation, enterprise solutions Kenya"
       />
       
-      <FuturisticHeader currentPage="portfolio" />
+      <FuturisticHeader  />
 
       {/* Hero Section */}
       <section className="relative pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
