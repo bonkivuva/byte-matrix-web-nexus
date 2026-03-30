@@ -29,7 +29,7 @@ import portfolioTechSupportImg from "@/assets/portfolio-technical-support.jpg";
 import portfolioCloudImg from "@/assets/portfolio-cloud-migration.jpg";
 import portfolioWifiImg from "@/assets/portfolio-wifi-network.jpg";
 import portfolioHardwareImg from "@/assets/portfolio-hardware-upgrade.jpg";
-import nairobiSkyline from "@/assets/nairobi-skyline-divider.jpg";
+import futuristicCity from "@/assets/futuristic-tech-city.jpg";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
