@@ -1042,10 +1042,7 @@
   @apply shadow-cyber-lg;
 }
 
-/* Professional spacing system - Enhanced */
-.section-spacing {
-  @apply py-16 md:py-20 lg:py-28;
-}
+/* duplicate removed */
 
 .container-professional {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
