@@ -74,46 +74,48 @@
   }
 
   .dark {
-    --background: 0 0% 10%;
-    --foreground: 0 0% 94%;
-    --card: 0 0% 18%;
-    --card-foreground: 0 0% 94%;
-    --popover: 0 0% 18%;
-    --popover-foreground: 0 0% 94%;
-    --primary: 197 73% 52%;
-    --primary-foreground: 0 0% 10%;
-    --secondary: 0 0% 18%;
-    --secondary-foreground: 0 0% 94%;
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 70%;
-    --accent: 197 73% 52%;
-    --accent-foreground: 0 0% 10%;
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 70% 60%;
-    --destructive-foreground: 0 0% 94%;
-    --border: 0 0% 23%;
-    --input: 0 0% 23%;
-    --ring: 197 73% 52%;
-    --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 0 0% 94%;
-    --sidebar-primary: 197 73% 52%;
-    --sidebar-primary-foreground: 0 0% 10%;
-    --sidebar-accent: 0 0% 18%;
-    --sidebar-accent-foreground: 0 0% 94%;
-    --sidebar-border: 0 0% 23%;
-    --sidebar-ring: 197 73% 52%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 217 91% 60%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 25%;
+    --sidebar-ring: 217 91% 60%;
     
-    /* Dark mode brand — gold primary for visibility */
-    --brand-blue: 38 85% 62%;
-    --brand-blue-light: 40 90% 72%;
-    --brand-blue-dark: 36 80% 52%;
+    /* Dark mode brand */
+    --brand-blue: 217 91% 60%;
+    --brand-blue-light: 217 91% 70%;
+    --brand-blue-dark: 222 47% 11%;
     --brand-gray: 210 40% 98%;
-    --brand-gray-light: 215 20% 28%;
-    --brand-accent: 38 85% 62%;
+    --brand-gray-light: 217 33% 25%;
+    --brand-accent: 217 91% 60%;
     
-    /* Dark mode gradient — gold warm */
-    --brand-gradient-start: 38 85% 58%;
-    --brand-gradient-mid: 38 80% 52%;
-    --brand-gradient-end: 215 45% 45%;
+    --navy: 222 47% 11%;
+    
+    /* Dark mode gradient */
+    --brand-gradient-start: 217 91% 55%;
+    --brand-gradient-mid: 217 91% 50%;
+    --brand-gradient-end: 217 91% 45%;
     
     /* Dark mode neural colors */
     --neural-50: 215 25% 12%;
