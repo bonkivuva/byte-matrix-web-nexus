@@ -17,7 +17,7 @@ const SEOHead = ({
   title = "Byte Matrix Technologies - Professional IT Solutions",
   description = "Professional IT services, hardware solutions, and 24/7 support for businesses. Transform your technology infrastructure with our expert consulting and implementation services.",
   keywords = "IT services, hardware solutions, technical support, enterprise technology, cloud solutions, cybersecurity, system integration, IT consulting",
-  image = "https://lovable.dev/opengraph-image-p98pqg.png",
+  image = "https://bytematrixtech.com/og-image.jpg",
   type = "website",
   author = "Byte Matrix Technologies",
   publishedTime,

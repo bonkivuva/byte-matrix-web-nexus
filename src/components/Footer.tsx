@@ -34,8 +34,8 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: XIcon, href: "https://x.com/ByteMatrixTech", label: "X", isCustom: true },
-    { icon: Facebook, href: "https://facebook.com/bytematrixtech", label: "Facebook", isCustom: false },
-    { icon: Instagram, href: "https://instagram.com/bytematrixtech", label: "Instagram", isCustom: false }
+    { icon: Facebook, href: "https://www.facebook.com/share/1BSjKFRCUd/", label: "Facebook", isCustom: false },
+    { icon: Instagram, href: "https://www.instagram.com/byte_matrix_technologies", label: "Instagram", isCustom: false }
   ];
 
   const containerVariants = {
