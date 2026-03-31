@@ -226,7 +226,7 @@ const Contact = () => {
       </section>
 
       <Footer />
-    </div>
+    </div></PageTransition>
   );
 };
 

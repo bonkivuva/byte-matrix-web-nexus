@@ -415,7 +415,7 @@ const Services = () => {
 
       <Footer />
       <FloatingActions />
-    </div>
+    </div></PageTransition>
   );
 };
 
