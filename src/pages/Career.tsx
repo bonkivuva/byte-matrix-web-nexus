@@ -198,7 +198,7 @@ const Career = () => {
       </section>
 
       <Footer />
-    </div>
+    </div></PageTransition>
   );
 };
 

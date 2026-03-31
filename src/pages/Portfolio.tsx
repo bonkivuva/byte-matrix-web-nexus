@@ -318,7 +318,7 @@ const Portfolio = () => {
       </section>
 
       <Footer />
-    </div>
+    </div></PageTransition>
   );
 };
 
