@@ -14,7 +14,9 @@ import {
   Phone,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
+import PageTransition from "@/components/PageTransition";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -30,23 +32,6 @@ import portfolioCloudImg from "@/assets/portfolio-cloud-migration.jpg";
 import portfolioWifiImg from "@/assets/portfolio-wifi-network.jpg";
 import portfolioHardwareImg from "@/assets/portfolio-hardware-upgrade.jpg";
 import futuristicCity from "@/assets/futuristic-tech-city.jpg";
-
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.5, ease: "easeOut" as const } 
-  }
-};
-
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.08, delayChildren: 0.1 }
-  }
-};
 
 const Portfolio = () => {
   const statsData = [
@@ -108,7 +93,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen text-foreground overflow-x-hidden">
+    <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
         title="Our Work & Solutions Delivered — Byte Matrix Technologies"
         description="Real projects that transformed business operations. Explore our portfolio of successful IT projects, network installations, cloud migrations, and custom software solutions."
@@ -333,7 +318,7 @@ const Portfolio = () => {
       </section>
 
       <Footer />
-    </div>
+    </div></PageTransition>
   );
 };
 

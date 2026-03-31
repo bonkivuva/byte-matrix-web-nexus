@@ -5,24 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Users, ArrowRight, Mail, Briefcase, Heart, Lightbulb, TrendingUp } from "lucide-react";
-import { motion, type Variants } from "framer-motion";
-
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.5, ease: "easeOut" as const } 
-  }
-};
-
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.08, delayChildren: 0.1 }
-  }
-};
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
+import PageTransition from "@/components/PageTransition";
 
 const Career = () => {
   const values = [
@@ -33,7 +18,7 @@ const Career = () => {
   ];
 
   return (
-    <div className="min-h-screen text-foreground overflow-x-hidden">
+    <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
         title="Join Our Growing Team — Byte Matrix Technologies"
         description="Explore career opportunities at Byte Matrix Technologies. Join our team of IT professionals and help shape the future of technology solutions in East Africa."
@@ -213,7 +198,7 @@ const Career = () => {
       </section>
 
       <Footer />
-    </div>
+    </div></PageTransition>
   );
 };
 

@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://bytematrixtech.com" />
     <meta property="og:title" content="Byte Matrix Technologies - Professional IT Solutions" />
     <meta property="og:description" content="Professional IT services, enterprise hardware solutions, and 24/7 technical support. Boost your business productivity with our comprehensive technology solutions." />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image" content="https://bytematrixtech.com/og-image.jpg" />
     <meta property="og:site_name" content="Byte Matrix Technologies" />
 
     <!-- Twitter -->
@@ -24,7 +24,7 @@
     <meta name="twitter:url" content="https://bytematrixtech.com" />
     <meta name="twitter:title" content="Byte Matrix Technologies - Professional IT Solutions" />
     <meta name="twitter:description" content="Professional IT services, enterprise hardware solutions, and 24/7 technical support." />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:image" content="https://bytematrixtech.com/og-image.jpg" />
     <meta name="twitter:site" content="@ByteMatrixTech" />
 
     <!-- Favicon -->
@@ -79,7 +79,7 @@
       "description": "Professional IT services and hardware solutions for businesses",
       "url": "https://bytematrixtech.com",
       "logo": "https://bytematrixtech.com/logo.png",
-      "image": "https://lovable.dev/opengraph-image-p98pqg.png",
+      "image": "https://bytematrixtech.com/og-image.jpg",
       "telephone": "+254724367794",
       "email": "bytematrixtechnologies@gmail.com",
       "contactPoint": {
@@ -131,33 +131,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Cookie Consent (GDPR Compliance) -->
-    <script>
-      // Simple cookie consent implementation
-      if (!localStorage.getItem('cookieConsent')) {
-        const banner = document.createElement('div');
-        banner.innerHTML = `
-          <div style="position: fixed; bottom: 0; left: 0; right: 0; background: #1e3a8a; color: white; padding: 16px; z-index: 9999; text-align: center;">
-            <p style="margin: 0 0 8px 0;">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-            <button onclick="acceptCookies()" style="background: white; color: #1e3a8a; border: none; padding: 8px 16px; border-radius: 4px; margin-right: 8px; cursor: pointer;">Accept</button>
-            <button onclick="declineCookies()" style="background: transparent; color: white; border: 1px solid white; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Decline</button>
-          </div>
-        `;
-        document.body.appendChild(banner);
-      }
+    
 
-      window.acceptCookies = function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        document.querySelector('[style*="position: fixed"]').remove();
-        gtag('consent', 'update', {
-          'analytics_storage': 'granted'
-        });
-      };
-
-      window.declineCookies = function() {
-        localStorage.setItem('cookieConsent', 'declined');
-        document.querySelector('[style*="position: fixed"]').remove();
-      };
-    </script>
   </body>
 </html>
