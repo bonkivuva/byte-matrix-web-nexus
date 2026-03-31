@@ -157,7 +157,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen text-foreground overflow-x-hidden">
+    <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
         title="Our Expert Technology Services — Byte Matrix Technologies"
         description="Solutions designed to grow your business faster and smarter. IT infrastructure, managed services, network solutions, custom software, cloud & security, and hardware sales."

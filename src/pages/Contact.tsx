@@ -32,7 +32,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen text-foreground overflow-x-hidden">
+    <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
         title="Get in Touch — Byte Matrix Technologies"
         description="Contact Byte Matrix Technologies for expert IT consultation and support. We're ready to help your business thrive with professional technology solutions."

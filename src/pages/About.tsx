@@ -519,7 +519,7 @@ const About = () => {
 
       <Footer />
       <FloatingActions />
-    </div>
+    </div></PageTransition>
   );
 };
 
