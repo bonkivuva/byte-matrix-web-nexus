@@ -93,7 +93,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen text-foreground overflow-x-hidden">
+    <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
         title="Our Work & Solutions Delivered — Byte Matrix Technologies"
         description="Real projects that transformed business operations. Explore our portfolio of successful IT projects, network installations, cloud migrations, and custom software solutions."
