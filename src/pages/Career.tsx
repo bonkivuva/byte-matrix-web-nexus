@@ -18,7 +18,7 @@ const Career = () => {
   ];
 
   return (
-    <div className="min-h-screen text-foreground overflow-x-hidden">
+    <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
         title="Join Our Growing Team — Byte Matrix Technologies"
         description="Explore career opportunities at Byte Matrix Technologies. Join our team of IT professionals and help shape the future of technology solutions in East Africa."
