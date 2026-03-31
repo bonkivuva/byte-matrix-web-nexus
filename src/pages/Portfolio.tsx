@@ -17,6 +17,20 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import PageTransition from "@/components/PageTransition";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import FuturisticHeader from "@/components/FuturisticHeader";
+import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import Testimonials from "@/components/Testimonials";
+
+import portfolioNetworkImg from "@/assets/portfolio-network-infrastructure.jpg";
+import portfolioEducationImg from "@/assets/portfolio-education-tech.jpg";
+import portfolioTechSupportImg from "@/assets/portfolio-technical-support.jpg";
+import portfolioCloudImg from "@/assets/portfolio-cloud-migration.jpg";
+import portfolioWifiImg from "@/assets/portfolio-wifi-network.jpg";
+import portfolioHardwareImg from "@/assets/portfolio-hardware-upgrade.jpg";
 import futuristicCity from "@/assets/futuristic-tech-city.jpg";
 
 const Portfolio = () => {
