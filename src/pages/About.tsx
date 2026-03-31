@@ -74,7 +74,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen text-foreground overflow-x-hidden">
+    <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead
         title="About Byte Matrix Technologies — ICT Infrastructure Specialists in Kenya"
         description="Byte Matrix Technologies is a professional ICT solutions provider specialising in enterprise infrastructure, cybersecurity, cloud systems, surveillance, and automation across Kenya."
