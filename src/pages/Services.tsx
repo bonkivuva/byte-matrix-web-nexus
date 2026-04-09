@@ -159,9 +159,9 @@ const Services = () => {
   return (
     <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
-        title="Our Expert Technology Services — Byte Matrix Technologies"
-        description="Solutions designed to grow your business faster and smarter. IT infrastructure, managed services, network solutions, custom software, cloud & security, and hardware sales."
-        keywords="IT services Kenya, managed IT services, network solutions, custom software, cloud migration, cybersecurity, hardware sales, enterprise IT"
+        title="Enterprise Technology Services — Byte Matrix Technologies"
+        description="Enterprise-grade IT infrastructure, managed services, network solutions, custom software, cloud & security, and hardware procurement — built to international standards."
+        keywords="enterprise IT services, managed IT services, network solutions, custom software, cloud migration, cybersecurity, hardware procurement, enterprise infrastructure"
       />
       
       <FuturisticHeader currentPage="services" />

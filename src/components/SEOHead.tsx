@@ -14,9 +14,9 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({ 
-  title = "Byte Matrix Technologies - Professional IT Solutions",
-  description = "Professional IT services, hardware solutions, and 24/7 support for businesses. Transform your technology infrastructure with our expert consulting and implementation services.",
-  keywords = "IT services, hardware solutions, technical support, enterprise technology, cloud solutions, cybersecurity, system integration, IT consulting",
+  title = "Byte Matrix Technologies | Enterprise IT Solutions & Managed Services",
+  description = "World-class managed IT services, enterprise hardware, and 24/7 technical support for organisations across East Africa and beyond. Built to international standards.",
+  keywords = "enterprise IT solutions, managed IT services, IT infrastructure, 24/7 technical support, enterprise hardware, compliance-ready IT, managed services",
   image = "https://bytematrixtech.com/og-image.jpg",
   type = "website",
   author = "Byte Matrix Technologies",

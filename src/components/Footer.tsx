@@ -93,12 +93,12 @@ const Footer = () => {
             </Link>
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-              <p className="text-sm text-primary font-medium italic bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                "Connecting Your Digital Matrix"
+            <p className="text-sm text-primary font-medium italic bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Enterprise IT Solutions, Built to Global Standards.
               </p>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Transforming businesses through innovative digital solutions and cutting-edge technology.
+              World-class managed IT services, enterprise hardware, and 24/7 technical support — headquartered in East Africa, serving clients globally.
             </p>
           </motion.div>
 
