@@ -201,26 +201,43 @@ const Contact = () => {
 
       {/* CTA */}
       <section className="section-spacing">
-        <div className="container-professional">
+        <div className="container-professional text-center">
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="space-y-4"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Button size="lg" asChild>
-              <a href="tel:+254724367794">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
+              Get a Free IT Audit — No Commitment
+            </h2>
+            <p className="text-muted-foreground">
+              Or reach us directly on WhatsApp:{" "}
+              <a
+                href="https://wa.me/254724367794"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold hover:underline"
+                style={{ color: '#00BFA5' }}
+              >
+                +254 724 367 794
               </a>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href="mailto:info@bytematrixtechnologies.co.ke">
-                <Send className="mr-2 h-5 w-5" />
-                Send Email
-              </a>
-            </Button>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button size="lg" asChild>
+                <Link to="/contact">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Now
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="mailto:info@bytematrixtechnologies.co.ke">
+                  <Send className="mr-2 h-5 w-5" />
+                  Send Email
+                </a>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
