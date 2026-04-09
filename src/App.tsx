@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import ErrorBoundary from "./components/ErrorBoundary";
 import CookieConsent from "./components/CookieConsent";
+import WhatsAppButton from "./components/WhatsAppButton";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
@@ -54,6 +55,7 @@ const App = () => (
         <BrowserRouter>
           <AnimatedRoutes />
           <CookieConsent />
+          <WhatsAppButton />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
