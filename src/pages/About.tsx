@@ -86,15 +86,13 @@ const About = () => {
       {/* ═══════════════════════════════════════════
           SECTION 1 — HERO
           ═══════════════════════════════════════════ */}
-      <section className="relative min-h-[92vh] flex items-center pt-16 overflow-hidden">
+      <section className="relative min-h-[92vh] flex items-center pt-16 overflow-hidden" style={{ backgroundColor: '#0F1F2E' }}>
         <div className="absolute inset-0">
           <img
             src={futuristicDataCentre}
             alt="Futuristic data centre with glowing server racks"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-20"
           />
-          {/* Soft overlay for text readability in both modes */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
         </div>
 
         <div className="container-professional relative z-10">
@@ -106,70 +104,180 @@ const About = () => {
               variants={staggerContainer}
             >
               <motion.p
-                className="text-sm font-semibold uppercase tracking-[0.2em] text-primary"
+                className="text-sm font-semibold uppercase tracking-[0.2em]"
+                style={{ color: '#00BFA5' }}
                 variants={fadeInUp}
               >
                 Connecting Your Digital Matrix
               </motion.p>
 
               <motion.h1
-                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.1] text-foreground"
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.1]"
+                style={{ color: '#FFFFFF' }}
                 variants={fadeInUp}
               >
-                Reliable IT Solutions That Help Your Business Grow
+                Enterprise IT support that keeps Nairobi's most ambitious businesses running — 24/7.
               </motion.h1>
 
               <motion.p
-                className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-[1.8]"
+                className="text-lg sm:text-xl max-w-2xl leading-[1.8]"
+                style={{ color: '#CBD5E1' }}
                 variants={fadeInUp}
               >
-                BYTE MATRIX TECHNOLOGIES provides practical and secure ICT solutions for businesses. We supply, install, and maintain IT systems including networks, security systems, cloud services, and office automation.
-              </motion.p>
-
-              <motion.p
-                className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-[1.8]"
-                variants={fadeInUp}
-              >
-                Our goal is simple — to help your organization run smoothly, stay secure, and grow with confidence.
+                From enterprise hardware and networking to rapid on-site response, Byte Matrix Technologies is the IT partner Nairobi's top companies trust.
               </motion.p>
 
               <motion.div
                 className="flex flex-col sm:flex-row gap-4 pt-4"
                 variants={fadeInUp}
               >
-                <Button size="lg" asChild>
+                <Button size="lg" className="rounded-xl font-semibold shadow-xl" style={{ backgroundColor: '#0F1F2E', color: '#FFFFFF', border: '2px solid #1A2E42' }} asChild>
                   <Link to="/contact">
-                    Request a Consultation
+                    Schedule a Free IT Audit
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/services">
-                    View Our Services
-                  </Link>
+                <Button size="lg" className="rounded-xl font-semibold" style={{ backgroundColor: 'transparent', color: '#FFFFFF', border: '2px solid #FFFFFF' }} asChild>
+                  <a href="tel:+254724367794">
+                    Talk to an Engineer Today
+                  </a>
                 </Button>
-              </motion.div>
-
-              {/* KPI strip */}
-              <motion.div
-                className="flex flex-wrap items-center gap-6 pt-4 text-sm text-muted-foreground"
-                variants={fadeInUp}
-              >
-                <span className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  500+ Organisations Supported
-                </span>
-                <span className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  24/7 Technical Response
-                </span>
-                <span className="hidden sm:flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  Proven Multi-Sector Experience
-                </span>
               </motion.div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          TRUST BAR
+          ═══════════════════════════════════════════ */}
+      <section style={{ backgroundColor: '#1A2E42' }} className="py-5">
+        <div className="container-professional">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0 sm:divide-x divide-white/20">
+            {["24/7 Support", "2-Hour Response SLA", "5+ Years Serving Nairobi", "Enterprise & SME Clients"].map((item, idx) => (
+              <p key={idx} className="px-6 text-xs sm:text-sm font-semibold uppercase tracking-[0.15em] text-center" style={{ color: '#FFFFFF' }}>
+                {item}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          CLIENT LOGOS
+          ═══════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-card">
+        <div className="container-professional text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3" variants={fadeInUp}>
+              Trusted by leading organisations across Kenya
+            </motion.h2>
+            <motion.p className="text-muted-foreground mb-10 max-w-lg mx-auto" variants={fadeInUp}>
+              Join the companies that rely on Byte Matrix for critical IT infrastructure.
+            </motion.p>
+            {/* [Replace these with real client logo images] */}
+            <motion.div className="flex flex-wrap items-center justify-center gap-6" variants={fadeInUp}>
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div
+                  key={i}
+                  className="w-36 h-16 rounded-xl bg-muted flex items-center justify-center"
+                >
+                  <span className="text-xs text-muted-foreground font-medium">Client Logo</span>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          SERVICE TIERS
+          ═══════════════════════════════════════════ */}
+      <section className="py-16 md:py-24">
+        <div className="container-professional">
+          <motion.div
+            className="text-center mb-14"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4" variants={fadeInUp}>
+              Service Tiers
+            </motion.h2>
+            <motion.p className="text-muted-foreground max-w-xl mx-auto" variants={fadeInUp}>
+              Choose the level of IT support that fits your organisation.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            className="grid md:grid-cols-3 gap-6 lg:gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            {/* Business */}
+            <motion.div variants={fadeInUp} className="rounded-2xl border border-border bg-card p-8 md:p-10 flex flex-col hover:-translate-y-1 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2">Business</h3>
+              <p className="text-sm text-muted-foreground mb-6">IT support for growing businesses</p>
+              <ul className="space-y-3 mb-8 flex-1">
+                {["Remote helpdesk support", "Hardware procurement & setup", "Monthly maintenance visits"].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-muted-foreground">
+                    <CheckCircle className="w-4 h-4 mr-2.5 flex-shrink-0" style={{ color: '#00BFA5' }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Button variant="outline" className="w-full" asChild>
+                <Link to="/contact">Get a Quote</Link>
+              </Button>
+            </motion.div>
+
+            {/* Enterprise — MOST POPULAR */}
+            <motion.div variants={fadeInUp} className="rounded-2xl bg-card p-8 md:p-10 flex flex-col relative hover:-translate-y-1 transition-all duration-300" style={{ border: '2px solid #0F1F2E' }}>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider" style={{ backgroundColor: '#0F1F2E', color: '#FFFFFF' }}>
+                  Most Popular
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Enterprise</h3>
+              <p className="text-sm text-muted-foreground mb-6">Full managed IT services</p>
+              <ul className="space-y-3 mb-8 flex-1">
+                {["24/7 remote + on-site support", "Network infrastructure management", "Priority hardware replacement", "Dedicated account manager"].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-muted-foreground">
+                    <CheckCircle className="w-4 h-4 mr-2.5 flex-shrink-0" style={{ color: '#00BFA5' }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Button className="w-full" style={{ backgroundColor: '#0F1F2E', color: '#FFFFFF' }} asChild>
+                <Link to="/contact">Schedule a Consultation</Link>
+              </Button>
+            </motion.div>
+
+            {/* Custom */}
+            <motion.div variants={fadeInUp} className="rounded-2xl border border-border bg-card p-8 md:p-10 flex flex-col hover:-translate-y-1 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2">Custom</h3>
+              <p className="text-sm text-muted-foreground mb-6">Tailored for complex environments</p>
+              <ul className="space-y-3 mb-8 flex-1">
+                {["Multi-site IT management", "Enterprise-grade SLAs", "Custom procurement & logistics", "Board-level IT reporting"].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-muted-foreground">
+                    <CheckCircle className="w-4 h-4 mr-2.5 flex-shrink-0" style={{ color: '#00BFA5' }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Button variant="outline" className="w-full" asChild>
+                <Link to="/contact">Contact Us Directly</Link>
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
