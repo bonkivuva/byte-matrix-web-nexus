@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
-				'display': ['Inter', 'system-ui', 'sans-serif'],
+				'sans': ['DM Sans', 'system-ui', 'sans-serif'],
+				'display': ['DM Serif Display', 'serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 				'montserrat': ['Montserrat', 'sans-serif'],
 				'cyber': ['JetBrains Mono', 'monospace'],
@@ -155,6 +155,17 @@ export default {
 						opacity: '1',
 						transform: 'scale(1.05)'
 					}
+				},
+				'whatsapp-pulse': {
+					'0%': {
+						boxShadow: '0 0 0 0 rgba(37, 211, 102, 0.5)'
+					},
+					'70%': {
+						boxShadow: '0 0 0 12px rgba(37, 211, 102, 0)'
+					},
+					'100%': {
+						boxShadow: '0 0 0 0 rgba(37, 211, 102, 0)'
+					}
 				}
 			},
 			animation: {
@@ -162,7 +173,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'brand-glow': 'brand-glow 2s ease-in-out infinite',
 				'matrix-rain': 'matrix-rain 3s linear infinite',
-				'neural-pulse': 'neural-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+				'neural-pulse': 'neural-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'whatsapp-pulse': 'whatsapp-pulse 2s ease-in-out infinite',
 			}
 		}
 	},
