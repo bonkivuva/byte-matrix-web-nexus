@@ -76,9 +76,9 @@ const About = () => {
   return (
     <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead
-        title="About Byte Matrix Technologies — ICT Infrastructure Specialists in Kenya"
-        description="Byte Matrix Technologies is a professional ICT solutions provider specialising in enterprise infrastructure, cybersecurity, cloud systems, surveillance, and automation across Kenya."
-        keywords="IT solutions Kenya, enterprise ICT, cybersecurity Kenya, cloud solutions, IT consulting, surveillance systems, Byte Matrix Technologies"
+        title="Byte Matrix Technologies | Enterprise IT Solutions & Managed Services"
+        description="World-class managed IT services, enterprise hardware, and 24/7 technical support for organisations across East Africa and beyond. Built to international standards."
+        keywords="enterprise IT solutions, managed IT services, IT infrastructure, 24/7 technical support, enterprise hardware, compliance-ready IT, managed services"
       />
 
       <FuturisticHeader currentPage="about" />
@@ -116,7 +116,7 @@ const About = () => {
                 style={{ color: '#FFFFFF' }}
                 variants={fadeInUp}
               >
-                Enterprise IT support that keeps Nairobi's most ambitious businesses running — 24/7.
+                World-class IT infrastructure. Delivered without compromise.
               </motion.h1>
 
               <motion.p
@@ -124,7 +124,7 @@ const About = () => {
                 style={{ color: '#CBD5E1' }}
                 variants={fadeInUp}
               >
-                From enterprise hardware and networking to rapid on-site response, Byte Matrix Technologies is the IT partner Nairobi's top companies trust.
+                Byte Matrix Technologies delivers enterprise-grade IT solutions — from managed infrastructure and hardware procurement to 24/7 technical support — built to international standards for organisations that demand nothing less.
               </motion.p>
 
               <motion.div
@@ -139,7 +139,7 @@ const About = () => {
                 </Button>
                 <Button size="lg" className="rounded-xl font-semibold" style={{ backgroundColor: 'transparent', color: '#FFFFFF', border: '2px solid #FFFFFF' }} asChild>
                   <a href="tel:+254724367794">
-                    Talk to an Engineer Today
+                    Talk to an Engineer
                   </a>
                 </Button>
               </motion.div>
@@ -154,7 +154,7 @@ const About = () => {
       <section style={{ backgroundColor: '#1A2E42' }} className="py-5">
         <div className="container-professional">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0 sm:divide-x divide-white/20">
-            {["24/7 Support", "2-Hour Response SLA", "5+ Years Serving Nairobi", "Enterprise & SME Clients"].map((item, idx) => (
+            {["ISO-Aligned Processes", "Enterprise-Grade SLAs", "24/7 Global Support Standards", "Serving Clients Across East Africa & Beyond"].map((item, idx) => (
               <p key={idx} className="px-6 text-xs sm:text-sm font-semibold uppercase tracking-[0.15em] text-center" style={{ color: '#FFFFFF' }}>
                 {item}
               </p>
@@ -175,10 +175,10 @@ const About = () => {
             variants={staggerContainer}
           >
             <motion.h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3" variants={fadeInUp}>
-              Trusted by leading organisations across Kenya
+              Trusted by leading organisations across the region
             </motion.h2>
             <motion.p className="text-muted-foreground mb-10 max-w-lg mx-auto" variants={fadeInUp}>
-              Join the companies that rely on Byte Matrix for critical IT infrastructure.
+              Join the forward-thinking organisations that rely on Byte Matrix for mission-critical IT infrastructure.
             </motion.p>
             {/* [Replace these with real client logo images] */}
             <motion.div className="flex flex-wrap items-center justify-center gap-6" variants={fadeInUp}>
@@ -282,6 +282,40 @@ const About = () => {
       </section>
 
       {/* ═══════════════════════════════════════════
+          MISSION STATEMENT
+          ═══════════════════════════════════════════ */}
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container-professional">
+          <motion.div
+            className="max-w-3xl mx-auto text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6" variants={fadeInUp}>
+              Built for organisations that operate at the highest level
+            </motion.h2>
+            <motion.p className="text-muted-foreground text-base md:text-lg leading-[1.8] mb-12" variants={fadeInUp}>
+              We design, deploy, and manage IT environments that meet the demands of modern enterprise — whether you're scaling operations across a continent or maintaining critical infrastructure for a multinational. Our team is trained to international standards, our processes are built for compliance-driven environments, and our response times are benchmarked against the world's best managed service providers.
+            </motion.p>
+            <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-8" variants={fadeInUp}>
+              {[
+                { stat: "99.9%", label: "Uptime commitment" },
+                { stat: "< 2hr", label: "Average response time" },
+                { stat: "5+", label: "Countries served" },
+              ].map((item, idx) => (
+                <div key={idx} className="text-center">
+                  <p className="text-3xl sm:text-4xl font-bold mb-1" style={{ color: '#0F1F2E' }}>{item.stat}</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wider font-medium">{item.label}</p>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
           SECTION 2 — WHO WE ARE
           ═══════════════════════════════════════════ */}
       <section className="section-spacing-lg">
@@ -304,7 +338,7 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    We are an ICT engineering company focused on delivering structured, standards-driven technology solutions for institutions and enterprises across Kenya.
+                    We are an ICT engineering company focused on delivering structured, standards-driven technology solutions for institutions and enterprises across East Africa and beyond.
                   </p>
                   <p>
                     Our approach combines technical precision, strategic planning, and long-term system reliability — ensuring every deployment meets the operational demands of modern business environments.
@@ -564,7 +598,7 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,55%,28%,0.85)] via-[hsl(215,55%,28%,0.6)] to-[hsl(38,85%,52%,0.4)]" />
         <div className="absolute inset-0 flex items-center justify-center">
           <p className="text-sm md:text-base font-semibold uppercase tracking-[0.25em] text-white/90 drop-shadow-lg">
-            Proudly Serving East Africa from Nairobi
+            Headquartered in East Africa · Serving Clients Globally
           </p>
         </div>
       </section>
