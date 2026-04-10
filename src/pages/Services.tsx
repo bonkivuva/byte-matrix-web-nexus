@@ -36,6 +36,7 @@ const Services = () => {
   const services = [
     {
       icon: Monitor,
+      image: serviceItInfrastructure,
       title: "IT Infrastructure & Hardware Solutions",
       impact: "Reliable support for desktops, laptops, servers, and enterprise hardware.",
       benefits: ["Server Setup & Configuration", "Desktop & Laptop Support", "Hardware Lifecycle Management", "Enterprise Equipment Deployment"],
@@ -57,6 +58,7 @@ const Services = () => {
     },
     {
       icon: Headphones,
+      image: serviceManagedSupport,
       title: "Managed & Support Services",
       impact: "24/7 technical support, troubleshooting, and proactive system management.",
       benefits: ["24/7 Help Desk", "Remote & On-site Support", "Proactive Monitoring", "Priority Response SLAs"],
@@ -78,6 +80,7 @@ const Services = () => {
     },
     {
       icon: Wifi,
+      image: serviceNetwork,
       title: "Network & Connectivity Solutions",
       impact: "Robust Wi-Fi, network installations, secure access points, and connectivity optimization.",
       benefits: ["Enterprise Wi-Fi Design", "Structured Cabling", "Network Security", "Performance Optimization"],
@@ -99,6 +102,7 @@ const Services = () => {
     },
     {
       icon: Code,
+      image: serviceCustomSoftware,
       title: "Custom Software & Web Applications",
       impact: "Tailored software, business systems, and websites designed for performance and scalability.",
       benefits: ["Business Management Systems", "Responsive Web Applications", "API Integration", "Scalable Architecture"],
@@ -120,6 +124,7 @@ const Services = () => {
     },
     {
       icon: Shield,
+      image: serviceCloudSecurity,
       title: "Cloud & Security Solutions",
       impact: "Cloud migrations, secure backup, cybersecurity measures, and enterprise protection.",
       benefits: ["Cloud Migration", "Data Backup & Recovery", "Threat Detection", "Compliance Support"],
@@ -141,6 +146,7 @@ const Services = () => {
     },
     {
       icon: Laptop,
+      image: serviceHardwareSales,
       title: "Professional Hardware Sales",
       impact: "Laptops, desktops, printers — tested for performance and business use.",
       benefits: ["Quality-Tested Equipment", "Competitive Pricing", "Warranty Support", "Bulk & Corporate Orders"],
