@@ -107,7 +107,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-200 rounded-md ${
+                className={`relative px-5 py-2.5 text-[15px] font-medium transition-all duration-200 rounded-md ${
                   isActive(link.path)
                     ? 'text-primary bg-primary/5'
                     : 'text-muted-foreground hover:text-foreground hover:bg-muted'
