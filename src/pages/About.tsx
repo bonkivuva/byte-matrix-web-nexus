@@ -166,31 +166,47 @@ const About = () => {
       {/* ═══════════════════════════════════════════
           CLIENT LOGOS
           ═══════════════════════════════════════════ */}
-      <section className="py-16 md:py-20 bg-card">
-        <div className="container-professional text-center">
+      <section className="bg-white" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+        <div className="max-w-[900px] mx-auto px-4 text-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
           >
-            <motion.h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3" variants={fadeInUp}>
+            <motion.h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3 text-foreground" variants={fadeInUp}>
               Trusted by leading organisations across the region
             </motion.h2>
             <motion.p className="text-muted-foreground mb-10 max-w-lg mx-auto" variants={fadeInUp}>
-              Join the forward-thinking organisations that rely on Byte Matrix for mission-critical IT infrastructure.
+              Join the organisations that rely on Byte Matrix for critical IT infrastructure.
             </motion.p>
-            {/* [Replace these with real client logo images] */}
-            <motion.div className="flex flex-wrap items-center justify-center gap-6" variants={fadeInUp}>
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="w-36 h-16 rounded-xl bg-muted flex items-center justify-center"
-                >
-                  <span className="text-xs text-muted-foreground font-medium">Client Logo</span>
-                </div>
-              ))}
+
+            {/* Top divider */}
+            <div className="w-full h-px bg-[#E5E7EB] mb-10" />
+
+            <motion.div
+              className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-20"
+              variants={fadeInUp}
+            >
+              <img
+                src={sanlamLogo}
+                alt="Sanlam Allianz"
+                className="max-w-[180px] max-h-[80px] object-contain transition-opacity duration-200 ease-in-out hover:opacity-80"
+              />
+              <img
+                src={kijabeLogo}
+                alt="Kijabe Sacco Ltd"
+                className="max-w-[180px] max-h-[80px] object-contain transition-opacity duration-200 ease-in-out hover:opacity-80"
+              />
+              <img
+                src={caritasLogo}
+                alt="Caritas Microfinance Bank"
+                className="max-w-[180px] max-h-[80px] object-contain transition-opacity duration-200 ease-in-out hover:opacity-80"
+              />
             </motion.div>
+
+            {/* Bottom divider */}
+            <div className="w-full h-px bg-[#E5E7EB] mt-10" />
           </motion.div>
         </div>
       </section>
