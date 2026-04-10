@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import futuristicDataCentre from "@/assets/futuristic-data-centre.jpg";
+import sanlamLogo from "@/assets/sanlam-allianz-logo.png";
+import kijabeLogo from "@/assets/kijabe-sacco-logo.png";
+import caritasLogo from "@/assets/caritas-bank-logo.png";
 import {
   ArrowRight, Shield, Users, CheckCircle, Phone,
   Cloud, Server, Camera, Cpu,
