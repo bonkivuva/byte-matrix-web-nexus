@@ -74,7 +74,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
         : 'bg-background/60 backdrop-blur-md border-b border-transparent'
     }`}>
       <div className="container-professional">
-        <div className="flex h-16 lg:h-[68px] items-center justify-between">
+        <div className="flex h-20 lg:h-[90px] items-center justify-between py-4">
           {/* Logo */}
           <Link 
             to="/" 
