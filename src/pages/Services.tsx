@@ -264,20 +264,29 @@ const Services = () => {
             {services.map((service, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Card className="card-premium group h-full relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_hsl(var(--primary)/0.25)]">
-                  {/* Most Popular Badge */}
-                  {index === 1 && (
-                    <div className="absolute top-4 right-4 z-10">
-                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-bold uppercase tracking-wider shadow-md">
-                        <Zap className="w-3 h-3" />
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
+                  {/* Service Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    {/* Most Popular Badge */}
+                    {index === 1 && (
+                      <div className="absolute top-4 right-4 z-10">
+                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-bold uppercase tracking-wider shadow-md">
+                          <Zap className="w-3 h-3" />
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+                  </div>
                   {/* Hover glow overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-accent/0 group-hover:from-primary/5 group-hover:via-transparent group-hover:to-accent/5 transition-all duration-500 pointer-events-none" />
-                  <CardContent className="p-6 md:p-8 lg:p-10 flex flex-col h-full relative z-[1]">
-                    <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-500">
-                      <service.icon className="w-7 h-7 md:w-8 md:h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
+                  <CardContent className="p-6 md:p-8 flex flex-col h-full relative z-[1]">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all duration-500">
+                      <service.icon className="w-6 h-6 text-primary" />
                     </div>
                     
                     <h3 className="text-lg md:text-xl font-bold mb-3">{service.title}</h3>
