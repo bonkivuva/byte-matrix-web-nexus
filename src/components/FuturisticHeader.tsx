@@ -160,7 +160,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               <Button 
                 asChild
                 size="sm"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-[15px] font-semibold"
               >
                 <Link to="/contact">
                   Get Consultation
