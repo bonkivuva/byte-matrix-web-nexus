@@ -84,7 +84,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-9 w-auto transition-all duration-300 group-hover:scale-105"
+                className="h-14 w-auto transition-all duration-300 group-hover:scale-105"
                 loading="eager"
                 style={{
                   filter: "drop-shadow(0 2px 8px hsl(var(--primary) / 0.15))",
@@ -92,10 +92,10 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               />
             </div>
             <div className="hidden md:block">
-              <h1 className="text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-primary tracking-wide">
+              <h1 className="text-[24px] font-extrabold text-foreground transition-colors duration-300 group-hover:text-primary tracking-wide leading-tight">
                 BYTE MATRIX TECHNOLOGIES
               </h1>
-              <p className="text-xs text-primary font-medium uppercase tracking-wider">
+              <p className="text-[13px] text-primary font-medium uppercase tracking-[0.15em]">
                 Connecting Your Digital Matrix
               </p>
             </div>
