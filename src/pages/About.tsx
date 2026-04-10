@@ -322,7 +322,7 @@ const About = () => {
               {[
                 { stat: "99.9%", label: "Uptime commitment" },
                 { stat: "< 2hr", label: "Average response time" },
-                { stat: "5+", label: "Countries served" },
+                { stat: "100+", label: "Enterprise clients served" },
               ].map((item, idx) => (
                 <div key={idx} className="text-center">
                   <p className="text-3xl sm:text-4xl font-bold mb-1" style={{ color: '#0F1F2E' }}>{item.stat}</p>
