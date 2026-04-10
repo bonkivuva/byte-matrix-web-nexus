@@ -74,7 +74,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
         : 'bg-background/60 backdrop-blur-md border-b border-transparent'
     }`}>
       <div className="container-professional">
-        <div className="flex h-16 lg:h-[68px] items-center justify-between">
+        <div className="flex h-20 lg:h-[90px] items-center justify-between py-4">
           {/* Logo */}
           <Link 
             to="/" 
@@ -84,7 +84,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               <img
                 src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
                 alt="Byte Matrix Technologies"
-                className="h-9 w-auto transition-all duration-300 group-hover:scale-105"
+                className="h-14 w-auto transition-all duration-300 group-hover:scale-105"
                 loading="eager"
                 style={{
                   filter: "drop-shadow(0 2px 8px hsl(var(--primary) / 0.15))",
@@ -92,10 +92,10 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               />
             </div>
             <div className="hidden md:block">
-              <h1 className="text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-primary tracking-wide">
+              <h1 className="text-[24px] font-extrabold text-foreground transition-colors duration-300 group-hover:text-primary tracking-wide leading-tight">
                 BYTE MATRIX TECHNOLOGIES
               </h1>
-              <p className="text-xs text-primary font-medium uppercase tracking-wider">
+              <p className="text-[13px] text-primary font-medium uppercase tracking-[0.15em]">
                 Connecting Your Digital Matrix
               </p>
             </div>
@@ -107,7 +107,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-200 rounded-md ${
+                className={`relative px-5 py-2.5 text-[15px] font-medium transition-all duration-200 rounded-md ${
                   isActive(link.path)
                     ? 'text-primary bg-primary/5'
                     : 'text-muted-foreground hover:text-foreground hover:bg-muted'
@@ -126,7 +126,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
             {/* Phone number - hidden on mobile */}
             <a
               href="tel:+254724367794"
-              className="hidden xl:flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-2"
+              className="hidden xl:flex items-center text-[15px] text-muted-foreground hover:text-foreground transition-colors px-3 py-2"
             >
               <Phone className="mr-2 h-4 w-4" />
               +254 724 367 794
@@ -160,7 +160,7 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
               <Button 
                 asChild
                 size="sm"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-[15px] font-semibold"
               >
                 <Link to="/contact">
                   Get Consultation
