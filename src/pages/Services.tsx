@@ -20,6 +20,12 @@ import {
   Headphones,
   Zap
 } from "lucide-react";
+import serviceItInfrastructure from "@/assets/service-it-infrastructure.jpg";
+import serviceManagedSupport from "@/assets/service-managed-support.jpg";
+import serviceNetwork from "@/assets/service-network.jpg";
+import serviceCustomSoftware from "@/assets/service-custom-software.jpg";
+import serviceCloudSecurity from "@/assets/service-cloud-security.jpg";
+import serviceHardwareSales from "@/assets/service-hardware-sales.jpg";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import PageTransition from "@/components/PageTransition";
