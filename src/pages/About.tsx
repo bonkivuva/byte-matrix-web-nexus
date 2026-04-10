@@ -371,7 +371,7 @@ const About = () => {
               {/* Right — image */}
               <motion.div variants={fadeInUp} className="flex justify-center">
                 <img
-                  src={futuristicDataCentre}
+                  src={futuristicCity}
                   alt="Futuristic data centre with glowing server racks"
                   loading="lazy"
                   width={1280}
