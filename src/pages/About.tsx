@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import futuristicDataCentre from "@/assets/futuristic-data-centre.jpg";
+
 import sanlamLogo from "@/assets/sanlam-allianz-logo.png";
 import kijabeLogo from "@/assets/kijabe-sacco-logo.png";
 import caritasLogo from "@/assets/caritas-bank-logo.png";
@@ -90,13 +90,16 @@ const About = () => {
           SECTION 1 — HERO
           ═══════════════════════════════════════════ */}
       <section className="relative min-h-[92vh] flex items-center pt-16 overflow-hidden" style={{ backgroundColor: '#0F1F2E' }}>
-        <div className="absolute inset-0">
-          <img
-            src={futuristicDataCentre}
-            alt="Futuristic data centre with glowing server racks"
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.35))' }} />
 
         <div className="container-professional relative z-10">
           <div className="max-w-3xl">
@@ -368,7 +371,7 @@ const About = () => {
               {/* Right — image */}
               <motion.div variants={fadeInUp} className="flex justify-center">
                 <img
-                  src={futuristicDataCentre}
+                  src={futuristicCity}
                   alt="Futuristic data centre with glowing server racks"
                   loading="lazy"
                   width={1280}
