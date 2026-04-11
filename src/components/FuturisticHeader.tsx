@@ -6,8 +6,7 @@ import {
   Sun, 
   Menu, 
   X,
-  ChevronRight,
-  Phone 
+  ChevronRight
 } from 'lucide-react';
 
 interface FuturisticHeaderProps {
