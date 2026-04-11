@@ -123,14 +123,6 @@ const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
 
           {/* Right side actions */}
           <div className="flex items-center gap-2">
-            {/* Phone number - hidden on mobile */}
-            <a
-              href="tel:+254724367794"
-              className="hidden xl:flex items-center text-[15px] text-muted-foreground hover:text-foreground transition-colors px-3 py-2"
-            >
-              <Phone className="mr-2 h-4 w-4" />
-              +254 724 367 794
-            </a>
 
             {/* Dark mode toggle */}
             <Button
