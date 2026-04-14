@@ -85,9 +85,9 @@ const About = () => {
   return (
     <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead
-        title="Byte Matrix Technologies | Enterprise IT Solutions & Managed Services"
-        description="World-class managed IT services, enterprise hardware, and 24/7 technical support for organisations across East Africa and beyond. Built to international standards."
-        keywords="enterprise IT solutions, managed IT services, IT infrastructure, 24/7 technical support, enterprise hardware, compliance-ready IT, managed services"
+        title="About Us | Byte Matrix Technologies – ICT Company Nairobi Kenya"
+        description="Learn about Byte Matrix Technologies, a premier ICT company in Nairobi Kenya delivering reliable IT support, infrastructure, and technology solutions to businesses."
+        keywords="ICT company Nairobi Kenya, IT solutions Nairobi Kenya, IT support, IT infrastructure, technology solutions, about Byte Matrix"
       />
 
       <FuturisticHeader currentPage="about" />

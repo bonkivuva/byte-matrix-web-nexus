@@ -6,8 +6,9 @@ const TermsOfService = () => {
   return (
     <>
       <SEOHead 
-        title="Terms of Service | Byte Matrix Technologies"
-        description="Terms of Service for Byte Matrix Technologies. Read our service terms and conditions."
+        title="Terms of Service | Byte Matrix Technologies – ICT Company Nairobi Kenya"
+        description="Terms of Service for Byte Matrix Technologies, a leading ICT company in Nairobi Kenya. Read our service terms and conditions for IT solutions."
+        keywords="terms of service, ICT company Nairobi Kenya, IT solutions terms"
       />
       
       <div className="min-h-screen bg-background">

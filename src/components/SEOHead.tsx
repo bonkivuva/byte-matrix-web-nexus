@@ -14,9 +14,9 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({ 
-  title = "Byte Matrix Technologies | Enterprise IT Solutions & Managed Services",
-  description = "World-class managed IT services, enterprise hardware, and 24/7 technical support for organisations across East Africa and beyond. Built to international standards.",
-  keywords = "enterprise IT solutions, managed IT services, IT infrastructure, 24/7 technical support, enterprise hardware, compliance-ready IT, managed services",
+  title = "Byte Matrix Technologies | Leading ICT Company in Nairobi, Kenya",
+  description = "Byte Matrix Technologies is a trusted ICT company in Nairobi, Kenya offering enterprise IT solutions, managed services, networking, and CCTV installation.",
+  keywords = "ICT company Nairobi Kenya, IT solutions Nairobi Kenya, managed IT services, networking, CCTV installation, cybersecurity, cloud services",
   image = "https://bytematrixtech.com/og-image.jpg",
   type = "website",
   author = "Byte Matrix Technologies",
