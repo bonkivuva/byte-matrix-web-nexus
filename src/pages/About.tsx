@@ -3,11 +3,17 @@ import { Link } from "react-router-dom";
 import sanlamLogo from "@/assets/sanlam-allianz-logo.png";
 import kijabeLogo from "@/assets/kijabe-sacco-logo.png";
 import caritasLogo from "@/assets/caritas-bank-logo.png";
+import hikvisionLogo from "@/assets/partners/hikvision.png";
+import ubiquitiLogo from "@/assets/partners/ubiquiti.png";
+import dellLogo from "@/assets/partners/dell.png";
+import hpeLogo from "@/assets/partners/hpe.png";
+import ciscoLogo from "@/assets/partners/cisco.png";
+import microsoftLogo from "@/assets/partners/microsoft.png";
 import {
   ArrowRight, Shield, Users, CheckCircle, Phone,
   Cloud, Server, Camera, Cpu,
   Building2, GraduationCap, Landmark, ShoppingBag, Factory, Heart,
-  Lightbulb, Eye, Target, Layers, Award
+  Lightbulb, Eye, Target, Layers
 } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
