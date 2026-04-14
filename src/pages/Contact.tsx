@@ -35,9 +35,9 @@ const Contact = () => {
   return (
     <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
-        title="Get in Touch — Byte Matrix Technologies"
-        description="Contact Byte Matrix Technologies for expert IT consultation and support. We're ready to help your business thrive with professional technology solutions."
-        keywords="contact IT services, IT consultation, technology support, professional IT help, enterprise solutions contact, IT company Kenya"
+        title="Contact Us | Byte Matrix Technologies Nairobi Kenya"
+        description="Get in touch with Byte Matrix Technologies, your trusted ICT partner in Nairobi Kenya. Call, email or visit us for IT support and technology solutions today."
+        keywords="contact ICT company Nairobi Kenya, IT support Nairobi, IT solutions Nairobi Kenya, technology partner Kenya"
       />
       
       <FuturisticHeader currentPage="contact" />

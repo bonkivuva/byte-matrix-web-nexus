@@ -171,9 +171,9 @@ const Services = () => {
   return (
     <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
-        title="Enterprise Technology Services — Byte Matrix Technologies"
-        description="Enterprise-grade IT infrastructure, managed services, network solutions, custom software, cloud & security, and hardware procurement — built to international standards."
-        keywords="enterprise IT services, managed IT services, network solutions, custom software, cloud migration, cybersecurity, hardware procurement, enterprise infrastructure"
+        title="Our Services | IT Solutions & Managed Services – Nairobi, Kenya"
+        description="Explore our full range of ICT services in Nairobi Kenya including networking, cloud solutions, CCTV, cybersecurity, structured cabling, and IT managed services."
+        keywords="ICT company Nairobi Kenya, IT solutions Nairobi Kenya, networking, cloud solutions, CCTV installation, cybersecurity, structured cabling, managed IT services"
       />
       
       <FuturisticHeader currentPage="services" />
