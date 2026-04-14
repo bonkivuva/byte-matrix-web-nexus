@@ -561,12 +561,12 @@ const About = () => {
       <Testimonials />
 
       {/* ═══════════════════════════════════════════
-          SECTION 7 — CERTIFICATIONS & PARTNERSHIPS
+          TRUSTED TECHNOLOGY PARTNERS
           ═══════════════════════════════════════════ */}
-      <section className="section-spacing bg-gradient-professional-subtle">
-        <div className="container-professional">
+      <section className="py-20 bg-background border-t border-b border-border">
+        <div className="container mx-auto px-4 max-w-6xl">
           <motion.div
-            className="text-center mb-10"
+            className="text-center mb-14"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -576,37 +576,48 @@ const About = () => {
               className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-4"
               variants={fadeInUp}
             >
-              Trusted Partnerships
+              Strategic Alliances
             </motion.p>
             <motion.h2
               className="text-2xl sm:text-3xl font-bold tracking-tight mb-4"
               variants={fadeInUp}
             >
-              Technology Partners & Certifications
+              Trusted Technology Partners
             </motion.h2>
             <motion.p
               className="text-muted-foreground max-w-xl mx-auto"
               variants={fadeInUp}
             >
-              We work with industry-leading vendors to deliver enterprise-grade solutions.
+              We partner with industry-leading vendors to deliver enterprise-grade solutions.
             </motion.p>
           </motion.div>
 
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-8 md:gap-12"
+            className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
           >
-            {["Microsoft", "Cisco", "HP Enterprise", "Dell Technologies", "Ubiquiti", "Hikvision"].map((partner, idx) => (
+            {[
+              { src: hikvisionLogo, alt: "Hikvision" },
+              { src: ubiquitiLogo, alt: "Ubiquiti Networks" },
+              { src: dellLogo, alt: "Dell Technologies" },
+              { src: hpeLogo, alt: "Hewlett Packard Enterprise" },
+              { src: ciscoLogo, alt: "Cisco" },
+              { src: microsoftLogo, alt: "Microsoft" },
+            ].map((partner, idx) => (
               <motion.div
                 key={idx}
-                className="flex items-center gap-2 px-5 py-3 rounded-xl border border-border bg-card hover:border-primary/25 transition-all duration-300"
+                className="flex items-center justify-center p-6 md:p-8 rounded-xl border border-border bg-card hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
                 variants={fadeInUp}
               >
-                <Award className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-sm font-semibold text-foreground whitespace-nowrap">{partner}</span>
+                <img
+                  src={partner.src}
+                  alt={partner.alt}
+                  className="h-10 md:h-12 w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                  loading="lazy"
+                />
               </motion.div>
             ))}
           </motion.div>
