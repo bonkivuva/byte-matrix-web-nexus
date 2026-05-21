@@ -14,17 +14,17 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({ 
-  title = "Byte Matrix Technologies | Leading ICT Company in Nairobi, Kenya",
-  description = "Byte Matrix Technologies is a trusted ICT company in Nairobi, Kenya offering enterprise IT solutions, managed services, networking, and CCTV installation.",
+  title = "Byte Matrix Technologies | ICT Company in Nairobi, Kenya",
+  description = "Byte Matrix Technologies is a trusted ICT company in Nairobi Kenya offering enterprise IT solutions, managed services, networking and CCTV installation.",
   keywords = "ICT company Nairobi Kenya, IT solutions Nairobi Kenya, managed IT services, networking, CCTV installation, cybersecurity, cloud services",
-  image = "https://bytematrixtech.com/og-image.jpg",
+  image = "https://bytematrixtechnologies.co.ke/og-image.jpg",
   type = "website",
   author = "Byte Matrix Technologies",
   publishedTime,
   modifiedTime
 }: SEOHeadProps) => {
   const location = useLocation();
-  const canonicalUrl = `https://bytematrixtech.com${location.pathname}`;
+  const canonicalUrl = `https://bytematrixtechnologies.co.ke${location.pathname}`;
 
   useEffect(() => {
     // Update document title with proper format
@@ -94,7 +94,7 @@ const SEOHead = ({
       "name": "Byte Matrix Technologies",
       "description": description,
       "url": canonicalUrl,
-      "logo": "https://bytematrixtech.com/logo.png",
+      "logo": "https://bytematrixtechnologies.co.ke/logo.png",
       "image": image,
       "telephone": "+254724367794",
       "email": "info@bytematrixtechnologies.co.ke",
