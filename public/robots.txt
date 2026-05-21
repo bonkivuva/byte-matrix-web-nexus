@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://bytematrixtech.com/sitemap.xml
+Sitemap: https://bytematrixtechnologies.co.ke/sitemap.xml
