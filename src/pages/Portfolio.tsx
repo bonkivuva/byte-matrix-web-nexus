@@ -95,7 +95,7 @@ const Portfolio = () => {
   return (
     <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
-        title="Our Portfolio | IT Projects & Solutions – Byte Matrix Technologies Nairobi"
+        title="Portfolio | IT Projects by Byte Matrix Technologies Nairobi"
         description="Explore successful IT projects by Byte Matrix Technologies, a leading ICT company in Nairobi Kenya. Network installations, cloud migrations, and custom solutions."
         keywords="ICT company Nairobi Kenya, IT portfolio, technology projects, network installations, cloud migrations, IT solutions Nairobi Kenya"
       />
