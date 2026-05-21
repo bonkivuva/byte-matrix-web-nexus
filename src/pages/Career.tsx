@@ -20,7 +20,7 @@ const Career = () => {
   return (
     <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
-        title="Careers | Join Byte Matrix Technologies – ICT Jobs Nairobi Kenya"
+        title="Careers | Byte Matrix Technologies – ICT Jobs Nairobi Kenya"
         description="Explore career opportunities at Byte Matrix Technologies, a growing ICT company in Nairobi Kenya. Join our team of IT professionals and build your tech career."
         keywords="ICT jobs Nairobi Kenya, IT careers Kenya, technology jobs, IT solutions Nairobi Kenya, tech careers"
       />
