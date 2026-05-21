@@ -1,0 +1,17 @@
+# Byte Matrix Technologies
+
+> Byte Matrix Technologies is an ICT company in Nairobi, Kenya delivering enterprise IT solutions, managed services, networking, CCTV, and cybersecurity to organisations across East Africa.
+
+## Pages
+
+- [About](/): Company overview, partners, capabilities, and engineering approach.
+- [Services](/services): Managed IT, networking, CCTV, cloud, hardware, and support services.
+- [Portfolio](/portfolio): Selected IT projects, case studies, and client outcomes.
+- [Careers](/careers): Open roles, culture, and how to join the team.
+- [Contact](/contact): Phone, email, location, and consultation requests.
+
+## Optional
+
+- [Privacy Policy](/privacy-policy)
+- [Terms of Service](/terms-of-service)
+- [Cookie Policy](/cookie-policy)
