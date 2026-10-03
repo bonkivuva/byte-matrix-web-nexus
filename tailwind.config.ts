@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['DM Sans', 'system-ui', 'sans-serif'],
-				'display': ['DM Serif Display', 'serif'],
+				'sans': ['Manrope', 'system-ui', 'sans-serif'],
+				'display': ['Sora', 'system-ui', 'sans-serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 				'montserrat': ['Montserrat', 'sans-serif'],
 				'cyber': ['JetBrains Mono', 'monospace'],
