@@ -1,214 +1,71 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { 
-  Moon, 
-  Sun, 
-  Menu, 
-  X,
-  ChevronRight
-} from 'lucide-react';
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { primaryNavigation } from "@/lib/siteConfig";
 
-interface FuturisticHeaderProps {
-  currentPage?: string;
-}
+interface FuturisticHeaderProps { currentPage?: string }
 
-const FuturisticHeader: React.FC<FuturisticHeaderProps> = ({ currentPage }) => {
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('darkMode') === 'true' || 
-             document.documentElement.classList.contains('dark');
-    }
-    return false;
-  });
-  
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+const FuturisticHeader = (_props: FuturisticHeaderProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // Scroll detection
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Dark mode effect
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('darkMode', 'true');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('darkMode', 'false');
-    }
-  }, [isDarkMode]);
+  useEffect(() => setIsOpen(false), [location.pathname, location.hash]);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+  const isActive = (to: string) => {
+    const [path, hash] = to.split("#");
+    return location.pathname === path && (!hash || location.hash === `#${hash}`);
   };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
-
-  const navLinks = [
-    { path: '/', label: 'About', name: 'about' },
-    { path: '/services', label: 'Services', name: 'services' },
-    { path: '/portfolio', label: 'Portfolio', name: 'portfolio' },
-    { path: '/careers', label: 'Careers', name: 'careers' },
-    { path: '/contact', label: 'Contact', name: 'contact' },
-  ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-background/95 backdrop-blur-xl border-b border-border shadow-corporate' 
-        : 'bg-background/60 backdrop-blur-md border-b border-transparent'
-    }`}>
-      <div className="container-professional">
-        <div className="flex h-20 lg:h-[90px] items-center justify-between py-4">
-          {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center space-x-3 group transition-all duration-300"
-          >
-            <div className="relative">
-              <img
-                src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png"
-                alt="Byte Matrix Technologies"
-                className="h-14 w-auto transition-all duration-300 group-hover:scale-105"
-                loading="eager"
-                style={{
-                  filter: "drop-shadow(0 2px 8px hsl(var(--primary) / 0.15))",
-                }}
-              />
-            </div>
-            <div className="hidden md:block">
-              <h1 className="text-[24px] font-extrabold text-foreground transition-colors duration-300 group-hover:text-primary tracking-wide leading-tight">
-                BYTE MATRIX TECHNOLOGIES
-              </h1>
-              <p className="text-[13px] text-primary font-medium uppercase tracking-[0.15em]">
-                Connecting Your Digital Matrix
-              </p>
-            </div>
-          </Link>
+    <header className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${scrolled || isOpen ? "border-border/70 bg-background/95 shadow-corporate backdrop-blur-xl" : "border-transparent bg-background/80 backdrop-blur-md"}`}>
+      <div className="container-professional flex h-[84px] items-center justify-between gap-5">
+        <Link to="/" className="flex min-h-12 items-center gap-3" aria-label="Byte Matrix Technologies home">
+          <img src="/lovable-uploads/6a15981c-c79b-411e-8627-f69fee6fedb3.png" alt="" width="48" height="48" className="h-11 w-11 object-contain" />
+          <div className="hidden sm:block">
+            <span className="block font-display text-sm font-bold leading-tight text-foreground">BYTE MATRIX</span>
+            <span className="block text-[10px] font-bold uppercase text-primary" style={{ letterSpacing: ".16em" }}>TECHNOLOGIES</span>
+          </div>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`relative px-5 py-2.5 text-[15px] font-medium transition-all duration-200 rounded-md ${
-                  isActive(link.path)
-                    ? 'text-primary bg-primary/5'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                }`}
-              >
-                <span className="relative z-10">{link.label}</span>
-                {isActive(link.path) && (
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-primary rounded-full"></div>
-                )}
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
+          {primaryNavigation.map((item) => (
+            <Link key={item.label} to={item.to} className={`flex min-h-12 items-center border-b-2 px-4 text-sm font-semibold transition-colors ${isActive(item.to) ? "border-primary text-foreground" : "border-transparent text-muted-foreground hover:border-primary/40 hover:text-foreground"}`}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-2">
+          <Button asChild className="hidden md:inline-flex">
+            <Link to="/contact">Request a Quote <ArrowUpRight /></Link>
+          </Button>
+          <Button variant="ghost" size="icon" className="lg:hidden h-12 w-12" onClick={() => setIsOpen((value) => !value)} aria-label={isOpen ? "Close navigation" : "Open navigation"} aria-expanded={isOpen}>
+            {isOpen ? <X /> : <Menu />}
+          </Button>
+        </div>
+      </div>
+
+      {isOpen && (
+        <nav className="border-t border-border bg-background px-5 pb-6 pt-3 lg:hidden" aria-label="Mobile navigation">
+          <div className="mx-auto flex max-w-7xl flex-col">
+            {primaryNavigation.map((item) => (
+              <Link key={item.label} to={item.to} className={`flex min-h-12 items-center justify-between border-b border-border text-base font-semibold ${isActive(item.to) ? "text-primary" : "text-foreground"}`}>
+                {item.label}<ArrowUpRight className="h-4 w-4" />
               </Link>
             ))}
-          </nav>
-
-          {/* Right side actions */}
-          <div className="flex items-center gap-2">
-
-            {/* Dark mode toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleDarkMode}
-              className="w-9 h-9 rounded-lg hover:bg-muted transition-colors"
-            >
-              <Sun 
-                className={`absolute h-4 w-4 transition-all duration-300 ${
-                  isDarkMode 
-                    ? 'rotate-90 scale-0 opacity-0' 
-                    : 'rotate-0 scale-100 opacity-100 text-amber-500'
-                }`} 
-              />
-              <Moon 
-                className={`absolute h-4 w-4 transition-all duration-300 ${
-                  isDarkMode 
-                    ? 'rotate-0 scale-100 opacity-100 text-primary' 
-                    : '-rotate-90 scale-0 opacity-0'
-                }`} 
-              />
-            </Button>
-
-            {/* CTA Button */}
-            <div className="hidden sm:block">
-              <Button 
-                asChild
-                size="sm"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-[15px] font-semibold"
-              >
-                <Link to="/contact">
-                  Get Consultation
-                </Link>
-              </Button>
-            </div>
-
-            {/* Mobile menu toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleMenu}
-              className="lg:hidden w-9 h-9 rounded-lg hover:bg-muted transition-colors"
-            >
-              {isMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
-            </Button>
+            <Button asChild className="mt-5 w-full"><Link to="/contact">Request a Quote</Link></Button>
           </div>
-        </div>
-        {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border animate-fade-up">
-            <nav className="container-professional py-4">
-              <div className="flex flex-col space-y-1">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`flex items-center px-4 py-3 text-sm font-medium transition-all duration-200 rounded-lg ${
-                      isActive(link.path)
-                        ? 'text-primary bg-primary/5'
-                        : 'text-foreground hover:bg-muted'
-                    }`}
-                  >
-                    <span className="flex-1">{link.label}</span>
-                    <ChevronRight className="w-4 h-4 opacity-40" />
-                  </Link>
-                ))}
-                <div className="pt-4 mt-2 border-t border-border">
-                  <Button 
-                    asChild
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <Link to="/contact">
-                      Get Consultation
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </nav>
-          </div>
-        )}
-      </div>
+        </nav>
+      )}
     </header>
   );
 };
