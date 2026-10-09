@@ -1,137 +1,14 @@
-import { Star, Quote } from "lucide-react";
-import { motion, type Variants } from "framer-motion";
+import { Quote } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.5, ease: "easeOut" as const } 
-  }
-};
-
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.1 }
-  }
-};
+const testimonials = [
+  { name: "Sarah Mwangi", role: "Chief Technology Officer", company: "TechCorp Kenya", content: "Byte Matrix Technologies transformed our entire IT infrastructure. Their expertise and 24/7 support have been invaluable. We've seen a 40% improvement in system uptime." },
+  { name: "John Kamau", role: "Operations Director", company: "Retail Solutions Ltd", content: "The hardware procurement and setup service was seamless. They secured the best prices and configured everything perfectly. Our systems are running flawlessly." },
+  { name: "Grace Ochieng", role: "IT Manager", company: "Finance Group", content: "Their cybersecurity solutions gave us complete peace of mind. The team is knowledgeable, responsive, and truly understands enterprise security needs." },
+];
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Sarah Mwangi",
-      role: "Chief Technology Officer",
-      company: "TechCorp Kenya",
-      content: "Byte Matrix Technologies transformed our entire IT infrastructure. Their expertise and 24/7 support have been invaluable. We've seen a 40% improvement in system uptime.",
-      rating: 5,
-    },
-    {
-      name: "John Kamau",
-      role: "Operations Director",
-      company: "Retail Solutions Ltd",
-      content: "The hardware procurement and setup service was seamless. They secured the best prices and configured everything perfectly. Our systems are running flawlessly.",
-      rating: 5,
-    },
-    {
-      name: "Grace Ochieng",
-      role: "IT Manager",
-      company: "Finance Group",
-      content: "Their cybersecurity solutions gave us complete peace of mind. The team is knowledgeable, responsive, and truly understands enterprise security needs.",
-      rating: 5,
-    }
-  ];
-
-  return (
-    <section className="section-spacing">
-      <div className="container-professional">
-        {/* Section Header */}
-        <motion.div 
-          className="section-header"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={staggerContainer}
-        >
-          <motion.span 
-            className="badge-premium mb-4"
-            variants={fadeInUp}
-          >
-            Testimonials
-          </motion.span>
-          <motion.h2 variants={fadeInUp}>
-            What Our Clients Say
-          </motion.h2>
-          <motion.p 
-            className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto"
-            variants={fadeInUp}
-          >
-            Don't just take our word for it — hear from the businesses we've helped transform
-          </motion.p>
-        </motion.div>
-
-        {/* Testimonials Grid */}
-        <motion.div 
-          className="grid-professional-3"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={staggerContainer}
-        >
-          {testimonials.map((testimonial, index) => (
-            <motion.div 
-              key={index}
-              className="glass-card-premium p-6 md:p-8 relative"
-              variants={fadeInUp}
-            >
-              {/* Quote Icon */}
-              <Quote className="w-8 h-8 md:w-10 md:h-10 text-brand-blue/10 absolute top-4 md:top-6 right-4 md:right-6" />
-              
-              {/* Stars */}
-              <div className="flex gap-1 mb-3 md:mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                ))}
-              </div>
-
-              {/* Content */}
-              <blockquote className="text-foreground mb-4 md:mb-6 text-sm md:text-base">
-                "{testimonial.content}"
-              </blockquote>
-
-              {/* Author */}
-              <div className="flex items-center gap-3 md:gap-4 pt-3 md:pt-4 border-t border-border">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-xs md:text-sm">
-                    {testimonial.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-                <div>
-                  <div className="font-semibold text-foreground text-sm md:text-base">{testimonial.name}</div>
-                  <div className="text-xs md:text-sm text-muted-foreground">{testimonial.role}</div>
-                  <div className="text-xs md:text-sm text-brand-blue font-medium">{testimonial.company}</div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Trust Indicator */}
-        <motion.div 
-          className="text-center mt-10 md:mt-12"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <p className="text-muted-foreground text-sm md:text-base">
-            Join <span className="text-brand-blue font-semibold">500+ satisfied clients</span> across East Africa
-          </p>
-        </motion.div>
-      </div>
-    </section>
-  );
+  const reduceMotion = useReducedMotion();
+  return <section className="section-spacing"><div className="container-professional"><span className="section-kicker">Client perspective</span><div className="grid gap-6 lg:grid-cols-[.7fr_1.3fr]"><div><h2>Trusted when technology is business-critical.</h2><p className="mt-5 text-muted-foreground">Existing client feedback, presented around the operational outcomes that matter.</p></div><div className="grid gap-4">{testimonials.map((item,index)=><motion.figure key={item.name} initial={reduceMotion?false:{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:index*.08}} className="enterprise-card grid gap-6 p-6 md:grid-cols-[auto_1fr_auto] md:items-center md:p-8"><div className="flex h-12 w-12 items-center justify-center bg-primary/10 font-display font-bold text-primary">{item.name.split(' ').map(x=>x[0]).join('')}</div><div><blockquote className="text-base leading-7 md:text-lg">“{item.content}”</blockquote><figcaption className="mt-4 text-sm"><strong>{item.name}</strong><span className="text-muted-foreground"> · {item.role}, {item.company}</span></figcaption></div><Quote className="hidden h-9 w-9 text-primary/30 md:block"/></motion.figure>)}</div></div></div></section>;
 };
-
 export default Testimonials;

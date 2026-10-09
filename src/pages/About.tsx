@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useInView, useReducedMotion } from "framer-motion";
-import { ArrowRight, Building2, Check, Factory, GraduationCap, HeartPulse, Landmark, Network, Retail, Server, ShieldCheck, Target, Users, Zap } from "lucide-react";
+import { ArrowRight, Building2, Check, Factory, GraduationCap, HeartPulse, Landmark, ShoppingBag, Server, ShieldCheck, Target, Users } from "lucide-react";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
@@ -53,7 +53,7 @@ const industries = [
   { icon: Building2, name: "Corporate Offices", text: "Secure, scalable workplaces and managed operations." },
   { icon: GraduationCap, name: "Education", text: "Connected campuses, learning platforms, and support." },
   { icon: Landmark, name: "Government", text: "Structured delivery for high-accountability environments." },
-  { icon: Retail, name: "Retail & Commerce", text: "Reliable connectivity and systems across customer touchpoints." },
+  { icon: ShoppingBag, name: "Retail & Commerce", text: "Reliable connectivity and systems across customer touchpoints." },
   { icon: Factory, name: "Manufacturing", text: "Resilient infrastructure for operational continuity." },
   { icon: HeartPulse, name: "Healthcare", text: "Dependable systems for sensitive, always-on operations." },
 ];
@@ -74,7 +74,7 @@ const About = () => {
   const reduceMotion = useReducedMotion();
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead page="home" />
+      <SEOHead title="Byte Matrix Technologies | Enterprise IT Nairobi" description="Byte Matrix Technologies delivers managed infrastructure, hardware procurement and 24/7 support as an ICT company in Nairobi, Kenya." keywords="" />
       <FuturisticHeader currentPage="about" />
       <main>
         <section className="relative min-h-[760px] overflow-hidden bg-[hsl(var(--brand-blue))] pt-[84px] text-primary-foreground lg:min-h-[800px]">
