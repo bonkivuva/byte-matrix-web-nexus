@@ -74,7 +74,7 @@ const About = () => {
   const reduceMotion = useReducedMotion();
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead page="home" />
+      <SEOHead title="Byte Matrix Technologies | Enterprise IT Nairobi" description="Byte Matrix Technologies delivers managed infrastructure, hardware procurement and 24/7 support as an ICT company in Nairobi, Kenya." keywords="" />
       <FuturisticHeader currentPage="about" />
       <main>
         <section className="relative min-h-[760px] overflow-hidden bg-[hsl(var(--brand-blue))] pt-[84px] text-primary-foreground lg:min-h-[800px]">
