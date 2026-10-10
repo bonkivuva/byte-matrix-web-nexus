@@ -171,9 +171,8 @@ const Services = () => {
   return (
     <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
       <SEOHead 
-        title="Our Services | IT Solutions & Managed Services – Nairobi, Kenya"
-        description="Explore our full range of ICT services in Nairobi Kenya including networking, cloud solutions, CCTV, cybersecurity, structured cabling, and IT managed services."
-        keywords="ICT company Nairobi Kenya, IT solutions Nairobi Kenya, networking, cloud solutions, CCTV installation, cybersecurity, structured cabling, managed IT services"
+        title="IT Services Nairobi | Byte Matrix Technologies"
+        description="Explore managed IT, networking, cloud, security, structured cabling, hardware and software services for organisations in Nairobi and across Kenya."
       />
       
       <FuturisticHeader currentPage="services" />

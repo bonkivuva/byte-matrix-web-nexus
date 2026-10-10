@@ -6,9 +6,8 @@ const CookiePolicy = () => {
   return (
     <>
       <SEOHead 
-        title="Cookie Policy | Byte Matrix Technologies – ICT Company Nairobi Kenya"
-        description="Cookie Policy for Byte Matrix Technologies, an ICT company in Nairobi Kenya. Learn about how we use cookies to improve your browsing experience."
-        keywords="cookie policy, ICT company Nairobi Kenya, website cookies"
+        title="Cookie Policy | Byte Matrix Technologies"
+        description="Learn how the Byte Matrix Technologies website uses cookies and related technologies to support functionality and improve your browsing experience."
       />
       
       <div className="min-h-screen bg-background">
