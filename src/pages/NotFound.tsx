@@ -42,7 +42,7 @@ const NotFound = () => {
 
           {/* Quick Links */}
           <div className="bg-primary-foreground/5 border border-primary-foreground/15 p-6 max-w-md mx-auto">
-            <h3 className="font-semibold text-foreground mb-4">Popular Pages:</h3>
+            <h3 className="font-semibold text-primary-foreground mb-4">Popular Pages:</h3>
             <div className="grid grid-cols-2 gap-3 text-sm">
               <Link to="/" className="text-primary hover:underline">Home</Link>
               <Link to="/services" className="text-primary hover:underline">Services</Link>
