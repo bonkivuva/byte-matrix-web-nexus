@@ -74,7 +74,7 @@ const About = () => {
   const reduceMotion = useReducedMotion();
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Byte Matrix Technologies | Enterprise IT Nairobi" description="Byte Matrix Technologies delivers managed infrastructure, hardware procurement and 24/7 support as an ICT company in Nairobi, Kenya." keywords="" />
+      <SEOHead title="Enterprise IT Nairobi | Byte Matrix" description="Byte Matrix delivers managed infrastructure, hardware procurement and 24/7 support for organisations across Nairobi, Kenya and East Africa." />
       <FuturisticHeader currentPage="about" />
       <main>
         <section className="relative min-h-[760px] overflow-hidden bg-[hsl(var(--brand-blue))] pt-[84px] text-primary-foreground lg:min-h-[800px]">
@@ -95,7 +95,7 @@ const About = () => {
               </motion.div>
             </div>
             <div className="relative min-h-[460px] lg:min-h-full">
-              <img src={heroEngineers} alt="Byte Matrix infrastructure engineers reviewing equipment in a data centre" width={1600} height={1200} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-center" />
+              <img src={heroEngineers} alt="Byte Matrix infrastructure engineers reviewing equipment in a data centre" width={1600} height={1200} loading="eager" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center" />
               <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--brand-blue))] via-transparent to-transparent lg:block" />
               <div className="absolute bottom-8 right-5 border border-primary-foreground/20 bg-[hsl(var(--brand-blue)/.88)] p-5 backdrop-blur-md sm:right-8">
                 <p className="text-xs font-bold uppercase text-primary" style={{ letterSpacing: ".12em" }}>Engineering standard</p><p className="mt-2 max-w-[260px] text-sm text-primary-foreground/80">Designed, deployed, documented, and supported as one accountable system.</p>

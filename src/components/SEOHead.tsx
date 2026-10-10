@@ -5,23 +5,23 @@ import { useLocation } from 'react-router-dom';
 interface SEOHeadProps {
   title?: string;
   description?: string;
-  keywords?: string;
   image?: string;
   type?: string;
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
+  noIndex?: boolean;
 }
 
 const SEOHead = ({ 
   title = "Byte Matrix Technologies | ICT Company in Nairobi, Kenya",
   description = "Byte Matrix Technologies is a trusted ICT company in Nairobi Kenya offering enterprise IT solutions, managed services, networking and CCTV installation.",
-  keywords = "ICT company Nairobi Kenya, IT solutions Nairobi Kenya, managed IT services, networking, CCTV installation, cybersecurity, cloud services",
   image = "https://bytematrixtechnologies.co.ke/og-image.jpg",
   type = "website",
   author = "Byte Matrix Technologies",
   publishedTime,
-  modifiedTime
+  modifiedTime,
+  noIndex = false,
 }: SEOHeadProps) => {
   const location = useLocation();
   const canonicalUrl = `https://bytematrixtechnologies.co.ke${location.pathname}`;
@@ -49,9 +49,10 @@ const SEOHead = ({
 
     // Basic meta tags
     updateMetaTag('meta[name="description"]', description);
-    updateMetaTag('meta[name="keywords"]', keywords);
     updateMetaTag('meta[name="author"]', author);
-    updateMetaTag('meta[name="robots"]', 'index, follow');
+    updateMetaTag('meta[name="robots"]', noIndex ? 'noindex, follow' : 'index, follow');
+
+    document.querySelector('meta[name="keywords"]')?.remove();
     
     // Open Graph tags
     updateMetaTag('meta[property="og:title"]', title);
@@ -88,53 +89,32 @@ const SEOHead = ({
     }
     
     // Add structured data for business
+    const routeName = location.pathname === '/' ? 'Home' : location.pathname.split('/').filter(Boolean).map(part => part.replace(/-/g, ' ').replace(/\b\w/g, letter => letter.toUpperCase())).join(' / ');
     const structuredData = {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Byte Matrix Technologies",
-      "description": description,
-      "url": canonicalUrl,
-      "logo": "https://bytematrixtechnologies.co.ke/logo.png",
-      "image": image,
-      "telephone": "+254724367794",
-      "email": "info@bytematrixtechnologies.co.ke",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "KE"
-      },
-      "serviceType": "IT Services",
-      "areaServed": "Global",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "IT Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "IT Consulting"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Hardware Solutions"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Technical Support"
-            }
-          }
-        ]
-      },
-      "sameAs": [
-        "https://x.com/ByteMatrixTech",
-        "https://www.facebook.com/share/1BSjKFRCUd/",
-        "https://www.instagram.com/byte_matrix_technologies"
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": `${canonicalUrl}#webpage`,
+          "url": canonicalUrl,
+          "name": title,
+          "description": description,
+          "isPartOf": { "@id": "https://bytematrixtechnologies.co.ke/#website" }
+        },
+        ...(location.pathname === '/' ? [] : [{
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bytematrixtechnologies.co.ke/" },
+            { "@type": "ListItem", "position": 2, "name": routeName, "item": canonicalUrl }
+          ]
+        }]),
+        ...(location.pathname === '/services' ? [{
+          "@type": "Service",
+          "name": "Enterprise IT Solutions and Managed Services",
+          "provider": { "@id": "https://bytematrixtechnologies.co.ke/#organization" },
+          "areaServed": ["Nairobi", "Kenya", "East Africa"],
+          "url": canonicalUrl
+        }] : [])
       ]
     };
 
@@ -150,37 +130,7 @@ const SEOHead = ({
       document.head.appendChild(structuredDataScript);
     }
     
-    // Analytics tracking (page view)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_path: location.pathname,
-        page_title: title,
-        page_location: canonicalUrl,
-      });
-      
-      // Track page view event
-      (window as any).gtag('event', 'page_view', {
-        page_title: title,
-        page_location: canonicalUrl,
-        page_path: location.pathname,
-      });
-    }
-
-    // Track performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
-        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        if ((window as any).gtag && loadTime > 0) {
-          (window as any).gtag('event', 'timing_complete', {
-            name: 'page_load_time',
-            value: Math.round(loadTime),
-            event_category: 'Performance'
-          });
-        }
-      });
-    }
-
-  }, [title, description, keywords, image, location.pathname, canonicalUrl, type, author, publishedTime, modifiedTime]);
+  }, [title, description, image, location.pathname, canonicalUrl, type, author, publishedTime, modifiedTime, noIndex]);
 
   return null; // This component doesn't render anything
 };

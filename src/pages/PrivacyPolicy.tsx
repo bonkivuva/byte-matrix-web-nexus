@@ -6,9 +6,8 @@ const PrivacyPolicy = () => {
   return (
     <>
       <SEOHead 
-        title="Privacy Policy | Byte Matrix Technologies – ICT Company Nairobi Kenya"
-        description="Privacy Policy for Byte Matrix Technologies, a trusted ICT company in Nairobi Kenya. Learn how we collect, use, and protect your personal information."
-        keywords="privacy policy, ICT company Nairobi Kenya, data protection Kenya"
+        title="Privacy Policy | Byte Matrix Technologies"
+        description="Read how Byte Matrix Technologies collects, uses and protects personal information when you use our website or contact our team in Nairobi, Kenya."
       />
       
       <div className="min-h-screen bg-background">

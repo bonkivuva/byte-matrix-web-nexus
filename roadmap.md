@@ -10,7 +10,7 @@
 
 # Improvement brief
 
-- [ ] Phase 1: add unique route metadata, self-referencing canonicals, structured data, canonical-host consistency, social image validation, sitemap review, crawlability recommendation, and refined 404.
+- [x] Phase 1: add unique route metadata, self-referencing canonicals, structured data, canonical-host consistency, social image validation, sitemap review, crawlability recommendation, and refined 404.
 - [ ] Phase 2: add six service detail routes, service-led homepage content, FAQs, blog structure, and case-study detail templates without breaking existing routes.
 - [ ] Phase 3: validate stored quote requests, WhatsApp/call conversion actions, end-of-page CTAs, map, and consent-aware analytics events.
 - [ ] Phase 4: use only verified client, testimonial, vendor, and company facts; do not invent certifications or metrics.
