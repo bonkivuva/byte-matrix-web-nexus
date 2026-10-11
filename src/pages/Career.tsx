@@ -8,6 +8,7 @@ import { Users, ArrowRight, Mail, Briefcase, Heart, Lightbulb, TrendingUp } from
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import PageTransition from "@/components/PageTransition";
+import engineers from "@/assets/hero-engineers-datacentre.jpg";
 
 const Career = () => {
   const values = [
@@ -28,11 +29,6 @@ const Career = () => {
       
       {/* Hero */}
       <section className="relative pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-64 md:w-96 h-64 md:h-96 bg-primary/8 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-64 md:w-96 h-64 md:h-96 bg-accent/6 rounded-full blur-3xl" />
-        </div>
-
         <div className="container-professional relative z-10">
           <motion.div 
             className="max-w-3xl"
@@ -47,7 +43,7 @@ const Career = () => {
               Careers
             </motion.p>
             <motion.h1 variants={fadeInUp}>
-              Join Our Growing Team
+              Careers at Byte Matrix Technologies
             </motion.h1>
             <motion.p 
               className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mt-6"
@@ -63,14 +59,14 @@ const Career = () => {
       {/* Hero Image */}
       <section className="container-professional mb-16 md:mb-24">
         <motion.div 
-          className="rounded-2xl overflow-hidden shadow-corporate-lg"
+          className="rounded-lg overflow-hidden shadow-corporate-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <img 
-            src="/lovable-uploads/6118b34b-4d85-4de5-b29f-798c1f7e9cec.png" 
-            alt="Professional team at Byte Matrix Technologies"
+            src={engineers} 
+            alt="Infrastructure engineering team reviewing data-centre systems"
             className="w-full h-56 md:h-72 lg:h-80 object-cover"
             loading="lazy"
           />
@@ -116,7 +112,7 @@ const Career = () => {
               <motion.div key={idx} variants={fadeInUp}>
                 <Card className="card-premium h-full">
                   <CardContent className="p-6 md:p-8">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                    <div className="w-12 h-12 bg-primary/10 rounded-md flex items-center justify-center mb-5">
                       <value.icon className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-bold mb-2">{value.title}</h3>
@@ -160,7 +156,7 @@ const Career = () => {
           >
             <Card className="card-premium">
               <CardContent className="p-8 md:p-12">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                   <Briefcase className="w-8 h-8 text-primary" />
                 </div>
                 
@@ -169,7 +165,7 @@ const Career = () => {
                 </h3>
                 
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  We don't have specific openings right now, but we're always looking for talented individuals who share our passion for technology and innovation. If you believe you'd be a great fit, we'd love to hear from you.
+                  To enquire about current or future opportunities, send your CV and cover letter to our recruitment team. Please include your area of expertise and the type of role you are interested in.
                 </p>
                 
                 <p className="text-primary font-semibold mb-8">
