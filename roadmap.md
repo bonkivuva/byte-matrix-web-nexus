@@ -1,5 +1,16 @@
 # Redesign roadmap
 
+# Current requested refinements
+
+- [x] Apply supplied statistics, testimonial, outcome descriptions, trust placeholders, footer hours, CTA copy and comparison table refinements.
+- [x] Add persistent light/dark control and full-color partner logos on readable surfaces.
+- [x] Put About first, expose Careers in shared navigation, and refine Careers without inventing vacancies.
+- [x] Restore original rotating-Earth About video and verify playback, navigation and mobile/tablet/desktop layouts.
+
+Current confirmation needed: real street address and evidence for certification/partner placeholders.
+
+## Earlier redesign scope (not part of this request)
+
 - [ ] Rebuild the shared visual system, navigation, footer, motion, and accessibility foundations.
 - [ ] Redesign the About/homepage hero and all requested credibility, bento, service-tier, comparison, testimonial, compliance, case-study, and CTA sections.
 - [ ] Restyle Services, Portfolio/Case Studies, Careers, Contact, and legal page shells without removing existing content.
@@ -9,6 +20,8 @@
 - [ ] Validate the central conversion flow and layouts at 375, 768, 1024, and 1440 pixels.
 
 # Improvement brief
+
+Phases 2–5 await the user's approval to proceed, as requested in the earlier brief.
 
 - [x] Phase 1: add unique route metadata, self-referencing canonicals, structured data, canonical-host consistency, social image validation, sitemap review, crawlability recommendation, and refined 404.
 - [ ] Phase 2: add six service detail routes, service-led homepage content, FAQs, blog structure, and case-study detail templates without breaking existing routes.

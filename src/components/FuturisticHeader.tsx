@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { primaryNavigation } from "@/lib/siteConfig";
+import ThemeToggle from "@/components/ThemeToggle";
 
 interface FuturisticHeaderProps { currentPage?: string }
 
@@ -19,6 +20,17 @@ const FuturisticHeader = (_props: FuturisticHeaderProps) => {
   }, []);
 
   useEffect(() => setIsOpen(false), [location.pathname, location.hash]);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      if (location.hash) {
+        document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [location.pathname, location.hash]);
 
   const isActive = (to: string) => {
     const [path, hash] = to.split("#");
@@ -38,13 +50,14 @@ const FuturisticHeader = (_props: FuturisticHeaderProps) => {
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
           {primaryNavigation.map((item) => (
-            <Link key={item.label} to={item.to} className={`flex min-h-12 items-center border-b-2 px-4 text-sm font-semibold transition-colors ${isActive(item.to) ? "border-primary text-foreground" : "border-transparent text-muted-foreground hover:border-primary/40 hover:text-foreground"}`}>
+            <Link key={item.label} to={item.to} aria-current={isActive(item.to) ? "page" : undefined} className={`flex min-h-12 items-center border-b-2 px-2 text-sm font-semibold transition-colors ${isActive(item.to) ? "border-primary text-foreground" : "border-transparent text-muted-foreground hover:border-primary/40 hover:text-foreground"}`}>
               {item.label}
             </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Button asChild className="hidden md:inline-flex">
             <Link to="/contact">Request a Quote <ArrowUpRight /></Link>
           </Button>

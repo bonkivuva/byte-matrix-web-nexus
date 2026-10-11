@@ -25,7 +25,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 interface LeadCaptureFormProps { title?: string; subtitle?: string; className?: string }
 
-const LeadCaptureForm = ({ title = "Request a Consultation", subtitle = "Share your priorities and our engineering team will review the requirement.", className = "" }: LeadCaptureFormProps) => {
+const LeadCaptureForm = ({ title = "Request a Tailored Proposal", subtitle = "Share your priorities and our engineering team will review the requirement.", className = "" }: LeadCaptureFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
