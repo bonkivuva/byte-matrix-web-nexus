@@ -1,5 +1,12 @@
 # Redesign roadmap
 
+# Current requested refinements
+
+- [ ] Apply supplied statistics, testimonial, outcome descriptions, trust placeholders, footer hours, CTA copy and comparison table refinements.
+- [ ] Add persistent light/dark control and full-color partner logos on readable surfaces.
+- [ ] Put About first, expose Careers in shared navigation, and refine Careers without inventing vacancies.
+- [ ] Restore original rotating-Earth About video and verify playback, navigation and mobile/tablet/desktop layouts.
+
 - [ ] Rebuild the shared visual system, navigation, footer, motion, and accessibility foundations.
 - [ ] Redesign the About/homepage hero and all requested credibility, bento, service-tier, comparison, testimonial, compliance, case-study, and CTA sections.
 - [ ] Restyle Services, Portfolio/Case Studies, Careers, Contact, and legal page shells without removing existing content.
