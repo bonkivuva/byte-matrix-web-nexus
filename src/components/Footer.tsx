@@ -37,7 +37,6 @@ const Footer = () => {
             <h2 className="text-sm font-bold uppercase text-primary" style={{ letterSpacing: ".12em" }}>Company</h2>
             <ul className="mt-5 space-y-1">
               {primaryNavigation.map((item) => <li key={item.label}><Link to={item.to} className="flex min-h-12 items-center text-sm text-primary-foreground/70 hover:text-primary">{item.label}</Link></li>)}
-              <li><Link to="/careers" className="flex min-h-12 items-center text-sm text-primary-foreground/70 hover:text-primary">Careers</Link></li>
             </ul>
           </div>
 
@@ -56,6 +55,8 @@ const Footer = () => {
               <a href={siteConfig.phoneHref} className="flex min-h-12 items-center gap-3 hover:text-primary"><Phone className="h-5 w-5 text-primary" />{siteConfig.phoneDisplay}</a>
               <a href={`mailto:${siteConfig.email}`} className="flex min-h-12 items-center gap-3 break-all hover:text-primary"><Mail className="h-5 w-5 shrink-0 text-primary" />{siteConfig.email}</a>
               <p className="flex items-center gap-3"><MapPin className="h-5 w-5 text-primary" />{siteConfig.location}</p>
+               <p className="text-xs text-primary-foreground/60">Street address: [OFFICE ADDRESS]</p>
+               <p className="text-sm leading-7">Mon–Fri: 8:00 AM – 6:00 PM EAT<br />24/7 Support for Enterprise Clients</p>
             </div>
             <form onSubmit={subscribe} className="mt-7">
               <label htmlFor="newsletter" className="text-sm font-semibold">Enterprise insights by email</label>

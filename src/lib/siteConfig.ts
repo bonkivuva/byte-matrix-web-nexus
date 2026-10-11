@@ -14,10 +14,11 @@ export const siteConfig = {
 } as const;
 
 export const primaryNavigation = [
+  { label: "About", to: "/" },
   { label: "Services", to: "/services" },
   { label: "Industries", to: "/#industries" },
-  { label: "About", to: "/#about" },
   { label: "Case Studies", to: "/portfolio" },
+  { label: "Careers", to: "/careers" },
   { label: "Contact", to: "/contact" },
 ] as const;
 
