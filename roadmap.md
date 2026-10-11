@@ -2,12 +2,13 @@
 
 # Current requested refinements
 
+- [ ] Remove the street-address placeholder, restore the original Careers photograph, and polish the Careers layout in both themes.
 - [x] Apply supplied statistics, testimonial, outcome descriptions, trust placeholders, footer hours, CTA copy and comparison table refinements.
 - [x] Add persistent light/dark control and full-color partner logos on readable surfaces.
 - [x] Put About first, expose Careers in shared navigation, and refine Careers without inventing vacancies.
 - [x] Restore original rotating-Earth About video and verify playback, navigation and mobile/tablet/desktop layouts.
 
-Current confirmation needed: real street address and evidence for certification/partner placeholders.
+Current confirmation needed: evidence for certification/partner placeholders. The unpublished street address must not appear as a placeholder.
 
 ## Earlier redesign scope (not part of this request)
 
