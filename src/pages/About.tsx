@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import earthVideo from "@/assets/hero-bg.mp4.asset.json";
+import earthWebm from "@/assets/hero-bg.webm.asset.json";
 import { homeStats, formatStat } from "@/lib/homeStats";
 import sanlamLogo from "@/assets/sanlam-allianz-logo.png";
 import kijabeLogo from "@/assets/kijabe-sacco-logo.png";
@@ -60,7 +61,7 @@ const About = () => {
       <main>
         <section className="about-hero relative overflow-hidden pt-[84px] text-primary-foreground">
           <img src="/videos/hero-poster.webp" alt="" className="absolute inset-0 h-full w-full object-cover" />
-          {!reduceMotion && <video ref={videoRef} src={earthVideo.url} autoPlay loop muted playsInline preload="metadata" poster="/videos/hero-poster.webp" aria-label="Rotating digital Earth matrix" className="absolute inset-0 h-full w-full object-cover" />}
+          {!reduceMotion && <video ref={videoRef} autoPlay loop muted playsInline preload="metadata" poster="/videos/hero-poster.webp" aria-label="Rotating digital Earth matrix" className="absolute inset-0 h-full w-full object-cover"><source src={earthWebm.url} type="video/webm" /><source src={earthVideo.url} type="video/mp4" /></video>}
           <div className="hero-video-overlay absolute inset-0" />
           <div className="container-professional relative flex min-h-[640px] items-center py-16 md:min-h-[650px]">
             <motion.div initial={reduceMotion ? false : "hidden"} animate="visible" variants={reveal} transition={{ duration: .65 }} className="w-full max-w-3xl">
