@@ -337,7 +337,7 @@ const Services = () => {
               className="text-lg text-white/70 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
-              We operate with full transparency in pricing, project timelines, and technical recommendations. Powered by innovation, our certified team delivers 24/7 enterprise support you can depend on.
+              We operate with full transparency in pricing, project timelines, and technical recommendations. Our engineering team delivers 24/7 enterprise support you can depend on.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
