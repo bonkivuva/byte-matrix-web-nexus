@@ -2,199 +2,85 @@ import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Users, ArrowRight, Mail, Briefcase, Heart, Lightbulb, TrendingUp } from "lucide-react";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { ArrowDown, ArrowUpRight, Mail, Users, ShieldCheck, Lightbulb, HeartHandshake } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
-import engineers from "@/assets/hero-engineers-datacentre.jpg";
 
-const Career = () => {
-  const values = [
-    { icon: Lightbulb, title: "Drive Innovation", desc: "We encourage continuous learning and the adoption of cutting-edge technologies to solve complex challenges." },
-    { icon: Users, title: "Operate with Integrity", desc: "We uphold transparency and ethical practices in every project, every interaction, and every decision." },
-    { icon: TrendingUp, title: "Put Customers First", desc: "Our teams are aligned around delivering tailored outcomes that genuinely serve our clients' goals." },
-    { icon: Heart, title: "Build Reliable Systems", desc: "Consistent performance and dependable support are the standards we hold ourselves to — for clients and for each other." },
-  ];
+const values = [
+  { icon: Lightbulb, title: "Drive Innovation", desc: "Continuous learning and thoughtful adoption of technology help us solve complex challenges." },
+  { icon: ShieldCheck, title: "Operate with Integrity", desc: "Transparency and ethical practices guide every project, interaction, and decision." },
+  { icon: HeartHandshake, title: "Put Customers First", desc: "We work together to deliver tailored outcomes that serve our clients’ goals." },
+  { icon: Users, title: "Build Reliable Systems", desc: "Dependable support and consistent performance are the standards we hold ourselves to." },
+];
 
-  return (
-    <PageTransition><div className="min-h-screen text-foreground overflow-x-hidden">
-      <SEOHead 
-        title="Technology Careers Nairobi | Byte Matrix"
-        description="Explore career opportunities with Byte Matrix Technologies and help deliver reliable IT infrastructure, support and digital solutions from Nairobi, Kenya."
-      />
-      
+const Career = () => (
+  <PageTransition>
+    <div className="min-h-screen bg-background text-foreground">
+      <SEOHead title="Technology Careers Nairobi | Byte Matrix" description="Explore career opportunities with Byte Matrix Technologies and help deliver reliable IT infrastructure, support and digital solutions from Nairobi, Kenya." />
       <FuturisticHeader currentPage="careers" />
-      
-      {/* Hero */}
-      <section className="relative pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
-        <div className="container-professional relative z-10">
-          <motion.div 
-            className="max-w-3xl"
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-          >
-            <motion.p 
-              className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-4"
-              variants={fadeInUp}
-            >
-              Careers
-            </motion.p>
-            <motion.h1 variants={fadeInUp}>
-              Careers at Byte Matrix Technologies
-            </motion.h1>
-            <motion.p 
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mt-6"
-              variants={fadeInUp}
-            >
-              At Byte Matrix Technologies, we hire passionate, driven individuals who love technology and innovation. We promote a collaborative environment where learning and creativity thrive.
-            </motion.p>
-            <motion.div className="w-16 h-1 bg-primary rounded-full mt-6" variants={fadeInUp} />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Hero Image */}
-      <section className="container-professional mb-16 md:mb-24">
-        <motion.div 
-          className="rounded-lg overflow-hidden shadow-corporate-lg"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <img 
-            src={engineers} 
-            alt="Infrastructure engineering team reviewing data-centre systems"
-            className="w-full h-56 md:h-72 lg:h-80 object-cover"
-            loading="lazy"
+      <main>
+        <section className="about-hero relative isolate overflow-hidden pb-16 pt-36 text-primary-foreground md:pb-20 md:pt-44">
+          <img
+            src="/lovable-uploads/babb4625-0209-4f12-95b2-209a31633356.png"
+            alt="Professionals collaborating around a shared table with laptops and tablets"
+            width="1536" height="1024"
+            loading="eager" decoding="async"
+            className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
           />
-        </motion.div>
-      </section>
+          <div className="hero-video-overlay absolute inset-0 -z-10" />
+          <div className="container-professional">
+            <p className="mb-5 text-sm font-semibold text-primary-foreground/80">People. Purpose. Technology.</p>
+            <h1 className="max-w-3xl">Careers at Byte Matrix Technologies</h1>
+            <p className="mt-6 max-w-xl text-base leading-7 text-primary-foreground/85 md:text-lg">Join a collaborative team where learning, integrity, and technical excellence shape the work we do.</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button asChild size="lg"><a href="#opportunities">Explore opportunities <ArrowDown className="h-4 w-4" /></a></Button>
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"><a href="mailto:careers@bytematrixtechnologies.co.ke"><Mail className="h-4 w-4" />Contact recruitment</a></Button>
+            </div>
+          </div>
+        </section>
 
-      {/* Our Culture */}
-      <section className="section-spacing bg-gradient-professional-subtle">
-        <div className="container-professional">
-          <motion.div 
-            className="max-w-2xl mb-14 md:mb-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
-            <motion.p 
-              className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-4"
-              variants={fadeInUp}
-            >
-              Our Culture & Values
-            </motion.p>
-            <motion.h2 variants={fadeInUp}>
-              Why Work With <span className="text-gradient-professional">Us</span>
-            </motion.h2>
-            <motion.p 
-              className="text-muted-foreground text-base md:text-lg max-w-2xl mt-4"
-              variants={fadeInUp}
-            >
-              At Byte Matrix Technologies, we believe that great teams are built on shared values. When you join us, you become part of a culture that lives these principles every day.
-            </motion.p>
-            <motion.div className="w-16 h-1 bg-primary rounded-full mt-6" variants={fadeInUp} />
-          </motion.div>
+        <section className="section-spacing" aria-labelledby="culture-heading">
+          <div className="container-professional">
+            <div className="grid gap-5 lg:grid-cols-2 lg:gap-16">
+              <div><span className="section-kicker">Our culture & values</span><h2 id="culture-heading" className="max-w-lg">Good technology starts with good people.</h2></div>
+              <p className="max-w-xl self-end text-base text-muted-foreground md:text-lg">Our shared values shape how we collaborate, solve problems, and support our clients. We welcome people who take pride in their work and bring curiosity to every challenge.</p>
+            </div>
+            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+              {values.map(({ icon: Icon, title, desc }) => (
+                <article key={title} className="border-t border-border pt-6">
+                  <Icon className="mb-6 h-7 w-7 text-primary" strokeWidth={1.5} aria-hidden="true" />
+                  <h3 className="text-lg">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted-foreground">{desc}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
 
-          <motion.div 
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
-            {values.map((value, idx) => (
-              <motion.div key={idx} variants={fadeInUp}>
-                <Card className="card-premium h-full">
-                  <CardContent className="p-6 md:p-8">
-                    <div className="w-12 h-12 bg-primary/10 rounded-md flex items-center justify-center mb-5">
-                      <value.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-2">{value.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{value.desc}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Open Positions */}
-      <section className="section-spacing-lg">
-        <div className="container-professional">
-          <motion.div 
-            className="max-w-2xl mb-14 md:mb-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
-            <motion.p 
-              className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-4"
-              variants={fadeInUp}
-            >
-              Open Positions
-            </motion.p>
-            <motion.h2 variants={fadeInUp}>
-              Current Opportunities
-            </motion.h2>
-            <motion.div className="w-16 h-1 bg-primary rounded-full mt-6" variants={fadeInUp} />
-          </motion.div>
-
-          <motion.div 
-            className="max-w-3xl"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <Card className="card-premium">
-              <CardContent className="p-8 md:p-12">
-                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                  <Briefcase className="w-8 h-8 text-primary" />
-                </div>
-                
-                <h3 className="text-xl md:text-2xl font-bold mb-4">
-                  Building Our Future Team
-                </h3>
-                
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  To enquire about current or future opportunities, send your CV and cover letter to our recruitment team. Please include your area of expertise and the type of role you are interested in.
-                </p>
-                
-                <p className="text-primary font-semibold mb-8">
-                  Submit your CV & Cover Letter to get considered for future roles.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" asChild>
-                    <a href="mailto:careers@bytematrixtechnologies.co.ke">
-                      <Mail className="w-5 h-5 mr-2" />
-                      Send Your CV
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild>
-                    <Link to="/contact">
-                      Contact Us
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
+        <section id="opportunities" className="section-spacing bg-muted" aria-labelledby="opportunities-heading">
+          <div className="container-professional grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
+            <div>
+              <span className="section-kicker">Career opportunities</span>
+              <h2 id="opportunities-heading">Start a conversation with our team.</h2>
+              <p className="mt-5 max-w-lg text-muted-foreground">To enquire about current or future opportunities, send your CV and cover letter to our recruitment team. Include your area of expertise and the type of role you are interested in.</p>
+            </div>
+            <div className="border-t border-border pt-6 lg:pt-8">
+              <h3 className="text-xl">Introduce yourself</h3>
+              <ul className="mt-6 divide-y divide-border border-y border-border">
+                {["Your CV and relevant experience", "A cover letter introducing your interests", "Your area of expertise and preferred role"].map((item, index) => <li key={item} className="flex items-start gap-4 py-4 text-sm"><span className="font-semibold text-primary" aria-hidden="true">0{index + 1}</span><span>{item}</span></li>)}
+              </ul>
+              <a href="mailto:careers@bytematrixtechnologies.co.ke" className="mt-6 block break-all text-sm font-semibold text-foreground underline decoration-primary/50 underline-offset-4 hover:text-primary">careers@bytematrixtechnologies.co.ke</a>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <Button asChild size="lg"><a href="mailto:careers@bytematrixtechnologies.co.ke"><Mail className="h-4 w-4" />Send your CV <ArrowUpRight className="h-4 w-4" /></a></Button>
+                <Button asChild size="lg" variant="outline"><Link to="/contact">Contact us <ArrowUpRight className="h-4 w-4" /></Link></Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       <Footer />
-    </div></PageTransition>
-  );
-};
+    </div>
+  </PageTransition>
+);
 
 export default Career;
