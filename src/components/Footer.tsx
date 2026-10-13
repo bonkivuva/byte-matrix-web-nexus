@@ -69,7 +69,7 @@ const Footer = () => {
 
         <div className="flex flex-col gap-5 pt-8 text-xs text-primary-foreground/55 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Byte Matrix Technologies. All rights reserved.</p>
-          <div className="flex flex-wrap gap-2"><span className="border border-primary-foreground/15 px-3 py-2">ISO-aligned processes</span><span className="border border-primary-foreground/15 px-3 py-2">Microsoft ecosystem</span><span className="border border-primary-foreground/15 px-3 py-2">Cisco solutions</span></div>
+          <p>Nairobi, Kenya · Connecting Your Digital Matrix</p>
         </div>
       </div>
     </footer>
