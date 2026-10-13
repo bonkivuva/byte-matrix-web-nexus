@@ -1,14 +1,12 @@
-import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Building2, Check, Factory, GraduationCap, HeartPulse, Landmark, ShoppingBag, Server, ShieldCheck, Target, Users, Pause, Play, Award } from "lucide-react";
+import { ArrowRight, Building2, Check, Factory, GraduationCap, HeartPulse, Landmark, ShoppingBag, Server, ShieldCheck, Target, Users } from "lucide-react";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
-import earthVideo from "@/assets/hero-bg.mp4.asset.json";
-import earthWebm from "@/assets/hero-bg.webm.asset.json";
+import aboutImage from "@/assets/hero-engineers-datacentre.jpg";
 import { homeStats, formatStat } from "@/lib/homeStats";
 import sanlamLogo from "@/assets/sanlam-allianz-logo.png";
 import kijabeLogo from "@/assets/kijabe-sacco-logo.png";
@@ -23,7 +21,7 @@ import microsoftLogo from "@/assets/partners/microsoft.png";
 const reveal = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } };
 
 const differentiators = [
-  { icon: ShieldCheck, title: "Certified Engineering Expertise", desc: "Experienced specialists apply disciplined, standards-led engineering to each environment." },
+  { icon: ShieldCheck, title: "Engineering Expertise", desc: "Experienced specialists apply disciplined engineering to each environment." },
   { icon: Server, title: "Enterprise-Grade Architecture", desc: "Resilient infrastructure designed for uptime, security, performance, and controlled growth." },
   { icon: Target, title: "Structured Project Execution", desc: "Clear discovery, implementation, documentation, handover, and governance at every stage." },
   { icon: Users, title: "Long-Term Technical Partnership", desc: "A proactive operating relationship aligned to your priorities, risks, and growth objectives." },
@@ -52,30 +50,27 @@ const caseStudies = [
 
 const About = () => {
   const reduceMotion = useReducedMotion();
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [paused, setPaused] = useState(false);
   return (
     <div className="min-h-screen bg-background">
       <SEOHead title="Enterprise IT Nairobi | Byte Matrix" description="Byte Matrix delivers managed infrastructure, hardware procurement and 24/7 support for organisations across Nairobi, Kenya and East Africa." />
       <FuturisticHeader currentPage="about" />
       <main>
         <section className="about-hero relative overflow-hidden pt-[84px] text-primary-foreground">
-          <img src="/videos/hero-poster.webp" alt="" className="absolute inset-0 h-full w-full object-cover" />
-          {!reduceMotion && <video ref={videoRef} autoPlay loop muted playsInline preload="metadata" poster="/videos/hero-poster.webp" aria-label="Rotating digital Earth matrix" className="absolute inset-0 h-full w-full object-cover"><source src={earthWebm.url} type="video/webm" /><source src={earthVideo.url} type="video/mp4" /></video>}
-          <div className="hero-video-overlay absolute inset-0" />
-          <div className="container-professional relative flex min-h-[640px] items-center py-16 md:min-h-[650px]">
-            <motion.div initial={reduceMotion ? false : "hidden"} animate="visible" variants={reveal} transition={{ duration: .65 }} className="w-full max-w-3xl">
-              <span className="section-kicker">Byte Matrix Technologies · Nairobi</span>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl">Enterprise IT Infrastructure, <span className="text-primary">Managed with Precision</span></h1>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-primary-foreground/85 md:text-lg">Managed IT services, hardware procurement, and 24/7 technical support for organisations that demand international standards across East Africa and beyond.</p>
+          <img src={aboutImage} alt="IT engineers reviewing server infrastructure in a data centre" width="1600" height="1200" loading="eager" decoding="async" className="about-intro-image absolute inset-0 h-full w-full object-cover" />
+          <div className="about-intro-overlay absolute inset-0" />
+          <div className="container-professional relative flex min-h-[560px] items-center py-14 md:py-16">
+            <motion.div initial={false} animate="visible" variants={reveal} transition={{ duration: .65 }} className="w-full max-w-2xl">
+              <span className="section-kicker">Connecting Your Digital Matrix</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl">Byte Matrix<br />Technologies</h1>
+              <p className="mt-6 max-w-xl text-xl font-semibold leading-8 md:text-2xl">Enterprise IT infrastructure.<br /><span className="text-primary">Managed with precision.</span></p>
+              <p className="mt-5 max-w-lg text-base leading-7 text-primary-foreground/85">Managed IT services, hardware procurement, and technical support. An accountable technology partner for organisations across East Africa and beyond.</p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg"><Link to="/contact">Request a Tailored Proposal <ArrowRight /></Link></Button>
                 <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"><Link to="/services">Explore Enterprise Solutions</Link></Button>
               </div>
-              <p className="mt-10 border-l-2 border-primary pl-5 text-xs font-bold uppercase leading-6 text-primary-foreground/80">ISO-Aligned Processes <span className="mx-2 text-primary">|</span> 99.9% Uptime Commitment <span className="mx-2 text-primary">|</span> 24/7 Global Support Standards</p>
+              <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 border-t border-primary-foreground/20 pt-6 text-xs font-semibold text-primary-foreground/85"><span className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />Managed infrastructure</span><span className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />24/7 enterprise support</span></div>
             </motion.div>
           </div>
-          {!reduceMotion && <Button size="icon" variant="outline" className="absolute bottom-4 right-5 border-primary-foreground/30 bg-transparent text-primary-foreground" aria-label={paused ? "Play background video" : "Pause background video"} title={paused ? "Play background video" : "Pause background video"} onClick={() => { const video = videoRef.current; if (!video) return; if (video.paused) { void video.play(); setPaused(false); } else { video.pause(); setPaused(true); } }}>{paused ? <Play /> : <Pause />}</Button>}
         </section>
 
         <section aria-label="Trusted clients" className="border-b border-border bg-card py-8">
@@ -96,7 +91,7 @@ const About = () => {
               <Button asChild variant="outline" className="mt-8"><Link to="/contact">Book a Technical Discovery Call <ArrowRight /></Link></Button>
             </motion.div>
             <div className="grid gap-4 sm:grid-cols-2">
-              {differentiators.map((item, index) => <motion.article key={item.title} initial={reduceMotion ? false : "hidden"} whileInView="visible" viewport={{ once: true }} variants={reveal} transition={{ delay: index * .08 }} className={`enterprise-card p-7 ${index === 0 ? "sm:row-span-2 sm:flex sm:flex-col sm:justify-end" : ""}`}><item.icon className="mb-8 h-8 w-8 text-primary" /><h3>{item.title}</h3><p className="mt-3 text-sm text-muted-foreground">{item.desc}</p></motion.article>)}
+              {differentiators.map((item, index) => <motion.article key={item.title} initial={reduceMotion ? false : "hidden"} whileInView="visible" viewport={{ once: true }} variants={reveal} transition={{ delay: index * .08 }} className="border-t border-border py-6"><item.icon className="mb-5 h-7 w-7 text-primary" /><h3 className="text-lg md:text-xl">{item.title}</h3><p className="mt-3 text-sm text-muted-foreground">{item.desc}</p></motion.article>)}
             </div>
           </div>
         </section>
@@ -134,10 +129,6 @@ const About = () => {
 
         <section className="section-spacing surface-dark">
           <div className="container-professional"><span className="section-kicker">Technology ecosystem</span><div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr]"><div><h2>Enterprise platforms. Independent engineering judgement.</h2><p className="mt-5 text-primary-foreground/70">We design within established technology ecosystems while selecting solutions around operational fit, resilience, and long-term value.</p></div><div className="grid grid-cols-2 gap-3 sm:grid-cols-3">{[{src:microsoftLogo,name:'Microsoft'},{src:ciscoLogo,name:'Cisco'},{src:dellLogo,name:'Dell Technologies'},{src:hpeLogo,name:'HPE'},{src:ubiquitiLogo,name:'Ubiquiti'},{src:hikvisionLogo,name:'Hikvision'}].map(x=><div key={x.name} className="partner-logo-surface flex min-h-28 items-center justify-center rounded-md p-5"><img src={x.src} alt={`${x.name} technology`} loading="lazy" className="max-h-11 max-w-[130px] object-contain"/></div>)}</div></div></div>
-        </section>
-
-        <section className="section-spacing border-b border-border">
-          <div className="container-professional"><span className="section-kicker">Standards & vendor relationships</span><h2>Trusted Partnerships & Certifications</h2><p className="mt-5 max-w-3xl text-muted-foreground">Verified vendor relationships and certification details will be published here once confirmed.</p><div className="mt-8 grid gap-4 sm:grid-cols-3">{["ISO 27001", "ISO 9001", "Microsoft Gold Partner"].map(name => <article key={name} className="enterprise-card flex items-center gap-4 p-5"><Award className="h-8 w-8 shrink-0 text-primary" /><div><h3 className="text-base">{name}</h3><p className="text-xs text-muted-foreground">Placeholder · not verified</p></div></article>)}</div><div className="mt-5 flex flex-wrap gap-4">{["HP", "Fortinet"].map(name => <span key={name} className="border border-border px-5 py-3 text-sm text-muted-foreground">{name} · partner placeholder</span>)}</div></div>
         </section>
 
         <section className="section-spacing bg-muted">

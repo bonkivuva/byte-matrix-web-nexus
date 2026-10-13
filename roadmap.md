@@ -2,13 +2,14 @@
 
 # Current requested refinements
 
+- [ ] Restore the previous static About image, remove ISO and certification mentions throughout the site, refine the homepage presentation, and verify local rendering and both themes.
 - [x] Remove the street-address placeholder, restore the original Careers photograph, and polish the Careers layout in both themes; verify photo loading, theme switching, recruitment links, and Contact navigation.
 - [x] Apply supplied statistics, testimonial, outcome descriptions, trust placeholders, footer hours, CTA copy and comparison table refinements.
 - [x] Add persistent light/dark control and full-color partner logos on readable surfaces.
 - [x] Put About first, expose Careers in shared navigation, and refine Careers without inventing vacancies.
 - [x] Restore original rotating-Earth About video and verify playback, navigation and mobile/tablet/desktop layouts.
 
-Current confirmation needed: evidence for certification/partner placeholders. The unpublished street address must not appear as a placeholder.
+Certification placeholders are removed at the user's request. The unpublished street address must not appear as a placeholder.
 
 ## Earlier redesign scope (not part of this request)
 

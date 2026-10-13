@@ -167,5 +167,11 @@
 
 .partner-logo-surface { background-color: hsl(var(--logo-surface)); color-scheme: light; border: 1px solid hsl(var(--border)); }
 .about-hero { background-color: hsl(var(--surface-dark)); }
+.about-intro-image { object-position: center 40%; }
+.about-intro-overlay { background: linear-gradient(90deg, hsl(var(--hero-overlay)/.97) 0%, hsl(var(--hero-overlay)/.9) 30%, hsl(var(--hero-overlay)/.48) 58%, hsl(var(--hero-overlay)/.08) 100%); }
+@media (max-width: 767px) {
+  .about-intro-image { object-position: 60% center; }
+  .about-intro-overlay { background: hsl(var(--hero-overlay)/.82); }
+}
 .hero-video-overlay { background: linear-gradient(90deg, hsl(var(--hero-overlay)/.94) 0%, hsl(var(--hero-overlay)/.76) 45%, hsl(var(--hero-overlay)/.25) 100%); }
 @media (max-width: 639px) { .hero-video-overlay { background: hsl(var(--hero-overlay)/.78); } }

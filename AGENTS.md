@@ -5,4 +5,4 @@
 - Store contact requests before attempting email notification so leads remain available when notification delivery is unavailable.
 - Manage the site theme centrally with next-themes; use theme-invariant logo surfaces to preserve original brand artwork.
 - Render homepage commitments from the tested homeStats module without zero-value animation states, so offscreen content remains accurate.
-- Reference the original About video through its CDN asset pointer and retain a poster for reduced-motion and playback fallback.
+- Import the About introduction photograph directly from project assets so it renders on local and hosted installations without video playback dependencies.
