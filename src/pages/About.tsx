@@ -56,7 +56,7 @@ const About = () => {
       <FuturisticHeader currentPage="about" />
       <main>
         <section className="about-hero relative overflow-hidden pt-[84px] text-primary-foreground">
-          <img src={aboutImage.url} alt="Server racks with network cabling and status lights in a data centre" width="1600" height="898" loading="eager" decoding="async" className="about-intro-image absolute inset-0 h-full w-full object-cover" />
+          <img src={new URL(aboutImage.url, "https://byte-matrix-web-nexus.lovable.app").href} alt="Server racks with network cabling and status lights in a data centre" width="1600" height="898" loading="eager" decoding="async" className="about-intro-image absolute inset-0 h-full w-full object-cover" />
           <div className="about-intro-overlay absolute inset-0" />
           <div className="container-professional relative flex min-h-[560px] items-center py-14 md:py-16">
             <motion.div initial={false} animate="visible" variants={reveal} transition={{ duration: .65 }} className="w-full max-w-2xl">
