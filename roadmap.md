@@ -2,6 +2,7 @@
 
 # Current requested refinements
 
+- [x] Replace the rejected About photograph with the selected server-room photograph and verify the page in light and dark modes.
 - [x] Restore the previous static About image, remove ISO and certification mentions throughout the site, refine the homepage presentation, and verify local rendering and both themes.
 - [x] Remove the street-address placeholder, restore the original Careers photograph, and polish the Careers layout in both themes; verify photo loading, theme switching, recruitment links, and Contact navigation.
 - [x] Apply supplied statistics, testimonial, outcome descriptions, trust placeholders, footer hours, CTA copy and comparison table refinements.
