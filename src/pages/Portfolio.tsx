@@ -103,11 +103,6 @@ const Portfolio = () => {
 
       {/* Hero Section */}
       <section className="relative pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-64 md:w-96 h-64 md:h-96 bg-primary/8 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-64 md:w-96 h-64 md:h-96 bg-accent/6 rounded-full blur-3xl" />
-        </div>
-
         <div className="container-professional relative z-10">
           <motion.div 
             className="max-w-3xl"
@@ -122,15 +117,15 @@ const Portfolio = () => {
               Portfolio
             </motion.p>
             <motion.h1 variants={fadeInUp}>
-              Our Work & Solutions Delivered
+              Technology Case Studies
             </motion.h1>
             <motion.p 
               className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mt-6 mb-10"
               variants={fadeInUp}
             >
-              Every project reflects our commitment to innovation, integrity, and customer-focused delivery — engineered for reliability, performance, and long-term value.
+              Infrastructure, connectivity and support projects focused on operational reliability and long-term value.
             </motion.p>
-            <motion.div className="w-16 h-1 bg-primary rounded-full" variants={fadeInUp} />
+            <motion.div variants={fadeInUp}><Button asChild size="lg"><Link to="/contact">Discuss your project <ArrowRight /></Link></Button></motion.div>
           </motion.div>
         </div>
       </section>
@@ -151,7 +146,7 @@ const Portfolio = () => {
                 <motion.div key={index} variants={fadeInUp}>
                   <Card className="card-premium text-center h-full">
                     <CardContent className="p-6 md:p-8">
-                      <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                         <IconComponent className="h-7 w-7 text-primary" />
                       </div>
                       <h3 className="text-3xl md:text-4xl font-bold text-primary mb-1">{metric.number}</h3>
@@ -197,11 +192,11 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Card className="card-premium group h-full overflow-hidden">
-                  <div className="relative">
+                  <div className="relative overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full aspect-[16/10] object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
@@ -255,17 +250,16 @@ const Portfolio = () => {
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,55%,28%,0.85)] via-[hsl(215,55%,28%,0.6)] to-[hsl(38,85%,52%,0.4)]" />
+        <div className="hero-video-overlay absolute inset-0" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <p className="text-sm md:text-base font-semibold uppercase tracking-[0.25em] text-white/90 drop-shadow-lg">
+          <p className="text-sm md:text-base font-semibold uppercase tracking-[0.25em] text-primary-foreground/90 drop-shadow-lg">
             Delivering Technology Excellence Across Kenya
           </p>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-primary" />
+      <section className="surface-dark section-spacing">
         <div className="container-professional relative z-10 text-center">
           <motion.div 
             className="max-w-3xl mx-auto space-y-8"
@@ -284,7 +278,7 @@ const Portfolio = () => {
               className="text-lg text-primary-foreground/80 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
-              Hundreds of businesses trust us with their technology. Ready to see what we can do for yours?
+              Discuss your infrastructure priorities with our engineering team.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
@@ -292,25 +286,14 @@ const Portfolio = () => {
             >
               <Button 
                 size="lg" 
-                className="bg-background text-foreground hover:bg-background/90 font-semibold shadow-xl"
                 asChild
               >
                 <Link to="/contact">
-                  Start Your Project
+                  Request a Tailored Proposal
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground hover:border-primary-foreground/50"
-                asChild
-              >
-                <a href="tel:+254724367794">
-                  <Phone className="mr-2 h-5 w-5" />
-                  +254 724 367 794
-                </a>
-              </Button>
+
             </motion.div>
           </motion.div>
         </div>
