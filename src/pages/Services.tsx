@@ -3,7 +3,6 @@ import { useState } from "react";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import FloatingActions from "@/components/FloatingActions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -179,11 +178,6 @@ const Services = () => {
       
       {/* Hero Section */}
       <section className="relative pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-64 md:w-96 h-64 md:h-96 bg-primary/8 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-64 md:w-96 h-64 md:h-96 bg-accent/6 rounded-full blur-3xl" />
-        </div>
-
         <div className="container-professional relative z-10">
           <motion.div 
             className="max-w-3xl"
@@ -201,13 +195,13 @@ const Services = () => {
               className="mb-6 md:mb-8"
               variants={fadeInUp}
             >
-            Our Expert Technology Services
+            Enterprise IT Services
             </motion.h1>
             <motion.p 
               className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10"
               variants={fadeInUp}
             >
-              Our services are built around a deep understanding of our clients' unique needs — delivering precision-engineered solutions with reliability and transparency at every step.
+              Infrastructure, managed support, connectivity and software built around your operational requirements.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4"
@@ -219,13 +213,7 @@ const Services = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <a
-                href="tel:+254724367794"
-                className="flex items-center gap-2 text-base md:text-lg font-semibold text-primary hover:text-primary/80 transition-colors min-h-[44px]"
-              >
-                <Phone className="h-5 w-5" />
-                +254 724 367 794
-              </a>
+
             </motion.div>
           </motion.div>
         </div>
@@ -262,9 +250,9 @@ const Services = () => {
           >
             {services.map((service, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="card-premium group h-full relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_hsl(var(--primary)/0.25)]">
+                <Card className="card-premium group flex h-full flex-col relative overflow-hidden">
                   {/* Service Image */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative aspect-[16/10] shrink-0 overflow-hidden">
                     <img 
                       src={service.image} 
                       alt={service.title} 
@@ -281,10 +269,8 @@ const Services = () => {
                       </div>
                     )}
                   </div>
-                  {/* Hover glow overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-accent/0 group-hover:from-primary/5 group-hover:via-transparent group-hover:to-accent/5 transition-all duration-500 pointer-events-none" />
-                  <CardContent className="p-6 md:p-8 flex flex-col h-full relative z-[1]">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all duration-500">
+                  <CardContent className="p-6 md:p-8 flex flex-1 flex-col relative z-[1]">
+                    <div className="w-12 h-12 shrink-0 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all duration-500">
                       <service.icon className="w-6 h-6 text-primary" />
                     </div>
                     
@@ -317,8 +303,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,22%,8%)] via-[hsl(217,91%,15%)] to-[hsl(220,22%,8%)]" />
+      <section className="surface-dark section-spacing">
         <div className="container-professional relative z-10 text-center">
           <motion.div 
             className="max-w-3xl mx-auto space-y-8"
@@ -328,13 +313,13 @@ const Services = () => {
             variants={staggerContainer}
           >
             <motion.h2 
-              className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white tracking-tight leading-tight"
+              className="text-3xl lg:text-4xl xl:text-5xl font-bold text-primary-foreground tracking-tight leading-tight"
               variants={fadeInUp}
             >
               Ready to Minimize Downtime & Maximize Productivity?
             </motion.h2>
             <motion.p 
-              className="text-lg text-white/70 max-w-2xl mx-auto"
+              className="text-lg text-primary-foreground/80 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
               We operate with full transparency in pricing, project timelines, and technical recommendations. Our engineering team delivers 24/7 enterprise support you can depend on.
@@ -345,25 +330,14 @@ const Services = () => {
             >
               <Button 
                 size="lg" 
-                className="bg-white text-foreground hover:bg-white/90 font-semibold shadow-xl"
                 asChild
               >
                 <Link to="/contact">
-                  Get Free Consultation
+                  Request a Tailored Proposal
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 hover:text-white hover:border-white/50"
-                asChild
-              >
-                <a href="tel:+254724367794">
-                  <Phone className="w-5 h-5 mr-2" />
-                  +254 724 367 794
-                </a>
-              </Button>
+
             </motion.div>
           </motion.div>
         </div>
@@ -371,12 +345,12 @@ const Services = () => {
 
       {/* Service Details Dialog */}
       <Dialog open={selectedService !== null} onOpenChange={() => setSelectedService(null)}>
-        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="w-[calc(100%-2rem)] max-w-4xl max-h-[80vh] overflow-y-auto">
           {selectedService !== null && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-2xl font-bold flex items-center gap-3">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                <DialogTitle className="text-xl sm:text-2xl font-bold flex items-start gap-4">
+                  <div className="w-12 h-12 shrink-0 bg-primary/10 rounded-lg flex items-center justify-center">
                     {(() => {
                       const IconComponent = services[selectedService].icon;
                       return <IconComponent className="w-6 h-6 text-primary" />;
@@ -419,7 +393,7 @@ const Services = () => {
                 <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t">
                   <Button size="lg" className="flex-1" asChild>
                     <Link to="/contact">
-                      Get Started Today
+                      Discuss this service
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
@@ -434,7 +408,6 @@ const Services = () => {
       </Dialog>
 
       <Footer />
-      <FloatingActions />
     </div></PageTransition>
   );
 };

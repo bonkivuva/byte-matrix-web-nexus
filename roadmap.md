@@ -2,6 +2,7 @@
 
 # Current requested refinements
 
+- [ ] Apply uploaded whole-site polish: simplify introductions, unify typography, palette, spacing, controls and legal layouts; verify images, links and both themes on mobile and desktop.
 - [x] Replace the rejected About photograph with the selected server-room photograph and verify the page in light and dark modes.
 - [x] Restore the previous static About image, remove ISO and certification mentions throughout the site, refine the homepage presentation, and verify local rendering and both themes.
 - [x] Remove the street-address placeholder, restore the original Careers photograph, and polish the Careers layout in both themes; verify photo loading, theme switching, recruitment links, and Contact navigation.

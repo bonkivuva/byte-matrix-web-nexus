@@ -22,9 +22,6 @@ export default {
 			fontFamily: {
 				'sans': ['Manrope', 'system-ui', 'sans-serif'],
 				'display': ['Sora', 'system-ui', 'sans-serif'],
-				'poppins': ['Poppins', 'sans-serif'],
-				'montserrat': ['Montserrat', 'sans-serif'],
-				'cyber': ['JetBrains Mono', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

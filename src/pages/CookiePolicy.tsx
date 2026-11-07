@@ -12,19 +12,19 @@ const CookiePolicy = () => {
       
       <div className="min-h-screen bg-background">
         <FuturisticHeader />
-        <div className="container mx-auto px-6 py-16 pt-28">
+        <main className="legal-shell">
           <h1 className="text-4xl font-bold text-foreground mb-8">Cookie Policy</h1>
           
-          <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground space-y-6">
+          <div className="text-muted-foreground space-y-8">
             <p className="text-sm text-muted-foreground/80">Last updated: {new Date().toLocaleDateString()}</p>
             
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. What Are Cookies</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">1. What Are Cookies</h2>
               <p>Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.</p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">2. How We Use Cookies</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">2. How We Use Cookies</h2>
               <p>We use cookies for the following purposes:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
@@ -35,7 +35,7 @@ const CookiePolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">3. Types of Cookies We Use</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">3. Types of Cookies We Use</h2>
               <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Session Cookies</h3>
@@ -53,7 +53,7 @@ const CookiePolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">4. Managing Cookies</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">4. Managing Cookies</h2>
               <p>You can control and manage cookies in various ways:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Most browsers allow you to refuse cookies or delete cookies</li>
@@ -63,12 +63,12 @@ const CookiePolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">5. Updates to This Policy</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">5. Updates to This Policy</h2>
               <p>We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">6. Contact Us</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">6. Contact Us</h2>
               <p>If you have any questions about our Cookie Policy, please contact us at:</p>
               <p className="mt-2">
                 Email: <a href="mailto:info@bytematrixtechnologies.co.ke" className="text-primary hover:underline">info@bytematrixtechnologies.co.ke</a><br />
@@ -76,7 +76,7 @@ const CookiePolicy = () => {
               </p>
             </section>
           </div>
-        </div>
+        </main>
         <Footer />
       </div>
     </>

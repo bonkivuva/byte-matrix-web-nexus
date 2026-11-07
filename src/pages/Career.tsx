@@ -34,7 +34,6 @@ const Career = () => (
             <p className="mt-6 max-w-xl text-base leading-7 text-primary-foreground/85 md:text-lg">Join a collaborative team where learning, integrity, and technical excellence shape the work we do.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg"><a href="#opportunities">Explore opportunities <ArrowDown className="h-4 w-4" /></a></Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"><a href="mailto:careers@bytematrixtechnologies.co.ke"><Mail className="h-4 w-4" />Contact recruitment</a></Button>
             </div>
           </div>
         </section>

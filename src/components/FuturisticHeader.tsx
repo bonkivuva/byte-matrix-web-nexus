@@ -58,9 +58,6 @@ const FuturisticHeader = (_props: FuturisticHeaderProps) => {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button asChild className="hidden md:inline-flex">
-            <Link to="/contact">Request a Quote <ArrowUpRight /></Link>
-          </Button>
           <Button variant="ghost" size="icon" className="lg:hidden h-12 w-12" onClick={() => setIsOpen((value) => !value)} aria-label={isOpen ? "Close navigation" : "Open navigation"} aria-expanded={isOpen}>
             {isOpen ? <X /> : <Menu />}
           </Button>

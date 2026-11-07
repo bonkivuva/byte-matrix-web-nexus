@@ -63,14 +63,6 @@ const NotFound = () => {
               </Link>
             </Button>
             
-            <Button 
-              asChild
-              variant="outline"
-            >
-              <Link to="/contact">
-                Contact Support <ArrowRight />
-              </Link>
-            </Button>
           </div>
 
           {/* Help text */}

@@ -16,8 +16,8 @@ const CookieConsent = () => {
   const accept = () => {
     localStorage.setItem("cookieConsent", "accepted");
     setVisible(false);
-    if ((window as any).gtag) {
-      (window as any).gtag("consent", "update", { analytics_storage: "granted" });
+    if ((window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag("consent", "update", { analytics_storage: "granted" });
     }
   };
 
@@ -34,12 +34,12 @@ const CookieConsent = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", damping: 25, stiffness: 200 }}
-          className="fixed bottom-0 left-0 right-0 z-[9999] p-4"
+          className="border-t border-border bg-muted px-4 py-6"
         >
-          <div className="max-w-4xl mx-auto rounded-2xl border border-border bg-card shadow-2xl p-5 md:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="container-professional flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <Cookie className="w-8 h-8 text-primary flex-shrink-0 mt-0.5 sm:mt-0" />
             <div className="flex-1 text-sm text-muted-foreground">
-              We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.{" "}
+              Choose whether to allow optional analytics cookies.{" "}
               <Link to="/cookie-policy" className="text-primary hover:underline font-medium">
                 Learn more
               </Link>

@@ -19,7 +19,7 @@ const Contact = () => {
       <div className="mt-7 border border-border bg-muted p-6"><Clock className="h-6 w-6 text-primary"/><h3 className="mt-4 text-base">Business hours</h3><p className="mt-2 text-sm text-muted-foreground">Monday–Friday: 08:00–18:00<br/>Saturday: 09:00–14:00<br/>East Africa Time (UTC+3)</p></div>
       <Button asChild variant="outline" className="mt-5 w-full"><a href={siteConfig.whatsapp} target="_blank" rel="noreferrer"><MessageCircle/>Continue on WhatsApp</a></Button>
       </aside>
-      <LeadCaptureForm title="Request a consultation" subtitle="This form replaces external scheduling. Tell us what you need and we will coordinate the right technical conversation."/>
+      <LeadCaptureForm subtitle="Share your requirements and we will coordinate a technical conversation with the right team."/>
     </div></section>
     <section className="section-spacing-sm bg-muted"><div className="container-professional"><div className="mb-8"><span className="section-kicker">Nairobi office area</span><h2 className="text-3xl">Operating from Kenya’s capital.</h2><p className="mt-3 text-muted-foreground">The map indicates Nairobi generally; an exact street address has not been published.</p></div><div className="overflow-hidden border border-border bg-card"><iframe src="https://www.google.com/maps?q=Nairobi%2C%20Kenya&output=embed" width="100%" height="420" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Nairobi, Kenya general location"/></div></div></section>
   </main><Footer/></div>;

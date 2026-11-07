@@ -6,3 +6,4 @@
 - Manage the site theme centrally with next-themes; use theme-invariant logo surfaces to preserve original brand artwork.
 - Render homepage commitments from the tested homeStats module without zero-value animation states, so offscreen content remains accurate.
 - Import the About introduction photograph through its project asset pointer and resolve its managed URL against the published asset-serving origin so standalone local hosting also loads it; downloaded media must use the managed asset flow.
+- Share card, control and shadow styling through global semantic tokens and UI primitives so pages remain visually consistent in both themes.
