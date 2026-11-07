@@ -58,17 +58,14 @@ const About = () => {
         <section className="about-hero relative overflow-hidden pt-[84px] text-primary-foreground">
           <img src={new URL(aboutImage.url, "https://byte-matrix-web-nexus.lovable.app").href} alt="Server racks with network cabling and status lights in a data centre" width="1600" height="898" loading="eager" decoding="async" className="about-intro-image absolute inset-0 h-full w-full object-cover" />
           <div className="about-intro-overlay absolute inset-0" />
-          <div className="container-professional relative flex min-h-[560px] items-center py-14 md:py-16">
+          <div className="container-professional relative flex min-h-[480px] items-center py-16">
             <motion.div initial={false} animate="visible" variants={reveal} transition={{ duration: .65 }} className="w-full max-w-2xl">
               <span className="section-kicker">Connecting Your Digital Matrix</span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl">Byte Matrix<br />Technologies</h1>
-              <p className="mt-6 max-w-xl text-xl font-semibold leading-8 md:text-2xl">Enterprise IT infrastructure.<br /><span className="text-primary">Managed with precision.</span></p>
-              <p className="mt-5 max-w-lg text-base leading-7 text-primary-foreground/85">Managed IT services, hardware procurement, and technical support. An accountable technology partner for organisations across East Africa and beyond.</p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <p className="mt-6 max-w-xl text-lg leading-8 text-primary-foreground/85 md:text-xl">Enterprise IT infrastructure, managed services and technical support. Managed with precision.</p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg"><Link to="/contact">Request a Tailored Proposal <ArrowRight /></Link></Button>
-                <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"><Link to="/services">Explore Enterprise Solutions</Link></Button>
               </div>
-              <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 border-t border-primary-foreground/20 pt-6 text-xs font-semibold text-primary-foreground/85"><span className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />Managed infrastructure</span><span className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />24/7 enterprise support</span></div>
             </motion.div>
           </div>
         </section>
@@ -96,7 +93,7 @@ const About = () => {
           </div>
         </section>
 
-        <section className="border-t border-border pb-16">
+        <section className="section-spacing border-t border-border">
           <div className="container-professional"><span className="section-kicker">Why Byte Matrix?</span><h2 className="text-3xl">One partner. A disciplined operating model.</h2><dl className="mt-8 divide-y divide-border">{[["Unlike fragmented vendors", "We operate as one accountable partner."], ["Unlike reactive support", "We proactively monitor and maintain your infrastructure."], ["Unlike generic solutions", "We design around your operational reality."]].map(([problem, answer]) => <div key={problem} className="grid gap-2 py-5 md:grid-cols-2"><dt className="text-muted-foreground">{problem}</dt><dd className="flex gap-3 font-semibold"><Check className="h-5 w-5 shrink-0 text-primary" />{answer}</dd></div>)}</dl></div>
         </section>
 
