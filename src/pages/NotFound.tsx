@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Home, AlertTriangle, ArrowRight } from "lucide-react";
+import { Home, AlertTriangle } from "lucide-react";
 import FuturisticHeader from "@/components/FuturisticHeader";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";

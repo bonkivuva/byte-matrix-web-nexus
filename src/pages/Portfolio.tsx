@@ -11,7 +11,6 @@ import {
   FolderCheck,
   Calendar,
   Headphones,
-  Phone,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
