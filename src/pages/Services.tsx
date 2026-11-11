@@ -9,13 +9,11 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { 
   Monitor, 
   Shield, 
-  Cloud, 
   Wifi,
   Code,
   Laptop,
   CheckCircle2,
   ArrowRight,
-  Phone,
   Headphones,
   Zap
 } from "lucide-react";
